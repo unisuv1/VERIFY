@@ -1,0 +1,44 @@
+`timescale	1ns/1ns
+module tb_vry_divider();
+
+
+reg			sclk;
+reg			rst_n;
+
+reg		[31:0]		quotient;
+reg		[31:0]		remain;
+
+initial begin
+	sclk = 0;
+	rst_n = 0;
+	#200
+	rst_n = 1;
+end 
+
+always #5	sclk = ~sclk;
+
+initial begin 
+	@ (posedge rst_n)
+	#100;
+	force vry_divider_inst.denominator = 32'd100;
+	force vry_divider_inst.numerator = 32'd9;
+	force quotient = vry_divider_inst.quotient;
+	force remain = vry_divider_inst.remain;
+	#10000
+	force vry_divider_inst.denominator = 32'd200;
+	force vry_divider_inst.numerator = 32'd10;
+	force quotient = vry_divider_inst.quotient;
+	force remain = vry_divider_inst.remain;
+	
+	
+end 
+
+
+vry_divider vry_divider_inst(
+	.sclk		(sclk),				//input		wire		
+	.rst_n		(rst_n)	           	//input		wire		
+);
+
+
+
+endmodule

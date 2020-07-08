@@ -1,0 +1,69 @@
+m255
+K3
+13
+cModel Technology
+Z0 dE:\UV\FPGA\VERIFY\vry_divider\simulation\modelsim
+T_opt
+VYQ^<I4HmCn@Q52bh9D@>Z1
+04 14 4 work tb_vry_divider fast 0
+=1-6c4b907f9ba3-5f059ab4-2d9-44c
+o-quiet -auto_acc_if_foreign -work work -L altera_ver -L lpm_ver -L sgate_ver -L altera_mf_ver -L altera_lnsim_ver -L cycloneive_ver -L rtl_work -L work +acc
+n@_opt
+OL;O;10.1c;51
+vdivider_1
+I<z72hHEZW`hJS_gMDnMT:0
+V;?^S0jR5WIbh[YNQ`l8g10
+Z1 dE:\UV\FPGA\VERIFY\vry_divider\simulation\modelsim
+w1594202723
+8E:/UV/FPGA/VERIFY/vry_divider/ip_core/divider_1.v
+FE:/UV/FPGA/VERIFY/vry_divider/ip_core/divider_1.v
+L0 40
+Z2 OL;L;10.1c;51
+r1
+31
+Z3 o-vlog01compat -work work -L mtiAvm -L mtiOvm -L mtiUvm -L mtiUPF
+!i10b 1
+!s100 3V3kCBU69PIVce7SY9J]`1
+!s85 0
+!s108 1594202802.715000
+!s107 E:/UV/FPGA/VERIFY/vry_divider/ip_core/divider_1.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+E:/UV/FPGA/VERIFY/vry_divider/ip_core|E:/UV/FPGA/VERIFY/vry_divider/ip_core/divider_1.v|
+!s92 -vlog01compat -work work +incdir+E:/UV/FPGA/VERIFY/vry_divider/ip_core -L mtiAvm -L mtiOvm -L mtiUvm -L mtiUPF
+vtb_vry_divider
+I`die[bmc0d4`NQ?B8`jnY0
+V[eiX0zoVlT[7MGaWZPlAk3
+R1
+w1594201777
+8E:/UV/FPGA/VERIFY/vry_divider/sim/tb_vry_divider.v
+FE:/UV/FPGA/VERIFY/vry_divider/sim/tb_vry_divider.v
+L0 2
+R2
+r1
+31
+R3
+!i10b 1
+!s100 ]9;Y_B^8MHG^PG_eZ=Sfm0
+!s85 0
+!s108 1594202802.940000
+!s107 E:/UV/FPGA/VERIFY/vry_divider/sim/tb_vry_divider.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+E:/UV/FPGA/VERIFY/vry_divider/sim|E:/UV/FPGA/VERIFY/vry_divider/sim/tb_vry_divider.v|
+!s92 -vlog01compat -work work +incdir+E:/UV/FPGA/VERIFY/vry_divider/sim -L mtiAvm -L mtiOvm -L mtiUvm -L mtiUPF
+vvry_divider
+ICDRA=0gCeIXRc^D?zDNBa3
+V2]W[z`b_6U9UE?RXJj_X73
+R1
+w1594202682
+8E:/UV/FPGA/VERIFY/vry_divider/design/vry_divider.v
+FE:/UV/FPGA/VERIFY/vry_divider/design/vry_divider.v
+L0 1
+R2
+r1
+31
+R3
+!i10b 1
+!s100 MkQn7gbHBKF;Q[1KMSA?d0
+!s85 0
+!s108 1594202802.291000
+!s107 E:/UV/FPGA/VERIFY/vry_divider/design/vry_divider.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+E:/UV/FPGA/VERIFY/vry_divider/design|E:/UV/FPGA/VERIFY/vry_divider/design/vry_divider.v|
+!s92 -vlog01compat -work work +incdir+E:/UV/FPGA/VERIFY/vry_divider/design -L mtiAvm -L mtiOvm -L mtiUvm -L mtiUPF

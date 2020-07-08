@@ -1,0 +1,6 @@
+<?xml version="1.0" ?>
+<LOG_ROOT>
+	<PROJECT NAME="vry_divider">
+		<CBX_INST_ENTRY INSTANCE_NAME="|vry_divider|divider_1:divider_1_inst|lpm_divide:LPM_DIVIDE_component" CBX_FILE_NAME="lpm_divide_fqt.tdf"/>
+	</PROJECT>
+</LOG_ROOT>
