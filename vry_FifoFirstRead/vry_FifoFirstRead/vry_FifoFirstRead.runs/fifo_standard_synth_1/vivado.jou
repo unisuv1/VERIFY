@@ -1,0 +1,10 @@
+#-----------------------------------------------------------
+# Vivado v2014.4 (64-bit)
+# SW Build 1071353 on Tue Nov 18 18:29:27 MST 2014
+# IP Build 1070531 on Tue Nov 18 01:10:18 MST 2014
+# Start of session at: Thu Jul 23 17:09:14 2020
+# Process ID: 18092
+# Log file: E:/UV/FPGA/VERIFY/vry_FifoFirstRead/vry_FifoFirstRead/vry_FifoFirstRead.runs/fifo_standard_synth_1/fifo_standard.vds
+# Journal file: E:/UV/FPGA/VERIFY/vry_FifoFirstRead/vry_FifoFirstRead/vry_FifoFirstRead.runs/fifo_standard_synth_1\vivado.jou
+#-----------------------------------------------------------
+source fifo_standard.tcl
