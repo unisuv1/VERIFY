@@ -1,0 +1,10 @@
+#-----------------------------------------------------------
+# Webtalk v2014.4 (64-bit)
+# SW Build 1071353 on Tue Nov 18 18:29:27 MST 2014
+# IP Build 1070531 on Tue Nov 18 01:10:18 MST 2014
+# Start of session at: Tue Jul 28 15:03:25 2020
+# Process ID: 21652
+# Log file: e:/uv/fpga/verify/vry_axi_dma/vry_axi_dma/ip_repo/axi_full_master_1.0/axi_full_master_v1_0_v1_0_project/axi_full_master_v1_0_v1_0_project.sim/sim_1/behav/webtalk.log
+# Journal file: e:/uv/fpga/verify/vry_axi_dma/vry_axi_dma/ip_repo/axi_full_master_1.0/axi_full_master_v1_0_v1_0_project/axi_full_master_v1_0_v1_0_project.sim/sim_1/behav\webtalk.jou
+#-----------------------------------------------------------
+source e:/uv/fpga/verify/vry_axi_dma/vry_axi_dma/ip_repo/axi_full_master_1.0/axi_full_master_v1_0_v1_0_project/axi_full_master_v1_0_v1_0_project.sim/sim_1/behav/xsim.dir/tb_axi_full_master_behav/webtalk/xsim_webtalk.tcl -notrace

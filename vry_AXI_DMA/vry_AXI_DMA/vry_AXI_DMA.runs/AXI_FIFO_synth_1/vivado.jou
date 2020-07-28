@@ -1,0 +1,10 @@
+#-----------------------------------------------------------
+# Vivado v2014.4 (64-bit)
+# SW Build 1071353 on Tue Nov 18 18:29:27 MST 2014
+# IP Build 1070531 on Tue Nov 18 01:10:18 MST 2014
+# Start of session at: Tue Jul 28 15:07:27 2020
+# Process ID: 18444
+# Log file: E:/UV/FPGA/VERIFY/vry_AXI_DMA/vry_AXI_DMA/vry_AXI_DMA.runs/AXI_FIFO_synth_1/AXI_FIFO.vds
+# Journal file: E:/UV/FPGA/VERIFY/vry_AXI_DMA/vry_AXI_DMA/vry_AXI_DMA.runs/AXI_FIFO_synth_1\vivado.jou
+#-----------------------------------------------------------
+source AXI_FIFO.tcl

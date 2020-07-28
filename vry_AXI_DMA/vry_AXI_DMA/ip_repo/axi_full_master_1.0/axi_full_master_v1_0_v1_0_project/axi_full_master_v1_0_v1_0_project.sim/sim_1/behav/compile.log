@@ -1,0 +1,9 @@
+Determining compilation order of HDL files.
+INFO: [VRFC 10-2263] Analyzing Verilog file "e:/uv/fpga/verify/vry_axi_dma/vry_axi_dma/ip_repo/axi_full_master_1.0/hdl/axi_full_master_v1_0_M00_AXI.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module axi_full_master_v1_0_M00_AXI
+INFO: [VRFC 10-2263] Analyzing Verilog file "e:/uv/fpga/verify/vry_axi_dma/vry_axi_dma/ip_repo/axi_full_master_1.0/hdl/axi_full_master_v1_0.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module axi_full_master_v1_0
+INFO: [VRFC 10-2263] Analyzing Verilog file "e:/uv/fpga/verify/vry_axi_dma/vry_axi_dma/ip_repo/axi_full_master_1.0/axi_full_master_v1_0_v1_0_project/axi_full_master_v1_0_v1_0_project.srcs/sim_1/new/tb_axi_full_master.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module tb_axi_full_master
+INFO: [VRFC 10-2263] Analyzing Verilog file "e:/uv/fpga/verify/vry_axi_dma/vry_axi_dma/ip_repo/axi_full_master_1.0/axi_full_master_v1_0_v1_0_project/axi_full_master_v1_0_v1_0_project.sim/sim_1/behav/glbl.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module glbl

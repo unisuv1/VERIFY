@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<wave_config>
+   <wave_state>
+   </wave_state>
+   <db_ref_list>
+      <db_ref path="tb_axi_full_master_behav.wdb" id="1">
+         <top_modules>
+            <top_module name="glbl" />
+            <top_module name="tb_axi_full_master" />
+         </top_modules>
+      </db_ref>
+   </db_ref_list>
+   <WVObjectSize size="16" />
+   <wvobject db_ref_id="1" fp_name="/tb_axi_full_master/rstn" type="logic">
+      <obj_property name="ElementShortName">rstn</obj_property>
+      <obj_property name="ObjectShortName">rstn</obj_property>
+   </wvobject>
+   <wvobject db_ref_id="1" fp_name="/tb_axi_full_master/sclk" type="logic">
+      <obj_property name="ElementShortName">sclk</obj_property>
+      <obj_property name="ObjectShortName">sclk</obj_property>
+   </wvobject>
+   <wvobject db_ref_id="1" fp_name="/tb_axi_full_master/init_axi_txn" type="logic">
+      <obj_property name="ElementShortName">init_axi_txn</obj_property>
+      <obj_property name="ObjectShortName">init_axi_txn</obj_property>
+   </wvobject>
+   <wvobject db_ref_id="1" fp_name="/tb_axi_full_master/axi_full_master_v1_0_inst/m00_axi_awaddr" type="array">
+      <obj_property name="ElementShortName">m00_axi_awaddr[31:0]</obj_property>
+      <obj_property name="ObjectShortName">m00_axi_awaddr[31:0]</obj_property>
+      <obj_property name="Radix">HEXRADIX</obj_property>
+   </wvobject>
+   <wvobject type="divider" fp_name="divider8">
+      <obj_property name="label">AXI_PORTS</obj_property>
+      <obj_property name="DisplayName">label</obj_property>
+   </wvobject>
+   <wvobject db_ref_id="1" fp_name="/tb_axi_full_master/axi_full_master_v1_0_inst/axi_full_master_v1_0_M00_AXI_inst/INIT_AXI_TXN" type="logic">
+      <obj_property name="ElementShortName">INIT_AXI_TXN</obj_property>
+      <obj_property name="ObjectShortName">INIT_AXI_TXN</obj_property>
+   </wvobject>
+   <wvobject db_ref_id="1" fp_name="/tb_axi_full_master/axi_full_master_v1_0_inst/axi_full_master_v1_0_M00_AXI_inst/init_txn_pulse" type="logic">
+      <obj_property name="ElementShortName">init_txn_pulse</obj_property>
+      <obj_property name="ObjectShortName">init_txn_pulse</obj_property>
+   </wvobject>
+   <wvobject db_ref_id="1" fp_name="/tb_axi_full_master/axi_full_master_v1_0_inst/axi_full_master_v1_0_M00_AXI_inst/start_single_burst_write" type="logic">
+      <obj_property name="ElementShortName">start_single_burst_write</obj_property>
+      <obj_property name="ObjectShortName">start_single_burst_write</obj_property>
+   </wvobject>
+   <wvobject db_ref_id="1" fp_name="/tb_axi_full_master/axi_full_master_v1_0_inst/axi_full_master_v1_0_M00_AXI_inst/mst_exec_state" type="array">
+      <obj_property name="ElementShortName">mst_exec_state[1:0]</obj_property>
+      <obj_property name="ObjectShortName">mst_exec_state[1:0]</obj_property>
+      <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+   </wvobject>
+   <wvobject db_ref_id="1" fp_name="/tb_axi_full_master/axi_full_master_v1_0_inst/axi_full_master_v1_0_M00_AXI_inst/M_AXI_AWLEN" type="array">
+      <obj_property name="ElementShortName">M_AXI_AWLEN[7:0]</obj_property>
+      <obj_property name="ObjectShortName">M_AXI_AWLEN[7:0]</obj_property>
+      <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+   </wvobject>
+   <wvobject db_ref_id="1" fp_name="/tb_axi_full_master/axi_full_master_v1_0_inst/axi_full_master_v1_0_M00_AXI_inst/M_AXI_AWADDR" type="array">
+      <obj_property name="ElementShortName">M_AXI_AWADDR[31:0]</obj_property>
+      <obj_property name="ObjectShortName">M_AXI_AWADDR[31:0]</obj_property>
+      <obj_property name="Radix">HEXRADIX</obj_property>
+   </wvobject>
+   <wvobject db_ref_id="1" fp_name="/tb_axi_full_master/axi_full_master_v1_0_inst/axi_full_master_v1_0_M00_AXI_inst/M_AXI_AWREADY" type="logic">
+      <obj_property name="ElementShortName">M_AXI_AWREADY</obj_property>
+      <obj_property name="ObjectShortName">M_AXI_AWREADY</obj_property>
+   </wvobject>
+   <wvobject db_ref_id="1" fp_name="/tb_axi_full_master/axi_full_master_v1_0_inst/axi_full_master_v1_0_M00_AXI_inst/axi_awvalid" type="logic">
+      <obj_property name="ElementShortName">axi_awvalid</obj_property>
+      <obj_property name="ObjectShortName">axi_awvalid</obj_property>
+   </wvobject>
+   <wvobject db_ref_id="1" fp_name="/tb_axi_full_master/axi_full_master_v1_0_inst/axi_full_master_v1_0_M00_AXI_inst/axi_awvalid" type="logic">
+      <obj_property name="ElementShortName">axi_awvalid</obj_property>
+      <obj_property name="ObjectShortName">axi_awvalid</obj_property>
+   </wvobject>
+   <wvobject db_ref_id="1" fp_name="/tb_axi_full_master/axi_full_master_v1_0_inst/axi_full_master_v1_0_M00_AXI_inst/write_index" type="array">
+      <obj_property name="ElementShortName">write_index[4:0]</obj_property>
+      <obj_property name="ObjectShortName">write_index[4:0]</obj_property>
+      <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+   </wvobject>
+   <wvobject db_ref_id="1" fp_name="/tb_axi_full_master/axi_full_master_v1_0_inst/axi_full_master_v1_0_M00_AXI_inst/wnext" type="logic">
+      <obj_property name="ElementShortName">wnext</obj_property>
+      <obj_property name="ObjectShortName">wnext</obj_property>
+   </wvobject>
+</wave_config>

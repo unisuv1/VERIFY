@@ -1,7 +1,0 @@
-Running: xsim.dir/tb_vry_FifoFirstRead_behav/xsimk.exe -simmode gui -wdb tb_vry_FifoFirstRead_behav.wdb -simrunnum 0 -socket 57112
-Design successfully loaded
-Design Loading Memory Usage: 21288 KB (Peak: 21288 KB)
-Design Loading CPU Usage: 280 ms
-Simulation completed
-Simulation Memory Usage: 25052 KB (Peak: 25052 KB)
-Simulation CPU Usage: 734 ms
