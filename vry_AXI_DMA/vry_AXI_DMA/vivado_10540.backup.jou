@@ -1,0 +1,21 @@
+#-----------------------------------------------------------
+# Vivado v2014.4 (64-bit)
+# SW Build 1071353 on Tue Nov 18 18:29:27 MST 2014
+# IP Build 1070531 on Tue Nov 18 01:10:18 MST 2014
+# Start of session at: Tue Jul 28 18:29:28 2020
+# Process ID: 6576
+# Log file: E:/UV/FPGA/VERIFY/vry_AXI_DMA/vry_AXI_DMA/vivado.log
+# Journal file: E:/UV/FPGA/VERIFY/vry_AXI_DMA/vry_AXI_DMA\vivado.jou
+#-----------------------------------------------------------
+start_gui
+open_project E:/UV/FPGA/VERIFY/vry_AXI_DMA/vry_AXI_DMA/vry_AXI_DMA.xpr
+ipx::edit_ip_in_project -upgrade true -name axi_full_master_v1_0_v1_0_project -directory E:/UV/FPGA/VERIFY/vry_AXI_DMA/vry_AXI_DMA/ip_repo/axi_full_master_1.0/axi_full_master_v1_0_v1_0_project e:/UV/FPGA/VERIFY/vry_AXI_DMA/vry_AXI_DMA/ip_repo/axi_full_master_1.0/component.xml
+update_compile_order -fileset sim_1
+current_project vry_AXI_DMA
+launch_simulation
+open_wave_config {E:/UV/FPGA/VERIFY/vry_AXI_DMA/vry_AXI_DMA\tb_design_1_behav.wcfg}
+source tb_design_1.tcl
+run 10 us
+close_sim
+close_project
+close_project

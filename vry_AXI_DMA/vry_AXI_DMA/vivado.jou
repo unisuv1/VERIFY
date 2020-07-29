@@ -2,20 +2,264 @@
 # Vivado v2014.4 (64-bit)
 # SW Build 1071353 on Tue Nov 18 18:29:27 MST 2014
 # IP Build 1070531 on Tue Nov 18 01:10:18 MST 2014
-# Start of session at: Tue Jul 28 18:29:28 2020
-# Process ID: 6576
+# Start of session at: Wed Jul 29 10:31:44 2020
+# Process ID: 16952
 # Log file: E:/UV/FPGA/VERIFY/vry_AXI_DMA/vry_AXI_DMA/vivado.log
 # Journal file: E:/UV/FPGA/VERIFY/vry_AXI_DMA/vry_AXI_DMA\vivado.jou
 #-----------------------------------------------------------
 start_gui
 open_project E:/UV/FPGA/VERIFY/vry_AXI_DMA/vry_AXI_DMA/vry_AXI_DMA.xpr
-ipx::edit_ip_in_project -upgrade true -name axi_full_master_v1_0_v1_0_project -directory E:/UV/FPGA/VERIFY/vry_AXI_DMA/vry_AXI_DMA/ip_repo/axi_full_master_1.0/axi_full_master_v1_0_v1_0_project e:/UV/FPGA/VERIFY/vry_AXI_DMA/vry_AXI_DMA/ip_repo/axi_full_master_1.0/component.xml
+launch_simulation
+open_bd_design {E:/UV/FPGA/VERIFY/vry_AXI_DMA/vry_AXI_DMA/vry_AXI_DMA.srcs/sources_1/bd/design_1/design_1.bd}
+startgroup
+set_property -dict [list CONFIG.C_M00_AXI_BURST_LEN {16}] [get_bd_cells axi_full_master_0]
+endgroup
+startgroup
+endgroup
+generate_target all [get_files  E:/UV/FPGA/VERIFY/vry_AXI_DMA/vry_AXI_DMA/vry_AXI_DMA.srcs/sources_1/bd/design_1/design_1.bd]
+launch_simulation
+reset_target all [get_files  E:/UV/FPGA/VERIFY/vry_AXI_DMA/vry_AXI_DMA/vry_AXI_DMA.srcs/sources_1/bd/design_1/design_1.bd]
+generate_target all [get_files  E:/UV/FPGA/VERIFY/vry_AXI_DMA/vry_AXI_DMA/vry_AXI_DMA.srcs/sources_1/bd/design_1/design_1.bd]
+launch_simulation
+source tb_design_1.tcl
+run 5 us
+close_sim
+launch_simulation
+open_wave_config {E:/UV/FPGA/VERIFY/vry_AXI_DMA/vry_AXI_DMA\tb_design_1_behav.wcfg}
+source tb_design_1.tcl
+run 5 us
+add_wave {{/tb_design_1/design_1_wrapper_inst/design_1_i/axi_full_slave2_0/inst/axi_full_slave2_v1_0_S00_AXI_inst/mem_data_out}} 
+add_wave {{/tb_design_1/design_1_wrapper_inst/design_1_i/axi_full_slave2_0/inst/axi_full_slave2_v1_0_S00_AXI_inst/axi_arv_arr_flag}} 
+restart
+run 5 us
+add_wave {{/tb_design_1/design_1_wrapper_inst/design_1_i/axi_full_slave2_0/inst/axi_full_slave2_v1_0_S00_AXI_inst/\BRAM_GEN[0].mem_rden }} 
+restart
+run 5 us
+add_wave {{/tb_design_1/design_1_wrapper_inst/design_1_i/axi_full_slave2_0/inst/axi_full_slave2_v1_0_S00_AXI_inst/axi_rvalid}} 
+restart
+run 5 us
+add_wave {{/tb_design_1/design_1_wrapper_inst/design_1_i/axi_full_slave2_0/inst/axi_full_slave2_v1_0_S00_AXI_inst/\BRAM_GEN[0].BYTE_BRAM_GEN[0].data_out }} {{/tb_design_1/design_1_wrapper_inst/design_1_i/axi_full_slave2_0/inst/axi_full_slave2_v1_0_S00_AXI_inst/\BRAM_GEN[0].BYTE_BRAM_GEN[1].data_out }} {{/tb_design_1/design_1_wrapper_inst/design_1_i/axi_full_slave2_0/inst/axi_full_slave2_v1_0_S00_AXI_inst/\BRAM_GEN[0].BYTE_BRAM_GEN[2].data_out }} {{/tb_design_1/design_1_wrapper_inst/design_1_i/axi_full_slave2_0/inst/axi_full_slave2_v1_0_S00_AXI_inst/\BRAM_GEN[0].BYTE_BRAM_GEN[3].data_out }} 
+restart
+run 5 us
+run 5 us
+run 5 us
+add_wave {{/tb_design_1/design_1_wrapper_inst/design_1_i/axi_full_slave2_0/inst/axi_full_slave2_v1_0_S00_AXI_inst/mem_address}} 
+restart
+run 5 us
+add_wave {{/tb_design_1/design_1_wrapper_inst/design_1_i/axi_full_slave2_0/inst/axi_full_slave2_v1_0_S00_AXI_inst/axi_araddr}} 
+restart
+run 5 us
+run 5 us
+add_wave {{/tb_design_1/design_1_wrapper_inst/design_1_i/axi_full_slave2_0/inst/axi_full_slave2_v1_0_S00_AXI_inst/S_AXI_ARADDR}} 
+add_wave {{/tb_design_1/design_1_wrapper_inst/design_1_i/axi_full_slave2_0/inst/axi_full_slave2_v1_0_S00_AXI_inst/S_AXI_ARBURST}} 
+add_wave {{/tb_design_1/design_1_wrapper_inst/design_1_i/axi_full_slave2_0/inst/axi_full_slave2_v1_0_S00_AXI_inst/S_AXI_RREADY}} 
+open_bd_design {E:/UV/FPGA/VERIFY/vry_AXI_DMA/vry_AXI_DMA/vry_AXI_DMA.srcs/sources_1/bd/design_1/design_1.bd}
+ipx::edit_ip_in_project -upgrade true -name axi_full_slave2_v1_0_project -directory E:/UV/FPGA/VERIFY/vry_AXI_DMA/vry_AXI_DMA/ip_repo/axi_full_slave2_1.0/axi_full_slave2_v1_0_project e:/UV/FPGA/VERIFY/vry_AXI_DMA/vry_AXI_DMA/ip_repo/axi_full_slave2_1.0/component.xml
+update_compile_order -fileset sim_1
+ipx::create_xgui_files [ipx::current_core]
+ipx::update_ip_instances -delete_project true
+generate_target all [get_files  E:/UV/FPGA/VERIFY/vry_AXI_DMA/vry_AXI_DMA/vry_AXI_DMA.srcs/sources_1/bd/design_1/design_1.bd]
+save_wave_config {E:/UV/FPGA/VERIFY/vry_AXI_DMA/vry_AXI_DMA\tb_design_1_behav.wcfg}
+close_sim
+open_bd_design {E:/UV/FPGA/VERIFY/vry_AXI_DMA/vry_AXI_DMA/vry_AXI_DMA.srcs/sources_1/bd/design_1/design_1.bd}
+launch_simulation
+open_wave_config {E:/UV/FPGA/VERIFY/vry_AXI_DMA/vry_AXI_DMA\tb_design_1_behav.wcfg}
+source tb_design_1.tcl
+run 5 us
+run 5 us
+launch_simulation
+open_wave_config {E:/UV/FPGA/VERIFY/vry_AXI_DMA/vry_AXI_DMA\tb_design_1_behav.wcfg}
+source tb_design_1.tcl
+run 5 us
+open_bd_design {E:/UV/FPGA/VERIFY/vry_AXI_DMA/vry_AXI_DMA/vry_AXI_DMA.srcs/sources_1/bd/design_1/design_1.bd}
+ipx::edit_ip_in_project -upgrade true -name axi_full_slave2_v1_0_project -directory E:/UV/FPGA/VERIFY/vry_AXI_DMA/vry_AXI_DMA/ip_repo/axi_full_slave2_1.0/axi_full_slave2_v1_0_project e:/UV/FPGA/VERIFY/vry_AXI_DMA/vry_AXI_DMA/ip_repo/axi_full_slave2_1.0/component.xml
+update_compile_order -fileset sim_1
+ipx::create_xgui_files [ipx::current_core]
+ipx::update_ip_instances -delete_project true
+generate_target all [get_files  E:/UV/FPGA/VERIFY/vry_AXI_DMA/vry_AXI_DMA/vry_AXI_DMA.srcs/sources_1/bd/design_1/design_1.bd]
+launch_simulation
+open_wave_config {E:/UV/FPGA/VERIFY/vry_AXI_DMA/vry_AXI_DMA\tb_design_1_behav.wcfg}
+source tb_design_1.tcl
+run 5 us
+run 5 us
+restart
+load_feature simulator
+open_wave_database {E:/UV/FPGA/VERIFY/vry_AXI_DMA/vry_AXI_DMA/vry_AXI_DMA.sim/sim_1/behav/tb_design_1_behav.wdb}
+open_wave_config {E:/UV/FPGA/VERIFY/vry_AXI_DMA/vry_AXI_DMA\tb_design_1_behav.wcfg}
+open_wave_config {E:/UV/FPGA/VERIFY/vry_AXI_DMA/vry_AXI_DMA/tb_design_1_behav.wcfg}
+close_sim
+open_wave_config {E:/UV/FPGA/VERIFY/vry_AXI_DMA/vry_AXI_DMA/tb_design_1_behav.wcfg}
+launch_simulation
+open_wave_config {E:/UV/FPGA/VERIFY/vry_AXI_DMA/vry_AXI_DMA\tb_design_1_behav.wcfg}
+source tb_design_1.tcl
+run 5 us
+run 5 us
+close_sim
+close_sim
+ipx::edit_ip_in_project -upgrade true -name axi_full_slave2_v1_0_v1_0_project -directory E:/UV/FPGA/VERIFY/vry_AXI_DMA/vry_AXI_DMA/ip_repo/axi_full_slave2_1.0/axi_full_slave2_v1_0_v1_0_project e:/UV/FPGA/VERIFY/vry_AXI_DMA/vry_AXI_DMA/ip_repo/axi_full_slave2_1.0/component.xml
 update_compile_order -fileset sim_1
 current_project vry_AXI_DMA
 launch_simulation
 open_wave_config {E:/UV/FPGA/VERIFY/vry_AXI_DMA/vry_AXI_DMA\tb_design_1_behav.wcfg}
 source tb_design_1.tcl
-run 10 us
+open_wave_database {C:/Users/admin/Desktop/tb_design_1_behav.wdb}
+open_wave_config {E:/UV/FPGA/VERIFY/vry_AXI_DMA/vry_AXI_DMA\tb_design_1_behav.wcfg}
 close_sim
-close_project
-close_project
+open_wave_database {C:/Users/admin/Desktop/tb_design_1_behav.wdb}
+open_wave_config {E:/UV/FPGA/VERIFY/vry_AXI_DMA/vry_AXI_DMA\tb_design_1_behav.wcfg}
+close_sim
+close_sim
+current_project axi_full_slave2_v1_0_v1_0_project
+ipx::update_ip_instances -delete_project true
+generate_target all [get_files  E:/UV/FPGA/VERIFY/vry_AXI_DMA/vry_AXI_DMA/vry_AXI_DMA.srcs/sources_1/bd/design_1/design_1.bd]
+launch_simulation
+open_wave_config {E:/UV/FPGA/VERIFY/vry_AXI_DMA/vry_AXI_DMA\tb_design_1_behav.wcfg}
+source tb_design_1.tcl
+run 5 us
+run 5 us
+close_sim
+open_wave_database {C:/Users/admin/Desktop/temp/tb_design_1_behav_1.wdb}
+open_wave_config {C:/Users/admin/Desktop/temp/tb_design_1_behav.wcfg}
+ipx::edit_ip_in_project -upgrade true -name axi_full_slave2_v1_0_v1_0_project -directory E:/UV/FPGA/VERIFY/vry_AXI_DMA/vry_AXI_DMA/ip_repo/axi_full_slave2_1.0/axi_full_slave2_v1_0_v1_0_project e:/UV/FPGA/VERIFY/vry_AXI_DMA/vry_AXI_DMA/ip_repo/axi_full_slave2_1.0/component.xml
+update_compile_order -fileset sim_1
+open_wave_database {C:/Users/admin/Desktop/temp/tb_design_1_behav_2.wdb}
+open_wave_config {C:/Users/admin/Desktop/temp/tb_design_1_behav.wcfg}
+current_project vry_AXI_DMA
+current_project axi_full_slave2_v1_0_v1_0_project
+ipx::update_ip_instances -delete_project true
+generate_target all [get_files  E:/UV/FPGA/VERIFY/vry_AXI_DMA/vry_AXI_DMA/vry_AXI_DMA.srcs/sources_1/bd/design_1/design_1.bd]
+launch_simulation
+open_wave_config {E:/UV/FPGA/VERIFY/vry_AXI_DMA/vry_AXI_DMA\tb_design_1_behav.wcfg}
+source tb_design_1.tcl
+run 5 us
+close_sim
+close_sim
+launch_simulation
+open_wave_config {E:/UV/FPGA/VERIFY/vry_AXI_DMA/vry_AXI_DMA\tb_design_1_behav.wcfg}
+source tb_design_1.tcl
+run 5 us
+add_wave {{/tb_design_1/design_1_wrapper_inst/design_1_i/axi_full_slave2_0/inst/axi_full_slave2_v1_0_S00_AXI_inst/axi_arlen_cntr}} 
+restart
+run 5 us
+add_wave {{/tb_design_1/design_1_wrapper_inst/design_1_i/axi_full_slave2_0/inst/axi_full_slave2_v1_0_S00_AXI_inst/axi_rlast}} 
+restart
+run 5 us
+ipx::edit_ip_in_project -upgrade true -name axi_full_slave2_v1_0_v1_0_project -directory E:/UV/FPGA/VERIFY/vry_AXI_DMA/vry_AXI_DMA/ip_repo/axi_full_slave2_1.0/axi_full_slave2_v1_0_v1_0_project e:/UV/FPGA/VERIFY/vry_AXI_DMA/vry_AXI_DMA/ip_repo/axi_full_slave2_1.0/component.xml
+update_compile_order -fileset sim_1
+close_sim
+ipx::update_ip_instances -delete_project true
+generate_target all [get_files  E:/UV/FPGA/VERIFY/vry_AXI_DMA/vry_AXI_DMA/vry_AXI_DMA.srcs/sources_1/bd/design_1/design_1.bd]
+save_wave_config {E:/UV/FPGA/VERIFY/vry_AXI_DMA/vry_AXI_DMA\tb_design_1_behav.wcfg}
+launch_simulation
+open_wave_config {E:/UV/FPGA/VERIFY/vry_AXI_DMA/vry_AXI_DMA\tb_design_1_behav.wcfg}
+source tb_design_1.tcl
+run 5 us
+ipx::edit_ip_in_project -upgrade true -name axi_full_slave2_v1_0_v1_0_project -directory E:/UV/FPGA/VERIFY/vry_AXI_DMA/vry_AXI_DMA/ip_repo/axi_full_slave2_1.0/axi_full_slave2_v1_0_v1_0_project e:/UV/FPGA/VERIFY/vry_AXI_DMA/vry_AXI_DMA/ip_repo/axi_full_slave2_1.0/component.xml
+update_compile_order -fileset sim_1
+ipx::update_ip_instances -delete_project true
+generate_target all [get_files  E:/UV/FPGA/VERIFY/vry_AXI_DMA/vry_AXI_DMA/vry_AXI_DMA.srcs/sources_1/bd/design_1/design_1.bd]
+save_wave_config {E:/UV/FPGA/VERIFY/vry_AXI_DMA/vry_AXI_DMA\tb_design_1_behav.wcfg}
+launch_simulation
+open_wave_config {E:/UV/FPGA/VERIFY/vry_AXI_DMA/vry_AXI_DMA\tb_design_1_behav.wcfg}
+source tb_design_1.tcl
+run 5 us
+ipx::edit_ip_in_project -upgrade true -name axi_full_slave2_v1_0_v1_0_project -directory E:/UV/FPGA/VERIFY/vry_AXI_DMA/vry_AXI_DMA/ip_repo/axi_full_slave2_1.0/axi_full_slave2_v1_0_v1_0_project e:/UV/FPGA/VERIFY/vry_AXI_DMA/vry_AXI_DMA/ip_repo/axi_full_slave2_1.0/component.xml
+update_compile_order -fileset sim_1
+ipx::update_ip_instances -delete_project true
+generate_target all [get_files  E:/UV/FPGA/VERIFY/vry_AXI_DMA/vry_AXI_DMA/vry_AXI_DMA.srcs/sources_1/bd/design_1/design_1.bd]
+save_wave_config {E:/UV/FPGA/VERIFY/vry_AXI_DMA/vry_AXI_DMA\tb_design_1_behav.wcfg}
+launch_simulation
+open_wave_config {E:/UV/FPGA/VERIFY/vry_AXI_DMA/vry_AXI_DMA\tb_design_1_behav.wcfg}
+source tb_design_1.tcl
+run 5 us
+run 5 us
+ipx::edit_ip_in_project -upgrade true -name axi_full_slave2_v1_0_v1_0_project -directory E:/UV/FPGA/VERIFY/vry_AXI_DMA/vry_AXI_DMA/ip_repo/axi_full_slave2_1.0/axi_full_slave2_v1_0_v1_0_project e:/UV/FPGA/VERIFY/vry_AXI_DMA/vry_AXI_DMA/ip_repo/axi_full_slave2_1.0/component.xml
+update_compile_order -fileset sim_1
+ipx::update_ip_instances -delete_project true
+generate_target all [get_files  E:/UV/FPGA/VERIFY/vry_AXI_DMA/vry_AXI_DMA/vry_AXI_DMA.srcs/sources_1/bd/design_1/design_1.bd]
+add_wave {{/tb_design_1/design_1_wrapper_inst/design_1_i/axi_full_master_0/inst/axi_full_master_v1_0_M00_AXI_inst/error_reg}} 
+restart
+run 5 us
+add_wave {{/tb_design_1/design_1_wrapper_inst/design_1_i/axi_full_master_0/inst/axi_full_master_v1_0_M00_AXI_inst/read_mismatch}} 
+add_wave {{/tb_design_1/design_1_wrapper_inst/design_1_i/axi_full_master_0/inst/axi_full_master_v1_0_M00_AXI_inst/write_resp_error}} 
+add_wave {{/tb_design_1/design_1_wrapper_inst/design_1_i/axi_full_master_0/inst/axi_full_master_v1_0_M00_AXI_inst/read_resp_error}} 
+restart
+run 5 us
+add_wave {{/tb_design_1/design_1_wrapper_inst/design_1_i/axi_full_master_0/inst/axi_full_master_v1_0_M00_AXI_inst/M_AXI_RDATA}} 
+add_wave {{/tb_design_1/design_1_wrapper_inst/design_1_i/axi_full_master_0/inst/axi_full_master_v1_0_M00_AXI_inst/expected_rdata}} 
+restart
+run 5 us
+add_wave {{/tb_design_1/design_1_wrapper_inst/design_1_i/axi_full_master_0/inst/axi_full_master_v1_0_M00_AXI_inst/rnext}} 
+restart
+run 5 us
+add_wave {{/tb_design_1/design_1_wrapper_inst/design_1_i/axi_full_master_0/inst/axi_full_master_v1_0_M00_AXI_inst/M_AXI_RVALID}} 
+add_wave {{/tb_design_1/design_1_wrapper_inst/design_1_i/axi_full_master_0/inst/axi_full_master_v1_0_M00_AXI_inst/axi_rready}} 
+restart
+run 5 us
+add_wave {{/tb_design_1/design_1_wrapper_inst/design_1_i/axi_full_slave2_0/inst/axi_full_slave2_v1_0_S00_AXI_inst/axi_araddr}} 
+add_wave {{/tb_design_1/design_1_wrapper_inst/design_1_i/axi_full_slave2_0/inst/axi_full_slave2_v1_0_S00_AXI_inst/S_AXI_ARBURST}} 
+add_wave {{/tb_design_1/design_1_wrapper_inst/design_1_i/axi_full_slave2_0/inst/axi_full_slave2_v1_0_S00_AXI_inst/mem_address}} 
+add_wave {{/tb_design_1/design_1_wrapper_inst/design_1_i/axi_full_slave2_0/inst/axi_full_slave2_v1_0_S00_AXI_inst/\BRAM_GEN[0].mem_rden }} 
+add_wave {{/tb_design_1/design_1_wrapper_inst/design_1_i/axi_full_slave2_0/inst/axi_full_slave2_v1_0_S00_AXI_inst/axi_rdata}} 
+restart
+run 5 us
+add_wave {{/tb_design_1/design_1_wrapper_inst/design_1_i/axi_full_slave2_0/inst/axi_full_slave2_v1_0_S00_AXI_inst/mem_data_out}} 
+add_wave {{/tb_design_1/design_1_wrapper_inst/design_1_i/axi_full_slave2_0/inst/axi_full_slave2_v1_0_S00_AXI_inst/axi_arv_arr_flag}} 
+add_wave {{/tb_design_1/design_1_wrapper_inst/design_1_i/axi_full_slave2_0/inst/axi_full_slave2_v1_0_S00_AXI_inst/axi_rvalid}} 
+ipx::edit_ip_in_project -upgrade true -name axi_full_slave2_v1_0_v1_0_project -directory E:/UV/FPGA/VERIFY/vry_AXI_DMA/vry_AXI_DMA/ip_repo/axi_full_slave2_1.0/axi_full_slave2_v1_0_v1_0_project e:/UV/FPGA/VERIFY/vry_AXI_DMA/vry_AXI_DMA/ip_repo/axi_full_slave2_1.0/component.xml
+update_compile_order -fileset sim_1
+ipx::update_ip_instances -delete_project true
+generate_target all [get_files  E:/UV/FPGA/VERIFY/vry_AXI_DMA/vry_AXI_DMA/vry_AXI_DMA.srcs/sources_1/bd/design_1/design_1.bd]
+save_wave_config {E:/UV/FPGA/VERIFY/vry_AXI_DMA/vry_AXI_DMA\tb_design_1_behav.wcfg}
+launch_simulation
+open_wave_config {E:/UV/FPGA/VERIFY/vry_AXI_DMA/vry_AXI_DMA\tb_design_1_behav.wcfg}
+source tb_design_1.tcl
+run 5 us
+ipx::edit_ip_in_project -upgrade true -name axi_full_slave2_v1_0_v1_0_project -directory E:/UV/FPGA/VERIFY/vry_AXI_DMA/vry_AXI_DMA/ip_repo/axi_full_slave2_1.0/axi_full_slave2_v1_0_v1_0_project e:/UV/FPGA/VERIFY/vry_AXI_DMA/vry_AXI_DMA/ip_repo/axi_full_slave2_1.0/component.xml
+update_compile_order -fileset sim_1
+ipx::update_ip_instances -delete_project true
+generate_target all [get_files  E:/UV/FPGA/VERIFY/vry_AXI_DMA/vry_AXI_DMA/vry_AXI_DMA.srcs/sources_1/bd/design_1/design_1.bd]
+launch_simulation
+open_wave_config {E:/UV/FPGA/VERIFY/vry_AXI_DMA/vry_AXI_DMA\tb_design_1_behav.wcfg}
+source tb_design_1.tcl
+run 5 us
+add_wave {{/tb_design_1/design_1_wrapper_inst/design_1_i/axi_full_slave2_0/inst/axi_full_slave2_v1_0_S00_AXI_inst/S_AXI_RREADY}} 
+ipx::edit_ip_in_project -upgrade true -name axi_full_slave2_v1_0_v1_0_project -directory E:/UV/FPGA/VERIFY/vry_AXI_DMA/vry_AXI_DMA/ip_repo/axi_full_slave2_1.0/axi_full_slave2_v1_0_v1_0_project e:/UV/FPGA/VERIFY/vry_AXI_DMA/vry_AXI_DMA/ip_repo/axi_full_slave2_1.0/component.xml
+update_compile_order -fileset sim_1
+current_project vry_AXI_DMA
+current_project axi_full_slave2_v1_0_v1_0_project
+ipx::update_ip_instances -delete_project true
+generate_target all [get_files  E:/UV/FPGA/VERIFY/vry_AXI_DMA/vry_AXI_DMA/vry_AXI_DMA.srcs/sources_1/bd/design_1/design_1.bd]
+save_wave_config {E:/UV/FPGA/VERIFY/vry_AXI_DMA/vry_AXI_DMA\tb_design_1_behav.wcfg}
+launch_simulation
+open_wave_config {E:/UV/FPGA/VERIFY/vry_AXI_DMA/vry_AXI_DMA\tb_design_1_behav.wcfg}
+source tb_design_1.tcl
+run 5 us
+add_wave {{/tb_design_1/design_1_wrapper_inst/design_1_i/axi_full_slave2_0/inst/axi_full_slave2_v1_0_S00_AXI_inst/S_AXI_ARBURST}} 
+ipx::edit_ip_in_project -upgrade true -name axi_full_slave2_v1_0_v1_0_project -directory E:/UV/FPGA/VERIFY/vry_AXI_DMA/vry_AXI_DMA/ip_repo/axi_full_slave2_1.0/axi_full_slave2_v1_0_v1_0_project e:/UV/FPGA/VERIFY/vry_AXI_DMA/vry_AXI_DMA/ip_repo/axi_full_slave2_1.0/component.xml
+update_compile_order -fileset sim_1
+current_project vry_AXI_DMA
+current_project axi_full_slave2_v1_0_v1_0_project
+ipx::update_ip_instances -delete_project true
+generate_target all [get_files  E:/UV/FPGA/VERIFY/vry_AXI_DMA/vry_AXI_DMA/vry_AXI_DMA.srcs/sources_1/bd/design_1/design_1.bd]
+save_wave_config {E:/UV/FPGA/VERIFY/vry_AXI_DMA/vry_AXI_DMA\tb_design_1_behav.wcfg}
+launch_simulation
+open_wave_config {E:/UV/FPGA/VERIFY/vry_AXI_DMA/vry_AXI_DMA\tb_design_1_behav.wcfg}
+source tb_design_1.tcl
+run 5 us
+run 5 us
+ipx::edit_ip_in_project -upgrade true -name axi_full_slave2_v1_0_v1_0_project -directory E:/UV/FPGA/VERIFY/vry_AXI_DMA/vry_AXI_DMA/ip_repo/axi_full_slave2_1.0/axi_full_slave2_v1_0_v1_0_project e:/UV/FPGA/VERIFY/vry_AXI_DMA/vry_AXI_DMA/ip_repo/axi_full_slave2_1.0/component.xml
+update_compile_order -fileset sim_1
+ipx::update_ip_instances -delete_project true
+generate_target all [get_files  E:/UV/FPGA/VERIFY/vry_AXI_DMA/vry_AXI_DMA/vry_AXI_DMA.srcs/sources_1/bd/design_1/design_1.bd]
+launch_simulation
+open_wave_config {E:/UV/FPGA/VERIFY/vry_AXI_DMA/vry_AXI_DMA\tb_design_1_behav.wcfg}
+source tb_design_1.tcl
+run 5 us
+run 5 us
+close_sim
+launch_simulation
+open_wave_config {E:/UV/FPGA/VERIFY/vry_AXI_DMA/vry_AXI_DMA\tb_design_1_behav.wcfg}
+source tb_design_1.tcl
+run 5 us
+close_sim

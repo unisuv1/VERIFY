@@ -48,7 +48,7 @@
 
 
 // IP VLNV: xilinx.com:user:axi_full_slave2:1.0
-// IP Revision: 1
+// IP Revision: 14
 
 `timescale 1ns/1ps
 

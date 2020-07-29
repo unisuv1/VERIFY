@@ -1,19 +1,19 @@
 ﻿<?xml version="1.0" encoding="UTF-8" standalone="no" ?>
-<EDKSYSTEM EDWVERSION="1.2" TIMESTAMP="Tue Jul 28 16:08:04 2020" VIVADOVERSION="2014.4">
+<EDKSYSTEM EDWVERSION="1.2" TIMESTAMP="Wed Jul 29 18:16:33 2020" VIVADOVERSION="2014.4">
 
   <SYSTEMINFO ARCH="zynq" DEVICE="7z020" NAME="design_1_imp" PACKAGE="clg400" SPEEDGRADE="-2"/>
 
   <EXTERNALPORTS>
     <PORT DIR="I" NAME="m00_axi_aresetn" SIGIS="rst" SIGNAME="External_Ports_m00_axi_aresetn">
       <CONNECTIONS>
-        <CONNECTION INSTANCE="axi_full_slave2_0" PORT="s00_axi_aresetn"/>
         <CONNECTION INSTANCE="axi_full_master_0" PORT="m00_axi_aresetn"/>
+        <CONNECTION INSTANCE="axi_full_slave2_0" PORT="s00_axi_aresetn"/>
       </CONNECTIONS>
     </PORT>
     <PORT CLKFREQUENCY="100000000" DIR="I" NAME="m00_axi_aclk" SIGIS="clk" SIGNAME="External_Ports_m00_axi_aclk">
       <CONNECTIONS>
-        <CONNECTION INSTANCE="axi_full_slave2_0" PORT="s00_axi_aclk"/>
         <CONNECTION INSTANCE="axi_full_master_0" PORT="m00_axi_aclk"/>
+        <CONNECTION INSTANCE="axi_full_slave2_0" PORT="s00_axi_aclk"/>
       </CONNECTIONS>
     </PORT>
     <PORT DIR="I" NAME="m00_axi_init_axi_txn" SIGIS="undef" SIGNAME="External_Ports_m00_axi_init_axi_txn">

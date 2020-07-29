@@ -465,7 +465,7 @@
         <spirit:parameters>
           <spirit:parameter>
             <spirit:name>customizationCRC</spirit:name>
-            <spirit:value>6b0e5667</spirit:value>
+            <spirit:value>f4befe2a</spirit:value>
           </spirit:parameter>
           <spirit:parameter>
             <spirit:name>customizationCRCversion</spirit:name>
@@ -473,7 +473,7 @@
           </spirit:parameter>
           <spirit:parameter>
             <spirit:name>GENtimestamp</spirit:name>
-            <spirit:value>Tue Jul 28 07:35:16 UTC 2020</spirit:value>
+            <spirit:value>Wed Jul 29 10:16:33 UTC 2020</spirit:value>
           </spirit:parameter>
           <spirit:parameter>
             <spirit:name>StaleAtRelink</spirit:name>
@@ -492,7 +492,7 @@
         <spirit:parameters>
           <spirit:parameter>
             <spirit:name>customizationCRC</spirit:name>
-            <spirit:value>6b0e5667</spirit:value>
+            <spirit:value>f4befe2a</spirit:value>
           </spirit:parameter>
           <spirit:parameter>
             <spirit:name>customizationCRCversion</spirit:name>
@@ -500,7 +500,7 @@
           </spirit:parameter>
           <spirit:parameter>
             <spirit:name>GENtimestamp</spirit:name>
-            <spirit:value>Tue Jul 28 07:35:16 UTC 2020</spirit:value>
+            <spirit:value>Wed Jul 29 10:16:33 UTC 2020</spirit:value>
           </spirit:parameter>
           <spirit:parameter>
             <spirit:name>StaleAtRelink</spirit:name>
@@ -519,7 +519,7 @@
         <spirit:parameters>
           <spirit:parameter>
             <spirit:name>customizationCRC</spirit:name>
-            <spirit:value>6b0e5667</spirit:value>
+            <spirit:value>f4befe2a</spirit:value>
           </spirit:parameter>
           <spirit:parameter>
             <spirit:name>customizationCRCversion</spirit:name>
@@ -527,7 +527,7 @@
           </spirit:parameter>
           <spirit:parameter>
             <spirit:name>GENtimestamp</spirit:name>
-            <spirit:value>Tue Jul 28 07:35:16 UTC 2020</spirit:value>
+            <spirit:value>Wed Jul 29 10:16:33 UTC 2020</spirit:value>
           </spirit:parameter>
           <spirit:parameter>
             <spirit:name>StaleAtRelink</spirit:name>
@@ -546,7 +546,7 @@
         <spirit:parameters>
           <spirit:parameter>
             <spirit:name>customizationCRC</spirit:name>
-            <spirit:value>39c52475</spirit:value>
+            <spirit:value>4077891a</spirit:value>
           </spirit:parameter>
           <spirit:parameter>
             <spirit:name>customizationCRCversion</spirit:name>
@@ -554,7 +554,7 @@
           </spirit:parameter>
           <spirit:parameter>
             <spirit:name>GENtimestamp</spirit:name>
-            <spirit:value>Tue Jul 28 07:35:16 UTC 2020</spirit:value>
+            <spirit:value>Wed Jul 29 10:16:33 UTC 2020</spirit:value>
           </spirit:parameter>
           <spirit:parameter>
             <spirit:name>StaleAtRelink</spirit:name>
@@ -573,7 +573,7 @@
         <spirit:parameters>
           <spirit:parameter>
             <spirit:name>customizationCRC</spirit:name>
-            <spirit:value>39c52475</spirit:value>
+            <spirit:value>4077891a</spirit:value>
           </spirit:parameter>
           <spirit:parameter>
             <spirit:name>customizationCRCversion</spirit:name>
@@ -581,7 +581,7 @@
           </spirit:parameter>
           <spirit:parameter>
             <spirit:name>GENtimestamp</spirit:name>
-            <spirit:value>Tue Jul 28 07:35:16 UTC 2020</spirit:value>
+            <spirit:value>Wed Jul 29 10:16:33 UTC 2020</spirit:value>
           </spirit:parameter>
           <spirit:parameter>
             <spirit:name>StaleAtRelink</spirit:name>
@@ -599,7 +599,7 @@
         <spirit:parameters>
           <spirit:parameter>
             <spirit:name>customizationCRC</spirit:name>
-            <spirit:value>6b0e5667</spirit:value>
+            <spirit:value>f4befe2a</spirit:value>
           </spirit:parameter>
           <spirit:parameter>
             <spirit:name>customizationCRCversion</spirit:name>
@@ -607,7 +607,7 @@
           </spirit:parameter>
           <spirit:parameter>
             <spirit:name>GENtimestamp</spirit:name>
-            <spirit:value>Tue Jul 28 07:35:16 UTC 2020</spirit:value>
+            <spirit:value>Wed Jul 29 10:16:33 UTC 2020</spirit:value>
           </spirit:parameter>
           <spirit:parameter>
             <spirit:name>StaleAtRelink</spirit:name>
@@ -1783,11 +1783,11 @@
     <spirit:fileSet>
       <spirit:name>xilinx_verilogsynthesis_view_fileset</spirit:name>
       <spirit:file>
-        <spirit:name>../../../../ipshared/xilinx.com/axi_full_slave2_v1_0/a8660ffe/hdl/axi_full_slave2_v1_0_S00_AXI.v</spirit:name>
+        <spirit:name>../../../../ipshared/xilinx.com/axi_full_slave2_v1_0/ace89faa/hdl/axi_full_slave2_v1_0_S00_AXI.v</spirit:name>
         <spirit:fileType>verilogSource</spirit:fileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>../../../../ipshared/xilinx.com/axi_full_slave2_v1_0/a8660ffe/hdl/axi_full_slave2_v1_0.v</spirit:name>
+        <spirit:name>../../../../ipshared/xilinx.com/axi_full_slave2_v1_0/ace89faa/hdl/axi_full_slave2_v1_0.v</spirit:name>
         <spirit:fileType>verilogSource</spirit:fileType>
       </spirit:file>
     </spirit:fileSet>
@@ -1802,11 +1802,11 @@
     <spirit:fileSet>
       <spirit:name>xilinx_verilogbehavioralsimulation_view_fileset</spirit:name>
       <spirit:file>
-        <spirit:name>../../../../ipshared/xilinx.com/axi_full_slave2_v1_0/a8660ffe/hdl/axi_full_slave2_v1_0_S00_AXI.v</spirit:name>
+        <spirit:name>../../../../ipshared/xilinx.com/axi_full_slave2_v1_0/ace89faa/hdl/axi_full_slave2_v1_0_S00_AXI.v</spirit:name>
         <spirit:fileType>verilogSource</spirit:fileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>../../../../ipshared/xilinx.com/axi_full_slave2_v1_0/a8660ffe/hdl/axi_full_slave2_v1_0.v</spirit:name>
+        <spirit:name>../../../../ipshared/xilinx.com/axi_full_slave2_v1_0/ace89faa/hdl/axi_full_slave2_v1_0.v</spirit:name>
         <spirit:fileType>verilogSource</spirit:fileType>
       </spirit:file>
     </spirit:fileSet>
@@ -1821,32 +1821,32 @@
     <spirit:fileSet>
       <spirit:name>xilinx_softwaredriver_view_fileset</spirit:name>
       <spirit:file>
-        <spirit:name>../../../../ipshared/xilinx.com/axi_full_slave2_v1_0/a8660ffe/drivers/axi_full_slave2_v1_0/data/axi_full_slave2.mdd</spirit:name>
+        <spirit:name>../../../../ipshared/xilinx.com/axi_full_slave2_v1_0/ace89faa/drivers/axi_full_slave2_v1_0/data/axi_full_slave2.mdd</spirit:name>
         <spirit:userFileType>mdd</spirit:userFileType>
         <spirit:userFileType>USED_IN_hw_handoff</spirit:userFileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>../../../../ipshared/xilinx.com/axi_full_slave2_v1_0/a8660ffe/drivers/axi_full_slave2_v1_0/data/axi_full_slave2.tcl</spirit:name>
+        <spirit:name>../../../../ipshared/xilinx.com/axi_full_slave2_v1_0/ace89faa/drivers/axi_full_slave2_v1_0/data/axi_full_slave2.tcl</spirit:name>
         <spirit:fileType>tclSource</spirit:fileType>
         <spirit:userFileType>USED_IN_hw_handoff</spirit:userFileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>../../../../ipshared/xilinx.com/axi_full_slave2_v1_0/a8660ffe/drivers/axi_full_slave2_v1_0/src/Makefile</spirit:name>
+        <spirit:name>../../../../ipshared/xilinx.com/axi_full_slave2_v1_0/ace89faa/drivers/axi_full_slave2_v1_0/src/Makefile</spirit:name>
         <spirit:userFileType>unknown</spirit:userFileType>
         <spirit:userFileType>USED_IN_hw_handoff</spirit:userFileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>../../../../ipshared/xilinx.com/axi_full_slave2_v1_0/a8660ffe/drivers/axi_full_slave2_v1_0/src/axi_full_slave2.h</spirit:name>
+        <spirit:name>../../../../ipshared/xilinx.com/axi_full_slave2_v1_0/ace89faa/drivers/axi_full_slave2_v1_0/src/axi_full_slave2.h</spirit:name>
         <spirit:fileType>cSource</spirit:fileType>
         <spirit:userFileType>USED_IN_hw_handoff</spirit:userFileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>../../../../ipshared/xilinx.com/axi_full_slave2_v1_0/a8660ffe/drivers/axi_full_slave2_v1_0/src/axi_full_slave2.c</spirit:name>
+        <spirit:name>../../../../ipshared/xilinx.com/axi_full_slave2_v1_0/ace89faa/drivers/axi_full_slave2_v1_0/src/axi_full_slave2.c</spirit:name>
         <spirit:fileType>cSource</spirit:fileType>
         <spirit:userFileType>USED_IN_hw_handoff</spirit:userFileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>../../../../ipshared/xilinx.com/axi_full_slave2_v1_0/a8660ffe/drivers/axi_full_slave2_v1_0/src/axi_full_slave2_selftest.c</spirit:name>
+        <spirit:name>../../../../ipshared/xilinx.com/axi_full_slave2_v1_0/ace89faa/drivers/axi_full_slave2_v1_0/src/axi_full_slave2_selftest.c</spirit:name>
         <spirit:fileType>cSource</spirit:fileType>
         <spirit:userFileType>USED_IN_hw_handoff</spirit:userFileType>
       </spirit:file>
@@ -1954,11 +1954,20 @@
         <xilinx:taxonomy>AXI_Peripheral</xilinx:taxonomy>
       </xilinx:taxonomies>
       <xilinx:displayName>axi_full_slave2_v1.0</xilinx:displayName>
-      <xilinx:coreRevision>1</xilinx:coreRevision>
-      <xilinx:coreCreationDateTime>2020-07-28T07:34:21Z</xilinx:coreCreationDateTime>
+      <xilinx:coreRevision>14</xilinx:coreRevision>
+      <xilinx:coreCreationDateTime>2020-07-29T10:16:19Z</xilinx:coreCreationDateTime>
+      <xilinx:tags>
+        <xilinx:tag xilinx:name="xilinx.com:user:axi_full_slave2:1.0_ARCHIVE_LOCATION">E:/UV/FPGA/VERIFY/vry_AXI_DMA/vry_AXI_DMA/ip_repo/axi_full_slave2_1.0</xilinx:tag>
+      </xilinx:tags>
     </xilinx:coreExtensions>
     <xilinx:packagingInfo>
       <xilinx:xilinxVersion>2014.4</xilinx:xilinxVersion>
+      <xilinx:checksum xilinx:scope="busInterfaces" xilinx:value="616b8c4a"/>
+      <xilinx:checksum xilinx:scope="memoryMaps" xilinx:value="cc91181b"/>
+      <xilinx:checksum xilinx:scope="fileGroups" xilinx:value="5ed150ce"/>
+      <xilinx:checksum xilinx:scope="ports" xilinx:value="d3ec9b05"/>
+      <xilinx:checksum xilinx:scope="hdlParameters" xilinx:value="e0d0e04e"/>
+      <xilinx:checksum xilinx:scope="parameters" xilinx:value="76539fbf"/>
     </xilinx:packagingInfo>
   </spirit:vendorExtensions>
 </spirit:component>

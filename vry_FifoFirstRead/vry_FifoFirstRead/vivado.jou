@@ -2,40 +2,24 @@
 # Vivado v2014.4 (64-bit)
 # SW Build 1071353 on Tue Nov 18 18:29:27 MST 2014
 # IP Build 1070531 on Tue Nov 18 01:10:18 MST 2014
-# Start of session at: Mon Jul 27 11:15:58 2020
-# Process ID: 2436
+# Start of session at: Wed Jul 29 19:02:47 2020
+# Process ID: 6992
 # Log file: E:/UV/FPGA/VERIFY/vry_FifoFirstRead/vry_FifoFirstRead/vivado.log
 # Journal file: E:/UV/FPGA/VERIFY/vry_FifoFirstRead/vry_FifoFirstRead\vivado.jou
 #-----------------------------------------------------------
 start_gui
 open_project E:/UV/FPGA/VERIFY/vry_FifoFirstRead/vry_FifoFirstRead/vry_FifoFirstRead.xpr
-ipx::package_project -root_dir E:/UV/FPGA/VERIFY/vry_FifoFirstRead/vry_FifoFirstRead/PackageIp_vry_FifoFirstRead1 -import_files -set_current false
-ipx::unload_core e:/UV/FPGA/VERIFY/vry_FifoFirstRead/vry_FifoFirstRead/PackageIp_vry_FifoFirstRead1/component.xml
-ipx::edit_ip_in_project -upgrade true -name tmp_edit_project -directory E:/UV/FPGA/VERIFY/vry_FifoFirstRead/vry_FifoFirstRead/PackageIp_vry_FifoFirstRead1 e:/UV/FPGA/VERIFY/vry_FifoFirstRead/vry_FifoFirstRead/PackageIp_vry_FifoFirstRead1/component.xml
-update_compile_order -fileset sources_1
-update_compile_order -fileset sim_1
-close_project
-set_property SOURCE_SET sources_1 [get_filesets sim_1]
-add_files -fileset sim_1 -norecurse E:/UV/FPGA/VERIFY/vry_FifoFirstRead/vry_FifoFirstRead1/vry_FifoFirstRead1.srcs/sim_1/new/tb_vry_FifoFirstRead.v
-update_compile_order -fileset sim_1
-update_compile_order -fileset sim_1
-update_compile_order -fileset sim_1
-remove_files -fileset sim_1 E:/UV/FPGA/VERIFY/vry_FifoFirstRead/vry_FifoFirstRead1/vry_FifoFirstRead1.srcs/sim_1/new/tb_vry_FifoFirstRead.v
-update_compile_order -fileset sim_1
-set_property SOURCE_SET sources_1 [get_filesets sim_1]
-import_files -fileset sim_1 -norecurse E:/UV/FPGA/VERIFY/vry_FifoFirstRead/vry_FifoFirstRead1/vry_FifoFirstRead1.srcs/sim_1/new/tb_vry_FifoFirstRead.v
-update_compile_order -fileset sim_1
-update_compile_order -fileset sim_1
-update_compile_order -fileset sim_1
-ipx::package_project -root_dir E:/UV/FPGA/VERIFY/vry_FifoFirstRead/vry_FifoFirstRead/PackageIp_vry_FifoFirstRead2 -import_files -set_current false
-ipx::unload_core e:/UV/FPGA/VERIFY/vry_FifoFirstRead/vry_FifoFirstRead/PackageIp_vry_FifoFirstRead2/component.xml
-ipx::edit_ip_in_project -upgrade true -name tmp_edit_project -directory E:/UV/FPGA/VERIFY/vry_FifoFirstRead/vry_FifoFirstRead/PackageIp_vry_FifoFirstRead2 e:/UV/FPGA/VERIFY/vry_FifoFirstRead/vry_FifoFirstRead/PackageIp_vry_FifoFirstRead2/component.xml
-update_compile_order -fileset sources_1
-close_project
-launch_runs synth_1
-wait_on_run synth_1
-ipx::package_project -root_dir E:/UV/FPGA/VERIFY/vry_FifoFirstRead/vry_FifoFirstRead/PackageIp_vry_FifoFirstRead3 -import_files -set_current false
-ipx::unload_core e:/UV/FPGA/VERIFY/vry_FifoFirstRead/vry_FifoFirstRead/PackageIp_vry_FifoFirstRead3/component.xml
-ipx::edit_ip_in_project -upgrade true -name tmp_edit_project -directory E:/UV/FPGA/VERIFY/vry_FifoFirstRead/vry_FifoFirstRead/PackageIp_vry_FifoFirstRead3 e:/UV/FPGA/VERIFY/vry_FifoFirstRead/vry_FifoFirstRead/PackageIp_vry_FifoFirstRead3/component.xml
-update_compile_order -fileset sources_1
-ipx::update_ip_instances -delete_project true
+launch_simulation
+source tb_vry_FifoFirstRead.tcl
+run 5 us
+close_sim
+load_feature simulator
+open_wave_database {E:/UV/FPGA/VERIFY/vry_FifoFirstRead/vry_FifoFirstRead/vry_FifoFirstRead.sim/sim_1/behav/tb_vry_FifoFirstRead_behav.wdb}
+launch_simulation
+source tb_vry_FifoFirstRead.tcl
+save_wave_config {E:/UV/FPGA/VERIFY/vry_FifoFirstRead/vry_FifoFirstRead/tb_vry_FifoFirstRead_behav.wcfg}
+close_sim
+close_sim
+open_wave_database {E:/UV/FPGA/VERIFY/vry_FifoFirstRead/vry_FifoFirstRead/vry_FifoFirstRead.sim/sim_1/behav/tb_vry_FifoFirstRead_behav.wdb}
+open_wave_config {E:/UV/FPGA/VERIFY/vry_FifoFirstRead/vry_FifoFirstRead\tb_vry_FifoFirstRead_behav.wcfg}
+close_sim

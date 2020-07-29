@@ -10,7 +10,7 @@
          </top_modules>
       </db_ref>
    </db_ref_list>
-   <WVObjectSize size="100" />
+   <WVObjectSize size="136" />
    <wvobject db_ref_id="1" fp_name="/tb_design_1/rstn" type="logic">
       <obj_property name="ElementShortName">rstn</obj_property>
       <obj_property name="ObjectShortName">rstn</obj_property>
@@ -47,10 +47,6 @@
    <wvobject db_ref_id="1" fp_name="/tb_design_1/design_1_wrapper_inst/design_1_i/axi_full_master_0/inst/axi_full_master_v1_0_M00_AXI_inst/ERROR" type="logic">
       <obj_property name="ElementShortName">ERROR</obj_property>
       <obj_property name="ObjectShortName">ERROR</obj_property>
-   </wvobject>
-   <wvobject db_ref_id="1" fp_name="/tb_design_1/design_1_wrapper_inst/design_1_i/axi_full_master_0/inst/axi_full_master_v1_0_M00_AXI_inst/M_AXI_ACLK" type="logic">
-      <obj_property name="ElementShortName">M_AXI_ACLK</obj_property>
-      <obj_property name="ObjectShortName">M_AXI_ACLK</obj_property>
    </wvobject>
    <wvobject db_ref_id="1" fp_name="/tb_design_1/design_1_wrapper_inst/design_1_i/axi_full_master_0/inst/axi_full_master_v1_0_M00_AXI_inst/M_AXI_ARESETN" type="logic">
       <obj_property name="ElementShortName">M_AXI_ARESETN</obj_property>
@@ -104,6 +100,18 @@
       <obj_property name="ElementShortName">M_AXI_AWUSER[0:0]</obj_property>
       <obj_property name="ObjectShortName">M_AXI_AWUSER[0:0]</obj_property>
       <obj_property name="Radix">HEXRADIX</obj_property>
+   </wvobject>
+   <wvobject db_ref_id="1" fp_name="/tb_design_1/design_1_wrapper_inst/design_1_i/axi_full_master_0/inst/axi_full_master_v1_0_M00_AXI_inst/M_AXI_ACLK" type="logic">
+      <obj_property name="ElementShortName">M_AXI_ACLK</obj_property>
+      <obj_property name="ObjectShortName">M_AXI_ACLK</obj_property>
+   </wvobject>
+   <wvobject db_ref_id="1" fp_name="/tb_design_1/design_1_wrapper_inst/design_1_i/axi_full_master_0/inst/axi_full_master_v1_0_M00_AXI_inst/burst_write_active" type="logic">
+      <obj_property name="ElementShortName">burst_write_active</obj_property>
+      <obj_property name="ObjectShortName">burst_write_active</obj_property>
+   </wvobject>
+   <wvobject db_ref_id="1" fp_name="/tb_design_1/design_1_wrapper_inst/design_1_i/axi_full_master_0/inst/axi_full_master_v1_0_M00_AXI_inst/start_single_burst_write" type="logic">
+      <obj_property name="ElementShortName">start_single_burst_write</obj_property>
+      <obj_property name="ObjectShortName">start_single_burst_write</obj_property>
    </wvobject>
    <wvobject db_ref_id="1" fp_name="/tb_design_1/design_1_wrapper_inst/design_1_i/axi_full_master_0/inst/axi_full_master_v1_0_M00_AXI_inst/M_AXI_AWVALID" type="logic">
       <obj_property name="ElementShortName">M_AXI_AWVALID</obj_property>
@@ -256,10 +264,6 @@
       <obj_property name="label">SLAVE</obj_property>
       <obj_property name="DisplayName">label</obj_property>
       <obj_property name="Radix">HEXRADIX</obj_property>
-   </wvobject>
-   <wvobject db_ref_id="1" fp_name="/tb_design_1/design_1_wrapper_inst/design_1_i/axi_full_slave2_0/inst/axi_full_slave2_v1_0_S00_AXI_inst/S_AXI_ACLK" type="logic">
-      <obj_property name="ElementShortName">S_AXI_ACLK</obj_property>
-      <obj_property name="ObjectShortName">S_AXI_ACLK</obj_property>
    </wvobject>
    <wvobject db_ref_id="1" fp_name="/tb_design_1/design_1_wrapper_inst/design_1_i/axi_full_slave2_0/inst/axi_full_slave2_v1_0_S00_AXI_inst/S_AXI_ARESETN" type="logic">
       <obj_property name="ElementShortName">S_AXI_ARESETN</obj_property>
@@ -444,31 +448,187 @@
       <obj_property name="ObjectShortName">S_AXI_RID[0:0]</obj_property>
       <obj_property name="Radix">HEXRADIX</obj_property>
    </wvobject>
+   <wvobject db_ref_id="1" fp_name="/tb_design_1/design_1_wrapper_inst/design_1_i/axi_full_slave2_0/inst/axi_full_slave2_v1_0_S00_AXI_inst/S_AXI_ACLK" type="logic">
+      <obj_property name="ElementShortName">S_AXI_ACLK</obj_property>
+      <obj_property name="ObjectShortName">S_AXI_ACLK</obj_property>
+   </wvobject>
    <wvobject db_ref_id="1" fp_name="/tb_design_1/design_1_wrapper_inst/design_1_i/axi_full_slave2_0/inst/axi_full_slave2_v1_0_S00_AXI_inst/S_AXI_RDATA" type="array">
       <obj_property name="ElementShortName">S_AXI_RDATA[31:0]</obj_property>
       <obj_property name="ObjectShortName">S_AXI_RDATA[31:0]</obj_property>
       <obj_property name="Radix">HEXRADIX</obj_property>
+   </wvobject>
+   <wvobject db_ref_id="1" fp_name="/tb_design_1/design_1_wrapper_inst/design_1_i/axi_full_slave2_0/inst/axi_full_slave2_v1_0_S00_AXI_inst/axi_rvalid" type="logic">
+      <obj_property name="ElementShortName">axi_rvalid</obj_property>
+      <obj_property name="ObjectShortName">axi_rvalid</obj_property>
+   </wvobject>
+   <wvobject db_ref_id="1" fp_name="/tb_design_1/design_1_wrapper_inst/design_1_i/axi_full_slave2_0/inst/axi_full_slave2_v1_0_S00_AXI_inst/axi_rlast" type="logic">
+      <obj_property name="ElementShortName">axi_rlast</obj_property>
+      <obj_property name="ObjectShortName">axi_rlast</obj_property>
+   </wvobject>
+   <wvobject db_ref_id="1" fp_name="/tb_design_1/design_1_wrapper_inst/design_1_i/axi_full_slave2_0/inst/axi_full_slave2_v1_0_S00_AXI_inst/axi_arv_arr_flag" type="logic">
+      <obj_property name="ElementShortName">axi_arv_arr_flag</obj_property>
+      <obj_property name="ObjectShortName">axi_arv_arr_flag</obj_property>
+   </wvobject>
+   <wvobject db_ref_id="1" fp_name="/tb_design_1/design_1_wrapper_inst/design_1_i/axi_full_slave2_0/inst/axi_full_slave2_v1_0_S00_AXI_inst/S_AXI_RREADY" type="logic">
+      <obj_property name="ElementShortName">S_AXI_RREADY</obj_property>
+      <obj_property name="ObjectShortName">S_AXI_RREADY</obj_property>
+   </wvobject>
+   <wvobject db_ref_id="1" fp_name="/tb_design_1/design_1_wrapper_inst/design_1_i/axi_full_slave2_0/inst/axi_full_slave2_v1_0_S00_AXI_inst/S_AXI_RVALID" type="logic">
+      <obj_property name="ElementShortName">S_AXI_RVALID</obj_property>
+      <obj_property name="ObjectShortName">S_AXI_RVALID</obj_property>
+   </wvobject>
+   <wvobject db_ref_id="1" fp_name="/tb_design_1/design_1_wrapper_inst/design_1_i/axi_full_slave2_0/inst/axi_full_slave2_v1_0_S00_AXI_inst/\BRAM_GEN[0].mem_rden " type="logic">
+      <obj_property name="ElementShortName">\BRAM_GEN[0].mem_rden </obj_property>
+      <obj_property name="ObjectShortName">\BRAM_GEN[0].mem_rden </obj_property>
    </wvobject>
    <wvobject db_ref_id="1" fp_name="/tb_design_1/design_1_wrapper_inst/design_1_i/axi_full_slave2_0/inst/axi_full_slave2_v1_0_S00_AXI_inst/S_AXI_RRESP" type="array">
       <obj_property name="ElementShortName">S_AXI_RRESP[1:0]</obj_property>
       <obj_property name="ObjectShortName">S_AXI_RRESP[1:0]</obj_property>
       <obj_property name="Radix">HEXRADIX</obj_property>
    </wvobject>
-   <wvobject db_ref_id="1" fp_name="/tb_design_1/design_1_wrapper_inst/design_1_i/axi_full_slave2_0/inst/axi_full_slave2_v1_0_S00_AXI_inst/S_AXI_RLAST" type="logic">
-      <obj_property name="ElementShortName">S_AXI_RLAST</obj_property>
-      <obj_property name="ObjectShortName">S_AXI_RLAST</obj_property>
-   </wvobject>
    <wvobject db_ref_id="1" fp_name="/tb_design_1/design_1_wrapper_inst/design_1_i/axi_full_slave2_0/inst/axi_full_slave2_v1_0_S00_AXI_inst/S_AXI_RUSER" type="array">
       <obj_property name="ElementShortName">S_AXI_RUSER[0:0]</obj_property>
       <obj_property name="ObjectShortName">S_AXI_RUSER[0:0]</obj_property>
       <obj_property name="Radix">HEXRADIX</obj_property>
    </wvobject>
-   <wvobject db_ref_id="1" fp_name="/tb_design_1/design_1_wrapper_inst/design_1_i/axi_full_slave2_0/inst/axi_full_slave2_v1_0_S00_AXI_inst/S_AXI_RVALID" type="logic">
-      <obj_property name="ElementShortName">S_AXI_RVALID</obj_property>
-      <obj_property name="ObjectShortName">S_AXI_RVALID</obj_property>
+   <wvobject db_ref_id="1" fp_name="/tb_design_1/design_1_wrapper_inst/design_1_i/axi_full_slave2_0/inst/axi_full_slave2_v1_0_S00_AXI_inst/S_AXI_ARADDR" type="array">
+      <obj_property name="ElementShortName">S_AXI_ARADDR[9:0]</obj_property>
+      <obj_property name="ObjectShortName">S_AXI_ARADDR[9:0]</obj_property>
+      <obj_property name="Radix">HEXRADIX</obj_property>
+   </wvobject>
+   <wvobject db_ref_id="1" fp_name="/tb_design_1/design_1_wrapper_inst/design_1_i/axi_full_slave2_0/inst/axi_full_slave2_v1_0_S00_AXI_inst/S_AXI_ARBURST" type="array">
+      <obj_property name="ElementShortName">S_AXI_ARBURST[1:0]</obj_property>
+      <obj_property name="ObjectShortName">S_AXI_ARBURST[1:0]</obj_property>
+      <obj_property name="Radix">HEXRADIX</obj_property>
+   </wvobject>
+   <wvobject db_ref_id="1" fp_name="/tb_design_1/design_1_wrapper_inst/design_1_i/axi_full_slave2_0/inst/axi_full_slave2_v1_0_S00_AXI_inst/axi_araddr" type="array">
+      <obj_property name="ElementShortName">axi_araddr[9:0]</obj_property>
+      <obj_property name="ObjectShortName">axi_araddr[9:0]</obj_property>
+      <obj_property name="Radix">HEXRADIX</obj_property>
+   </wvobject>
+   <wvobject db_ref_id="1" fp_name="/tb_design_1/design_1_wrapper_inst/design_1_i/axi_full_slave2_0/inst/axi_full_slave2_v1_0_S00_AXI_inst/mem_address" type="array">
+      <obj_property name="ElementShortName">mem_address[7:0]</obj_property>
+      <obj_property name="ObjectShortName">mem_address[7:0]</obj_property>
+      <obj_property name="Radix">HEXRADIX</obj_property>
+   </wvobject>
+   <wvobject db_ref_id="1" fp_name="/tb_design_1/design_1_wrapper_inst/design_1_i/axi_full_slave2_0/inst/axi_full_slave2_v1_0_S00_AXI_inst/mem_data_out" type="array">
+      <obj_property name="ElementShortName">mem_data_out[0:0][31:0]</obj_property>
+      <obj_property name="ObjectShortName">mem_data_out[0:0][31:0]</obj_property>
+      <obj_property name="Radix">HEXRADIX</obj_property>
+   </wvobject>
+   <wvobject db_ref_id="1" fp_name="/tb_design_1/design_1_wrapper_inst/design_1_i/axi_full_slave2_0/inst/axi_full_slave2_v1_0_S00_AXI_inst/\BRAM_GEN[0].BYTE_BRAM_GEN[1].data_out " type="array">
+      <obj_property name="ElementShortName">\BRAM_GEN[0].BYTE_BRAM_GEN[1].data_out [7:0]</obj_property>
+      <obj_property name="ObjectShortName">\BRAM_GEN[0].BYTE_BRAM_GEN[1].data_out [7:0]</obj_property>
+      <obj_property name="Radix">HEXRADIX</obj_property>
+   </wvobject>
+   <wvobject db_ref_id="1" fp_name="/tb_design_1/design_1_wrapper_inst/design_1_i/axi_full_slave2_0/inst/axi_full_slave2_v1_0_S00_AXI_inst/\BRAM_GEN[0].BYTE_BRAM_GEN[2].data_out " type="array">
+      <obj_property name="ElementShortName">\BRAM_GEN[0].BYTE_BRAM_GEN[2].data_out [7:0]</obj_property>
+      <obj_property name="ObjectShortName">\BRAM_GEN[0].BYTE_BRAM_GEN[2].data_out [7:0]</obj_property>
+      <obj_property name="Radix">HEXRADIX</obj_property>
+   </wvobject>
+   <wvobject db_ref_id="1" fp_name="/tb_design_1/design_1_wrapper_inst/design_1_i/axi_full_slave2_0/inst/axi_full_slave2_v1_0_S00_AXI_inst/\BRAM_GEN[0].BYTE_BRAM_GEN[3].data_out " type="array">
+      <obj_property name="ElementShortName">\BRAM_GEN[0].BYTE_BRAM_GEN[3].data_out [7:0]</obj_property>
+      <obj_property name="ObjectShortName">\BRAM_GEN[0].BYTE_BRAM_GEN[3].data_out [7:0]</obj_property>
+      <obj_property name="Radix">HEXRADIX</obj_property>
    </wvobject>
    <wvobject db_ref_id="1" fp_name="/tb_design_1/design_1_wrapper_inst/design_1_i/axi_full_slave2_0/inst/axi_full_slave2_v1_0_S00_AXI_inst/S_AXI_RREADY" type="logic">
       <obj_property name="ElementShortName">S_AXI_RREADY</obj_property>
       <obj_property name="ObjectShortName">S_AXI_RREADY</obj_property>
+   </wvobject>
+   <wvobject db_ref_id="1" fp_name="/tb_design_1/design_1_wrapper_inst/design_1_i/axi_full_master_0/inst/axi_full_master_v1_0_M00_AXI_inst/error_reg" type="logic">
+      <obj_property name="ElementShortName">error_reg</obj_property>
+      <obj_property name="ObjectShortName">error_reg</obj_property>
+   </wvobject>
+   <wvobject db_ref_id="1" fp_name="/tb_design_1/design_1_wrapper_inst/design_1_i/axi_full_master_0/inst/axi_full_master_v1_0_M00_AXI_inst/read_mismatch" type="logic">
+      <obj_property name="ElementShortName">read_mismatch</obj_property>
+      <obj_property name="ObjectShortName">read_mismatch</obj_property>
+   </wvobject>
+   <wvobject db_ref_id="1" fp_name="/tb_design_1/design_1_wrapper_inst/design_1_i/axi_full_master_0/inst/axi_full_master_v1_0_M00_AXI_inst/write_resp_error" type="logic">
+      <obj_property name="ElementShortName">write_resp_error</obj_property>
+      <obj_property name="ObjectShortName">write_resp_error</obj_property>
+   </wvobject>
+   <wvobject db_ref_id="1" fp_name="/tb_design_1/design_1_wrapper_inst/design_1_i/axi_full_master_0/inst/axi_full_master_v1_0_M00_AXI_inst/read_resp_error" type="logic">
+      <obj_property name="ElementShortName">read_resp_error</obj_property>
+      <obj_property name="ObjectShortName">read_resp_error</obj_property>
+   </wvobject>
+   <wvobject db_ref_id="1" fp_name="/tb_design_1/design_1_wrapper_inst/design_1_i/axi_full_master_0/inst/axi_full_master_v1_0_M00_AXI_inst/M_AXI_RDATA" type="array">
+      <obj_property name="ElementShortName">M_AXI_RDATA[31:0]</obj_property>
+      <obj_property name="ObjectShortName">M_AXI_RDATA[31:0]</obj_property>
+      <obj_property name="Radix">HEXRADIX</obj_property>
+   </wvobject>
+   <wvobject db_ref_id="1" fp_name="/tb_design_1/design_1_wrapper_inst/design_1_i/axi_full_slave2_0/inst/axi_full_slave2_v1_0_S00_AXI_inst/axi_rdata" type="array">
+      <obj_property name="ElementShortName">axi_rdata[31:0]</obj_property>
+      <obj_property name="ObjectShortName">axi_rdata[31:0]</obj_property>
+      <obj_property name="Radix">HEXRADIX</obj_property>
+   </wvobject>
+   <wvobject db_ref_id="1" fp_name="/tb_design_1/design_1_wrapper_inst/design_1_i/axi_full_slave2_0/inst/axi_full_slave2_v1_0_S00_AXI_inst/mem_data_out" type="array">
+      <obj_property name="ElementShortName">mem_data_out[0:0][31:0]</obj_property>
+      <obj_property name="ObjectShortName">mem_data_out[0:0][31:0]</obj_property>
+      <obj_property name="Radix">HEXRADIX</obj_property>
+   </wvobject>
+   <wvobject db_ref_id="1" fp_name="/tb_design_1/design_1_wrapper_inst/design_1_i/axi_full_slave2_0/inst/axi_full_slave2_v1_0_S00_AXI_inst/\BRAM_GEN[0].BYTE_BRAM_GEN[0].data_out " type="array">
+      <obj_property name="ElementShortName">\BRAM_GEN[0].BYTE_BRAM_GEN[0].data_out [7:0]</obj_property>
+      <obj_property name="ObjectShortName">\BRAM_GEN[0].BYTE_BRAM_GEN[0].data_out [7:0]</obj_property>
+      <obj_property name="Radix">HEXRADIX</obj_property>
+   </wvobject>
+   <wvobject db_ref_id="1" fp_name="/tb_design_1/design_1_wrapper_inst/design_1_i/axi_full_master_0/inst/axi_full_master_v1_0_M00_AXI_inst/expected_rdata" type="array">
+      <obj_property name="ElementShortName">expected_rdata[31:0]</obj_property>
+      <obj_property name="ObjectShortName">expected_rdata[31:0]</obj_property>
+      <obj_property name="Radix">HEXRADIX</obj_property>
+   </wvobject>
+   <wvobject db_ref_id="1" fp_name="/tb_design_1/design_1_wrapper_inst/design_1_i/axi_full_slave2_0/inst/axi_full_slave2_v1_0_S00_AXI_inst/axi_arv_arr_flag" type="logic">
+      <obj_property name="ElementShortName">axi_arv_arr_flag</obj_property>
+      <obj_property name="ObjectShortName">axi_arv_arr_flag</obj_property>
+   </wvobject>
+   <wvobject db_ref_id="1" fp_name="/tb_design_1/design_1_wrapper_inst/design_1_i/axi_full_master_0/inst/axi_full_master_v1_0_M00_AXI_inst/M_AXI_RVALID" type="logic">
+      <obj_property name="ElementShortName">M_AXI_RVALID</obj_property>
+      <obj_property name="ObjectShortName">M_AXI_RVALID</obj_property>
+   </wvobject>
+   <wvobject db_ref_id="1" fp_name="/tb_design_1/design_1_wrapper_inst/design_1_i/axi_full_master_0/inst/axi_full_master_v1_0_M00_AXI_inst/axi_rready" type="logic">
+      <obj_property name="ElementShortName">axi_rready</obj_property>
+      <obj_property name="ObjectShortName">axi_rready</obj_property>
+   </wvobject>
+   <wvobject db_ref_id="1" fp_name="/tb_design_1/design_1_wrapper_inst/design_1_i/axi_full_master_0/inst/axi_full_master_v1_0_M00_AXI_inst/rnext" type="logic">
+      <obj_property name="ElementShortName">rnext</obj_property>
+      <obj_property name="ObjectShortName">rnext</obj_property>
+   </wvobject>
+   <wvobject db_ref_id="1" fp_name="/tb_design_1/design_1_wrapper_inst/design_1_i/axi_full_slave2_0/inst/axi_full_slave2_v1_0_S00_AXI_inst/S_AXI_RLAST" type="logic">
+      <obj_property name="ElementShortName">S_AXI_RLAST</obj_property>
+      <obj_property name="ObjectShortName">S_AXI_RLAST</obj_property>
+   </wvobject>
+   <wvobject db_ref_id="1" fp_name="/tb_design_1/design_1_wrapper_inst/design_1_i/axi_full_slave2_0/inst/axi_full_slave2_v1_0_S00_AXI_inst/axi_arlen_cntr" type="array">
+      <obj_property name="ElementShortName">axi_arlen_cntr[7:0]</obj_property>
+      <obj_property name="ObjectShortName">axi_arlen_cntr[7:0]</obj_property>
+      <obj_property name="Radix">HEXRADIX</obj_property>
+   </wvobject>
+   <wvobject db_ref_id="1" fp_name="/tb_design_1/design_1_wrapper_inst/design_1_i/axi_full_slave2_0/inst/axi_full_slave2_v1_0_S00_AXI_inst/axi_araddr" type="array">
+      <obj_property name="ElementShortName">axi_araddr[9:0]</obj_property>
+      <obj_property name="ObjectShortName">axi_araddr[9:0]</obj_property>
+      <obj_property name="Radix">HEXRADIX</obj_property>
+   </wvobject>
+   <wvobject db_ref_id="1" fp_name="/tb_design_1/design_1_wrapper_inst/design_1_i/axi_full_slave2_0/inst/axi_full_slave2_v1_0_S00_AXI_inst/mem_address" type="array">
+      <obj_property name="ElementShortName">mem_address[7:0]</obj_property>
+      <obj_property name="ObjectShortName">mem_address[7:0]</obj_property>
+      <obj_property name="Radix">HEXRADIX</obj_property>
+   </wvobject>
+   <wvobject db_ref_id="1" fp_name="/tb_design_1/design_1_wrapper_inst/design_1_i/axi_full_slave2_0/inst/axi_full_slave2_v1_0_S00_AXI_inst/S_AXI_ARBURST" type="array">
+      <obj_property name="ElementShortName">S_AXI_ARBURST[1:0]</obj_property>
+      <obj_property name="ObjectShortName">S_AXI_ARBURST[1:0]</obj_property>
+   </wvobject>
+   <wvobject db_ref_id="1" fp_name="/tb_design_1/design_1_wrapper_inst/design_1_i/axi_full_slave2_0/inst/axi_full_slave2_v1_0_S00_AXI_inst/\BRAM_GEN[0].mem_rden " type="logic">
+      <obj_property name="ElementShortName">\BRAM_GEN[0].mem_rden </obj_property>
+      <obj_property name="ObjectShortName">\BRAM_GEN[0].mem_rden </obj_property>
+   </wvobject>
+   <wvobject db_ref_id="1" fp_name="/tb_design_1/design_1_wrapper_inst/design_1_i/axi_full_slave2_0/inst/axi_full_slave2_v1_0_S00_AXI_inst/axi_rvalid" type="logic">
+      <obj_property name="ElementShortName">axi_rvalid</obj_property>
+      <obj_property name="ObjectShortName">axi_rvalid</obj_property>
+   </wvobject>
+   <wvobject db_ref_id="1" fp_name="/tb_design_1/design_1_wrapper_inst/design_1_i/axi_full_slave2_0/inst/axi_full_slave2_v1_0_S00_AXI_inst/S_AXI_RREADY" type="logic">
+      <obj_property name="ElementShortName">S_AXI_RREADY</obj_property>
+      <obj_property name="ObjectShortName">S_AXI_RREADY</obj_property>
+   </wvobject>
+   <wvobject db_ref_id="1" fp_name="/tb_design_1/design_1_wrapper_inst/design_1_i/axi_full_slave2_0/inst/axi_full_slave2_v1_0_S00_AXI_inst/S_AXI_ARBURST" type="array">
+      <obj_property name="ElementShortName">S_AXI_ARBURST[1:0]</obj_property>
+      <obj_property name="ObjectShortName">S_AXI_ARBURST[1:0]</obj_property>
    </wvobject>
 </wave_config>

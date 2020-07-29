@@ -56,4 +56,34 @@ design_1_wrapper	design_1_wrapper_inst(
 
 
 
+
+//`define dump_level 10
+////module dump_task;
+//initial begin#1; //延迟1ns记录，方便与其他仿真动作协调
+//`ifdef VCS_DUMP //Synopsys VCD+格式存储
+//$display("Start Recording Waveform in VPD format!");
+//$vcdpluson();
+//$vcdplustraceon;
+//`endif
+//
+//`ifdef FSDB_DUMP //Synopsys fsdb格式存储
+//$display("Start Recording Waveform in FSDB format!");
+//$fsdbDumpfile("dump.fsdb");
+//$fsdbDumpvars('dump_level);
+//`endif
+//
+//`ifdef NC_DUMP//cadence 格式存储
+//$recordsetup("dump","version=1","run=1","directory=.");
+//$recordvars("depth=6");
+//`endif
+//
+//`ifdef VCD_DUMP//工业标准VCD格式存储
+//$display("Start Recording Waveform in VCD format!");
+//$dumpfile("dump.vcd");
+//$dumpvars('dump_level);
+//`endif
+//end
+
+
+
 endmodule

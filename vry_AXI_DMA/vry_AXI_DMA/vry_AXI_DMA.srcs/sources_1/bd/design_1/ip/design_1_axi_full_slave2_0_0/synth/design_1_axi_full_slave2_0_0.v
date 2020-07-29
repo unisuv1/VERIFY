@@ -48,11 +48,11 @@
 
 
 // IP VLNV: xilinx.com:user:axi_full_slave2:1.0
-// IP Revision: 1
+// IP Revision: 14
 
 (* X_CORE_INFO = "axi_full_slave2_v1_0,Vivado 2014.4" *)
 (* CHECK_LICENSE_TYPE = "design_1_axi_full_slave2_0_0,axi_full_slave2_v1_0,{}" *)
-(* CORE_GENERATION_INFO = "design_1_axi_full_slave2_0_0,axi_full_slave2_v1_0,{x_ipProduct=Vivado 2014.4,x_ipVendor=xilinx.com,x_ipLibrary=user,x_ipName=axi_full_slave2,x_ipVersion=1.0,x_ipCoreRevision=1,x_ipLanguage=VERILOG,x_ipSimLanguage=MIXED,C_S00_AXI_ID_WIDTH=1,C_S00_AXI_DATA_WIDTH=32,C_S00_AXI_ADDR_WIDTH=10,C_S00_AXI_AWUSER_WIDTH=1,C_S00_AXI_ARUSER_WIDTH=1,C_S00_AXI_WUSER_WIDTH=1,C_S00_AXI_RUSER_WIDTH=1,C_S00_AXI_BUSER_WIDTH=1}" *)
+(* CORE_GENERATION_INFO = "design_1_axi_full_slave2_0_0,axi_full_slave2_v1_0,{x_ipProduct=Vivado 2014.4,x_ipVendor=xilinx.com,x_ipLibrary=user,x_ipName=axi_full_slave2,x_ipVersion=1.0,x_ipCoreRevision=14,x_ipLanguage=VERILOG,x_ipSimLanguage=MIXED,C_S00_AXI_ID_WIDTH=1,C_S00_AXI_DATA_WIDTH=32,C_S00_AXI_ADDR_WIDTH=10,C_S00_AXI_AWUSER_WIDTH=1,C_S00_AXI_ARUSER_WIDTH=1,C_S00_AXI_WUSER_WIDTH=1,C_S00_AXI_RUSER_WIDTH=1,C_S00_AXI_BUSER_WIDTH=1}" *)
 (* DowngradeIPIdentifiedWarnings = "yes" *)
 module design_1_axi_full_slave2_0_0 (
   s00_axi_awid,
