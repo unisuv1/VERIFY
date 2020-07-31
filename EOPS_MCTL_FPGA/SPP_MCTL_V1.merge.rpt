@@ -1,0 +1,459 @@
+Partition Merge report for SPP_MCTL_V1
+Mon Nov 10 11:29:22 2014
+Quartus II 64-Bit Version 12.1 Build 177 11/07/2012 SJ Full Version
+
+
+---------------------
+; Table of Contents ;
+---------------------
+  1. Legal Notice
+  2. Partition Merge Summary
+  3. Partition Merge Netlist Types Used
+  4. Connections to In-System Debugging Instance "auto_signaltap_0"
+  5. Partition Merge Partition Statistics
+  6. Partition Merge Resource Usage Summary
+  7. Partition Merge RAM Summary
+  8. Partition Merge Messages
+
+
+
+----------------
+; Legal Notice ;
+----------------
+Copyright (C) 1991-2012 Altera Corporation
+Your use of Altera Corporation's design tools, logic functions 
+and other software and tools, and its AMPP partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Altera Program License 
+Subscription Agreement, Altera MegaCore Function License 
+Agreement, or other applicable license agreement, including, 
+without limitation, that your use is for the sole purpose of 
+programming logic devices manufactured by Altera and sold by 
+Altera or its authorized distributors.  Please refer to the 
+applicable agreement for further details.
+
+
+
++-----------------------------------------------------------------------+
+; Partition Merge Summary                                               ;
++---------------------------+-------------------------------------------+
+; Partition Merge Status    ; Successful - Mon Nov 10 11:29:22 2014     ;
+; Quartus II 64-Bit Version ; 12.1 Build 177 11/07/2012 SJ Full Version ;
+; Revision Name             ; SPP_MCTL_V1                               ;
+; Top-level Entity Name     ; SPP_MCTL_V1                               ;
+; Family                    ; Cyclone                                   ;
+; Total logic elements      ; 3,008 / 2,910 ( 103 % )                   ;
+; Total pins                ; 64 / 104 ( 62 % )                         ;
+; Total virtual pins        ; 0                                         ;
+; Total memory bits         ; 30,464 / 59,904 ( 51 % )                  ;
+; Total PLLs                ; 0 / 1 ( 0 % )                             ;
++---------------------------+-------------------------------------------+
+
+
++-------------------------------------------------------------------------------------------------------------------------------+
+; Partition Merge Netlist Types Used                                                                                            ;
++--------------------------------+----------------+-------------------+------------------------+--------------------------------+
+; Partition Name                 ; Partition Type ; Netlist Type Used ; Netlist Type Requested ; Partition Contents             ;
++--------------------------------+----------------+-------------------+------------------------+--------------------------------+
+; Top                            ; User-created   ; Post-Fit          ; Post-Fit               ;                                ;
+; sld_hub:auto_hub               ; Auto-generated ; Post-Synthesis    ; Post-Synthesis         ; sld_hub:auto_hub               ;
+; sld_signaltap:auto_signaltap_0 ; Auto-generated ; Post-Synthesis    ; Post-Synthesis         ; sld_signaltap:auto_signaltap_0 ;
+; hard_block:auto_generated_inst ; Auto-generated ; Source File       ; Source File            ; hard_block:auto_generated_inst ;
++--------------------------------+----------------+-------------------+------------------------+--------------------------------+
+
+
++------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Connections to In-System Debugging Instance "auto_signaltap_0"                                                                                                                                                                                                   ;
++-------------------------------------------------------------------------------------------+---------------+-----------+----------------+-------------------+-------------------------------------------------------------------------------------------+---------+
+; Name                                                                                      ; Type          ; Status    ; Partition Name ; Netlist Type Used ; Actual Connection                                                                         ; Details ;
++-------------------------------------------------------------------------------------------+---------------+-----------+----------------+-------------------+-------------------------------------------------------------------------------------------+---------+
+; Ch1_SPR_XPRTSize_Wr[0]                                                                    ; pre-synthesis ; connected ; Top            ; post-fit          ; Ch1_SPR_XPRTSize_Wr[0]                                                                    ; N/A     ;
+; Ch1_SPR_XPRTSize_Wr[0]                                                                    ; pre-synthesis ; connected ; Top            ; post-fit          ; Ch1_SPR_XPRTSize_Wr[0]                                                                    ; N/A     ;
+; Ch1_SPR_XPRTSize_Wr[10]                                                                   ; pre-synthesis ; connected ; Top            ; post-fit          ; Ch1_SPR_XPRTSize_Wr[10]                                                                   ; N/A     ;
+; Ch1_SPR_XPRTSize_Wr[10]                                                                   ; pre-synthesis ; connected ; Top            ; post-fit          ; Ch1_SPR_XPRTSize_Wr[10]                                                                   ; N/A     ;
+; Ch1_SPR_XPRTSize_Wr[11]                                                                   ; pre-synthesis ; connected ; Top            ; post-fit          ; Ch1_SPR_XPRTSize_Wr[11]                                                                   ; N/A     ;
+; Ch1_SPR_XPRTSize_Wr[11]                                                                   ; pre-synthesis ; connected ; Top            ; post-fit          ; Ch1_SPR_XPRTSize_Wr[11]                                                                   ; N/A     ;
+; Ch1_SPR_XPRTSize_Wr[12]                                                                   ; pre-synthesis ; connected ; Top            ; post-fit          ; Ch1_SPR_XPRTSize_Wr[12]                                                                   ; N/A     ;
+; Ch1_SPR_XPRTSize_Wr[12]                                                                   ; pre-synthesis ; connected ; Top            ; post-fit          ; Ch1_SPR_XPRTSize_Wr[12]                                                                   ; N/A     ;
+; Ch1_SPR_XPRTSize_Wr[13]                                                                   ; pre-synthesis ; connected ; Top            ; post-fit          ; Ch1_SPR_XPRTSize_Wr[13]                                                                   ; N/A     ;
+; Ch1_SPR_XPRTSize_Wr[13]                                                                   ; pre-synthesis ; connected ; Top            ; post-fit          ; Ch1_SPR_XPRTSize_Wr[13]                                                                   ; N/A     ;
+; Ch1_SPR_XPRTSize_Wr[14]                                                                   ; pre-synthesis ; connected ; Top            ; post-fit          ; Ch1_SPR_XPRTSize_Wr[14]                                                                   ; N/A     ;
+; Ch1_SPR_XPRTSize_Wr[14]                                                                   ; pre-synthesis ; connected ; Top            ; post-fit          ; Ch1_SPR_XPRTSize_Wr[14]                                                                   ; N/A     ;
+; Ch1_SPR_XPRTSize_Wr[15]                                                                   ; pre-synthesis ; connected ; Top            ; post-fit          ; Ch1_SPR_XPRTSize_Wr[15]                                                                   ; N/A     ;
+; Ch1_SPR_XPRTSize_Wr[15]                                                                   ; pre-synthesis ; connected ; Top            ; post-fit          ; Ch1_SPR_XPRTSize_Wr[15]                                                                   ; N/A     ;
+; Ch1_SPR_XPRTSize_Wr[16]                                                                   ; pre-synthesis ; connected ; Top            ; post-fit          ; Ch1_SPR_XPRTSize_Wr[16]                                                                   ; N/A     ;
+; Ch1_SPR_XPRTSize_Wr[16]                                                                   ; pre-synthesis ; connected ; Top            ; post-fit          ; Ch1_SPR_XPRTSize_Wr[16]                                                                   ; N/A     ;
+; Ch1_SPR_XPRTSize_Wr[17]                                                                   ; pre-synthesis ; connected ; Top            ; post-fit          ; Ch1_SPR_XPRTSize_Wr[17]                                                                   ; N/A     ;
+; Ch1_SPR_XPRTSize_Wr[17]                                                                   ; pre-synthesis ; connected ; Top            ; post-fit          ; Ch1_SPR_XPRTSize_Wr[17]                                                                   ; N/A     ;
+; Ch1_SPR_XPRTSize_Wr[18]                                                                   ; pre-synthesis ; connected ; Top            ; post-fit          ; Ch1_SPR_XPRTSize_Wr[18]                                                                   ; N/A     ;
+; Ch1_SPR_XPRTSize_Wr[18]                                                                   ; pre-synthesis ; connected ; Top            ; post-fit          ; Ch1_SPR_XPRTSize_Wr[18]                                                                   ; N/A     ;
+; Ch1_SPR_XPRTSize_Wr[19]                                                                   ; pre-synthesis ; connected ; Top            ; post-fit          ; Ch1_SPR_XPRTSize_Wr[19]                                                                   ; N/A     ;
+; Ch1_SPR_XPRTSize_Wr[19]                                                                   ; pre-synthesis ; connected ; Top            ; post-fit          ; Ch1_SPR_XPRTSize_Wr[19]                                                                   ; N/A     ;
+; Ch1_SPR_XPRTSize_Wr[1]                                                                    ; pre-synthesis ; connected ; Top            ; post-fit          ; Ch1_SPR_XPRTSize_Wr[1]                                                                    ; N/A     ;
+; Ch1_SPR_XPRTSize_Wr[1]                                                                    ; pre-synthesis ; connected ; Top            ; post-fit          ; Ch1_SPR_XPRTSize_Wr[1]                                                                    ; N/A     ;
+; Ch1_SPR_XPRTSize_Wr[20]                                                                   ; pre-synthesis ; connected ; Top            ; post-fit          ; Ch1_SPR_XPRTSize_Wr[20]                                                                   ; N/A     ;
+; Ch1_SPR_XPRTSize_Wr[20]                                                                   ; pre-synthesis ; connected ; Top            ; post-fit          ; Ch1_SPR_XPRTSize_Wr[20]                                                                   ; N/A     ;
+; Ch1_SPR_XPRTSize_Wr[21]                                                                   ; pre-synthesis ; connected ; Top            ; post-fit          ; Ch1_SPR_XPRTSize_Wr[21]                                                                   ; N/A     ;
+; Ch1_SPR_XPRTSize_Wr[21]                                                                   ; pre-synthesis ; connected ; Top            ; post-fit          ; Ch1_SPR_XPRTSize_Wr[21]                                                                   ; N/A     ;
+; Ch1_SPR_XPRTSize_Wr[22]                                                                   ; pre-synthesis ; connected ; Top            ; post-fit          ; Ch1_SPR_XPRTSize_Wr[22]                                                                   ; N/A     ;
+; Ch1_SPR_XPRTSize_Wr[22]                                                                   ; pre-synthesis ; connected ; Top            ; post-fit          ; Ch1_SPR_XPRTSize_Wr[22]                                                                   ; N/A     ;
+; Ch1_SPR_XPRTSize_Wr[23]                                                                   ; pre-synthesis ; connected ; Top            ; post-fit          ; Ch1_SPR_XPRTSize_Wr[23]                                                                   ; N/A     ;
+; Ch1_SPR_XPRTSize_Wr[23]                                                                   ; pre-synthesis ; connected ; Top            ; post-fit          ; Ch1_SPR_XPRTSize_Wr[23]                                                                   ; N/A     ;
+; Ch1_SPR_XPRTSize_Wr[24]                                                                   ; pre-synthesis ; connected ; Top            ; post-fit          ; Ch1_SPR_XPRTSize_Wr[24]                                                                   ; N/A     ;
+; Ch1_SPR_XPRTSize_Wr[24]                                                                   ; pre-synthesis ; connected ; Top            ; post-fit          ; Ch1_SPR_XPRTSize_Wr[24]                                                                   ; N/A     ;
+; Ch1_SPR_XPRTSize_Wr[25]                                                                   ; pre-synthesis ; connected ; Top            ; post-fit          ; Ch1_SPR_XPRTSize_Wr[25]                                                                   ; N/A     ;
+; Ch1_SPR_XPRTSize_Wr[25]                                                                   ; pre-synthesis ; connected ; Top            ; post-fit          ; Ch1_SPR_XPRTSize_Wr[25]                                                                   ; N/A     ;
+; Ch1_SPR_XPRTSize_Wr[26]                                                                   ; pre-synthesis ; connected ; Top            ; post-fit          ; Ch1_SPR_XPRTSize_Wr[26]                                                                   ; N/A     ;
+; Ch1_SPR_XPRTSize_Wr[26]                                                                   ; pre-synthesis ; connected ; Top            ; post-fit          ; Ch1_SPR_XPRTSize_Wr[26]                                                                   ; N/A     ;
+; Ch1_SPR_XPRTSize_Wr[27]                                                                   ; pre-synthesis ; connected ; Top            ; post-fit          ; Ch1_SPR_XPRTSize_Wr[27]                                                                   ; N/A     ;
+; Ch1_SPR_XPRTSize_Wr[27]                                                                   ; pre-synthesis ; connected ; Top            ; post-fit          ; Ch1_SPR_XPRTSize_Wr[27]                                                                   ; N/A     ;
+; Ch1_SPR_XPRTSize_Wr[28]                                                                   ; pre-synthesis ; connected ; Top            ; post-fit          ; Ch1_SPR_XPRTSize_Wr[28]                                                                   ; N/A     ;
+; Ch1_SPR_XPRTSize_Wr[28]                                                                   ; pre-synthesis ; connected ; Top            ; post-fit          ; Ch1_SPR_XPRTSize_Wr[28]                                                                   ; N/A     ;
+; Ch1_SPR_XPRTSize_Wr[29]                                                                   ; pre-synthesis ; connected ; Top            ; post-fit          ; Ch1_SPR_XPRTSize_Wr[29]                                                                   ; N/A     ;
+; Ch1_SPR_XPRTSize_Wr[29]                                                                   ; pre-synthesis ; connected ; Top            ; post-fit          ; Ch1_SPR_XPRTSize_Wr[29]                                                                   ; N/A     ;
+; Ch1_SPR_XPRTSize_Wr[2]                                                                    ; pre-synthesis ; connected ; Top            ; post-fit          ; Ch1_SPR_XPRTSize_Wr[2]                                                                    ; N/A     ;
+; Ch1_SPR_XPRTSize_Wr[2]                                                                    ; pre-synthesis ; connected ; Top            ; post-fit          ; Ch1_SPR_XPRTSize_Wr[2]                                                                    ; N/A     ;
+; Ch1_SPR_XPRTSize_Wr[30]                                                                   ; pre-synthesis ; connected ; Top            ; post-fit          ; Ch1_SPR_XPRTSize_Wr[30]                                                                   ; N/A     ;
+; Ch1_SPR_XPRTSize_Wr[30]                                                                   ; pre-synthesis ; connected ; Top            ; post-fit          ; Ch1_SPR_XPRTSize_Wr[30]                                                                   ; N/A     ;
+; Ch1_SPR_XPRTSize_Wr[31]                                                                   ; pre-synthesis ; connected ; Top            ; post-fit          ; Ch1_SPR_XPRTSize_Wr[31]                                                                   ; N/A     ;
+; Ch1_SPR_XPRTSize_Wr[31]                                                                   ; pre-synthesis ; connected ; Top            ; post-fit          ; Ch1_SPR_XPRTSize_Wr[31]                                                                   ; N/A     ;
+; Ch1_SPR_XPRTSize_Wr[3]                                                                    ; pre-synthesis ; connected ; Top            ; post-fit          ; Ch1_SPR_XPRTSize_Wr[3]                                                                    ; N/A     ;
+; Ch1_SPR_XPRTSize_Wr[3]                                                                    ; pre-synthesis ; connected ; Top            ; post-fit          ; Ch1_SPR_XPRTSize_Wr[3]                                                                    ; N/A     ;
+; Ch1_SPR_XPRTSize_Wr[4]                                                                    ; pre-synthesis ; connected ; Top            ; post-fit          ; Ch1_SPR_XPRTSize_Wr[4]                                                                    ; N/A     ;
+; Ch1_SPR_XPRTSize_Wr[4]                                                                    ; pre-synthesis ; connected ; Top            ; post-fit          ; Ch1_SPR_XPRTSize_Wr[4]                                                                    ; N/A     ;
+; Ch1_SPR_XPRTSize_Wr[5]                                                                    ; pre-synthesis ; connected ; Top            ; post-fit          ; Ch1_SPR_XPRTSize_Wr[5]                                                                    ; N/A     ;
+; Ch1_SPR_XPRTSize_Wr[5]                                                                    ; pre-synthesis ; connected ; Top            ; post-fit          ; Ch1_SPR_XPRTSize_Wr[5]                                                                    ; N/A     ;
+; Ch1_SPR_XPRTSize_Wr[6]                                                                    ; pre-synthesis ; connected ; Top            ; post-fit          ; Ch1_SPR_XPRTSize_Wr[6]                                                                    ; N/A     ;
+; Ch1_SPR_XPRTSize_Wr[6]                                                                    ; pre-synthesis ; connected ; Top            ; post-fit          ; Ch1_SPR_XPRTSize_Wr[6]                                                                    ; N/A     ;
+; Ch1_SPR_XPRTSize_Wr[7]                                                                    ; pre-synthesis ; connected ; Top            ; post-fit          ; Ch1_SPR_XPRTSize_Wr[7]                                                                    ; N/A     ;
+; Ch1_SPR_XPRTSize_Wr[7]                                                                    ; pre-synthesis ; connected ; Top            ; post-fit          ; Ch1_SPR_XPRTSize_Wr[7]                                                                    ; N/A     ;
+; Ch1_SPR_XPRTSize_Wr[8]                                                                    ; pre-synthesis ; connected ; Top            ; post-fit          ; Ch1_SPR_XPRTSize_Wr[8]                                                                    ; N/A     ;
+; Ch1_SPR_XPRTSize_Wr[8]                                                                    ; pre-synthesis ; connected ; Top            ; post-fit          ; Ch1_SPR_XPRTSize_Wr[8]                                                                    ; N/A     ;
+; Ch1_SPR_XPRTSize_Wr[9]                                                                    ; pre-synthesis ; connected ; Top            ; post-fit          ; Ch1_SPR_XPRTSize_Wr[9]                                                                    ; N/A     ;
+; Ch1_SPR_XPRTSize_Wr[9]                                                                    ; pre-synthesis ; connected ; Top            ; post-fit          ; Ch1_SPR_XPRTSize_Wr[9]                                                                    ; N/A     ;
+; EN_A_pin                                                                                  ; pre-synthesis ; connected ; Top            ; post-fit          ; EN_A_pin                                                                                  ; N/A     ;
+; EN_A_pin                                                                                  ; pre-synthesis ; connected ; Top            ; post-fit          ; EN_A_pin                                                                                  ; N/A     ;
+; L2_GPIO_I[0]                                                                              ; pre-synthesis ; connected ; Top            ; post-fit          ; L2_GPIO_I[0]                                                                              ; N/A     ;
+; L2_GPIO_I[0]                                                                              ; pre-synthesis ; connected ; Top            ; post-fit          ; L2_GPIO_I[0]                                                                              ; N/A     ;
+; L2_GPIO_I[1]                                                                              ; pre-synthesis ; connected ; Top            ; post-fit          ; L2_GPIO_I[1]                                                                              ; N/A     ;
+; L2_GPIO_I[1]                                                                              ; pre-synthesis ; connected ; Top            ; post-fit          ; L2_GPIO_I[1]                                                                              ; N/A     ;
+; TwoChannel                                                                                ; pre-synthesis ; connected ; Top            ; post-fit          ; TwoChannel                                                                                ; N/A     ;
+; TwoChannel                                                                                ; pre-synthesis ; connected ; Top            ; post-fit          ; TwoChannel                                                                                ; N/A     ;
+; XCoorSystem:XCoorSystem_inst|EncoderNoiseFilter:EncoderNoiseFilter_X_Raw|Encoder_A_Filted ; pre-synthesis ; connected ; Top            ; post-fit          ; XCoorSystem:XCoorSystem_inst|EncoderNoiseFilter:EncoderNoiseFilter_X_Raw|Encoder_A_Filted ; N/A     ;
+; XCoorSystem:XCoorSystem_inst|EncoderNoiseFilter:EncoderNoiseFilter_X_Raw|Encoder_A_Filted ; pre-synthesis ; connected ; Top            ; post-fit          ; XCoorSystem:XCoorSystem_inst|EncoderNoiseFilter:EncoderNoiseFilter_X_Raw|Encoder_A_Filted ; N/A     ;
+; XCoorSystem:XCoorSystem_inst|EncoderNoiseFilter:EncoderNoiseFilter_X_Raw|Encoder_B_Filted ; pre-synthesis ; connected ; Top            ; post-fit          ; XCoorSystem:XCoorSystem_inst|EncoderNoiseFilter:EncoderNoiseFilter_X_Raw|Encoder_B_Filted ; N/A     ;
+; XCoorSystem:XCoorSystem_inst|EncoderNoiseFilter:EncoderNoiseFilter_X_Raw|Encoder_B_Filted ; pre-synthesis ; connected ; Top            ; post-fit          ; XCoorSystem:XCoorSystem_inst|EncoderNoiseFilter:EncoderNoiseFilter_X_Raw|Encoder_B_Filted ; N/A     ;
+; XCoorSystem:XCoorSystem_inst|EncoderNoiseFilter:EncoderNoiseFilter_X_Raw|Locked           ; pre-synthesis ; connected ; Top            ; post-fit          ; XCoorSystem:XCoorSystem_inst|EncoderNoiseFilter:EncoderNoiseFilter_X_Raw|Locked           ; N/A     ;
+; XCoorSystem:XCoorSystem_inst|EncoderNoiseFilter:EncoderNoiseFilter_X_Raw|Locked           ; pre-synthesis ; connected ; Top            ; post-fit          ; XCoorSystem:XCoorSystem_inst|EncoderNoiseFilter:EncoderNoiseFilter_X_Raw|Locked           ; N/A     ;
+; XCoorSystem:XCoorSystem_inst|Locked                                                       ; pre-synthesis ; connected ; Top            ; post-fit          ; XCoorSystem:XCoorSystem_inst|EncoderNoiseFilter:EncoderNoiseFilter_X_Raw|Locked           ; N/A     ;
+; XCoorSystem:XCoorSystem_inst|Locked                                                       ; pre-synthesis ; connected ; Top            ; post-fit          ; XCoorSystem:XCoorSystem_inst|EncoderNoiseFilter:EncoderNoiseFilter_X_Raw|Locked           ; N/A     ;
+; XCoorSystem:XCoorSystem_inst|QEI_X:QEI_X_Inst|Add                                         ; pre-synthesis ; connected ; Top            ; post-fit          ; XCoorSystem:XCoorSystem_inst|QEI_X:QEI_X_Inst|Add                                         ; N/A     ;
+; XCoorSystem:XCoorSystem_inst|QEI_X:QEI_X_Inst|Add                                         ; pre-synthesis ; connected ; Top            ; post-fit          ; XCoorSystem:XCoorSystem_inst|QEI_X:QEI_X_Inst|Add                                         ; N/A     ;
+; XCoorSystem:XCoorSystem_inst|QEI_X:QEI_X_Inst|Coor[0]                                     ; pre-synthesis ; connected ; Top            ; post-fit          ; XCoorSystem:XCoorSystem_inst|QEI_X:QEI_X_Inst|Coor[0]                                     ; N/A     ;
+; XCoorSystem:XCoorSystem_inst|QEI_X:QEI_X_Inst|Coor[0]                                     ; pre-synthesis ; connected ; Top            ; post-fit          ; XCoorSystem:XCoorSystem_inst|QEI_X:QEI_X_Inst|Coor[0]                                     ; N/A     ;
+; XCoorSystem:XCoorSystem_inst|QEI_X:QEI_X_Inst|Coor[10]                                    ; pre-synthesis ; connected ; Top            ; post-fit          ; XCoorSystem:XCoorSystem_inst|QEI_X:QEI_X_Inst|Coor[10]                                    ; N/A     ;
+; XCoorSystem:XCoorSystem_inst|QEI_X:QEI_X_Inst|Coor[10]                                    ; pre-synthesis ; connected ; Top            ; post-fit          ; XCoorSystem:XCoorSystem_inst|QEI_X:QEI_X_Inst|Coor[10]                                    ; N/A     ;
+; XCoorSystem:XCoorSystem_inst|QEI_X:QEI_X_Inst|Coor[11]                                    ; pre-synthesis ; connected ; Top            ; post-fit          ; XCoorSystem:XCoorSystem_inst|QEI_X:QEI_X_Inst|Coor[11]                                    ; N/A     ;
+; XCoorSystem:XCoorSystem_inst|QEI_X:QEI_X_Inst|Coor[11]                                    ; pre-synthesis ; connected ; Top            ; post-fit          ; XCoorSystem:XCoorSystem_inst|QEI_X:QEI_X_Inst|Coor[11]                                    ; N/A     ;
+; XCoorSystem:XCoorSystem_inst|QEI_X:QEI_X_Inst|Coor[12]                                    ; pre-synthesis ; connected ; Top            ; post-fit          ; XCoorSystem:XCoorSystem_inst|QEI_X:QEI_X_Inst|Coor[12]                                    ; N/A     ;
+; XCoorSystem:XCoorSystem_inst|QEI_X:QEI_X_Inst|Coor[12]                                    ; pre-synthesis ; connected ; Top            ; post-fit          ; XCoorSystem:XCoorSystem_inst|QEI_X:QEI_X_Inst|Coor[12]                                    ; N/A     ;
+; XCoorSystem:XCoorSystem_inst|QEI_X:QEI_X_Inst|Coor[13]                                    ; pre-synthesis ; connected ; Top            ; post-fit          ; XCoorSystem:XCoorSystem_inst|QEI_X:QEI_X_Inst|Coor[13]                                    ; N/A     ;
+; XCoorSystem:XCoorSystem_inst|QEI_X:QEI_X_Inst|Coor[13]                                    ; pre-synthesis ; connected ; Top            ; post-fit          ; XCoorSystem:XCoorSystem_inst|QEI_X:QEI_X_Inst|Coor[13]                                    ; N/A     ;
+; XCoorSystem:XCoorSystem_inst|QEI_X:QEI_X_Inst|Coor[14]                                    ; pre-synthesis ; connected ; Top            ; post-fit          ; XCoorSystem:XCoorSystem_inst|QEI_X:QEI_X_Inst|Coor[14]                                    ; N/A     ;
+; XCoorSystem:XCoorSystem_inst|QEI_X:QEI_X_Inst|Coor[14]                                    ; pre-synthesis ; connected ; Top            ; post-fit          ; XCoorSystem:XCoorSystem_inst|QEI_X:QEI_X_Inst|Coor[14]                                    ; N/A     ;
+; XCoorSystem:XCoorSystem_inst|QEI_X:QEI_X_Inst|Coor[15]                                    ; pre-synthesis ; connected ; Top            ; post-fit          ; XCoorSystem:XCoorSystem_inst|QEI_X:QEI_X_Inst|Coor[15]                                    ; N/A     ;
+; XCoorSystem:XCoorSystem_inst|QEI_X:QEI_X_Inst|Coor[15]                                    ; pre-synthesis ; connected ; Top            ; post-fit          ; XCoorSystem:XCoorSystem_inst|QEI_X:QEI_X_Inst|Coor[15]                                    ; N/A     ;
+; XCoorSystem:XCoorSystem_inst|QEI_X:QEI_X_Inst|Coor[16]                                    ; pre-synthesis ; connected ; Top            ; post-fit          ; XCoorSystem:XCoorSystem_inst|QEI_X:QEI_X_Inst|Coor[16]                                    ; N/A     ;
+; XCoorSystem:XCoorSystem_inst|QEI_X:QEI_X_Inst|Coor[16]                                    ; pre-synthesis ; connected ; Top            ; post-fit          ; XCoorSystem:XCoorSystem_inst|QEI_X:QEI_X_Inst|Coor[16]                                    ; N/A     ;
+; XCoorSystem:XCoorSystem_inst|QEI_X:QEI_X_Inst|Coor[17]                                    ; pre-synthesis ; connected ; Top            ; post-fit          ; XCoorSystem:XCoorSystem_inst|QEI_X:QEI_X_Inst|Coor[17]                                    ; N/A     ;
+; XCoorSystem:XCoorSystem_inst|QEI_X:QEI_X_Inst|Coor[17]                                    ; pre-synthesis ; connected ; Top            ; post-fit          ; XCoorSystem:XCoorSystem_inst|QEI_X:QEI_X_Inst|Coor[17]                                    ; N/A     ;
+; XCoorSystem:XCoorSystem_inst|QEI_X:QEI_X_Inst|Coor[18]                                    ; pre-synthesis ; connected ; Top            ; post-fit          ; XCoorSystem:XCoorSystem_inst|QEI_X:QEI_X_Inst|Coor[18]                                    ; N/A     ;
+; XCoorSystem:XCoorSystem_inst|QEI_X:QEI_X_Inst|Coor[18]                                    ; pre-synthesis ; connected ; Top            ; post-fit          ; XCoorSystem:XCoorSystem_inst|QEI_X:QEI_X_Inst|Coor[18]                                    ; N/A     ;
+; XCoorSystem:XCoorSystem_inst|QEI_X:QEI_X_Inst|Coor[19]                                    ; pre-synthesis ; connected ; Top            ; post-fit          ; XCoorSystem:XCoorSystem_inst|QEI_X:QEI_X_Inst|Coor[19]                                    ; N/A     ;
+; XCoorSystem:XCoorSystem_inst|QEI_X:QEI_X_Inst|Coor[19]                                    ; pre-synthesis ; connected ; Top            ; post-fit          ; XCoorSystem:XCoorSystem_inst|QEI_X:QEI_X_Inst|Coor[19]                                    ; N/A     ;
+; XCoorSystem:XCoorSystem_inst|QEI_X:QEI_X_Inst|Coor[1]                                     ; pre-synthesis ; connected ; Top            ; post-fit          ; XCoorSystem:XCoorSystem_inst|QEI_X:QEI_X_Inst|Coor[1]                                     ; N/A     ;
+; XCoorSystem:XCoorSystem_inst|QEI_X:QEI_X_Inst|Coor[1]                                     ; pre-synthesis ; connected ; Top            ; post-fit          ; XCoorSystem:XCoorSystem_inst|QEI_X:QEI_X_Inst|Coor[1]                                     ; N/A     ;
+; XCoorSystem:XCoorSystem_inst|QEI_X:QEI_X_Inst|Coor[20]                                    ; pre-synthesis ; connected ; Top            ; post-fit          ; XCoorSystem:XCoorSystem_inst|QEI_X:QEI_X_Inst|Coor[20]                                    ; N/A     ;
+; XCoorSystem:XCoorSystem_inst|QEI_X:QEI_X_Inst|Coor[20]                                    ; pre-synthesis ; connected ; Top            ; post-fit          ; XCoorSystem:XCoorSystem_inst|QEI_X:QEI_X_Inst|Coor[20]                                    ; N/A     ;
+; XCoorSystem:XCoorSystem_inst|QEI_X:QEI_X_Inst|Coor[21]                                    ; pre-synthesis ; connected ; Top            ; post-fit          ; XCoorSystem:XCoorSystem_inst|QEI_X:QEI_X_Inst|Coor[21]                                    ; N/A     ;
+; XCoorSystem:XCoorSystem_inst|QEI_X:QEI_X_Inst|Coor[21]                                    ; pre-synthesis ; connected ; Top            ; post-fit          ; XCoorSystem:XCoorSystem_inst|QEI_X:QEI_X_Inst|Coor[21]                                    ; N/A     ;
+; XCoorSystem:XCoorSystem_inst|QEI_X:QEI_X_Inst|Coor[22]                                    ; pre-synthesis ; connected ; Top            ; post-fit          ; XCoorSystem:XCoorSystem_inst|QEI_X:QEI_X_Inst|Coor[22]                                    ; N/A     ;
+; XCoorSystem:XCoorSystem_inst|QEI_X:QEI_X_Inst|Coor[22]                                    ; pre-synthesis ; connected ; Top            ; post-fit          ; XCoorSystem:XCoorSystem_inst|QEI_X:QEI_X_Inst|Coor[22]                                    ; N/A     ;
+; XCoorSystem:XCoorSystem_inst|QEI_X:QEI_X_Inst|Coor[23]                                    ; pre-synthesis ; connected ; Top            ; post-fit          ; XCoorSystem:XCoorSystem_inst|QEI_X:QEI_X_Inst|Coor[23]                                    ; N/A     ;
+; XCoorSystem:XCoorSystem_inst|QEI_X:QEI_X_Inst|Coor[23]                                    ; pre-synthesis ; connected ; Top            ; post-fit          ; XCoorSystem:XCoorSystem_inst|QEI_X:QEI_X_Inst|Coor[23]                                    ; N/A     ;
+; XCoorSystem:XCoorSystem_inst|QEI_X:QEI_X_Inst|Coor[24]                                    ; pre-synthesis ; connected ; Top            ; post-fit          ; XCoorSystem:XCoorSystem_inst|QEI_X:QEI_X_Inst|Coor[24]                                    ; N/A     ;
+; XCoorSystem:XCoorSystem_inst|QEI_X:QEI_X_Inst|Coor[24]                                    ; pre-synthesis ; connected ; Top            ; post-fit          ; XCoorSystem:XCoorSystem_inst|QEI_X:QEI_X_Inst|Coor[24]                                    ; N/A     ;
+; XCoorSystem:XCoorSystem_inst|QEI_X:QEI_X_Inst|Coor[25]                                    ; pre-synthesis ; connected ; Top            ; post-fit          ; XCoorSystem:XCoorSystem_inst|QEI_X:QEI_X_Inst|Coor[25]                                    ; N/A     ;
+; XCoorSystem:XCoorSystem_inst|QEI_X:QEI_X_Inst|Coor[25]                                    ; pre-synthesis ; connected ; Top            ; post-fit          ; XCoorSystem:XCoorSystem_inst|QEI_X:QEI_X_Inst|Coor[25]                                    ; N/A     ;
+; XCoorSystem:XCoorSystem_inst|QEI_X:QEI_X_Inst|Coor[26]                                    ; pre-synthesis ; connected ; Top            ; post-fit          ; XCoorSystem:XCoorSystem_inst|QEI_X:QEI_X_Inst|Coor[26]                                    ; N/A     ;
+; XCoorSystem:XCoorSystem_inst|QEI_X:QEI_X_Inst|Coor[26]                                    ; pre-synthesis ; connected ; Top            ; post-fit          ; XCoorSystem:XCoorSystem_inst|QEI_X:QEI_X_Inst|Coor[26]                                    ; N/A     ;
+; XCoorSystem:XCoorSystem_inst|QEI_X:QEI_X_Inst|Coor[27]                                    ; pre-synthesis ; connected ; Top            ; post-fit          ; XCoorSystem:XCoorSystem_inst|QEI_X:QEI_X_Inst|Coor[27]                                    ; N/A     ;
+; XCoorSystem:XCoorSystem_inst|QEI_X:QEI_X_Inst|Coor[27]                                    ; pre-synthesis ; connected ; Top            ; post-fit          ; XCoorSystem:XCoorSystem_inst|QEI_X:QEI_X_Inst|Coor[27]                                    ; N/A     ;
+; XCoorSystem:XCoorSystem_inst|QEI_X:QEI_X_Inst|Coor[28]                                    ; pre-synthesis ; connected ; Top            ; post-fit          ; XCoorSystem:XCoorSystem_inst|QEI_X:QEI_X_Inst|Coor[28]                                    ; N/A     ;
+; XCoorSystem:XCoorSystem_inst|QEI_X:QEI_X_Inst|Coor[28]                                    ; pre-synthesis ; connected ; Top            ; post-fit          ; XCoorSystem:XCoorSystem_inst|QEI_X:QEI_X_Inst|Coor[28]                                    ; N/A     ;
+; XCoorSystem:XCoorSystem_inst|QEI_X:QEI_X_Inst|Coor[29]                                    ; pre-synthesis ; connected ; Top            ; post-fit          ; XCoorSystem:XCoorSystem_inst|QEI_X:QEI_X_Inst|Coor[29]                                    ; N/A     ;
+; XCoorSystem:XCoorSystem_inst|QEI_X:QEI_X_Inst|Coor[29]                                    ; pre-synthesis ; connected ; Top            ; post-fit          ; XCoorSystem:XCoorSystem_inst|QEI_X:QEI_X_Inst|Coor[29]                                    ; N/A     ;
+; XCoorSystem:XCoorSystem_inst|QEI_X:QEI_X_Inst|Coor[2]                                     ; pre-synthesis ; connected ; Top            ; post-fit          ; XCoorSystem:XCoorSystem_inst|QEI_X:QEI_X_Inst|Coor[2]                                     ; N/A     ;
+; XCoorSystem:XCoorSystem_inst|QEI_X:QEI_X_Inst|Coor[2]                                     ; pre-synthesis ; connected ; Top            ; post-fit          ; XCoorSystem:XCoorSystem_inst|QEI_X:QEI_X_Inst|Coor[2]                                     ; N/A     ;
+; XCoorSystem:XCoorSystem_inst|QEI_X:QEI_X_Inst|Coor[30]                                    ; pre-synthesis ; connected ; Top            ; post-fit          ; XCoorSystem:XCoorSystem_inst|QEI_X:QEI_X_Inst|Coor[30]                                    ; N/A     ;
+; XCoorSystem:XCoorSystem_inst|QEI_X:QEI_X_Inst|Coor[30]                                    ; pre-synthesis ; connected ; Top            ; post-fit          ; XCoorSystem:XCoorSystem_inst|QEI_X:QEI_X_Inst|Coor[30]                                    ; N/A     ;
+; XCoorSystem:XCoorSystem_inst|QEI_X:QEI_X_Inst|Coor[31]                                    ; pre-synthesis ; connected ; Top            ; post-fit          ; XCoorSystem:XCoorSystem_inst|QEI_X:QEI_X_Inst|Coor[31]                                    ; N/A     ;
+; XCoorSystem:XCoorSystem_inst|QEI_X:QEI_X_Inst|Coor[31]                                    ; pre-synthesis ; connected ; Top            ; post-fit          ; XCoorSystem:XCoorSystem_inst|QEI_X:QEI_X_Inst|Coor[31]                                    ; N/A     ;
+; XCoorSystem:XCoorSystem_inst|QEI_X:QEI_X_Inst|Coor[3]                                     ; pre-synthesis ; connected ; Top            ; post-fit          ; XCoorSystem:XCoorSystem_inst|QEI_X:QEI_X_Inst|Coor[3]                                     ; N/A     ;
+; XCoorSystem:XCoorSystem_inst|QEI_X:QEI_X_Inst|Coor[3]                                     ; pre-synthesis ; connected ; Top            ; post-fit          ; XCoorSystem:XCoorSystem_inst|QEI_X:QEI_X_Inst|Coor[3]                                     ; N/A     ;
+; XCoorSystem:XCoorSystem_inst|QEI_X:QEI_X_Inst|Coor[4]                                     ; pre-synthesis ; connected ; Top            ; post-fit          ; XCoorSystem:XCoorSystem_inst|QEI_X:QEI_X_Inst|Coor[4]                                     ; N/A     ;
+; XCoorSystem:XCoorSystem_inst|QEI_X:QEI_X_Inst|Coor[4]                                     ; pre-synthesis ; connected ; Top            ; post-fit          ; XCoorSystem:XCoorSystem_inst|QEI_X:QEI_X_Inst|Coor[4]                                     ; N/A     ;
+; XCoorSystem:XCoorSystem_inst|QEI_X:QEI_X_Inst|Coor[5]                                     ; pre-synthesis ; connected ; Top            ; post-fit          ; XCoorSystem:XCoorSystem_inst|QEI_X:QEI_X_Inst|Coor[5]                                     ; N/A     ;
+; XCoorSystem:XCoorSystem_inst|QEI_X:QEI_X_Inst|Coor[5]                                     ; pre-synthesis ; connected ; Top            ; post-fit          ; XCoorSystem:XCoorSystem_inst|QEI_X:QEI_X_Inst|Coor[5]                                     ; N/A     ;
+; XCoorSystem:XCoorSystem_inst|QEI_X:QEI_X_Inst|Coor[6]                                     ; pre-synthesis ; connected ; Top            ; post-fit          ; XCoorSystem:XCoorSystem_inst|QEI_X:QEI_X_Inst|Coor[6]                                     ; N/A     ;
+; XCoorSystem:XCoorSystem_inst|QEI_X:QEI_X_Inst|Coor[6]                                     ; pre-synthesis ; connected ; Top            ; post-fit          ; XCoorSystem:XCoorSystem_inst|QEI_X:QEI_X_Inst|Coor[6]                                     ; N/A     ;
+; XCoorSystem:XCoorSystem_inst|QEI_X:QEI_X_Inst|Coor[7]                                     ; pre-synthesis ; connected ; Top            ; post-fit          ; XCoorSystem:XCoorSystem_inst|QEI_X:QEI_X_Inst|Coor[7]                                     ; N/A     ;
+; XCoorSystem:XCoorSystem_inst|QEI_X:QEI_X_Inst|Coor[7]                                     ; pre-synthesis ; connected ; Top            ; post-fit          ; XCoorSystem:XCoorSystem_inst|QEI_X:QEI_X_Inst|Coor[7]                                     ; N/A     ;
+; XCoorSystem:XCoorSystem_inst|QEI_X:QEI_X_Inst|Coor[8]                                     ; pre-synthesis ; connected ; Top            ; post-fit          ; XCoorSystem:XCoorSystem_inst|QEI_X:QEI_X_Inst|Coor[8]                                     ; N/A     ;
+; XCoorSystem:XCoorSystem_inst|QEI_X:QEI_X_Inst|Coor[8]                                     ; pre-synthesis ; connected ; Top            ; post-fit          ; XCoorSystem:XCoorSystem_inst|QEI_X:QEI_X_Inst|Coor[8]                                     ; N/A     ;
+; XCoorSystem:XCoorSystem_inst|QEI_X:QEI_X_Inst|Coor[9]                                     ; pre-synthesis ; connected ; Top            ; post-fit          ; XCoorSystem:XCoorSystem_inst|QEI_X:QEI_X_Inst|Coor[9]                                     ; N/A     ;
+; XCoorSystem:XCoorSystem_inst|QEI_X:QEI_X_Inst|Coor[9]                                     ; pre-synthesis ; connected ; Top            ; post-fit          ; XCoorSystem:XCoorSystem_inst|QEI_X:QEI_X_Inst|Coor[9]                                     ; N/A     ;
+; XCoorSystem:XCoorSystem_inst|QEI_X:QEI_X_Inst|Dec                                         ; pre-synthesis ; connected ; Top            ; post-fit          ; XCoorSystem:XCoorSystem_inst|QEI_X:QEI_X_Inst|Dec                                         ; N/A     ;
+; XCoorSystem:XCoorSystem_inst|QEI_X:QEI_X_Inst|Dec                                         ; pre-synthesis ; connected ; Top            ; post-fit          ; XCoorSystem:XCoorSystem_inst|QEI_X:QEI_X_Inst|Dec                                         ; N/A     ;
+; clk                                                                                       ; pre-synthesis ; connected ; Top            ; post-fit          ; clk                                                                                       ; N/A     ;
+; dianyan1_sts.Enable                                                                       ; pre-synthesis ; connected ; Top            ; post-fit          ; dianyan1_sts.Enable                                                                       ; N/A     ;
+; dianyan1_sts.Enable                                                                       ; pre-synthesis ; connected ; Top            ; post-fit          ; dianyan1_sts.Enable                                                                       ; N/A     ;
+; dianyan1_sts.IDLE                                                                         ; pre-synthesis ; connected ; Top            ; post-fit          ; dianyan1_sts.IDLE~_wirecell                                                               ; N/A     ;
+; dianyan1_sts.IDLE                                                                         ; pre-synthesis ; connected ; Top            ; post-fit          ; dianyan1_sts.IDLE~_wirecell                                                               ; N/A     ;
+; dianyan1_sts.Waitting                                                                     ; pre-synthesis ; connected ; Top            ; post-fit          ; dianyan1_sts.Waitting                                                                     ; N/A     ;
+; dianyan1_sts.Waitting                                                                     ; pre-synthesis ; connected ; Top            ; post-fit          ; dianyan1_sts.Waitting                                                                     ; N/A     ;
+; dianyan_en1                                                                               ; pre-synthesis ; connected ; Top            ; post-fit          ; dianyan_en1                                                                               ; N/A     ;
+; dianyan_en1                                                                               ; pre-synthesis ; connected ; Top            ; post-fit          ; dianyan_en1                                                                               ; N/A     ;
+; dianyan_en2                                                                               ; pre-synthesis ; connected ; Top            ; post-fit          ; dianyan_en2                                                                               ; N/A     ;
+; dianyan_en2                                                                               ; pre-synthesis ; connected ; Top            ; post-fit          ; dianyan_en2                                                                               ; N/A     ;
+; origin[0]                                                                                 ; pre-synthesis ; connected ; Top            ; post-fit          ; origin[0]                                                                                 ; N/A     ;
+; origin[0]                                                                                 ; pre-synthesis ; connected ; Top            ; post-fit          ; origin[0]                                                                                 ; N/A     ;
+; origin[1]                                                                                 ; pre-synthesis ; connected ; Top            ; post-fit          ; origin[10]                                                                                ; N/A     ;
+; origin[1]                                                                                 ; pre-synthesis ; connected ; Top            ; post-fit          ; origin[10]                                                                                ; N/A     ;
+; pre_Ch1_SPR_XPRTSize[0]                                                                   ; pre-synthesis ; connected ; Top            ; post-fit          ; pre_Ch1_SPR_XPRTSize[0]                                                                   ; N/A     ;
+; pre_Ch1_SPR_XPRTSize[0]                                                                   ; pre-synthesis ; connected ; Top            ; post-fit          ; pre_Ch1_SPR_XPRTSize[0]                                                                   ; N/A     ;
+; pre_Ch1_SPR_XPRTSize[10]                                                                  ; pre-synthesis ; connected ; Top            ; post-fit          ; pre_Ch1_SPR_XPRTSize[10]                                                                  ; N/A     ;
+; pre_Ch1_SPR_XPRTSize[10]                                                                  ; pre-synthesis ; connected ; Top            ; post-fit          ; pre_Ch1_SPR_XPRTSize[10]                                                                  ; N/A     ;
+; pre_Ch1_SPR_XPRTSize[11]                                                                  ; pre-synthesis ; connected ; Top            ; post-fit          ; pre_Ch1_SPR_XPRTSize[11]                                                                  ; N/A     ;
+; pre_Ch1_SPR_XPRTSize[11]                                                                  ; pre-synthesis ; connected ; Top            ; post-fit          ; pre_Ch1_SPR_XPRTSize[11]                                                                  ; N/A     ;
+; pre_Ch1_SPR_XPRTSize[12]                                                                  ; pre-synthesis ; connected ; Top            ; post-fit          ; pre_Ch1_SPR_XPRTSize[12]                                                                  ; N/A     ;
+; pre_Ch1_SPR_XPRTSize[12]                                                                  ; pre-synthesis ; connected ; Top            ; post-fit          ; pre_Ch1_SPR_XPRTSize[12]                                                                  ; N/A     ;
+; pre_Ch1_SPR_XPRTSize[13]                                                                  ; pre-synthesis ; connected ; Top            ; post-fit          ; pre_Ch1_SPR_XPRTSize[13]                                                                  ; N/A     ;
+; pre_Ch1_SPR_XPRTSize[13]                                                                  ; pre-synthesis ; connected ; Top            ; post-fit          ; pre_Ch1_SPR_XPRTSize[13]                                                                  ; N/A     ;
+; pre_Ch1_SPR_XPRTSize[14]                                                                  ; pre-synthesis ; connected ; Top            ; post-fit          ; pre_Ch1_SPR_XPRTSize[14]                                                                  ; N/A     ;
+; pre_Ch1_SPR_XPRTSize[14]                                                                  ; pre-synthesis ; connected ; Top            ; post-fit          ; pre_Ch1_SPR_XPRTSize[14]                                                                  ; N/A     ;
+; pre_Ch1_SPR_XPRTSize[15]                                                                  ; pre-synthesis ; connected ; Top            ; post-fit          ; pre_Ch1_SPR_XPRTSize[15]                                                                  ; N/A     ;
+; pre_Ch1_SPR_XPRTSize[15]                                                                  ; pre-synthesis ; connected ; Top            ; post-fit          ; pre_Ch1_SPR_XPRTSize[15]                                                                  ; N/A     ;
+; pre_Ch1_SPR_XPRTSize[16]                                                                  ; pre-synthesis ; connected ; Top            ; post-fit          ; pre_Ch1_SPR_XPRTSize[16]                                                                  ; N/A     ;
+; pre_Ch1_SPR_XPRTSize[16]                                                                  ; pre-synthesis ; connected ; Top            ; post-fit          ; pre_Ch1_SPR_XPRTSize[16]                                                                  ; N/A     ;
+; pre_Ch1_SPR_XPRTSize[17]                                                                  ; pre-synthesis ; connected ; Top            ; post-fit          ; pre_Ch1_SPR_XPRTSize[17]                                                                  ; N/A     ;
+; pre_Ch1_SPR_XPRTSize[17]                                                                  ; pre-synthesis ; connected ; Top            ; post-fit          ; pre_Ch1_SPR_XPRTSize[17]                                                                  ; N/A     ;
+; pre_Ch1_SPR_XPRTSize[18]                                                                  ; pre-synthesis ; connected ; Top            ; post-fit          ; pre_Ch1_SPR_XPRTSize[18]                                                                  ; N/A     ;
+; pre_Ch1_SPR_XPRTSize[18]                                                                  ; pre-synthesis ; connected ; Top            ; post-fit          ; pre_Ch1_SPR_XPRTSize[18]                                                                  ; N/A     ;
+; pre_Ch1_SPR_XPRTSize[19]                                                                  ; pre-synthesis ; connected ; Top            ; post-fit          ; pre_Ch1_SPR_XPRTSize[19]                                                                  ; N/A     ;
+; pre_Ch1_SPR_XPRTSize[19]                                                                  ; pre-synthesis ; connected ; Top            ; post-fit          ; pre_Ch1_SPR_XPRTSize[19]                                                                  ; N/A     ;
+; pre_Ch1_SPR_XPRTSize[1]                                                                   ; pre-synthesis ; connected ; Top            ; post-fit          ; pre_Ch1_SPR_XPRTSize[1]                                                                   ; N/A     ;
+; pre_Ch1_SPR_XPRTSize[1]                                                                   ; pre-synthesis ; connected ; Top            ; post-fit          ; pre_Ch1_SPR_XPRTSize[1]                                                                   ; N/A     ;
+; pre_Ch1_SPR_XPRTSize[20]                                                                  ; pre-synthesis ; connected ; Top            ; post-fit          ; pre_Ch1_SPR_XPRTSize[20]                                                                  ; N/A     ;
+; pre_Ch1_SPR_XPRTSize[20]                                                                  ; pre-synthesis ; connected ; Top            ; post-fit          ; pre_Ch1_SPR_XPRTSize[20]                                                                  ; N/A     ;
+; pre_Ch1_SPR_XPRTSize[21]                                                                  ; pre-synthesis ; connected ; Top            ; post-fit          ; pre_Ch1_SPR_XPRTSize[21]                                                                  ; N/A     ;
+; pre_Ch1_SPR_XPRTSize[21]                                                                  ; pre-synthesis ; connected ; Top            ; post-fit          ; pre_Ch1_SPR_XPRTSize[21]                                                                  ; N/A     ;
+; pre_Ch1_SPR_XPRTSize[22]                                                                  ; pre-synthesis ; connected ; Top            ; post-fit          ; pre_Ch1_SPR_XPRTSize[22]                                                                  ; N/A     ;
+; pre_Ch1_SPR_XPRTSize[22]                                                                  ; pre-synthesis ; connected ; Top            ; post-fit          ; pre_Ch1_SPR_XPRTSize[22]                                                                  ; N/A     ;
+; pre_Ch1_SPR_XPRTSize[23]                                                                  ; pre-synthesis ; connected ; Top            ; post-fit          ; pre_Ch1_SPR_XPRTSize[23]                                                                  ; N/A     ;
+; pre_Ch1_SPR_XPRTSize[23]                                                                  ; pre-synthesis ; connected ; Top            ; post-fit          ; pre_Ch1_SPR_XPRTSize[23]                                                                  ; N/A     ;
+; pre_Ch1_SPR_XPRTSize[24]                                                                  ; pre-synthesis ; connected ; Top            ; post-fit          ; pre_Ch1_SPR_XPRTSize[24]                                                                  ; N/A     ;
+; pre_Ch1_SPR_XPRTSize[24]                                                                  ; pre-synthesis ; connected ; Top            ; post-fit          ; pre_Ch1_SPR_XPRTSize[24]                                                                  ; N/A     ;
+; pre_Ch1_SPR_XPRTSize[25]                                                                  ; pre-synthesis ; connected ; Top            ; post-fit          ; pre_Ch1_SPR_XPRTSize[25]                                                                  ; N/A     ;
+; pre_Ch1_SPR_XPRTSize[25]                                                                  ; pre-synthesis ; connected ; Top            ; post-fit          ; pre_Ch1_SPR_XPRTSize[25]                                                                  ; N/A     ;
+; pre_Ch1_SPR_XPRTSize[26]                                                                  ; pre-synthesis ; connected ; Top            ; post-fit          ; pre_Ch1_SPR_XPRTSize[26]                                                                  ; N/A     ;
+; pre_Ch1_SPR_XPRTSize[26]                                                                  ; pre-synthesis ; connected ; Top            ; post-fit          ; pre_Ch1_SPR_XPRTSize[26]                                                                  ; N/A     ;
+; pre_Ch1_SPR_XPRTSize[27]                                                                  ; pre-synthesis ; connected ; Top            ; post-fit          ; pre_Ch1_SPR_XPRTSize[27]                                                                  ; N/A     ;
+; pre_Ch1_SPR_XPRTSize[27]                                                                  ; pre-synthesis ; connected ; Top            ; post-fit          ; pre_Ch1_SPR_XPRTSize[27]                                                                  ; N/A     ;
+; pre_Ch1_SPR_XPRTSize[28]                                                                  ; pre-synthesis ; connected ; Top            ; post-fit          ; pre_Ch1_SPR_XPRTSize[28]                                                                  ; N/A     ;
+; pre_Ch1_SPR_XPRTSize[28]                                                                  ; pre-synthesis ; connected ; Top            ; post-fit          ; pre_Ch1_SPR_XPRTSize[28]                                                                  ; N/A     ;
+; pre_Ch1_SPR_XPRTSize[29]                                                                  ; pre-synthesis ; connected ; Top            ; post-fit          ; pre_Ch1_SPR_XPRTSize[29]                                                                  ; N/A     ;
+; pre_Ch1_SPR_XPRTSize[29]                                                                  ; pre-synthesis ; connected ; Top            ; post-fit          ; pre_Ch1_SPR_XPRTSize[29]                                                                  ; N/A     ;
+; pre_Ch1_SPR_XPRTSize[2]                                                                   ; pre-synthesis ; connected ; Top            ; post-fit          ; pre_Ch1_SPR_XPRTSize[2]                                                                   ; N/A     ;
+; pre_Ch1_SPR_XPRTSize[2]                                                                   ; pre-synthesis ; connected ; Top            ; post-fit          ; pre_Ch1_SPR_XPRTSize[2]                                                                   ; N/A     ;
+; pre_Ch1_SPR_XPRTSize[30]                                                                  ; pre-synthesis ; connected ; Top            ; post-fit          ; pre_Ch1_SPR_XPRTSize[30]                                                                  ; N/A     ;
+; pre_Ch1_SPR_XPRTSize[30]                                                                  ; pre-synthesis ; connected ; Top            ; post-fit          ; pre_Ch1_SPR_XPRTSize[30]                                                                  ; N/A     ;
+; pre_Ch1_SPR_XPRTSize[31]                                                                  ; pre-synthesis ; connected ; Top            ; post-fit          ; pre_Ch1_SPR_XPRTSize[31]                                                                  ; N/A     ;
+; pre_Ch1_SPR_XPRTSize[31]                                                                  ; pre-synthesis ; connected ; Top            ; post-fit          ; pre_Ch1_SPR_XPRTSize[31]                                                                  ; N/A     ;
+; pre_Ch1_SPR_XPRTSize[3]                                                                   ; pre-synthesis ; connected ; Top            ; post-fit          ; pre_Ch1_SPR_XPRTSize[3]                                                                   ; N/A     ;
+; pre_Ch1_SPR_XPRTSize[3]                                                                   ; pre-synthesis ; connected ; Top            ; post-fit          ; pre_Ch1_SPR_XPRTSize[3]                                                                   ; N/A     ;
+; pre_Ch1_SPR_XPRTSize[4]                                                                   ; pre-synthesis ; connected ; Top            ; post-fit          ; pre_Ch1_SPR_XPRTSize[4]                                                                   ; N/A     ;
+; pre_Ch1_SPR_XPRTSize[4]                                                                   ; pre-synthesis ; connected ; Top            ; post-fit          ; pre_Ch1_SPR_XPRTSize[4]                                                                   ; N/A     ;
+; pre_Ch1_SPR_XPRTSize[5]                                                                   ; pre-synthesis ; connected ; Top            ; post-fit          ; pre_Ch1_SPR_XPRTSize[5]                                                                   ; N/A     ;
+; pre_Ch1_SPR_XPRTSize[5]                                                                   ; pre-synthesis ; connected ; Top            ; post-fit          ; pre_Ch1_SPR_XPRTSize[5]                                                                   ; N/A     ;
+; pre_Ch1_SPR_XPRTSize[6]                                                                   ; pre-synthesis ; connected ; Top            ; post-fit          ; pre_Ch1_SPR_XPRTSize[6]                                                                   ; N/A     ;
+; pre_Ch1_SPR_XPRTSize[6]                                                                   ; pre-synthesis ; connected ; Top            ; post-fit          ; pre_Ch1_SPR_XPRTSize[6]                                                                   ; N/A     ;
+; pre_Ch1_SPR_XPRTSize[7]                                                                   ; pre-synthesis ; connected ; Top            ; post-fit          ; pre_Ch1_SPR_XPRTSize[7]                                                                   ; N/A     ;
+; pre_Ch1_SPR_XPRTSize[7]                                                                   ; pre-synthesis ; connected ; Top            ; post-fit          ; pre_Ch1_SPR_XPRTSize[7]                                                                   ; N/A     ;
+; pre_Ch1_SPR_XPRTSize[8]                                                                   ; pre-synthesis ; connected ; Top            ; post-fit          ; pre_Ch1_SPR_XPRTSize[8]                                                                   ; N/A     ;
+; pre_Ch1_SPR_XPRTSize[8]                                                                   ; pre-synthesis ; connected ; Top            ; post-fit          ; pre_Ch1_SPR_XPRTSize[8]                                                                   ; N/A     ;
+; pre_Ch1_SPR_XPRTSize[9]                                                                   ; pre-synthesis ; connected ; Top            ; post-fit          ; pre_Ch1_SPR_XPRTSize[9]                                                                   ; N/A     ;
+; pre_Ch1_SPR_XPRTSize[9]                                                                   ; pre-synthesis ; connected ; Top            ; post-fit          ; pre_Ch1_SPR_XPRTSize[9]                                                                   ; N/A     ;
+; valid_edge1                                                                               ; pre-synthesis ; connected ; Top            ; post-fit          ; valid_edge1                                                                               ; N/A     ;
+; valid_edge1                                                                               ; pre-synthesis ; connected ; Top            ; post-fit          ; valid_edge1                                                                               ; N/A     ;
+; valid_edge2                                                                               ; pre-synthesis ; connected ; Top            ; post-fit          ; valid_edge2                                                                               ; N/A     ;
+; valid_edge2                                                                               ; pre-synthesis ; connected ; Top            ; post-fit          ; valid_edge2                                                                               ; N/A     ;
+; EN1_X_2A_t                                                                                ; post-fitting  ; connected ; Top            ; post-fit          ; EN1_X_2A_t                                                                                ; N/A     ;
+; EN1_X_2A_t                                                                                ; post-fitting  ; connected ; Top            ; post-fit          ; EN1_X_2A_t                                                                                ; N/A     ;
+; EN1_X_2B_t                                                                                ; post-fitting  ; connected ; Top            ; post-fit          ; EN1_X_2B_t                                                                                ; N/A     ;
+; EN1_X_2B_t                                                                                ; post-fitting  ; connected ; Top            ; post-fit          ; EN1_X_2B_t                                                                                ; N/A     ;
+; discard1                                                                                  ; post-fitting  ; connected ; Top            ; post-fit          ; discard1                                                                                  ; N/A     ;
+; discard1                                                                                  ; post-fitting  ; connected ; Top            ; post-fit          ; discard1                                                                                  ; N/A     ;
+; discard2                                                                                  ; post-fitting  ; connected ; Top            ; post-fit          ; discard2                                                                                  ; N/A     ;
+; discard2                                                                                  ; post-fitting  ; connected ; Top            ; post-fit          ; discard2                                                                                  ; N/A     ;
++-------------------------------------------------------------------------------------------+---------------+-----------+----------------+-------------------+-------------------------------------------------------------------------------------------+---------+
+
+
++---------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Partition Merge Partition Statistics                                                                                                                    ;
++---------------------------------------------+---------------------+-------------------+--------------------------------+--------------------------------+
+; Statistic                                   ; Top                 ; sld_hub:auto_hub  ; sld_signaltap:auto_signaltap_0 ; hard_block:auto_generated_inst ;
++---------------------------------------------+---------------------+-------------------+--------------------------------+--------------------------------+
+; Total logic elements                        ; 932                 ; 161               ; 1915                           ; 0                              ;
+;     -- Combinational with no register       ; 331                 ; 67                ; 254                            ; 0                              ;
+;     -- Register only                        ; 0                   ; 20                ; 1296                           ; 0                              ;
+;     -- Combinational with a register        ; 601                 ; 74                ; 365                            ; 0                              ;
+;                                             ;                     ;                   ;                                ;                                ;
+; Logic element usage by number of LUT inputs ;                     ;                   ;                                ;                                ;
+;     -- 4 input functions                    ; 0                   ; 0                 ; 0                              ; 0                              ;
+;     -- 3 input functions                    ; 0                   ; 0                 ; 0                              ; 0                              ;
+;     -- 2 input functions                    ; 0                   ; 0                 ; 0                              ; 0                              ;
+;     -- 1 input functions                    ; 0                   ; 0                 ; 0                              ; 0                              ;
+;     -- 0 input functions                    ; 0                   ; 0                 ; 0                              ; 0                              ;
+;                                             ;                     ;                   ;                                ;                                ;
+; Logic elements by mode                      ;                     ;                   ;                                ;                                ;
+;     -- normal mode                          ; 0                   ; 0                 ; 0                              ; 0                              ;
+;     -- arithmetic mode                      ; 0                   ; 0                 ; 0                              ; 0                              ;
+;     -- qfbk mode                            ; 0                   ; 0                 ; 0                              ; 0                              ;
+;     -- register cascade mode                ; 0                   ; 0                 ; 0                              ; 0                              ;
+;     -- synchronous clear/load mode          ; 0                   ; 0                 ; 0                              ; 0                              ;
+;     -- asynchronous clear/load mode         ; 0                   ; 0                 ; 0                              ; 0                              ;
+;                                             ;                     ;                   ;                                ;                                ;
+; Total registers                             ; 601 / 1455 ( 41 % ) ; 94 / 1455 ( 6 % ) ; 1455 / 1455 ( 100 % )          ; 0 / 1455 ( 0 % )               ;
+; Virtual pins                                ; 0                   ; 0                 ; 0                              ; 0                              ;
+; I/O pins                                    ; 64                  ; 0                 ; 0                              ; 0                              ;
+; DSP block 9-bit elements                    ; 0                   ; 0                 ; 0                              ; 0                              ;
+; Total memory bits                           ; 0                   ; 0                 ; 30464                          ; 0                              ;
+; Total RAM block bits                        ; 0                   ; 0                 ; 32256                          ; 0                              ;
+; JTAG                                        ; 1 / 1 ( 100 % )     ; 0 / 1 ( 0 % )     ; 0 / 1 ( 0 % )                  ; 0 / 1 ( 0 % )                  ;
+; M4K                                         ; 0 / 13 ( 0 % )      ; 0 / 13 ( 0 % )    ; 7 / 13 ( 53 % )                ; 0 / 13 ( 0 % )                 ;
+;                                             ;                     ;                   ;                                ;                                ;
+; Connections                                 ;                     ;                   ;                                ;                                ;
+;     -- Input Connections                    ; 1                   ; 135               ; 2353                           ; 0                              ;
+;     -- Registered Input Connections         ; 0                   ; 125               ; 1947                           ; 0                              ;
+;     -- Output Connections                   ; 2267                ; 221               ; 1                              ; 0                              ;
+;     -- Registered Output Connections        ; 236                 ; 220               ; 0                              ; 0                              ;
+;                                             ;                     ;                   ;                                ;                                ;
+; Internal Connections                        ;                     ;                   ;                                ;                                ;
+;     -- Total Connections                    ; 6987                ; 890               ; 8828                           ; 0                              ;
+;     -- Registered Connections               ; 2104                ; 724               ; 7206                           ; 0                              ;
+;                                             ;                     ;                   ;                                ;                                ;
+; External Connections                        ;                     ;                   ;                                ;                                ;
+;     -- Top                                  ; 0                   ; 127               ; 2141                           ; 0                              ;
+;     -- sld_hub:auto_hub                     ; 127                 ; 16                ; 213                            ; 0                              ;
+;     -- sld_signaltap:auto_signaltap_0       ; 2141                ; 213               ; 0                              ; 0                              ;
+;     -- hard_block:auto_generated_inst       ; 0                   ; 0                 ; 0                              ; 0                              ;
+;                                             ;                     ;                   ;                                ;                                ;
+; Partition Interface                         ;                     ;                   ;                                ;                                ;
+;     -- Input Ports                          ; 23                  ; 19                ; 295                            ; 0                              ;
+;     -- Output Ports                         ; 159                 ; 37                ; 248                            ; 0                              ;
+;     -- Bidir Ports                          ; 1                   ; 0                 ; 0                              ; 0                              ;
+;                                             ;                     ;                   ;                                ;                                ;
+; Registered Ports                            ;                     ;                   ;                                ;                                ;
+;     -- Registered Input Ports               ; 0                   ; 11                ; 247                            ; 0                              ;
+;     -- Registered Output Ports              ; 0                   ; 26                ; 239                            ; 0                              ;
+;                                             ;                     ;                   ;                                ;                                ;
+; Port Connectivity                           ;                     ;                   ;                                ;                                ;
+;     -- Input Ports driven by GND            ; 0                   ; 1                 ; 0                              ; 0                              ;
+;     -- Output Ports driven by GND           ; 0                   ; 1                 ; 0                              ; 0                              ;
+;     -- Input Ports driven by VCC            ; 0                   ; 0                 ; 0                              ; 0                              ;
+;     -- Output Ports driven by VCC           ; 0                   ; 0                 ; 0                              ; 0                              ;
+;     -- Input Ports with no Source           ; 0                   ; 1                 ; 35                             ; 0                              ;
+;     -- Output Ports with no Source          ; 0                   ; 0                 ; 0                              ; 0                              ;
+;     -- Input Ports with no Fanout           ; 0                   ; 2                 ; 40                             ; 0                              ;
+;     -- Output Ports with no Fanout          ; 0                   ; 15                ; 239                            ; 0                              ;
++---------------------------------------------+---------------------+-------------------+--------------------------------+--------------------------------+
+Note: Resource usage numbers presented for Partitions containing post-synthesis logic are estimates.  For Partitions containing post-fit logic, resource usage numbers are accurate based on previous placement information.  Actual Fitter results may vary depending on current Fitter Preservation Level assignments.
+
+
++-----------------------------------------------------+
+; Partition Merge Resource Usage Summary              ;
++---------------------------------------------+-------+
+; Resource                                    ; Usage ;
++---------------------------------------------+-------+
+; Total logic elements                        ; 3008  ;
+;     -- Combinational with no register       ; 652   ;
+;     -- Register only                        ; 1316  ;
+;     -- Combinational with a register        ; 1040  ;
+;                                             ;       ;
+; Logic element usage by number of LUT inputs ;       ;
+;     -- 4 input functions                    ; 762   ;
+;     -- 3 input functions                    ; 421   ;
+;     -- 2 input functions                    ; 417   ;
+;     -- 1 input functions                    ; 59    ;
+;     -- 0 input functions                    ; 33    ;
+;                                             ;       ;
+; Logic elements by mode                      ;       ;
+;     -- normal mode                          ; 2624  ;
+;     -- arithmetic mode                      ; 384   ;
+;     -- qfbk mode                            ; 115   ;
+;     -- register cascade mode                ; 0     ;
+;     -- synchronous clear/load mode          ; 341   ;
+;     -- asynchronous clear/load mode         ; 915   ;
+;                                             ;       ;
+; Total registers                             ; 2356  ;
+; Total logic cells in carry chains           ; 407   ;
+; I/O pins                                    ; 64    ;
+; Total memory bits                           ; 30464 ;
+; Maximum fan-out                             ; 1783  ;
+; Total fan-out                               ; 13696 ;
+; Average fan-out                             ; 4.29  ;
++---------------------------------------------+-------+
+
+
++------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Partition Merge RAM Summary                                                                                                                                                                                                                                                                                ;
++-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+------+------------------+--------------+--------------+--------------+--------------+-------+------+
+; Name                                                                                                                                                                                                  ; Type ; Mode             ; Port A Depth ; Port A Width ; Port B Depth ; Port B Width ; Size  ; MIF  ;
++-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+------+------------------+--------------+--------------+--------------+--------------+-------+------+
+; sld_signaltap:auto_signaltap_0|sld_signaltap_impl:sld_signaltap_body|sld_signaltap_implb:sld_signaltap_body|altsyncram:\stp_non_zero_ram_gen:stp_buffer_ram|altsyncram_ll14:auto_generated|ALTSYNCRAM ; AUTO ; Simple Dual Port ; 256          ; 119          ; 256          ; 119          ; 30464 ; None ;
++-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+------+------------------+--------------+--------------+--------------+--------------+-------+------+
+
+
++--------------------------+
+; Partition Merge Messages ;
++--------------------------+
+Info: *******************************************************************
+Info: Running Quartus II 64-Bit Partition Merge
+    Info: Version 12.1 Build 177 11/07/2012 SJ Full Version
+    Info: Processing started: Mon Nov 10 11:29:21 2014
+Info: Command: quartus_cdb --read_settings_files=off --write_settings_files=off SPP_MCTL_V1 -c SPP_MCTL_V1 --merge=on
+Info (35006): Using previously generated Fitter netlist for partition "Top"
+Info (35007): Using synthesis netlist for partition "sld_hub:auto_hub"
+Info (35007): Using synthesis netlist for partition "sld_signaltap:auto_signaltap_0"
+Info (35024): Succesfully connected in-system debug instance "auto_signaltap_0" to all 239 required data inputs, trigger inputs, acquisition clocks, and dynamic pins
+Info (35002): Resolved and merged 3 partition(s)
+Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
+    Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
+Warning (21074): Design contains 1 input pin(s) that do not drive logic
+    Warning (15610): No output dependent on input pin "F_GPIO_I[5]"
+Info (21057): Implemented 3196 device resources after synthesis - the final resource count might be different
+    Info (21058): Implemented 23 input pins
+    Info (21059): Implemented 44 output pins
+    Info (21060): Implemented 1 bidirectional pins
+    Info (21061): Implemented 3008 logic cells
+    Info (21064): Implemented 119 RAM segments
+Info: Quartus II 64-Bit Partition Merge was successful. 0 errors, 2 warnings
+    Info: Peak virtual memory: 438 megabytes
+    Info: Processing ended: Mon Nov 10 11:29:22 2014
+    Info: Elapsed time: 00:00:01
+    Info: Total CPU time (on all processors): 00:00:01
+
+

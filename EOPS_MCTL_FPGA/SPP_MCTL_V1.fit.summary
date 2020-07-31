@@ -1,0 +1,16 @@
+Fitter Status : Successful - Fri Jul 31 17:03:25 2020
+Quartus II 64-Bit Version : 14.0.0 Build 200 06/17/2014 SJ Full Version
+Revision Name : SPP_MCTL_V1
+Top-level Entity Name : SPP_MCTL_V1
+Family : Cyclone IV E
+Device : EP4CE10F17C8
+Timing Models : Final
+Total logic elements : 6,455 / 10,320 ( 63 % )
+    Total combinational functions : 5,047 / 10,320 ( 49 % )
+    Dedicated logic registers : 3,602 / 10,320 ( 35 % )
+Total registers : 3602
+Total pins : 100 / 180 ( 56 % )
+Total virtual pins : 0
+Total memory bits : 12,288 / 423,936 ( 3 % )
+Embedded Multiplier 9-bit elements : 0 / 46 ( 0 % )
+Total PLLs : 1 / 2 ( 50 % )

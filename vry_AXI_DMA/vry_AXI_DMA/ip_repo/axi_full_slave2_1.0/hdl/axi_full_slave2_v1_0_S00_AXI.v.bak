@@ -1,7 +1,7 @@
 
 `timescale 1 ns / 1 ps
 
-	module axi_full_slave2_v1_0_S00_AXI #
+module axi_full_slave2_v1_0_S00_AXI #
 	(
 		// Users to add parameters here
 
@@ -177,7 +177,6 @@
 	reg  	axi_rlast;
 	reg [C_S_AXI_RUSER_WIDTH-1 : 0] 	axi_ruser;
 	reg  	axi_rvalid;
-//	wire  	axi_rvalid;
 	
 	// aw_wrap_en determines wrap boundary and enables wrapping
 	wire aw_wrap_en;
@@ -538,27 +537,21 @@
 	// is deasserted on reset (active low). axi_rresp and axi_rdata are 
 	// cleared to zero on reset (active low).  
 
-//	always @( posedge S_AXI_ACLK )
-//	begin
-//	  if ( S_AXI_ARESETN == 1'b0 )
-//	    begin
-//	      axi_rvalid <= 0;
-//	      axi_rresp  <= 0;
-//	    end 
-//	  else
-//	    begin    
-//	      if (axi_arv_arr_flag && ~axi_rvalid)
-//	        begin
-//	          axi_rvalid <= 1'b1;
-//	          axi_rresp  <= 2'b0; 
-//	          // 'OKAY' response
-//	        end   
-//	      else if (axi_rvalid && S_AXI_RREADY)
-//	        begin
-//	          axi_rvalid <= 1'b0;
-//	        end            
-//	    end
-//	end 
+	always @( posedge S_AXI_ACLK )
+	begin
+	  if ( S_AXI_ARESETN == 1'b0 )
+	    begin
+	      axi_rresp  <= 0;
+	    end 
+	  else
+	    begin    
+	      if (axi_arv_arr_flag && ~axi_rvalid)
+	        begin
+	          axi_rresp  <= 2'b0; 
+	          // 'OKAY' response
+	        end              
+	    end
+	end 
 	always @( posedge S_AXI_ACLK )   begin
 		axi_rvalid <= axi_arv_arr_flag;
 	end 
@@ -615,8 +608,8 @@
 //	        end 
 			assign mem_data_out[i][(mem_byte_index*8+7) -: 8] = data_out;   
 	               
-	    end
-	  end       
+	      end
+	    end       
 	endgenerate
 	//Output register or memory read data
 
@@ -637,4 +630,4 @@
 
 	// User logic ends
 
-	endmodule
+endmodule

@@ -1,7 +1,7 @@
 
 `timescale 1 ns / 1 ps
 
-	module axi_full_slave2_v1_0_S00_AXI #
+module axi_full_slave2_v1_0_S00_AXI #
 	(
 		// Users to add parameters here
 
@@ -177,7 +177,6 @@
 	reg  	axi_rlast;
 	reg [C_S_AXI_RUSER_WIDTH-1 : 0] 	axi_ruser;
 	reg  	axi_rvalid;
-//	wire  	axi_rvalid;
 	
 	// aw_wrap_en determines wrap boundary and enables wrapping
 	wire aw_wrap_en;
@@ -454,7 +453,7 @@
 	        begin
 	         
 	          axi_arlen_cntr <= axi_arlen_cntr + 1;
-	          axi_rlast <= 1'b0;
+//	          axi_rlast <= 1'b0;
 	        
 	          case (S_AXI_ARBURST)
 	            2'b00: // fixed burst
@@ -609,8 +608,8 @@
 //	        end 
 			assign mem_data_out[i][(mem_byte_index*8+7) -: 8] = data_out;   
 	               
-	    end
-	  end       
+	      end
+	    end       
 	endgenerate
 	//Output register or memory read data
 
@@ -631,4 +630,4 @@
 
 	// User logic ends
 
-	endmodule
+endmodule

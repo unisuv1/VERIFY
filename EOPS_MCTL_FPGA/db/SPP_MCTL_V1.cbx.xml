@@ -1,0 +1,17 @@
+<?xml version="1.0" ?>
+<LOG_ROOT>
+	<PROJECT NAME="SPP_MCTL_V1">
+		<CBX_INST_ENTRY INSTANCE_NAME="|SPP_MCTL_V1|PLL:PLL_inst|altpll:altpll_component" CBX_FILE_NAME="PLL_altpll.v"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|SPP_MCTL_V1|DEAL_DY:DEAL_DY_inst|DY_SIZE_FILTER:DY_SIZE_FILTER_inst1|PDFIFO:PDFIFO_inst|scfifo:scfifo_component" CBX_FILE_NAME="scfifo_kq61.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|SPP_MCTL_V1|DEAL_ENCODE:DEAL_ENCODE_inst|EncoderNoiseFilter:EncoderNoiseFilter_X_Raw|NoiseFltCounter:NoiseFltCounter_A_inst|lpm_counter:LPM_COUNTER_component" CBX_FILE_NAME="cntr_bti.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|SPP_MCTL_V1|sld_signaltap:parameter_analysis|sld_signaltap_impl:sld_signaltap_body|sld_signaltap_implb:sld_signaltap_body|sld_offload_buffer_mgr:\stp_non_zero_depth_offload_gen:stp_offload_buff_mgr_inst|lpm_counter:status_advance_pointer_counter" CBX_FILE_NAME="cntr_egi.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|SPP_MCTL_V1|DEAL_DY:DEAL_DY_inst|DY_SIZE_FILTER:DY_SIZE_FILTER_inst2|PDFIFO:PDFIFO_inst|scfifo:scfifo_component" CBX_FILE_NAME="scfifo_kq61.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|SPP_MCTL_V1|DEAL_ENCODE:DEAL_ENCODE_inst|EncoderNoiseFilter:EncoderNoiseFilter_X_Raw|NoiseFltCounter:NoiseFltCounter_B_inst|lpm_counter:LPM_COUNTER_component" CBX_FILE_NAME="cntr_bti.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|SPP_MCTL_V1|sld_signaltap:parameter_analysis|sld_signaltap_impl:sld_signaltap_body|sld_signaltap_implb:sld_signaltap_body|altsyncram:\stp_non_zero_ram_gen:stp_buffer_ram" CBX_FILE_NAME="altsyncram_ku14.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|SPP_MCTL_V1|sld_signaltap:parameter_analysis|sld_signaltap_impl:sld_signaltap_body|sld_signaltap_implb:sld_signaltap_body|altdpram:\stp_non_zero_ram_gen:attribute_mem_gen:attribute_mem|lpm_mux:mux" CBX_FILE_NAME="mux_ssc.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|SPP_MCTL_V1|sld_signaltap:parameter_analysis|sld_signaltap_impl:sld_signaltap_body|sld_signaltap_implb:sld_signaltap_body|sld_offload_buffer_mgr:\stp_non_zero_depth_offload_gen:stp_offload_buff_mgr_inst|lpm_counter:\adv_point_3_and_more:advance_pointer_counter" CBX_FILE_NAME="cntr_kgi.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|SPP_MCTL_V1|sld_signaltap:parameter_analysis|sld_signaltap_impl:sld_signaltap_body|sld_signaltap_implb:sld_signaltap_body|altdpram:\stp_non_zero_ram_gen:attribute_mem_gen:attribute_mem|lpm_decode:wdecoder" CBX_FILE_NAME="decode_dvf.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|SPP_MCTL_V1|sld_signaltap:parameter_analysis|sld_signaltap_impl:sld_signaltap_body|sld_signaltap_implb:sld_signaltap_body|sld_offload_buffer_mgr:\stp_non_zero_depth_offload_gen:stp_offload_buff_mgr_inst|lpm_counter:status_read_pointer_counter" CBX_FILE_NAME="cntr_23j.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|SPP_MCTL_V1|sld_signaltap:parameter_analysis|sld_signaltap_impl:sld_signaltap_body|sld_signaltap_implb:sld_signaltap_body|sld_offload_buffer_mgr:\stp_non_zero_depth_offload_gen:stp_offload_buff_mgr_inst|lpm_counter:read_pointer_counter" CBX_FILE_NAME="cntr_i6j.tdf"/>
+	</PROJECT>
+</LOG_ROOT>

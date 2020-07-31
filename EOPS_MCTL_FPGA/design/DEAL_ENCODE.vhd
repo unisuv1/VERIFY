@@ -1,0 +1,173 @@
+LIBRARY IEEE;
+USE IEEE.STD_LOGIC_1164.ALL;
+USE IEEE.STD_LOGIC_UNSIGNED.ALL;
+USE IEEE.STD_LOGIC_ARITH.ALL;
+
+entity DEAL_ENCODE is
+	port 
+	(
+		nRESET      					: in std_logic;
+		clk_sys							: in std_logic;
+		
+		EN1_X_2A						: in std_logic;		---外部编码输入A相
+		EN1_X_2B						: in std_logic;		---外部编码输入B相
+		gen_encoder_A					: in std_logic;		---虚拟编码输入A相
+		gen_encoder_B					: in std_logic;		---虚拟编码输入B相
+		
+		gen_en_encoder					:in		std_logic;	---虚拟编码使能
+		select_swap	 					:in		std_logic;	---编码器AB交换使能
+
+		filter_delay_encoder_en			: in std_logic;						---编码滤波时间（时钟数）
+		filter_delay_time_encoder		: in std_logic_vector(15 downto 0);	---编码滤波使能
+
+		multiplication					: in std_logic_vector(7 downto 0);	---编码倍频倍数
+				
+		X_Raw_A_Filted_port				: out std_logic;	---编码输出A相
+		X_Raw_B_Filted_port				: out std_logic		---编码输出B相
+	);
+end entity;
+
+architecture rtl of DEAL_ENCODE is
+
+signal X_Raw_A_Filted			: STD_LOGIC;
+signal X_Raw_B_Filted 			: STD_LOGIC;
+signal X_Raw_A_Full				: STD_LOGIC;
+signal X_Raw_B_Full 			: STD_LOGIC;
+signal X_Raw_Filter_Lock 		: STD_LOGIC;
+signal X_Feedback_A_Smooth_720	: STD_LOGIC;
+signal X_Feedback_B_Smooth_720	: STD_LOGIC;
+signal X_Feedback_A_Filted		: STD_LOGIC;
+signal X_Feedback_B_Filted		: STD_LOGIC;
+
+component EncoderNoiseFilter is
+	port 
+	(
+		Encoder_A				: in std_logic;
+		Encoder_B				: in std_logic;
+		
+		filter_delay_time		: in std_logic_vector(15 downto 0);
+		filter_delay_encoder_en	: in std_logic;
+		
+		nRESET          		: in std_logic;
+		clk_sys					: in std_logic;
+
+		Encoder_A_Filted 		: out STD_LOGIC;
+		Encoder_B_Filted 		: out STD_LOGIC;
+
+		Locked					: out std_logic
+	);
+end component;
+
+component Encoder_full
+	port 
+	(
+		Encoder_A					: in	std_logic;
+		Encoder_B					: in	std_logic;
+
+		nRESET                  	: in	std_logic;
+		enable						: in	std_logic;
+		clk_sys						: in	std_logic;
+		
+		fire_multiplication			: in	STD_LOGIC_VECTOR (15 DOWNTO 0);		
+
+		synchronization_en 			: out	STD_LOGIC;
+		Encoder_A_Smooth_720 		: out	STD_LOGIC;
+		Encoder_B_Smooth_720 		: out	STD_LOGIC
+	);	
+end component;
+	
+	
+signal EN1_X_2A_t			: std_logic;
+signal EN1_X_2B_t			: std_logic;
+
+
+	
+begin
+	
+	---编码信号选择
+	process(nRESET,clk_sys)
+	begin
+		if(nRESET = '0') then
+			EN1_X_2A_t	<= '0';
+			EN1_X_2B_t	<= '0';
+		elsif rising_edge(clk_sys) then
+			if(gen_en_encoder = '0') then		
+				if(select_swap = '0') then
+					EN1_X_2A_t	<= EN1_X_2A;
+					EN1_X_2B_t	<= EN1_X_2B;
+				else
+					EN1_X_2A_t	<= EN1_X_2B;
+					EN1_X_2B_t	<= EN1_X_2A;
+				end if;
+			else
+				if(select_swap = '0') then
+					EN1_X_2A_t	<= gen_encoder_A;
+					EN1_X_2B_t	<= gen_encoder_B;
+				else
+					EN1_X_2A_t	<= gen_encoder_B;
+					EN1_X_2B_t	<= gen_encoder_A;
+				end if;
+			end if;				
+		end if;
+	end process;	
+	
+	
+	EncoderNoiseFilter_X_Raw : EncoderNoiseFilter
+	port map 
+	(
+		Encoder_A	=> EN1_X_2A_t,
+		Encoder_B 	=> EN1_X_2B_t,
+	
+		filter_delay_time	=> filter_delay_time_encoder,
+		filter_delay_encoder_en => filter_delay_encoder_en,
+		
+		nRESET  	=> nRESET,
+		clk_sys		=> clk_sys,
+	
+		Encoder_A_Filted => X_Raw_A_Filted,
+		Encoder_B_Filted => X_Raw_B_Filted,
+	
+		Locked 		=> X_Raw_Filter_Lock
+	);
+		
+--	Encoder_full_inst : Encoder_full
+--	port map 
+--	(
+--		Encoder_A	=>	X_Raw_A_Filted,
+--		Encoder_B	=>	X_Raw_B_Filted,
+--
+--		nRESET      =>  nRESET,
+--		enable		=>	X_Raw_Filter_Lock,
+--		clk_sys		=>	clk_sys, 
+--		
+--		fire_multiplication => X"00"&multiplication,
+--
+--		Encoder_A_Smooth_720 => X_Raw_A_Full,
+--		Encoder_B_Smooth_720 => X_Raw_B_Full
+--	);
+
+--	process(gen_en_encoder, multiplication, X_Raw_A_Filted, X_Raw_B_Filted, X_Raw_A_full, X_Raw_B_full)
+--	begin
+--		if(gen_en_encoder = '1' or multiplication = X"00" or multiplication = X"01") then
+--			X_Raw_A_Filted_port	<= X_Raw_A_Filted;
+--			X_Raw_B_Filted_port	<= X_Raw_B_Filted;
+--		else
+--			X_Raw_A_Filted_port	<= X_Raw_A_full;
+--			X_Raw_B_Filted_port	<= X_Raw_B_full;	
+--		end if;
+--	end process;
+
+	process (clk_sys) begin 
+		if (clk_sys'event and clk_sys = '1') then
+--			if(gen_en_encoder = '1' or multiplication = X"00" or multiplication = X"01") then
+				X_Raw_A_Filted_port	<= X_Raw_A_Filted;
+				X_Raw_B_Filted_port	<= X_Raw_B_Filted;
+--			else
+--				X_Raw_A_Filted_port	<= X_Raw_A_full;
+--				X_Raw_B_Filted_port	<= X_Raw_B_full;	
+--			end if;			
+		end if;	
+	end process;
+
+
+end rtl;

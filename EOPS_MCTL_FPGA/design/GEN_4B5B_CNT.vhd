@@ -1,0 +1,115 @@
+LIBRARY IEEE;
+USE IEEE.STD_LOGIC_ARITH.ALL;
+USE IEEE.STD_LOGIC_UNSIGNED.ALL;
+USE IEEE.STD_LOGIC_1164.ALL;
+
+entity	GEN_4B5B_CNT IS
+	PORT (
+		nRST					:in		std_logic;
+		clk_100					:in		std_logic; 
+		
+		
+		sensor_en1				:in		std_logic;
+		sensor_en2				:in		std_logic;
+		sensor_en3				:in		std_logic;
+		sensor_4b5b_en			:in		std_logic; ---电眼4b/5b编码使能
+		
+		valid_edge1				:in		std_logic;
+		valid_edge2				:in		std_logic;
+		valid_edge3				:in		std_logic;		
+
+		
+		sensor_4b5b_cnt1		:buffer	std_logic_vector(15 downto 0); 
+		sensor_4b5b_cnt2		:buffer	std_logic_vector(15 downto 0);
+		sensor_4b5b_cnt3		:buffer	std_logic_vector(15 downto 0)		
+	);
+END entity;
+
+architecture BEHV of GEN_4B5B_CNT IS
+	
+	
+	signal sensor_en1_r1	: std_logic;
+	signal sensor_en1_r2	: std_logic;
+	signal sensor_en2_r1	: std_logic;
+	signal sensor_en2_r2	: std_logic;
+	signal sensor_en3_r1	: std_logic;
+	signal sensor_en3_r2	: std_logic;
+	
+	
+	
+BEGIN 
+
+	---产生 sensor_4b5b_cnt1 -*- 干什么用 -*-
+	process(clk_100,nRST)
+	begin
+		if(nRST = '0') then
+
+			sensor_en1_r1	<= '0';
+			sensor_en1_r2	<= '0';
+			sensor_en2_r1	<= '0';
+			sensor_en2_r2	<= '0';
+			sensor_en3_r1	<= '0';
+			sensor_en3_r2	<= '0';
+			sensor_4b5b_cnt1	<= (others => '0');
+			
+		elsif(clk_100'event and clk_100='1') then
+			sensor_en1_r1	<= sensor_en1;
+			sensor_en1_r2	<= sensor_en1_r1;
+		
+			sensor_en2_r1	<= sensor_en2;
+			sensor_en2_r2	<= sensor_en2_r1;
+			
+			sensor_en3_r1	<= sensor_en3;
+			sensor_en3_r2	<= sensor_en3_r1;
+		
+			if(sensor_en1_r2 = '0' and sensor_en1_r1 = '1') then
+				sensor_4b5b_cnt1	<= (others => '0');
+			elsif(sensor_en1_r2 = '1') then		
+				if(sensor_4b5b_en = '1') then
+					if(valid_edge1 = '1') then
+						sensor_4b5b_cnt1	<= sensor_4b5b_cnt1 + '1';
+					else
+						sensor_4b5b_cnt1	<= sensor_4b5b_cnt1;
+					end if;
+				else
+					sensor_4b5b_cnt1	<= sensor_4b5b_cnt1;
+				end if;
+			else
+				sensor_4b5b_cnt1	<= sensor_4b5b_cnt1;
+			end if;
+
+			if(sensor_en2_r2 = '0' and sensor_en2_r1 = '1') then
+				sensor_4b5b_cnt2	<= (others => '0');
+			elsif(sensor_en2_r2 = '1') then		
+				if(sensor_4b5b_en = '1') then
+					if(valid_edge2 = '1') then
+						sensor_4b5b_cnt2	<= sensor_4b5b_cnt2 + '1';
+					else
+						sensor_4b5b_cnt2	<= sensor_4b5b_cnt2;
+					end if;
+				else
+					sensor_4b5b_cnt2	<= sensor_4b5b_cnt2;
+				end if;
+			else
+				sensor_4b5b_cnt2	<= sensor_4b5b_cnt2;
+			end if;
+			
+			if(sensor_en3_r2 = '0' and sensor_en3_r1 = '1') then
+				sensor_4b5b_cnt3	<= (others => '0');
+			elsif(sensor_en3_r2 = '1') then		
+				if(sensor_4b5b_en = '1') then
+					if(valid_edge3 = '1') then
+						sensor_4b5b_cnt3	<= sensor_4b5b_cnt3 + '1';
+					else
+						sensor_4b5b_cnt3	<= sensor_4b5b_cnt3;
+					end if;
+				else
+					sensor_4b5b_cnt3	<= sensor_4b5b_cnt3;
+				end if;
+			else
+				sensor_4b5b_cnt3	<= sensor_4b5b_cnt3;
+			end if;
+		end if;
+	end process;
+	
+END BEHV;

@@ -1,0 +1,439 @@
+<session jtag_chain="USB-Blaster [USB-0]" jtag_device="@1: EP1C3 (0x020810DD)" sof_file="SPP_MCTL_V1.sof">
+  <display_tree gui_logging_enabled="0">
+    <display_branch instance="auto_signaltap_0" log="USE_GLOBAL_TEMP" signal_set="USE_GLOBAL_TEMP" trigger="USE_GLOBAL_TEMP"/>
+  </display_tree>
+  <instance entity_name="sld_signaltap" is_auto_node="yes" is_expanded="true" name="auto_signaltap_0" source_file="sld_signaltap.vhd">
+    <node_ip_info instance_id="0" mfg_id="110" node_id="0" version="6"/>
+    <position_info>
+      <single attribute="active tab" value="0"/>
+      <single attribute="data horizontal scroll position" value="5"/>
+      <single attribute="data vertical scroll position" value="0"/>
+      <single attribute="setup horizontal scroll position" value="0"/>
+      <single attribute="setup vertical scroll position" value="19"/>
+      <single attribute="zoom level denominator" value="1"/>
+      <single attribute="zoom level numerator" value="2"/>
+      <single attribute="zoom offset denominator" value="1"/>
+      <single attribute="zoom offset numerator" value="65504"/>
+    </position_info>
+    <signal_set global_temp="1" name="signal_set: 2015/09/14 15:53:38  #0">
+      <clock name="clk" polarity="posedge" tap_mode="classic"/>
+      <config ram_type="M4K" reserved_data_nodes="0" reserved_storage_qualifier_nodes="0" reserved_trigger_nodes="0" sample_depth="64" trigger_in_enable="no" trigger_out_enable="no"/>
+      <top_entity/>
+      <signal_vec>
+        <trigger_input_vec>
+          <wire name="SENSOR_ENCODER:gen_inst|Pre_SPR_XRawCoor[0]" tap_mode="classic" type="register"/>
+          <wire name="SENSOR_ENCODER:gen_inst|Pre_SPR_XRawCoor[10]" tap_mode="classic" type="register"/>
+          <wire name="SENSOR_ENCODER:gen_inst|Pre_SPR_XRawCoor[11]" tap_mode="classic" type="register"/>
+          <wire name="SENSOR_ENCODER:gen_inst|Pre_SPR_XRawCoor[12]" tap_mode="classic" type="register"/>
+          <wire name="SENSOR_ENCODER:gen_inst|Pre_SPR_XRawCoor[13]" tap_mode="classic" type="register"/>
+          <wire name="SENSOR_ENCODER:gen_inst|Pre_SPR_XRawCoor[14]" tap_mode="classic" type="register"/>
+          <wire name="SENSOR_ENCODER:gen_inst|Pre_SPR_XRawCoor[15]" tap_mode="classic" type="register"/>
+          <wire name="SENSOR_ENCODER:gen_inst|Pre_SPR_XRawCoor[16]" tap_mode="classic" type="register"/>
+          <wire name="SENSOR_ENCODER:gen_inst|Pre_SPR_XRawCoor[17]" tap_mode="classic" type="register"/>
+          <wire name="SENSOR_ENCODER:gen_inst|Pre_SPR_XRawCoor[18]" tap_mode="classic" type="register"/>
+          <wire name="SENSOR_ENCODER:gen_inst|Pre_SPR_XRawCoor[19]" tap_mode="classic" type="register"/>
+          <wire name="SENSOR_ENCODER:gen_inst|Pre_SPR_XRawCoor[1]" tap_mode="classic" type="register"/>
+          <wire name="SENSOR_ENCODER:gen_inst|Pre_SPR_XRawCoor[20]" tap_mode="classic" type="register"/>
+          <wire name="SENSOR_ENCODER:gen_inst|Pre_SPR_XRawCoor[21]" tap_mode="classic" type="register"/>
+          <wire name="SENSOR_ENCODER:gen_inst|Pre_SPR_XRawCoor[22]" tap_mode="classic" type="register"/>
+          <wire name="SENSOR_ENCODER:gen_inst|Pre_SPR_XRawCoor[23]" tap_mode="classic" type="register"/>
+          <wire name="SENSOR_ENCODER:gen_inst|Pre_SPR_XRawCoor[24]" tap_mode="classic" type="register"/>
+          <wire name="SENSOR_ENCODER:gen_inst|Pre_SPR_XRawCoor[25]" tap_mode="classic" type="register"/>
+          <wire name="SENSOR_ENCODER:gen_inst|Pre_SPR_XRawCoor[26]" tap_mode="classic" type="register"/>
+          <wire name="SENSOR_ENCODER:gen_inst|Pre_SPR_XRawCoor[27]" tap_mode="classic" type="register"/>
+          <wire name="SENSOR_ENCODER:gen_inst|Pre_SPR_XRawCoor[28]" tap_mode="classic" type="register"/>
+          <wire name="SENSOR_ENCODER:gen_inst|Pre_SPR_XRawCoor[29]" tap_mode="classic" type="register"/>
+          <wire name="SENSOR_ENCODER:gen_inst|Pre_SPR_XRawCoor[2]" tap_mode="classic" type="register"/>
+          <wire name="SENSOR_ENCODER:gen_inst|Pre_SPR_XRawCoor[30]" tap_mode="classic" type="register"/>
+          <wire name="SENSOR_ENCODER:gen_inst|Pre_SPR_XRawCoor[31]" tap_mode="classic" type="register"/>
+          <wire name="SENSOR_ENCODER:gen_inst|Pre_SPR_XRawCoor[3]" tap_mode="classic" type="register"/>
+          <wire name="SENSOR_ENCODER:gen_inst|Pre_SPR_XRawCoor[4]" tap_mode="classic" type="register"/>
+          <wire name="SENSOR_ENCODER:gen_inst|Pre_SPR_XRawCoor[5]" tap_mode="classic" type="register"/>
+          <wire name="SENSOR_ENCODER:gen_inst|Pre_SPR_XRawCoor[6]" tap_mode="classic" type="register"/>
+          <wire name="SENSOR_ENCODER:gen_inst|Pre_SPR_XRawCoor[7]" tap_mode="classic" type="register"/>
+          <wire name="SENSOR_ENCODER:gen_inst|Pre_SPR_XRawCoor[8]" tap_mode="classic" type="register"/>
+          <wire name="SENSOR_ENCODER:gen_inst|Pre_SPR_XRawCoor[9]" tap_mode="classic" type="register"/>
+          <wire name="SENSOR_ENCODER:gen_inst|SPR_XRawCoor[0]" tap_mode="classic" type="combinatorial"/>
+          <wire name="SENSOR_ENCODER:gen_inst|SPR_XRawCoor[10]" tap_mode="classic" type="combinatorial"/>
+          <wire name="SENSOR_ENCODER:gen_inst|SPR_XRawCoor[11]" tap_mode="classic" type="combinatorial"/>
+          <wire name="SENSOR_ENCODER:gen_inst|SPR_XRawCoor[12]" tap_mode="classic" type="combinatorial"/>
+          <wire name="SENSOR_ENCODER:gen_inst|SPR_XRawCoor[13]" tap_mode="classic" type="combinatorial"/>
+          <wire name="SENSOR_ENCODER:gen_inst|SPR_XRawCoor[14]" tap_mode="classic" type="combinatorial"/>
+          <wire name="SENSOR_ENCODER:gen_inst|SPR_XRawCoor[15]" tap_mode="classic" type="combinatorial"/>
+          <wire name="SENSOR_ENCODER:gen_inst|SPR_XRawCoor[16]" tap_mode="classic" type="combinatorial"/>
+          <wire name="SENSOR_ENCODER:gen_inst|SPR_XRawCoor[17]" tap_mode="classic" type="combinatorial"/>
+          <wire name="SENSOR_ENCODER:gen_inst|SPR_XRawCoor[18]" tap_mode="classic" type="combinatorial"/>
+          <wire name="SENSOR_ENCODER:gen_inst|SPR_XRawCoor[19]" tap_mode="classic" type="combinatorial"/>
+          <wire name="SENSOR_ENCODER:gen_inst|SPR_XRawCoor[1]" tap_mode="classic" type="combinatorial"/>
+          <wire name="SENSOR_ENCODER:gen_inst|SPR_XRawCoor[20]" tap_mode="classic" type="combinatorial"/>
+          <wire name="SENSOR_ENCODER:gen_inst|SPR_XRawCoor[21]" tap_mode="classic" type="combinatorial"/>
+          <wire name="SENSOR_ENCODER:gen_inst|SPR_XRawCoor[22]" tap_mode="classic" type="combinatorial"/>
+          <wire name="SENSOR_ENCODER:gen_inst|SPR_XRawCoor[23]" tap_mode="classic" type="combinatorial"/>
+          <wire name="SENSOR_ENCODER:gen_inst|SPR_XRawCoor[24]" tap_mode="classic" type="combinatorial"/>
+          <wire name="SENSOR_ENCODER:gen_inst|SPR_XRawCoor[25]" tap_mode="classic" type="combinatorial"/>
+          <wire name="SENSOR_ENCODER:gen_inst|SPR_XRawCoor[26]" tap_mode="classic" type="combinatorial"/>
+          <wire name="SENSOR_ENCODER:gen_inst|SPR_XRawCoor[27]" tap_mode="classic" type="combinatorial"/>
+          <wire name="SENSOR_ENCODER:gen_inst|SPR_XRawCoor[28]" tap_mode="classic" type="combinatorial"/>
+          <wire name="SENSOR_ENCODER:gen_inst|SPR_XRawCoor[29]" tap_mode="classic" type="combinatorial"/>
+          <wire name="SENSOR_ENCODER:gen_inst|SPR_XRawCoor[2]" tap_mode="classic" type="combinatorial"/>
+          <wire name="SENSOR_ENCODER:gen_inst|SPR_XRawCoor[30]" tap_mode="classic" type="combinatorial"/>
+          <wire name="SENSOR_ENCODER:gen_inst|SPR_XRawCoor[31]" tap_mode="classic" type="combinatorial"/>
+          <wire name="SENSOR_ENCODER:gen_inst|SPR_XRawCoor[3]" tap_mode="classic" type="combinatorial"/>
+          <wire name="SENSOR_ENCODER:gen_inst|SPR_XRawCoor[4]" tap_mode="classic" type="combinatorial"/>
+          <wire name="SENSOR_ENCODER:gen_inst|SPR_XRawCoor[5]" tap_mode="classic" type="combinatorial"/>
+          <wire name="SENSOR_ENCODER:gen_inst|SPR_XRawCoor[6]" tap_mode="classic" type="combinatorial"/>
+          <wire name="SENSOR_ENCODER:gen_inst|SPR_XRawCoor[7]" tap_mode="classic" type="combinatorial"/>
+          <wire name="SENSOR_ENCODER:gen_inst|SPR_XRawCoor[8]" tap_mode="classic" type="combinatorial"/>
+          <wire name="SENSOR_ENCODER:gen_inst|SPR_XRawCoor[9]" tap_mode="classic" type="combinatorial"/>
+          <wire name="SENSOR_ENCODER:gen_inst|gen_dy" tap_mode="classic" type="combinatorial"/>
+          <wire name="SENSOR_ENCODER:gen_inst|trigger" tap_mode="classic" type="register"/>
+          <wire name="default_out" tap_mode="classic" type="register"/>
+          <wire name="filter_delay_encoder_en" tap_mode="classic" type="register"/>
+          <wire name="gen_en_sensor" tap_mode="classic" type="register"/>
+        </trigger_input_vec>
+        <data_input_vec>
+          <wire name="SENSOR_ENCODER:gen_inst|Pre_SPR_XRawCoor[0]" tap_mode="classic" type="register"/>
+          <wire name="SENSOR_ENCODER:gen_inst|Pre_SPR_XRawCoor[10]" tap_mode="classic" type="register"/>
+          <wire name="SENSOR_ENCODER:gen_inst|Pre_SPR_XRawCoor[11]" tap_mode="classic" type="register"/>
+          <wire name="SENSOR_ENCODER:gen_inst|Pre_SPR_XRawCoor[12]" tap_mode="classic" type="register"/>
+          <wire name="SENSOR_ENCODER:gen_inst|Pre_SPR_XRawCoor[13]" tap_mode="classic" type="register"/>
+          <wire name="SENSOR_ENCODER:gen_inst|Pre_SPR_XRawCoor[14]" tap_mode="classic" type="register"/>
+          <wire name="SENSOR_ENCODER:gen_inst|Pre_SPR_XRawCoor[15]" tap_mode="classic" type="register"/>
+          <wire name="SENSOR_ENCODER:gen_inst|Pre_SPR_XRawCoor[16]" tap_mode="classic" type="register"/>
+          <wire name="SENSOR_ENCODER:gen_inst|Pre_SPR_XRawCoor[17]" tap_mode="classic" type="register"/>
+          <wire name="SENSOR_ENCODER:gen_inst|Pre_SPR_XRawCoor[18]" tap_mode="classic" type="register"/>
+          <wire name="SENSOR_ENCODER:gen_inst|Pre_SPR_XRawCoor[19]" tap_mode="classic" type="register"/>
+          <wire name="SENSOR_ENCODER:gen_inst|Pre_SPR_XRawCoor[1]" tap_mode="classic" type="register"/>
+          <wire name="SENSOR_ENCODER:gen_inst|Pre_SPR_XRawCoor[20]" tap_mode="classic" type="register"/>
+          <wire name="SENSOR_ENCODER:gen_inst|Pre_SPR_XRawCoor[21]" tap_mode="classic" type="register"/>
+          <wire name="SENSOR_ENCODER:gen_inst|Pre_SPR_XRawCoor[22]" tap_mode="classic" type="register"/>
+          <wire name="SENSOR_ENCODER:gen_inst|Pre_SPR_XRawCoor[23]" tap_mode="classic" type="register"/>
+          <wire name="SENSOR_ENCODER:gen_inst|Pre_SPR_XRawCoor[24]" tap_mode="classic" type="register"/>
+          <wire name="SENSOR_ENCODER:gen_inst|Pre_SPR_XRawCoor[25]" tap_mode="classic" type="register"/>
+          <wire name="SENSOR_ENCODER:gen_inst|Pre_SPR_XRawCoor[26]" tap_mode="classic" type="register"/>
+          <wire name="SENSOR_ENCODER:gen_inst|Pre_SPR_XRawCoor[27]" tap_mode="classic" type="register"/>
+          <wire name="SENSOR_ENCODER:gen_inst|Pre_SPR_XRawCoor[28]" tap_mode="classic" type="register"/>
+          <wire name="SENSOR_ENCODER:gen_inst|Pre_SPR_XRawCoor[29]" tap_mode="classic" type="register"/>
+          <wire name="SENSOR_ENCODER:gen_inst|Pre_SPR_XRawCoor[2]" tap_mode="classic" type="register"/>
+          <wire name="SENSOR_ENCODER:gen_inst|Pre_SPR_XRawCoor[30]" tap_mode="classic" type="register"/>
+          <wire name="SENSOR_ENCODER:gen_inst|Pre_SPR_XRawCoor[31]" tap_mode="classic" type="register"/>
+          <wire name="SENSOR_ENCODER:gen_inst|Pre_SPR_XRawCoor[3]" tap_mode="classic" type="register"/>
+          <wire name="SENSOR_ENCODER:gen_inst|Pre_SPR_XRawCoor[4]" tap_mode="classic" type="register"/>
+          <wire name="SENSOR_ENCODER:gen_inst|Pre_SPR_XRawCoor[5]" tap_mode="classic" type="register"/>
+          <wire name="SENSOR_ENCODER:gen_inst|Pre_SPR_XRawCoor[6]" tap_mode="classic" type="register"/>
+          <wire name="SENSOR_ENCODER:gen_inst|Pre_SPR_XRawCoor[7]" tap_mode="classic" type="register"/>
+          <wire name="SENSOR_ENCODER:gen_inst|Pre_SPR_XRawCoor[8]" tap_mode="classic" type="register"/>
+          <wire name="SENSOR_ENCODER:gen_inst|Pre_SPR_XRawCoor[9]" tap_mode="classic" type="register"/>
+          <wire name="SENSOR_ENCODER:gen_inst|SPR_XRawCoor[0]" tap_mode="classic" type="combinatorial"/>
+          <wire name="SENSOR_ENCODER:gen_inst|SPR_XRawCoor[10]" tap_mode="classic" type="combinatorial"/>
+          <wire name="SENSOR_ENCODER:gen_inst|SPR_XRawCoor[11]" tap_mode="classic" type="combinatorial"/>
+          <wire name="SENSOR_ENCODER:gen_inst|SPR_XRawCoor[12]" tap_mode="classic" type="combinatorial"/>
+          <wire name="SENSOR_ENCODER:gen_inst|SPR_XRawCoor[13]" tap_mode="classic" type="combinatorial"/>
+          <wire name="SENSOR_ENCODER:gen_inst|SPR_XRawCoor[14]" tap_mode="classic" type="combinatorial"/>
+          <wire name="SENSOR_ENCODER:gen_inst|SPR_XRawCoor[15]" tap_mode="classic" type="combinatorial"/>
+          <wire name="SENSOR_ENCODER:gen_inst|SPR_XRawCoor[16]" tap_mode="classic" type="combinatorial"/>
+          <wire name="SENSOR_ENCODER:gen_inst|SPR_XRawCoor[17]" tap_mode="classic" type="combinatorial"/>
+          <wire name="SENSOR_ENCODER:gen_inst|SPR_XRawCoor[18]" tap_mode="classic" type="combinatorial"/>
+          <wire name="SENSOR_ENCODER:gen_inst|SPR_XRawCoor[19]" tap_mode="classic" type="combinatorial"/>
+          <wire name="SENSOR_ENCODER:gen_inst|SPR_XRawCoor[1]" tap_mode="classic" type="combinatorial"/>
+          <wire name="SENSOR_ENCODER:gen_inst|SPR_XRawCoor[20]" tap_mode="classic" type="combinatorial"/>
+          <wire name="SENSOR_ENCODER:gen_inst|SPR_XRawCoor[21]" tap_mode="classic" type="combinatorial"/>
+          <wire name="SENSOR_ENCODER:gen_inst|SPR_XRawCoor[22]" tap_mode="classic" type="combinatorial"/>
+          <wire name="SENSOR_ENCODER:gen_inst|SPR_XRawCoor[23]" tap_mode="classic" type="combinatorial"/>
+          <wire name="SENSOR_ENCODER:gen_inst|SPR_XRawCoor[24]" tap_mode="classic" type="combinatorial"/>
+          <wire name="SENSOR_ENCODER:gen_inst|SPR_XRawCoor[25]" tap_mode="classic" type="combinatorial"/>
+          <wire name="SENSOR_ENCODER:gen_inst|SPR_XRawCoor[26]" tap_mode="classic" type="combinatorial"/>
+          <wire name="SENSOR_ENCODER:gen_inst|SPR_XRawCoor[27]" tap_mode="classic" type="combinatorial"/>
+          <wire name="SENSOR_ENCODER:gen_inst|SPR_XRawCoor[28]" tap_mode="classic" type="combinatorial"/>
+          <wire name="SENSOR_ENCODER:gen_inst|SPR_XRawCoor[29]" tap_mode="classic" type="combinatorial"/>
+          <wire name="SENSOR_ENCODER:gen_inst|SPR_XRawCoor[2]" tap_mode="classic" type="combinatorial"/>
+          <wire name="SENSOR_ENCODER:gen_inst|SPR_XRawCoor[30]" tap_mode="classic" type="combinatorial"/>
+          <wire name="SENSOR_ENCODER:gen_inst|SPR_XRawCoor[31]" tap_mode="classic" type="combinatorial"/>
+          <wire name="SENSOR_ENCODER:gen_inst|SPR_XRawCoor[3]" tap_mode="classic" type="combinatorial"/>
+          <wire name="SENSOR_ENCODER:gen_inst|SPR_XRawCoor[4]" tap_mode="classic" type="combinatorial"/>
+          <wire name="SENSOR_ENCODER:gen_inst|SPR_XRawCoor[5]" tap_mode="classic" type="combinatorial"/>
+          <wire name="SENSOR_ENCODER:gen_inst|SPR_XRawCoor[6]" tap_mode="classic" type="combinatorial"/>
+          <wire name="SENSOR_ENCODER:gen_inst|SPR_XRawCoor[7]" tap_mode="classic" type="combinatorial"/>
+          <wire name="SENSOR_ENCODER:gen_inst|SPR_XRawCoor[8]" tap_mode="classic" type="combinatorial"/>
+          <wire name="SENSOR_ENCODER:gen_inst|SPR_XRawCoor[9]" tap_mode="classic" type="combinatorial"/>
+          <wire name="SENSOR_ENCODER:gen_inst|gen_dy" tap_mode="classic" type="combinatorial"/>
+          <wire name="SENSOR_ENCODER:gen_inst|trigger" tap_mode="classic" type="register"/>
+          <wire name="default_out" tap_mode="classic" type="register"/>
+          <wire name="filter_delay_encoder_en" tap_mode="classic" type="register"/>
+          <wire name="gen_en_sensor" tap_mode="classic" type="register"/>
+        </data_input_vec>
+        <storage_qualifier_input_vec>
+          <wire name="SENSOR_ENCODER:gen_inst|Pre_SPR_XRawCoor[0]" tap_mode="classic" type="register"/>
+          <wire name="SENSOR_ENCODER:gen_inst|Pre_SPR_XRawCoor[10]" tap_mode="classic" type="register"/>
+          <wire name="SENSOR_ENCODER:gen_inst|Pre_SPR_XRawCoor[11]" tap_mode="classic" type="register"/>
+          <wire name="SENSOR_ENCODER:gen_inst|Pre_SPR_XRawCoor[12]" tap_mode="classic" type="register"/>
+          <wire name="SENSOR_ENCODER:gen_inst|Pre_SPR_XRawCoor[13]" tap_mode="classic" type="register"/>
+          <wire name="SENSOR_ENCODER:gen_inst|Pre_SPR_XRawCoor[14]" tap_mode="classic" type="register"/>
+          <wire name="SENSOR_ENCODER:gen_inst|Pre_SPR_XRawCoor[15]" tap_mode="classic" type="register"/>
+          <wire name="SENSOR_ENCODER:gen_inst|Pre_SPR_XRawCoor[16]" tap_mode="classic" type="register"/>
+          <wire name="SENSOR_ENCODER:gen_inst|Pre_SPR_XRawCoor[17]" tap_mode="classic" type="register"/>
+          <wire name="SENSOR_ENCODER:gen_inst|Pre_SPR_XRawCoor[18]" tap_mode="classic" type="register"/>
+          <wire name="SENSOR_ENCODER:gen_inst|Pre_SPR_XRawCoor[19]" tap_mode="classic" type="register"/>
+          <wire name="SENSOR_ENCODER:gen_inst|Pre_SPR_XRawCoor[1]" tap_mode="classic" type="register"/>
+          <wire name="SENSOR_ENCODER:gen_inst|Pre_SPR_XRawCoor[20]" tap_mode="classic" type="register"/>
+          <wire name="SENSOR_ENCODER:gen_inst|Pre_SPR_XRawCoor[21]" tap_mode="classic" type="register"/>
+          <wire name="SENSOR_ENCODER:gen_inst|Pre_SPR_XRawCoor[22]" tap_mode="classic" type="register"/>
+          <wire name="SENSOR_ENCODER:gen_inst|Pre_SPR_XRawCoor[23]" tap_mode="classic" type="register"/>
+          <wire name="SENSOR_ENCODER:gen_inst|Pre_SPR_XRawCoor[24]" tap_mode="classic" type="register"/>
+          <wire name="SENSOR_ENCODER:gen_inst|Pre_SPR_XRawCoor[25]" tap_mode="classic" type="register"/>
+          <wire name="SENSOR_ENCODER:gen_inst|Pre_SPR_XRawCoor[26]" tap_mode="classic" type="register"/>
+          <wire name="SENSOR_ENCODER:gen_inst|Pre_SPR_XRawCoor[27]" tap_mode="classic" type="register"/>
+          <wire name="SENSOR_ENCODER:gen_inst|Pre_SPR_XRawCoor[28]" tap_mode="classic" type="register"/>
+          <wire name="SENSOR_ENCODER:gen_inst|Pre_SPR_XRawCoor[29]" tap_mode="classic" type="register"/>
+          <wire name="SENSOR_ENCODER:gen_inst|Pre_SPR_XRawCoor[2]" tap_mode="classic" type="register"/>
+          <wire name="SENSOR_ENCODER:gen_inst|Pre_SPR_XRawCoor[30]" tap_mode="classic" type="register"/>
+          <wire name="SENSOR_ENCODER:gen_inst|Pre_SPR_XRawCoor[31]" tap_mode="classic" type="register"/>
+          <wire name="SENSOR_ENCODER:gen_inst|Pre_SPR_XRawCoor[3]" tap_mode="classic" type="register"/>
+          <wire name="SENSOR_ENCODER:gen_inst|Pre_SPR_XRawCoor[4]" tap_mode="classic" type="register"/>
+          <wire name="SENSOR_ENCODER:gen_inst|Pre_SPR_XRawCoor[5]" tap_mode="classic" type="register"/>
+          <wire name="SENSOR_ENCODER:gen_inst|Pre_SPR_XRawCoor[6]" tap_mode="classic" type="register"/>
+          <wire name="SENSOR_ENCODER:gen_inst|Pre_SPR_XRawCoor[7]" tap_mode="classic" type="register"/>
+          <wire name="SENSOR_ENCODER:gen_inst|Pre_SPR_XRawCoor[8]" tap_mode="classic" type="register"/>
+          <wire name="SENSOR_ENCODER:gen_inst|Pre_SPR_XRawCoor[9]" tap_mode="classic" type="register"/>
+          <wire name="SENSOR_ENCODER:gen_inst|SPR_XRawCoor[0]" tap_mode="classic" type="combinatorial"/>
+          <wire name="SENSOR_ENCODER:gen_inst|SPR_XRawCoor[10]" tap_mode="classic" type="combinatorial"/>
+          <wire name="SENSOR_ENCODER:gen_inst|SPR_XRawCoor[11]" tap_mode="classic" type="combinatorial"/>
+          <wire name="SENSOR_ENCODER:gen_inst|SPR_XRawCoor[12]" tap_mode="classic" type="combinatorial"/>
+          <wire name="SENSOR_ENCODER:gen_inst|SPR_XRawCoor[13]" tap_mode="classic" type="combinatorial"/>
+          <wire name="SENSOR_ENCODER:gen_inst|SPR_XRawCoor[14]" tap_mode="classic" type="combinatorial"/>
+          <wire name="SENSOR_ENCODER:gen_inst|SPR_XRawCoor[15]" tap_mode="classic" type="combinatorial"/>
+          <wire name="SENSOR_ENCODER:gen_inst|SPR_XRawCoor[16]" tap_mode="classic" type="combinatorial"/>
+          <wire name="SENSOR_ENCODER:gen_inst|SPR_XRawCoor[17]" tap_mode="classic" type="combinatorial"/>
+          <wire name="SENSOR_ENCODER:gen_inst|SPR_XRawCoor[18]" tap_mode="classic" type="combinatorial"/>
+          <wire name="SENSOR_ENCODER:gen_inst|SPR_XRawCoor[19]" tap_mode="classic" type="combinatorial"/>
+          <wire name="SENSOR_ENCODER:gen_inst|SPR_XRawCoor[1]" tap_mode="classic" type="combinatorial"/>
+          <wire name="SENSOR_ENCODER:gen_inst|SPR_XRawCoor[20]" tap_mode="classic" type="combinatorial"/>
+          <wire name="SENSOR_ENCODER:gen_inst|SPR_XRawCoor[21]" tap_mode="classic" type="combinatorial"/>
+          <wire name="SENSOR_ENCODER:gen_inst|SPR_XRawCoor[22]" tap_mode="classic" type="combinatorial"/>
+          <wire name="SENSOR_ENCODER:gen_inst|SPR_XRawCoor[23]" tap_mode="classic" type="combinatorial"/>
+          <wire name="SENSOR_ENCODER:gen_inst|SPR_XRawCoor[24]" tap_mode="classic" type="combinatorial"/>
+          <wire name="SENSOR_ENCODER:gen_inst|SPR_XRawCoor[25]" tap_mode="classic" type="combinatorial"/>
+          <wire name="SENSOR_ENCODER:gen_inst|SPR_XRawCoor[26]" tap_mode="classic" type="combinatorial"/>
+          <wire name="SENSOR_ENCODER:gen_inst|SPR_XRawCoor[27]" tap_mode="classic" type="combinatorial"/>
+          <wire name="SENSOR_ENCODER:gen_inst|SPR_XRawCoor[28]" tap_mode="classic" type="combinatorial"/>
+          <wire name="SENSOR_ENCODER:gen_inst|SPR_XRawCoor[29]" tap_mode="classic" type="combinatorial"/>
+          <wire name="SENSOR_ENCODER:gen_inst|SPR_XRawCoor[2]" tap_mode="classic" type="combinatorial"/>
+          <wire name="SENSOR_ENCODER:gen_inst|SPR_XRawCoor[30]" tap_mode="classic" type="combinatorial"/>
+          <wire name="SENSOR_ENCODER:gen_inst|SPR_XRawCoor[31]" tap_mode="classic" type="combinatorial"/>
+          <wire name="SENSOR_ENCODER:gen_inst|SPR_XRawCoor[3]" tap_mode="classic" type="combinatorial"/>
+          <wire name="SENSOR_ENCODER:gen_inst|SPR_XRawCoor[4]" tap_mode="classic" type="combinatorial"/>
+          <wire name="SENSOR_ENCODER:gen_inst|SPR_XRawCoor[5]" tap_mode="classic" type="combinatorial"/>
+          <wire name="SENSOR_ENCODER:gen_inst|SPR_XRawCoor[6]" tap_mode="classic" type="combinatorial"/>
+          <wire name="SENSOR_ENCODER:gen_inst|SPR_XRawCoor[7]" tap_mode="classic" type="combinatorial"/>
+          <wire name="SENSOR_ENCODER:gen_inst|SPR_XRawCoor[8]" tap_mode="classic" type="combinatorial"/>
+          <wire name="SENSOR_ENCODER:gen_inst|SPR_XRawCoor[9]" tap_mode="classic" type="combinatorial"/>
+          <wire name="SENSOR_ENCODER:gen_inst|gen_dy" tap_mode="classic" type="combinatorial"/>
+          <wire name="SENSOR_ENCODER:gen_inst|trigger" tap_mode="classic" type="register"/>
+          <wire name="default_out" tap_mode="classic" type="register"/>
+          <wire name="filter_delay_encoder_en" tap_mode="classic" type="register"/>
+          <wire name="gen_en_sensor" tap_mode="classic" type="register"/>
+        </storage_qualifier_input_vec>
+      </signal_vec>
+      <presentation>
+        <data_view>
+          <net is_signal_inverted="no" name="SENSOR_ENCODER:gen_inst|gen_dy"/>
+          <net is_signal_inverted="no" name="SENSOR_ENCODER:gen_inst|trigger"/>
+          <net is_signal_inverted="no" name="filter_delay_encoder_en"/>
+          <net is_signal_inverted="no" name="default_out"/>
+          <net is_signal_inverted="no" name="gen_en_sensor"/>
+          <bus is_signal_inverted="no" link="all" name="SENSOR_ENCODER:gen_inst|Pre_SPR_XRawCoor" order="msb_to_lsb" radix="hex" state="collapse" type="register">
+            <net is_signal_inverted="no" name="SENSOR_ENCODER:gen_inst|Pre_SPR_XRawCoor[31]"/>
+            <net is_signal_inverted="no" name="SENSOR_ENCODER:gen_inst|Pre_SPR_XRawCoor[30]"/>
+            <net is_signal_inverted="no" name="SENSOR_ENCODER:gen_inst|Pre_SPR_XRawCoor[29]"/>
+            <net is_signal_inverted="no" name="SENSOR_ENCODER:gen_inst|Pre_SPR_XRawCoor[28]"/>
+            <net is_signal_inverted="no" name="SENSOR_ENCODER:gen_inst|Pre_SPR_XRawCoor[27]"/>
+            <net is_signal_inverted="no" name="SENSOR_ENCODER:gen_inst|Pre_SPR_XRawCoor[26]"/>
+            <net is_signal_inverted="no" name="SENSOR_ENCODER:gen_inst|Pre_SPR_XRawCoor[25]"/>
+            <net is_signal_inverted="no" name="SENSOR_ENCODER:gen_inst|Pre_SPR_XRawCoor[24]"/>
+            <net is_signal_inverted="no" name="SENSOR_ENCODER:gen_inst|Pre_SPR_XRawCoor[23]"/>
+            <net is_signal_inverted="no" name="SENSOR_ENCODER:gen_inst|Pre_SPR_XRawCoor[22]"/>
+            <net is_signal_inverted="no" name="SENSOR_ENCODER:gen_inst|Pre_SPR_XRawCoor[21]"/>
+            <net is_signal_inverted="no" name="SENSOR_ENCODER:gen_inst|Pre_SPR_XRawCoor[20]"/>
+            <net is_signal_inverted="no" name="SENSOR_ENCODER:gen_inst|Pre_SPR_XRawCoor[19]"/>
+            <net is_signal_inverted="no" name="SENSOR_ENCODER:gen_inst|Pre_SPR_XRawCoor[18]"/>
+            <net is_signal_inverted="no" name="SENSOR_ENCODER:gen_inst|Pre_SPR_XRawCoor[17]"/>
+            <net is_signal_inverted="no" name="SENSOR_ENCODER:gen_inst|Pre_SPR_XRawCoor[16]"/>
+            <net is_signal_inverted="no" name="SENSOR_ENCODER:gen_inst|Pre_SPR_XRawCoor[15]"/>
+            <net is_signal_inverted="no" name="SENSOR_ENCODER:gen_inst|Pre_SPR_XRawCoor[14]"/>
+            <net is_signal_inverted="no" name="SENSOR_ENCODER:gen_inst|Pre_SPR_XRawCoor[13]"/>
+            <net is_signal_inverted="no" name="SENSOR_ENCODER:gen_inst|Pre_SPR_XRawCoor[12]"/>
+            <net is_signal_inverted="no" name="SENSOR_ENCODER:gen_inst|Pre_SPR_XRawCoor[11]"/>
+            <net is_signal_inverted="no" name="SENSOR_ENCODER:gen_inst|Pre_SPR_XRawCoor[10]"/>
+            <net is_signal_inverted="no" name="SENSOR_ENCODER:gen_inst|Pre_SPR_XRawCoor[9]"/>
+            <net is_signal_inverted="no" name="SENSOR_ENCODER:gen_inst|Pre_SPR_XRawCoor[8]"/>
+            <net is_signal_inverted="no" name="SENSOR_ENCODER:gen_inst|Pre_SPR_XRawCoor[7]"/>
+            <net is_signal_inverted="no" name="SENSOR_ENCODER:gen_inst|Pre_SPR_XRawCoor[6]"/>
+            <net is_signal_inverted="no" name="SENSOR_ENCODER:gen_inst|Pre_SPR_XRawCoor[5]"/>
+            <net is_signal_inverted="no" name="SENSOR_ENCODER:gen_inst|Pre_SPR_XRawCoor[4]"/>
+            <net is_signal_inverted="no" name="SENSOR_ENCODER:gen_inst|Pre_SPR_XRawCoor[3]"/>
+            <net is_signal_inverted="no" name="SENSOR_ENCODER:gen_inst|Pre_SPR_XRawCoor[2]"/>
+            <net is_signal_inverted="no" name="SENSOR_ENCODER:gen_inst|Pre_SPR_XRawCoor[1]"/>
+            <net is_signal_inverted="no" name="SENSOR_ENCODER:gen_inst|Pre_SPR_XRawCoor[0]"/>
+          </bus>
+          <bus is_signal_inverted="no" link="all" name="SENSOR_ENCODER:gen_inst|SPR_XRawCoor" order="msb_to_lsb" radix="hex" state="collapse" type="combinatorial">
+            <net is_signal_inverted="no" name="SENSOR_ENCODER:gen_inst|SPR_XRawCoor[31]"/>
+            <net is_signal_inverted="no" name="SENSOR_ENCODER:gen_inst|SPR_XRawCoor[30]"/>
+            <net is_signal_inverted="no" name="SENSOR_ENCODER:gen_inst|SPR_XRawCoor[29]"/>
+            <net is_signal_inverted="no" name="SENSOR_ENCODER:gen_inst|SPR_XRawCoor[28]"/>
+            <net is_signal_inverted="no" name="SENSOR_ENCODER:gen_inst|SPR_XRawCoor[27]"/>
+            <net is_signal_inverted="no" name="SENSOR_ENCODER:gen_inst|SPR_XRawCoor[26]"/>
+            <net is_signal_inverted="no" name="SENSOR_ENCODER:gen_inst|SPR_XRawCoor[25]"/>
+            <net is_signal_inverted="no" name="SENSOR_ENCODER:gen_inst|SPR_XRawCoor[24]"/>
+            <net is_signal_inverted="no" name="SENSOR_ENCODER:gen_inst|SPR_XRawCoor[23]"/>
+            <net is_signal_inverted="no" name="SENSOR_ENCODER:gen_inst|SPR_XRawCoor[22]"/>
+            <net is_signal_inverted="no" name="SENSOR_ENCODER:gen_inst|SPR_XRawCoor[21]"/>
+            <net is_signal_inverted="no" name="SENSOR_ENCODER:gen_inst|SPR_XRawCoor[20]"/>
+            <net is_signal_inverted="no" name="SENSOR_ENCODER:gen_inst|SPR_XRawCoor[19]"/>
+            <net is_signal_inverted="no" name="SENSOR_ENCODER:gen_inst|SPR_XRawCoor[18]"/>
+            <net is_signal_inverted="no" name="SENSOR_ENCODER:gen_inst|SPR_XRawCoor[17]"/>
+            <net is_signal_inverted="no" name="SENSOR_ENCODER:gen_inst|SPR_XRawCoor[16]"/>
+            <net is_signal_inverted="no" name="SENSOR_ENCODER:gen_inst|SPR_XRawCoor[15]"/>
+            <net is_signal_inverted="no" name="SENSOR_ENCODER:gen_inst|SPR_XRawCoor[14]"/>
+            <net is_signal_inverted="no" name="SENSOR_ENCODER:gen_inst|SPR_XRawCoor[13]"/>
+            <net is_signal_inverted="no" name="SENSOR_ENCODER:gen_inst|SPR_XRawCoor[12]"/>
+            <net is_signal_inverted="no" name="SENSOR_ENCODER:gen_inst|SPR_XRawCoor[11]"/>
+            <net is_signal_inverted="no" name="SENSOR_ENCODER:gen_inst|SPR_XRawCoor[10]"/>
+            <net is_signal_inverted="no" name="SENSOR_ENCODER:gen_inst|SPR_XRawCoor[9]"/>
+            <net is_signal_inverted="no" name="SENSOR_ENCODER:gen_inst|SPR_XRawCoor[8]"/>
+            <net is_signal_inverted="no" name="SENSOR_ENCODER:gen_inst|SPR_XRawCoor[7]"/>
+            <net is_signal_inverted="no" name="SENSOR_ENCODER:gen_inst|SPR_XRawCoor[6]"/>
+            <net is_signal_inverted="no" name="SENSOR_ENCODER:gen_inst|SPR_XRawCoor[5]"/>
+            <net is_signal_inverted="no" name="SENSOR_ENCODER:gen_inst|SPR_XRawCoor[4]"/>
+            <net is_signal_inverted="no" name="SENSOR_ENCODER:gen_inst|SPR_XRawCoor[3]"/>
+            <net is_signal_inverted="no" name="SENSOR_ENCODER:gen_inst|SPR_XRawCoor[2]"/>
+            <net is_signal_inverted="no" name="SENSOR_ENCODER:gen_inst|SPR_XRawCoor[1]"/>
+            <net is_signal_inverted="no" name="SENSOR_ENCODER:gen_inst|SPR_XRawCoor[0]"/>
+          </bus>
+        </data_view>
+        <setup_view>
+          <net is_signal_inverted="no" name="SENSOR_ENCODER:gen_inst|gen_dy"/>
+          <net is_signal_inverted="no" name="SENSOR_ENCODER:gen_inst|trigger"/>
+          <net is_signal_inverted="no" name="filter_delay_encoder_en"/>
+          <net is_signal_inverted="no" name="default_out"/>
+          <net is_signal_inverted="no" name="gen_en_sensor"/>
+          <bus is_signal_inverted="no" link="all" name="SENSOR_ENCODER:gen_inst|Pre_SPR_XRawCoor" order="msb_to_lsb" radix="hex" state="collapse" type="register">
+            <net is_signal_inverted="no" name="SENSOR_ENCODER:gen_inst|Pre_SPR_XRawCoor[31]"/>
+            <net is_signal_inverted="no" name="SENSOR_ENCODER:gen_inst|Pre_SPR_XRawCoor[30]"/>
+            <net is_signal_inverted="no" name="SENSOR_ENCODER:gen_inst|Pre_SPR_XRawCoor[29]"/>
+            <net is_signal_inverted="no" name="SENSOR_ENCODER:gen_inst|Pre_SPR_XRawCoor[28]"/>
+            <net is_signal_inverted="no" name="SENSOR_ENCODER:gen_inst|Pre_SPR_XRawCoor[27]"/>
+            <net is_signal_inverted="no" name="SENSOR_ENCODER:gen_inst|Pre_SPR_XRawCoor[26]"/>
+            <net is_signal_inverted="no" name="SENSOR_ENCODER:gen_inst|Pre_SPR_XRawCoor[25]"/>
+            <net is_signal_inverted="no" name="SENSOR_ENCODER:gen_inst|Pre_SPR_XRawCoor[24]"/>
+            <net is_signal_inverted="no" name="SENSOR_ENCODER:gen_inst|Pre_SPR_XRawCoor[23]"/>
+            <net is_signal_inverted="no" name="SENSOR_ENCODER:gen_inst|Pre_SPR_XRawCoor[22]"/>
+            <net is_signal_inverted="no" name="SENSOR_ENCODER:gen_inst|Pre_SPR_XRawCoor[21]"/>
+            <net is_signal_inverted="no" name="SENSOR_ENCODER:gen_inst|Pre_SPR_XRawCoor[20]"/>
+            <net is_signal_inverted="no" name="SENSOR_ENCODER:gen_inst|Pre_SPR_XRawCoor[19]"/>
+            <net is_signal_inverted="no" name="SENSOR_ENCODER:gen_inst|Pre_SPR_XRawCoor[18]"/>
+            <net is_signal_inverted="no" name="SENSOR_ENCODER:gen_inst|Pre_SPR_XRawCoor[17]"/>
+            <net is_signal_inverted="no" name="SENSOR_ENCODER:gen_inst|Pre_SPR_XRawCoor[16]"/>
+            <net is_signal_inverted="no" name="SENSOR_ENCODER:gen_inst|Pre_SPR_XRawCoor[15]"/>
+            <net is_signal_inverted="no" name="SENSOR_ENCODER:gen_inst|Pre_SPR_XRawCoor[14]"/>
+            <net is_signal_inverted="no" name="SENSOR_ENCODER:gen_inst|Pre_SPR_XRawCoor[13]"/>
+            <net is_signal_inverted="no" name="SENSOR_ENCODER:gen_inst|Pre_SPR_XRawCoor[12]"/>
+            <net is_signal_inverted="no" name="SENSOR_ENCODER:gen_inst|Pre_SPR_XRawCoor[11]"/>
+            <net is_signal_inverted="no" name="SENSOR_ENCODER:gen_inst|Pre_SPR_XRawCoor[10]"/>
+            <net is_signal_inverted="no" name="SENSOR_ENCODER:gen_inst|Pre_SPR_XRawCoor[9]"/>
+            <net is_signal_inverted="no" name="SENSOR_ENCODER:gen_inst|Pre_SPR_XRawCoor[8]"/>
+            <net is_signal_inverted="no" name="SENSOR_ENCODER:gen_inst|Pre_SPR_XRawCoor[7]"/>
+            <net is_signal_inverted="no" name="SENSOR_ENCODER:gen_inst|Pre_SPR_XRawCoor[6]"/>
+            <net is_signal_inverted="no" name="SENSOR_ENCODER:gen_inst|Pre_SPR_XRawCoor[5]"/>
+            <net is_signal_inverted="no" name="SENSOR_ENCODER:gen_inst|Pre_SPR_XRawCoor[4]"/>
+            <net is_signal_inverted="no" name="SENSOR_ENCODER:gen_inst|Pre_SPR_XRawCoor[3]"/>
+            <net is_signal_inverted="no" name="SENSOR_ENCODER:gen_inst|Pre_SPR_XRawCoor[2]"/>
+            <net is_signal_inverted="no" name="SENSOR_ENCODER:gen_inst|Pre_SPR_XRawCoor[1]"/>
+            <net is_signal_inverted="no" name="SENSOR_ENCODER:gen_inst|Pre_SPR_XRawCoor[0]"/>
+          </bus>
+          <bus is_signal_inverted="no" link="all" name="SENSOR_ENCODER:gen_inst|SPR_XRawCoor" order="msb_to_lsb" radix="hex" state="collapse" type="combinatorial">
+            <net is_signal_inverted="no" name="SENSOR_ENCODER:gen_inst|SPR_XRawCoor[31]"/>
+            <net is_signal_inverted="no" name="SENSOR_ENCODER:gen_inst|SPR_XRawCoor[30]"/>
+            <net is_signal_inverted="no" name="SENSOR_ENCODER:gen_inst|SPR_XRawCoor[29]"/>
+            <net is_signal_inverted="no" name="SENSOR_ENCODER:gen_inst|SPR_XRawCoor[28]"/>
+            <net is_signal_inverted="no" name="SENSOR_ENCODER:gen_inst|SPR_XRawCoor[27]"/>
+            <net is_signal_inverted="no" name="SENSOR_ENCODER:gen_inst|SPR_XRawCoor[26]"/>
+            <net is_signal_inverted="no" name="SENSOR_ENCODER:gen_inst|SPR_XRawCoor[25]"/>
+            <net is_signal_inverted="no" name="SENSOR_ENCODER:gen_inst|SPR_XRawCoor[24]"/>
+            <net is_signal_inverted="no" name="SENSOR_ENCODER:gen_inst|SPR_XRawCoor[23]"/>
+            <net is_signal_inverted="no" name="SENSOR_ENCODER:gen_inst|SPR_XRawCoor[22]"/>
+            <net is_signal_inverted="no" name="SENSOR_ENCODER:gen_inst|SPR_XRawCoor[21]"/>
+            <net is_signal_inverted="no" name="SENSOR_ENCODER:gen_inst|SPR_XRawCoor[20]"/>
+            <net is_signal_inverted="no" name="SENSOR_ENCODER:gen_inst|SPR_XRawCoor[19]"/>
+            <net is_signal_inverted="no" name="SENSOR_ENCODER:gen_inst|SPR_XRawCoor[18]"/>
+            <net is_signal_inverted="no" name="SENSOR_ENCODER:gen_inst|SPR_XRawCoor[17]"/>
+            <net is_signal_inverted="no" name="SENSOR_ENCODER:gen_inst|SPR_XRawCoor[16]"/>
+            <net is_signal_inverted="no" name="SENSOR_ENCODER:gen_inst|SPR_XRawCoor[15]"/>
+            <net is_signal_inverted="no" name="SENSOR_ENCODER:gen_inst|SPR_XRawCoor[14]"/>
+            <net is_signal_inverted="no" name="SENSOR_ENCODER:gen_inst|SPR_XRawCoor[13]"/>
+            <net is_signal_inverted="no" name="SENSOR_ENCODER:gen_inst|SPR_XRawCoor[12]"/>
+            <net is_signal_inverted="no" name="SENSOR_ENCODER:gen_inst|SPR_XRawCoor[11]"/>
+            <net is_signal_inverted="no" name="SENSOR_ENCODER:gen_inst|SPR_XRawCoor[10]"/>
+            <net is_signal_inverted="no" name="SENSOR_ENCODER:gen_inst|SPR_XRawCoor[9]"/>
+            <net is_signal_inverted="no" name="SENSOR_ENCODER:gen_inst|SPR_XRawCoor[8]"/>
+            <net is_signal_inverted="no" name="SENSOR_ENCODER:gen_inst|SPR_XRawCoor[7]"/>
+            <net is_signal_inverted="no" name="SENSOR_ENCODER:gen_inst|SPR_XRawCoor[6]"/>
+            <net is_signal_inverted="no" name="SENSOR_ENCODER:gen_inst|SPR_XRawCoor[5]"/>
+            <net is_signal_inverted="no" name="SENSOR_ENCODER:gen_inst|SPR_XRawCoor[4]"/>
+            <net is_signal_inverted="no" name="SENSOR_ENCODER:gen_inst|SPR_XRawCoor[3]"/>
+            <net is_signal_inverted="no" name="SENSOR_ENCODER:gen_inst|SPR_XRawCoor[2]"/>
+            <net is_signal_inverted="no" name="SENSOR_ENCODER:gen_inst|SPR_XRawCoor[1]"/>
+            <net is_signal_inverted="no" name="SENSOR_ENCODER:gen_inst|SPR_XRawCoor[0]"/>
+          </bus>
+        </setup_view>
+      </presentation>
+      <trigger CRC="9586C660" attribute_mem_mode="false" gap_record="true" global_temp="1" name="trigger: 2015/09/14 15:58:38  #0" position="pre" power_up_trigger_mode="false" record_data_gap="true" segment_size="64" storage_mode="off" storage_qualifier_disabled="no" storage_qualifier_port_is_pin="true" storage_qualifier_port_name="auto_stp_external_storage_qualifier" storage_qualifier_port_tap_mode="classic" trigger_in="dont_care" trigger_out="active high" trigger_type="circular">
+        <power_up_trigger position="pre" storage_qualifier_disabled="no" trigger_in="dont_care" trigger_out="active high"/>
+        <events use_custom_flow_control="no">
+          <level enabled="yes" name="condition1" type="basic">'SENSOR_ENCODER:gen_inst|trigger' == rising edge
+            <power_up enabled="yes">
+            </power_up>
+            <op_node/>
+          </level>
+        </events>
+        <storage_qualifier_events>
+          <transitional>000000000000000000000000000000000000000000000000000000000000000000000
+            <pwr_up_transitional>000000000000000000000000000000000000000000000000000000000000000000000</pwr_up_transitional>
+          </transitional>
+          <storage_qualifier_level type="basic">
+            <power_up>
+            </power_up>
+            <op_node/>
+          </storage_qualifier_level>
+          <storage_qualifier_level type="basic">
+            <power_up>
+            </power_up>
+            <op_node/>
+          </storage_qualifier_level>
+          <storage_qualifier_level type="basic">
+            <power_up>
+            </power_up>
+            <op_node/>
+          </storage_qualifier_level>
+        </storage_qualifier_events>
+        <log>
+          <data global_temp="1" name="log: 2015/09/14 15:58:38  #1" power_up_mode="false" sample_depth="64" trigger_position="8">100000000000000000000000000000001010000100010000000000000010011110101100000000000000000000000000000001010000100010000000000000010011110101100000000000000000000000000000001010000100010000000000000010011110101100000000000000000000000000000001010000100010000000000000010011110101100000000000000000000000000000001010000100010000000000000010011110101100000000000000000000000000000001010000100010000000000000010011110101100000000000000000000000000000001010000100010000000000000010011110101100000000000000000000000000000000010000100000000000000100010011110101001000010000000000000010001001110010000100000000000000100010011111101001000010000000000000010001001110010000100000000000000100010011101101001000010000000000000010001001110010000100000000000000100010011101101001000010000000000000010001001110010000100000000000000100010011101101001000010000000000000010001001110010000100000000000000100010011101101001000010000000000000010001001110010000100000000000000100010011101101001000010000000000000010001001110010000100000000000000100010011101101001000010000000000000010001001110010000100000000000000100010011101101001000010000000000000010001001110010000100000000000000100010011101101001000010000000000000010001001110010000100000000000000100010011101101001000010000000000000010001001110010000100000000000000100010011101101001000010000000000000010001001110010000100000000000000100010011101101001000010000000000000010001001110010000100000000000000100010011101101001000010000000000000010001001110010000100000000000000100010011101101001000010000000000000010001001110010000100000000000000100010011101101001000010000000000000010001001110010000100000000000000100010011101101001000010000000000000010001001110010000100000000000000100010011101101001000010000000000000010001001110010000100000000000000100010011101101001000010000000000000010001001110010000100000000000000100010011101101001000010000000000000010001001110010000100000000000000100010011101101001000010000000000000010001001110010000100000000000000100010011101101001000010000000000000010001001110010000100000000000000100010011101101001000010000000000000010001001110010000100000000000000100010011101101001000010000000000000010001001110010000100000000000000100010011101101001000010000000000000010001001110010000100000000000000100010011101101001000010000000000000010001001110010000100000000000000100010011101101001000010000000000000010001001110010000100000000000000100010011101101001000010000000000000010001001110010000100000000000000100010011101101001000010000000000000010001001110010000100000000000000100010011101101001000010000000000000010001001110010000100000000000000100010011101101001000010000000000000010001001110010000100000000000000100010011101101001000010000000000000010001001110010000100000000000000100010011101101001000010000000000000010001001110010000100000000000000100010011101101001000010000000000000010001001110010000100000000000000100010011101101001000010000000000000010001001110010000100000000000000100010011101101001000010000000000000010001001110010000100000000000000100010011101101001000010000000000000010001001110010000100000000000000100010011101101001000010000000000000010001001110010000100000000000000100010011101101001000010000000000000010001001110010000100000000000000100010011101101001000010000000000000010001001110010000100000000000000100010011101101001000010000000000000010001001110010000100000000000000100010011101101001000010000000000000010001001110010000100000000000000100010011101101001000010000000000000010001001110010000100000000000000100010011101101001000010000000000000010001001110010000100000000000000100010011101101001000010000000000000010001001110010000100000000000000100010011101101001000010000000000000010001001110010000100000000000000100010011101101001000010000000000000010001001110010000100000000000000100010011101101001000010000000000000010001001110010000100000000000000100010011101101001000010000000000000010001001110010000100000000000000100010011101101001000010000000000000010001001110010000100000000000000100010011101101001000010000000000000010001001110010000100000000000000100010011101101001000010000000000000010001001110010000100000000000000100010011101101001000010000000000000010001001110010000100000000000000100010011101101001000010000000000000010001001110010000100000000000000100010011101101001000010000000000000010001001110010000100000000000000100010011101101001000010000000000000010001001110010000100000000000000100010011101101</data>
+          <extradata>11111111T1111111111111111111111111111111111111111111111111111111</extradata>
+        </log>
+      </trigger>
+    </signal_set>
+  </instance>
+  <mnemonics/>
+  <static_plugin_mnemonics/>
+  <global_info>
+    <single attribute="active instance" value="0"/>
+    <single attribute="config widget visible" value="1"/>
+    <single attribute="data log widget visible" value="1"/>
+    <single attribute="hierarchy widget height" value="162"/>
+    <single attribute="hierarchy widget visible" value="1"/>
+    <single attribute="instance widget visible" value="1"/>
+    <single attribute="jtag widget visible" value="1"/>
+    <multi attribute="column width" size="23" value="34,34,318,74,68,70,88,88,98,98,88,88,110,101,101,101,101,101,101,101,101,107,78"/>
+    <multi attribute="frame size" size="2" value="1366,706"/>
+    <multi attribute="jtag widget size" size="2" value="334,120"/>
+  </global_info>
+</session>

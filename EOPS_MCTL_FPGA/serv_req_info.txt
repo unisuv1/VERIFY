@@ -1,0 +1,59 @@
+<internal_error>
+	<executable>quartus.exe</executable>
+	<sub_system>unknown</sub_system>
+	<file>unknown</file>
+	<line>0</line>
+	<callstack>
+	0x00020005:
+	0x1003909b: GCL_AFC + 0x3909b (?OnClose@AFC_CHILD_FRAME@@QAEXXZ + 0x13b)
+	0x637fbe7f: mfc90 + 0x5be7f
+	0x75bb6898: USER32 + 0x16898 (gapfnScSendMessage + 0x8d0)
+	0x75bb6900: USER32 + 0x16900 (gapfnScSendMessage + 0x938)
+	0x75bc0aaf: USER32 + 0x20aaf (FillRect + 0x10f)
+	0x0e7eda02: gcl_scin + 0x6da02 (?Create@CScintillaCtrl@@QAEHKABUtagRECT@@PAVCWnd@@IKPAX@Z + 0x65fc2)
+	0x0e7ca275: gcl_scin + 0x4a275 (?Create@CScintillaCtrl@@QAEHKABUtagRECT@@PAVCWnd@@IKPAX@Z + 0x42835)
+	0x100091a5: GCL_AFC + 0x91a5 (?OnWndMsg@AFC_CHILD_FRAME@@UAEHIIJPAJ@Z + 0x75)
+	0x637fba48: mfc90 + 0x5ba48
+	0x637fa63c: mfc90 + 0x5a63c
+	0x637fa8c8: mfc90 + 0x5a8c8
+	0x637f85b2: mfc90 + 0x585b2
+	0x75bb6237: USER32 + 0x16237 (gapfnScSendMessage + 0x26f)
+	0x75bb68e9: USER32 + 0x168e9 (gapfnScSendMessage + 0x921)
+	0x75bb7176: USER32 + 0x17176 (GetWindowLongW + 0x189)
+	0x75bb72f0: USER32 + 0x172f0 (GetDC + 0xaa)
+	0x77c800e5: ntdll + 0x100e5 (KiUserCallbackDispatcher + 0x2d)
+	0x75bdef3f: USER32 + 0x3ef3f (SendMessageA + 0x4b)
+	0x10011207: GCL_AFC + 0x11207 (?OnNcActivate@AFC_MDI_FRAME@@QAEHH@Z + 0x77)
+	0x63829874: mfc90 + 0x89874
+	0x63801693: mfc90 + 0x61693
+	0x4c0d19a6: AOT803AS + 0xd19a6 (SECMDIFrameWnd::OnCmdMsg + 0xe6)
+	0x637fc2d2: mfc90 + 0x5c2d2
+	0x63800b7f: mfc90 + 0x60b7f
+	0x4c0d187c: AOT803AS + 0xd187c (SECMDIFrameWnd::OnCommand + 0x5c)
+	0x10047ef0: GCL_AFC + 0x47ef0 (?OnCommand@AFC_MDI_FRAME@@UAEHIJ@Z + 0x20)
+	0x637fba48: mfc90 + 0x5ba48
+	0x4c0d1c3a: AOT803AS + 0xd1c3a (SECMDIFrameWnd::WindowProc + 0x8a)
+	0x637fa63c: mfc90 + 0x5a63c
+	0x637fa8c8: mfc90 + 0x5a8c8
+	0x637f85b2: mfc90 + 0x585b2
+	0x75bb6237: USER32 + 0x16237 (gapfnScSendMessage + 0x26f)
+	0x75bb68e9: USER32 + 0x168e9 (gapfnScSendMessage + 0x921)
+	0x75bb7d30: USER32 + 0x17d30 (LoadStringW + 0x11e)
+	0x75bb8111: USER32 + 0x18111 (DispatchMessageA + 0xe)
+	0x6383a866: mfc90 + 0x9a866
+	0x00391968: ccl_thr + 0x1968 (thr_thread_var_destroy + 0x28)
+	0x638071e7: mfc90 + 0x671e7
+	0x0044f42e: quartus + 0x4f42e (Pjm_Uninit + 0x401ee)
+	0x77453676: kernel32 + 0x13676 (BaseThreadInitThunk + 0x11)
+	0x77ca9d71: ntdll + 0x39d71 (RtlInitializeExceptionChain + 0x62)
+	0x77ca9d44: ntdll + 0x39d44 (RtlInitializeExceptionChain + 0x35)
+	0xffffffffffffffff:
+	</callstack>
+	<error>Current editor: STED, RPW, STED</error>
+	<date>Tue Jun 17 12:04:00 2014</date>
+	<version>Quartus II Version 9.0 Build 132 02/25/2009 SJ Full Version</version>
+	<full_error>Access Violation at 0X00020005
+Current editor: STED, RPW, STED
+Quartus II Version 9.0 Build 132 02/25/2009 SJ Full Version </full_error>
+</internal_error>
+

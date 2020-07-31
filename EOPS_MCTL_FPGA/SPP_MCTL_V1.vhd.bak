@@ -1,0 +1,1059 @@
+LIBRARY IEEE;
+USE IEEE.STD_LOGIC_1164.ALL;
+USE IEEE.STD_LOGIC_UNSIGNED.ALL;
+USE IEEE.STD_LOGIC_ARITH.ALL;
+
+ENTITY SPP_MCTL_V1 IS
+	PORT
+	(
+		nRST          		: in std_logic;
+		clk		           	: in std_logic;		---clk=50M
+
+		ARM_FPGA_CLK   		: in std_logic;		---ARM与FPGA接口，类似spi协议
+		ARM_FPGA_SYNC  		: in std_logic;
+		ARM_FPGA_DATA  		: inout std_logic;	
+			
+		ARM_FPGA_RSV		: out std_logic; 	---FIFO满标志信号
+		
+		F_SW0   	 		: in std_logic;		---拨码开关信号（原来用于控制输入，现在废弃基本被spi接口取代）
+		F_SW1   	 		: in std_logic;
+		F_SW2   	 		: in std_logic;
+		F_SW3       		: in std_logic;
+		F_SW4				: in std_logic;
+		F_SW5				: in std_logic;
+		
+		---dy1_en				: in std_logic;		---三路电眼使能信号
+		---dy2_en				: in std_logic;
+		---dy3_en				: in std_logic;					
+		---dy1_npn				: in std_logic;		---三路NPN电眼
+		---dy2_npn				: in std_logic;
+		---dy3_npn				: in std_logic;	
+		---dy1_pnp				: in std_logic;		---三路PNP电眼
+		---dy2_pnp				: in std_logic;
+		---dy3_pnp				: in std_logic;		
+		Lorigin     		: out std_logic_vector(23 downto 0);	---24个电眼输出
+			
+		EN1_X_2A			: in std_logic;		---编码器信号输入
+		EN1_X_2B			: in std_logic;			
+		X_1A 				: out std_logic;	---24个编码输出
+		X_1B				: out std_logic;
+		X_2A			 	: out std_logic;
+		X_2B				: out std_logic;
+		X_3A				: out std_logic;
+		X_3B				: out std_logic;
+		X_4A				: out std_logic;
+		X_4B				: out std_logic;
+		X_5A				: out std_logic;
+		X_5B				: out std_logic;
+		X_6A				: out std_logic;
+		X_6B				: out std_logic;
+		X_7A				: out std_logic;
+		X_7B				: out std_logic;
+		X_8A				: out std_logic;
+		X_8B				: out std_logic;
+		X_9A				: out std_logic;
+		X_9B				: out std_logic;
+		X_10A			 	: out std_logic;
+		X_10B				: out std_logic;
+		X_11A				: out std_logic;
+		X_11B				: out std_logic;
+		X_12A				: out std_logic;
+		X_12B    			: out std_logic;
+		X_13A 				: out std_logic;
+		X_13B				: out std_logic;
+		X_14A 				: out std_logic;
+		X_14B				: out std_logic;
+		X_15A 				: out std_logic;
+		X_15B				: out std_logic;
+		X_16A 				: out std_logic;
+		X_16B				: out std_logic;
+		X_17A 				: out std_logic;
+		X_17B				: out std_logic;
+		X_18A 				: out std_logic;
+		X_18B				: out std_logic;
+		X_19A 				: out std_logic;
+		X_19B				: out std_logic;	
+		X_20A			 	: out std_logic;
+		X_20B				: out std_logic;
+		X_21A			 	: out std_logic;
+		X_21B				: out std_logic;
+		X_22A			 	: out std_logic;
+		X_22B				: out std_logic;
+		X_23A			 	: out std_logic;
+		X_23B				: out std_logic;		
+		X_24A			 	: out std_logic;
+		X_24B				: out std_logic;	
+
+		---staging_in			: in std_logic;		---平台状态信号
+		---uv_status			: in std_logic;		---UV灯状态信号
+		---dy_gravure			: in std_logic;		---凹印电眼信号
+		
+		---uv_ctrl				: out std_logic;	---UV灯控制输出
+		---nozzle_up			: out std_logic;	---喷头升降控制
+		
+		FPGA_LED      		: out std_logic_vector(1 downto 0);	---LED灯控制		
+		
+		
+		F_GPIO_I			: in std_logic_vector(10 downto 1);		---电眼信号输入（1,2，3；6,7,8）、UV灯状态信号（4）、平台状态信号（9）、凹印电眼信号（9）、1-2-3通道的电眼使能(9、4、5)
+		F_GPIO_O			: out std_logic_vector(2 downto 1)		---UV灯控制(1)、喷头升降控制信号(2)
+	);
+END SPP_MCTL_V1;
+                                                  
+ARCHITECTURE BEHV OF SPP_MCTL_V1 IS
+	
+	signal clk_100				: std_logic;	---
+		
+	---ARM_INTERFACE 信号
+	signal Boardtype			: std_logic_vector(7 downto 0); 	--- 板卡类型
+	signal sensor_en1_reg		: std_logic;	---三路电眼使能信号
+   	signal sensor_en2_reg		: std_logic;
+	signal sensor_en3_reg		: std_logic;
+
+	signal select_not			: std_logic;	---电眼输入极性选择
+	signal default_out			: std_logic;	---电眼输出极性选择
+	signal PN_sel				: std_logic;	---电眼输入类型（PNP/NPN）选择
+	signal filter_en			: std_logic;	---电眼时间滤波使能
+	signal sizefilter_sw		: std_logic;	---电眼尺寸滤波使能
+	signal sizefilter_mode		: std_logic;	---电眼尺寸滤波模式	
+	signal sensor_en_sel		: std_logic := '0';	---电眼使能信号的选择（外部管脚/内部寄存器）	
+	signal sensor_4b5b_en		: std_logic := '0'; ---电眼4b/5b编码使能
+	signal dianyan_extra		: std_logic_vector(1 downto 0);	---电眼附加功能标志
+	signal select_swap	 		: std_logic;	---	编码器AB交换使能	
+	signal filter_delay_encoder_en		: std_logic := '1';	---编码器滤波使能
+	signal select1_2	 		: std_logic;	--- 编码器输入通道选择（预留）
+	signal multiplication		: std_logic_vector(7 downto 0);	---编码器倍频
+	signal gen_en_sensor		: std_logic;	---内部电眼发生使能
+	signal gen_en_encoder		: std_logic;	---内部编码器发生使能
+	signal printdye_en			: std_logic;	---印染模式特殊电眼使能
+	signal sensor_group1_sel	: std_logic_vector(3 downto 0);	---第一组输出电眼的电眼源选择
+	signal sensor_group2_sel	: std_logic_vector(3 downto 0);	---第二组输出电眼的电眼源选择
+	signal sensor_group3_sel	: std_logic_vector(3 downto 0);	---第三组输出电眼的电眼源选择	
+	signal sensor_delay_time1 	: std_logic_vector(15 downto 0);	---第一组电眼延时寄存器
+	signal sensor_delay_time2 	: std_logic_vector(15 downto 0);	---第二组电眼延时寄存器
+	signal sensor_delay_time3 	: std_logic_vector(15 downto 0);	---第三组电眼延时寄存器
+	signal PD1FIFO_aclr			: std_logic;	---通道1的FIFO清空标志
+	signal PD2FIFO_aclr			: std_logic;	---通道2的FIFO清空标志	
+	signal PD3FIFO_aclr			: std_logic;	---通道3的FIFO清空标志	
+	signal filter_time			: std_logic_vector(31 downto 0); 	---电眼滤波时间长度	
+	signal sensor_cycle			: std_logic_vector(63 downto 0)	:= x"000000000000D60A";	---内部电眼周期编码坐标个数		-- 54794 1of4 cycle = 1s	
+	signal encoder_1of4			: std_logic_vector(15 downto 0)	:= x"039D";	---内部编码器四分之一周期		-- 73us	
+	signal filter_delay_time_encoder	: std_logic_vector(15 downto 0) := x"0010";	---编码器滤波大小
+	signal sensor_valid_time	: std_logic_vector(31 downto 0) := x"0007A120";	---内部电眼持续时间
+	signal Ch1_SPR_XPRTSize_Wr 	: std_logic_vector(63 downto 0) := (others => '0');	---通道1打印砖的大小 --PrintSize		
+	signal Ch1_SPR_XPRTSize_Wr_en, Ch1_SPR_XPRTSize_Wr_en1 : std_logic := '0';
+	signal Ch2_SPR_XPRTSize_Wr 	: std_logic_vector(63 downto 0) := (others => '0');	---通道2打印砖的大小 --PrintSize
+	signal Ch2_SPR_XPRTSize_Wr_en, Ch2_SPR_XPRTSize_Wr_en1 : std_logic := '0';	
+	signal Ch3_SPR_XPRTSize_Wr : std_logic_vector(63 downto 0) := (others => '0');		---通道3打印砖的大小 --PrintSize
+	signal Ch3_SPR_XPRTSize_Wr_en, Ch3_SPR_XPRTSize_Wr_en1 : std_logic := '0';	
+	signal dianyan_on_coor	: std_logic_vector(31 downto 0) := (others => '0');	---回拉使能速度			
+	signal dianyan_off_coor	: std_logic_vector(31 downto 0) := (others => '0');	---回拉生效速度			
+	signal UV_on_coor	: std_logic_vector(31 downto 0) := (others => '0');		---UV灯开启速度
+	signal UV_off_coor	: std_logic_vector(31 downto 0) := (others => '0');		---UV灯关闭速度		
+	signal UV_OFF_TIME	: std_logic_vector(15 downto 0);				---UV灯关闭速度持续时间
+	signal UV_over_coor	: std_logic_vector(31 downto 0) := (others => '0');	---UV关闭延时坐标		
+	signal terrace_front_do_coor	: std_logic_vector(31 downto 0) := (others => '0');	---平台升起延时坐标
+	signal terrace_after_do_coor	: std_logic_vector(31 downto 0) := (others => '0');	---平台下落延时坐标		
+	signal terrace_front_eye_coor	: std_logic_vector(31 downto 0) := (others => '0');	---关闭电眼延时坐标
+	signal terrace_after_eye_coor	: std_logic_vector(31 downto 0) := (others => '0');	---开启电眼延时坐标	
+	signal terrace_filter	: std_logic_vector(31 downto 0) := (others => '0');	---平台起落滤波时间	
+	signal terrace_eye_coor	: std_logic_vector(31 downto 0) := (others => '0');	---凹印电眼使能速度	
+	signal dianyan_sign_clr	: std_logic;	---ARM读电眼使能状态时，置1				
+		 
+
+
+
+
+
+	signal empty_error1			: std_logic := '0';
+	signal empty_error2 		: std_logic := '0';
+	signal empty_error3 		: std_logic := '0';
+
+	signal gen_encoder_A		: std_logic;
+	signal gen_encoder_B		: std_logic;		
+	signal gen_dy				: std_logic;
+
+	signal PD1FIFO_alfull		: std_logic;
+	signal PD1FIFO_empty		: std_logic;
+	signal PD2FIFO_alfull		: std_logic;
+	signal PD2FIFO_empty		: std_logic;
+	signal PD3FIFO_alfull		: std_logic;
+	signal PD3FIFO_empty		: std_logic;
+	
+	signal discard1_cnt			: std_logic_vector(7 downto 0) := (others => '0');
+	signal discard2_cnt			: std_logic_vector(7 downto 0) := (others => '0');
+	signal discard3_cnt			: std_logic_vector(7 downto 0) := (others => '0');
+	
+	signal sensor_en1			: std_logic;
+	signal sensor_en2			: std_logic;
+	signal sensor_en3			: std_logic;
+	signal sensor_in1			: std_logic;
+	signal sensor_in2			: std_logic;
+	signal sensor_in3			: std_logic;	
+	
+	signal valid_edge1			: std_logic;
+	signal valid_edge2			: std_logic;
+	signal valid_edge3			: std_logic;	
+	signal valid_edge_f1		: std_logic;
+	signal valid_edge_f2		: std_logic;
+	signal valid_edge_f3		: std_logic;	
+
+	signal X_Raw_A_Filted_port	: std_logic;
+	signal X_Raw_B_Filted_port	: std_logic;
+	signal pass_dir				: std_logic;
+	signal SPR_XRawCoor 		: std_logic_vector(63 downto 0) := (others => '0');
+	
+	signal sensor_4b5b_cnt1		: std_logic_vector(15 downto 0) := (others => '0');
+	signal sensor_4b5b_cnt2		: std_logic_vector(15 downto 0) := (others => '0');
+	signal sensor_4b5b_cnt3		: std_logic_vector(15 downto 0) := (others => '0');
+
+	signal terrace_eye_num		: std_logic_vector(31 downto 0) := (others => '0');
+	signal terrace_eye_count	: std_logic_vector(31 downto 0) := (others => '0');		
+		
+	signal led_cnt       		: std_logic_vector(31 downto 0);	
+		
+	signal dianyan_en			: std_logic;
+	signal dianyan_en1			: std_logic;
+	signal dianyan_en2			: std_logic;
+
+	signal control_condition	: std_logic_vector(3 downto 0);
+	signal terrace_en			: std_logic;
+	signal terrace_signal		: std_logic;       				---凹印纸接头标志	
+	
+	signal label_signal_1		: std_logic;
+	signal label_signal_2		: std_logic;		
+	signal UV_en				: std_logic;
+
+	
+		
+	component PLL is
+		port
+		(
+			inclk0		: in std_logic;
+			c0			: out std_logic
+		);
+	end component;
+		
+	component ARM_COMMU_PORT is
+		port
+		(      
+			nRST							: in std_logic;
+			clk_100							: in std_logic; 
+			
+			F_SW0   	 					: in std_logic;		---拨码开关信号（原来用于控制输入，现在废弃基本被spi接口取代）
+			F_SW1   	 					: in std_logic;
+			F_SW2   	 					: in std_logic;
+			F_SW3       					: in std_logic;
+			F_SW4							: in std_logic;
+			F_SW5							: in std_logic;	
+			                    			
+			ARM_FPGA_CLK   					: in std_logic;		---ARM与FPGA接口，类似spi协议
+			ARM_FPGA_SYNC  					: in std_logic;
+			ARM_FPGA_DATA  					: inout std_logic;
+			
+			---ARM写FPGA的参数
+			Boardtype											:	buffer std_logic_vector(7 downto 0); 	--- 板卡类型
+			sensor_en1_reg										:	buffer std_logic;	---三路电眼使能信号
+	   		sensor_en2_reg										:	buffer std_logic;
+			sensor_en3_reg										:	buffer std_logic;   	
+			select_not											:	buffer std_logic;	---电眼输入极性选择
+			default_out											:	buffer std_logic;	---电眼输出极性选择
+			PN_sel												:	buffer std_logic;	---电眼输入类型（PNP/NPN）选择
+			filter_en											:	buffer std_logic;	---电眼时间滤波使能
+			sizefilter_sw										:	buffer std_logic;	---电眼尺寸滤波使能
+			sizefilter_mode										:	buffer std_logic;	---电眼尺寸滤波模式	
+			sensor_en_sel										:	buffer std_logic := '0';	---电眼使能信号的选择（外部管脚/内部寄存器）	
+			sensor_4b5b_en										:	buffer std_logic := '0'; ---电眼4b/5b编码使能
+			dianyan_extra										:	buffer std_logic_vector(1 downto 0);	---电眼附加功能标志
+			select_swap	 										:	buffer std_logic;	---	编码器AB交换使能	
+			filter_delay_encoder_en								:	buffer std_logic := '1';	---编码器滤波使能
+			select1_2	 										:	buffer std_logic;	--- 编码器输入通道选择（预留）
+			multiplication										:	buffer std_logic_vector(7 downto 0);	---编码器倍频
+			gen_en_sensor										:	buffer std_logic;	---内部电眼发生使能
+			gen_en_encoder										:	buffer std_logic;	---内部编码器发生使能
+			printdye_en											:	buffer std_logic;	---印染模式特殊电眼使能
+			sensor_group1_sel									:	buffer std_logic_vector(3 downto 0);	---第一组输出电眼的电眼源选择
+			sensor_group2_sel									:	buffer std_logic_vector(3 downto 0);	---第二组输出电眼的电眼源选择
+			sensor_group3_sel									:	buffer std_logic_vector(3 downto 0);	---第三组输出电眼的电眼源选择	
+			sensor_delay_time1 									:	buffer std_logic_vector(15 downto 0);	---第一组电眼延时寄存器
+			sensor_delay_time2 									:	buffer std_logic_vector(15 downto 0);	---第二组电眼延时寄存器
+			sensor_delay_time3 									:	buffer std_logic_vector(15 downto 0);	---第三组电眼延时寄存器
+			PD1FIFO_aclr										:	buffer std_logic;	---通道1的FIFO清空标志
+			PD2FIFO_aclr										:	buffer std_logic;	---通道2的FIFO清空标志	
+			PD3FIFO_aclr										:	buffer std_logic;	---通道3的FIFO清空标志	
+			filter_time											:	buffer std_logic_vector(31 downto 0); 	---电眼滤波时间长度	
+			sensor_cycle										:	buffer std_logic_vector(63 downto 0)	:= x"000000000000D60A";	---内部电眼周期编码坐标个数		-- 54794 1of4 cycle = 1s	
+			encoder_1of4										:	buffer std_logic_vector(15 downto 0)	:= x"039D";	---内部编码器四分之一周期		-- 73us	
+			filter_delay_time_encoder							:	buffer std_logic_vector(15 downto 0) := x"0010";	---编码器滤波大小
+			sensor_valid_time									:	buffer std_logic_vector(31 downto 0) := x"0007A120";	---内部电眼持续时间
+			Ch1_SPR_XPRTSize_Wr 								:	buffer std_logic_vector(63 downto 0) := (others => '0');	---通道1打印砖的大小 --PrintSize
+			Ch1_SPR_XPRTSize_Wr_en							 	:	buffer std_logic := '0';   
+			Ch1_SPR_XPRTSize_Wr_en1 							:	buffer std_logic := '0'; 
+			Ch2_SPR_XPRTSize_Wr 								:	buffer std_logic_vector(63 downto 0) := (others => '0');	---通道2打印砖的大小 --PrintSize
+			Ch2_SPR_XPRTSize_Wr_en							 	:	buffer std_logic := '0';	
+			Ch2_SPR_XPRTSize_Wr_en1 							:	buffer std_logic := '0';
+			Ch3_SPR_XPRTSize_Wr 								:	buffer std_logic_vector(63 downto 0) := (others => '0');	---通道3打印砖的大小 --PrintSize
+			Ch3_SPR_XPRTSize_Wr_en							 	:	buffer std_logic := '0';
+			Ch3_SPR_XPRTSize_Wr_en1 							:	buffer std_logic := '0';
+			dianyan_on_coor										:	buffer std_logic_vector(31 downto 0) := (others => '0');	---回拉使能速度			
+			dianyan_off_coor									:	buffer std_logic_vector(31 downto 0) := (others => '0');	---回拉生效速度			
+			UV_on_coor											:	buffer std_logic_vector(31 downto 0) := (others => '0');		---UV灯开启速度
+			UV_off_coor											:	buffer std_logic_vector(31 downto 0) := (others => '0');		---UV灯关闭速度		
+			UV_OFF_TIME											:	buffer std_logic_vector(15 downto 0);				---UV灯关闭速度持续时间
+			UV_over_coor										:	buffer std_logic_vector(31 downto 0) := (others => '0');	---UV关闭延时坐标		
+			terrace_front_do_coor								:	buffer std_logic_vector(31 downto 0) := (others => '0');	---平台升起延时坐标
+			terrace_after_do_coor								:	buffer std_logic_vector(31 downto 0) := (others => '0');	---平台下落延时坐标
+			terrace_front_eye_coor								:	buffer std_logic_vector(31 downto 0) := (others => '0');	---关闭电眼延时坐标
+			terrace_after_eye_coor								:	buffer std_logic_vector(31 downto 0) := (others => '0');	---开启电眼延时坐标
+			terrace_filter										:	buffer std_logic_vector(31 downto 0) := (others => '0');	---平台起落滤波时间	
+			terrace_eye_coor									:	buffer std_logic_vector(31 downto 0) := (others => '0');	---凹印电眼使能速度				
+	
+			---ARM读FPGA的参数
+			SPR_XRawCoor										:	in std_logic_vector(63 downto 0);
+			valid_edge1											:	in std_logic;
+			empty_error1										:	in std_logic;
+			PD1FIFO_empty										: 	in std_logic;
+			PD1FIFO_alfull										:	in std_logic;
+			discard1_cnt										:	in std_logic_vector(7 downto 0);
+			valid_edge2											:	in std_logic;
+			empty_error2										:	in std_logic;
+			PD2FIFO_empty										: 	in std_logic;
+			PD2FIFO_alfull										:	in std_logic;
+			discard2_cnt										:	in std_logic_vector(7 downto 0);		
+			valid_edge3											:	in std_logic;
+			empty_error3										:	in std_logic;
+			PD3FIFO_empty										: 	in std_logic;
+			PD3FIFO_alfull										:	in std_logic;
+			discard3_cnt										:	in std_logic_vector(7 downto 0);
+	
+			sensor_4b5b_cnt1									: 	in std_logic_vector(15 downto 0);
+			sensor_4b5b_cnt2									: 	in std_logic_vector(15 downto 0);
+			sensor_4b5b_cnt3									: 	in std_logic_vector(15 downto 0);			
+
+																						---主控板附加功能标志	
+			label_signal_1										: 	in	std_logic;		---标签模式UV灯异常（低表示异常）
+			label_signal_2										: 	in	std_logic;		---标签模式平台走纸异常（低表示异常）
+			dianyan_en1											: 	in	std_logic;		---内部状态（测试使用）
+			dianyan_en2											: 	in	std_logic;		---内部状态（测试使用）		
+			terrace_signal										: 	in	std_logic;		---凹印纸接头标志
+			terrace_en											: 	in	std_logic;		---凹印控制/标签模式下表示寄存器电眼使能
+			UV_en												: 	in	std_logic;		---UV灯使能
+			dianyan_en											: 	in	std_logic;		---电眼使能
+			control_condition									: 	in	std_logic_vector(3 downto 0);	---FPGA控制状态
+	
+			terrace_eye_num										:	in	std_logic_vector(31 downto 0);
+			terrace_eye_count									: 	in	std_logic_vector(31 downto 0);			
+	
+			dianyan_sign_clr									:	out std_logic			 ---ARM读电眼使能状态时，置1	
+		);
+	end component;
+		
+	component VIRTUAL_ENCODER IS
+		PORT
+		(
+			nRST				: in std_logic;
+			clk					: in std_logic;
+        	
+			gen_en_encoder		: in std_logic;		---虚拟编码使能信号
+			encoder_1of4		: in std_logic_vector(15 downto 0);		---虚拟编码1/4周期（时钟数）
+				
+			gen_encoder_A		: out std_logic;	---虚拟编码A相
+			gen_encoder_B		: out std_logic		---虚拟编码B相	
+		);
+	END component;
+
+	component DEAL_ENCODE is
+		port 
+		(
+			nRESET      					: in std_logic;
+			clk_sys							: in std_logic;
+			
+			EN1_X_2A						: in std_logic;		---外部编码输入A相
+			EN1_X_2B						: in std_logic;		---外部编码输入B相
+			gen_encoder_A					: in std_logic;		---虚拟编码输入A相
+			gen_encoder_B					: in std_logic;		---虚拟编码输入B相
+			
+			gen_en_encoder					:in		std_logic;	---虚拟编码使能
+			select_swap	 					:in		std_logic;	---编码器AB交换使能
+        	
+			filter_delay_encoder_en			: in std_logic;						---编码滤波时间（时钟数）
+			filter_delay_time_encoder		: in std_logic_vector(15 downto 0);	---编码滤波使能
+        	
+			multiplication					: in std_logic_vector(7 downto 0);	---编码倍频倍数
+					
+			X_Raw_A_Filted_port				: out std_logic;	---编码输出A相
+			X_Raw_B_Filted_port				: out std_logic		---编码输出B相
+		);
+	end component;
+		
+	component CoorGen is
+		port 
+		(
+			nReset				: in    std_logic;
+			clk_sys				: in 	std_logic;
+			
+			enable				: in    std_logic;		---使能		
+			Encoder_A			: in    std_logic;		---编码输入A相
+			Encoder_B			: in    std_logic;		---编码输入B相
+	
+			pass_dir			: out   std_logic;		---运行方向
+			Coor_out			: OUT 	STD_LOGIC_VECTOR (63 DOWNTO 0)  ---坐标
+		);
+	end component;			
+		
+	component MUX_ENCODER is
+		port
+		(
+			clk					: in std_logic;
+			nRST				: in std_logic;
+			
+			Encd_A				: in std_logic;					
+			Encd_B				: in std_logic;
+			
+			X_1A				: out std_logic;
+			X_1B				: out std_logic;		
+			X_2A				: out std_logic;
+			X_2B				: out std_logic;
+			X_3A				: out std_logic;
+			X_3B				: out std_logic;
+			X_4A				: out std_logic;
+			X_4B				: out std_logic;
+			X_5A				: out std_logic;
+			X_5B				: out std_logic;
+			X_6A				: out std_logic;
+			X_6B				: out std_logic;
+			X_7A				: out std_logic;
+			X_7B				: out std_logic;
+			X_8A				: out std_logic;
+			X_8B				: out std_logic;
+			X_9A				: out std_logic;
+			X_9B				: out std_logic;
+			X_10A				: out std_logic;
+			X_10B				: out std_logic;
+			X_11A				: out std_logic;
+			X_11B				: out std_logic;
+			X_12A				: out std_logic;
+			X_12B				: out std_logic;
+			X_13A				: out std_logic;
+			X_13B				: out std_logic;
+			X_14A				: out std_logic;
+			X_14B				: out std_logic;
+			X_15A				: out std_logic;
+			X_15B				: out std_logic;
+			X_16A				: out std_logic;
+			X_16B				: out std_logic;
+			X_17A				: out std_logic;
+			X_17B				: out std_logic;	
+			X_18A				: out std_logic;
+			X_18B				: out std_logic;	
+			X_19A				: out std_logic;
+			X_19B				: out std_logic;	
+			X_20A				: out std_logic;
+			X_20B				: out std_logic;	
+			X_21A				: out std_logic;
+			X_21B				: out std_logic;
+			X_22A				: out std_logic;
+			X_22B				: out std_logic;	
+			X_23A				: out std_logic;
+			X_23B				: out std_logic;
+			X_24A				: out std_logic;
+			X_24B				: out std_logic
+		);
+	end component;
+			
+	component VIRTUAL_DY IS
+		PORT
+		(
+			nRST				: in std_logic;
+			clk					: in std_logic;
+	
+			gen_en_sensor		: in std_logic;		---虚拟电眼使能信号
+			default_out			: in std_logic;		---电眼输出极性
+			
+			sensor_cycle		: in std_logic_vector(63 downto 0);	---虚拟电眼周期（单位是坐标单位）
+			sensor_valid_time	: in std_logic_vector(31 downto 0);	---虚拟电眼有效电平持续时间（时钟数）
+			SPR_XRawCoor		: in std_logic_vector(63 downto 0);	---实时坐标		
+				
+			gen_dy_out				: out std_logic		---虚拟电眼信号
+		);
+	END component;
+			
+	component DEAL_DY is
+		port(
+			nRST					:in		std_logic;
+			clk_100					:in		std_logic;
+			
+			gen_en_sensor			:in		std_logic; 	---虚拟电眼使能
+			sensor_en_sel			:in		std_logic;	---电眼使能信号的选择（外部管脚/内部寄存器）	
+			PN_sel					:in		std_logic;	---电眼输入类型（PNP/NPN）选择	
+			select_not				:in		std_logic;	---电眼输入极性选择
+			
+			sensor_en1_reg			:in 	std_logic;	---PM三路电眼使能信号
+   			sensor_en2_reg			:in 	std_logic;
+			sensor_en3_reg			:in 	std_logic;
+			
+			dianyan_en				:in 	std_logic;	---主控板电眼使能
+        	
+			F_GPIO_I				:in 	std_logic_vector(10 downto 1);		---电眼信号输入（1,2,3；6,7,8）、UV灯状态信号（4）、平台状态信号（9）、凹印电眼信号（9）、1-2-3通道的电眼使能(9、4、5)
+        	
+			gen_dy					:in		std_logic;
+							
+			timeflt_en				:in		std_logic;
+			filter_time				:in		std_logic_vector(31 downto 0);
+				
+			sensor_delay_time1		:in		std_logic_vector(15 downto 0);
+			sensor_delay_time2		:in		std_logic_vector(15 downto 0);
+			sensor_delay_time3		:in		std_logic_vector(15 downto 0);
+				
+			X_Raw_A_Filted_port		:in 	std_logic;
+			X_Raw_B_Filted_port		:in 	std_logic;
+			
+			sizefilter_mode			:in 	std_logic;								---尺寸滤波模式	 
+			SPR_XRawCoor_in			:in 	std_logic_vector(63 downto 0);			---坐标输入	
+	    	
+			PD1FIFO_aclr			:in		std_logic;							---尺寸参数FIFO清空信号
+			Ch1_SPR_XPRTSize_Wr 	:in		std_logic_vector(63 downto 0);		---尺寸参数数据        
+			Ch1_SPR_XPRTSize_Wr_en	:in		std_logic := '0';					---尺寸参数写使能      
+			Ch1_SPR_XPRTSize_Wr_en1 :in		std_logic := '0';                   ---尺寸参数写使能1     
+			PD2FIFO_aclr			:in		std_logic;							
+			Ch2_SPR_XPRTSize_Wr 	:in		std_logic_vector(63 downto 0);		
+			Ch2_SPR_XPRTSize_Wr_en	:in		std_logic := '0';	
+			Ch2_SPR_XPRTSize_Wr_en1 :in		std_logic := '0';
+			PD3FIFO_aclr			:in		std_logic;							
+			Ch3_SPR_XPRTSize_Wr 	:in		std_logic_vector(63 downto 0);		
+			Ch3_SPR_XPRTSize_Wr_en	:in		std_logic := '0';
+			Ch3_SPR_XPRTSize_Wr_en1 :in		std_logic := '0';
+				
+			sensor_en1				:buffer std_logic;				---三路电眼使能输出
+			sensor_en2				:buffer std_logic;
+			sensor_en3				:buffer std_logic;
+			sensor_in1				:buffer std_logic;				---三路电眼输出
+			sensor_in2				:buffer std_logic;
+			sensor_in3				:buffer std_logic;
+        	
+			PD1_FIFO_alfull			:out	std_logic;				---尺寸参数FIFO的几乎满标志
+			PD1_FIFO_empty			:out	std_logic;				---尺寸参数FIFO的空标志
+			empty_error1			:out 	std_logic;				---尺寸参数FIFO的空错误标志
+			PD2_FIFO_alfull			:out	std_logic;
+			PD2_FIFO_empty			:out	std_logic;
+			empty_error2			:out 	std_logic;
+			PD3_FIFO_alfull			:out	std_logic;
+			PD3_FIFO_empty			:out	std_logic;
+			empty_error3			:out 	std_logic;
+        	
+			valid_edge1				:buffer	std_logic;						---输出电眼的上升沿标志
+			valid_edge_f1			:out	std_logic;						---输出电眼的下降沿标志
+			discard1_cnt			:out 	std_logic_vector(7 downto 0);	---过滤掉电眼的个数
+			valid_edge2				:buffer std_logic;						---输出电眼的上升沿标志            
+			valid_edge_f2			:out 	std_logic;						---输出电眼的下降沿标志            
+			discard2_cnt			:out 	std_logic_vector(7 downto 0);	---过滤掉电眼的个数
+			valid_edge3				:buffer std_logic;						---输出电眼的上升沿标志            
+			valid_edge_f3			:out 	std_logic;						---输出电眼的下降沿标志            
+			discard3_cnt			:out 	std_logic_vector(7 downto 0);	---过滤掉电眼的个数
+        	
+			sensor_4b5b_en			:in		std_logic; 							---电眼4b/5b编码使能			
+			sensor_4b5b_cnt1		:buffer	std_logic_vector(15 downto 0);		---三路4b/5b电眼计数
+			sensor_4b5b_cnt2		:buffer	std_logic_vector(15 downto 0);  
+			sensor_4b5b_cnt3		:buffer	std_logic_vector(15 downto 0);	
+				
+			dianyan_sign_clr		:in		std_logic;			 				---ARM读电眼使能状态时，置1
+			terrace_eye_num			:buffer std_logic_vector(31 downto 0) := (others => '0');	---电眼个数统计
+			terrace_eye_count		:buffer std_logic_vector(31 downto 0) := (others => '0');	---电眼个数统计（无用）
+        	
+			dianyan_extra			:in 	std_logic_vector(1 downto 0);		---电眼附加功能标志	
+			printdye_en				:in 	std_logic							---印染模式特殊电眼使能
+		);
+	end component;
+		
+	component SELECT_OUT_DY IS
+		PORT(
+			nRST			:in		std_logic;
+			clk_100			:in		std_logic;
+	
+			default_out				:in		std_logic;
+			
+			sensor_in1				:in		std_logic;
+			sensor_in2				:in		std_logic;
+			sensor_in3				:in		std_logic;		
+			
+			sensor_en1				:in		std_logic;
+			sensor_en2				:in		std_logic;
+			sensor_en3				:in		std_logic; 
+			printdye_en				:in		std_logic;   
+			
+			sensor_4b5b_en			:in		std_logic; 
+			sizefilter_sw   		:in		std_logic;
+			
+			sensor_group1_sel		:in		std_logic_vector(3 downto 0);
+			sensor_group2_sel		:in		std_logic_vector(3 downto 0);
+			sensor_group3_sel		:in		std_logic_vector(3 downto 0);
+					
+			valid_edge1				:in 	std_logic;					---输出电眼的上升沿标志
+			valid_edge_f1			:in 	std_logic;					---输出电眼的下降沿标志
+			valid_edge2				:in 	std_logic;					---输出电眼的上升沿标志            
+			valid_edge_f2			:in 	std_logic;					---输出电眼的下降沿标志            
+			valid_edge3				:in 	std_logic;					---输出电眼的上升沿标志            
+			valid_edge_f3			:in 	std_logic;					---输出电眼的下降沿标志 
+			
+			Lorigin					:out std_logic_vector(23 downto 0)          			
+		);
+	END component;
+
+
+	component EXTRA_FUNCTION IS
+		port(
+			nRST			:in		std_logic;
+			clk_100			:in		std_logic;
+			terrace_filter	:in std_logic_vector(31 downto 0);	
+			F_GPIO_I		:in 	std_logic_vector(10 downto 1);		---电眼信号输入（1,2，3；6,7,8）、UV灯状态信号（4）、平台状态信号（9）、凹印电眼信号（9）、1-2-3通道的电眼使能(9、4、5)
+			dianyan_extra	:in 	std_logic_vector(1 downto 0);	---电眼附加功能标志		
+			SPR_XRawCoor		: in std_logic_vector(63 downto 0);	
+	
+			pass_dir		:in		std_logic;
+			sensor_en1		:in		std_logic;                    
+			UV_on_coor		:in		std_logic_vector(31 downto 0);
+			UV_off_coor		:in		std_logic_vector(31 downto 0);			
+			UV_over_coor	:in		std_logic_vector(31 downto 0);				
+			UV_OFF_TIME		:in		std_logic_vector(15 downto 0);
+				
+			dianyan_on_coor			:in			std_logic_vector(31 downto 0);
+			dianyan_off_coor		:in 		std_logic_vector(31 downto 0);
+			terrace_eye_coor		:in 		std_logic_vector(31 downto 0);
+			terrace_front_do_coor	:in 		std_logic_vector(31 downto 0);
+			terrace_after_do_coor	:in 		std_logic_vector(31 downto 0);
+			terrace_front_eye_coor	:in 		std_logic_vector(31 downto 0);
+			terrace_after_eye_coor	:in 		std_logic_vector(31 downto 0);
+	 
+	 
+	 
+			label_signal_1	:out	std_logic;
+			label_signal_2	:out	std_logic; 
+	
+			dianyan_en		:out		std_logic;
+			dianyan_en1		:buffer		std_logic;
+			dianyan_en2		:buffer		std_logic;
+			terrace_en		:out		std_logic;
+	
+			control_condition	:buffer std_logic_vector(3 downto 0);
+			UV_en				:buffer	std_logic;
+			terrace_signal		:out	std_logic	
+		);		
+	END component;
+
+		
+begin  
+
+	---时钟（clk_in = 50M，clk_out = 100M）	
+	PLL_inst : PLL port map(
+		inclk0			=> clk,
+		c0				=> clk_100
+	);	
+	
+	ARM_COMMU_PORT_INST : ARM_COMMU_PORT port map(
+		nRST						=>	nRST,
+		clk_100						=>	clk_100,
+		
+		F_SW0   					=>	F_SW0,   
+		F_SW1   					=>	F_SW1,   
+		F_SW2   					=>	F_SW2,   
+		F_SW3   					=>	F_SW3,   
+		F_SW4						=>	F_SW4,	
+		F_SW5						=>	F_SW5,	
+				
+		ARM_FPGA_CLK   				=>	ARM_FPGA_CLK   				,---	: in std_logic;		---ARM与FPGA接口，类似spi协议
+		ARM_FPGA_SYNC  				=>	ARM_FPGA_SYNC  				,---	: in std_logic;
+		ARM_FPGA_DATA  				=>	ARM_FPGA_DATA  				,---	: inout std_logic;		
+
+		Boardtype					=>	Boardtype					,---:	out std_logic_vector(7 downto 0); 	--- 板卡类型
+		sensor_en1_reg				=>	sensor_en1_reg				,---:	out std_logic;	---三路电眼使能信号
+   		sensor_en2_reg				=>	sensor_en2_reg				,---:	out std_logic;
+		sensor_en3_reg				=>	sensor_en3_reg				,---:	out std_logic;   	
+		select_not					=>	select_not					,---:	out std_logic;	---电眼输入极性选择
+		default_out					=>	default_out					,---:	out std_logic;	---电眼输出极性选择
+		PN_sel						=>	PN_sel						,---:	out std_logic;	---电眼输入类型（PNP/NPN）选择
+		filter_en					=>	filter_en					,---:	out std_logic;	---电眼时间滤波使能
+		sizefilter_sw				=>	sizefilter_sw				,---:	out std_logic;	---电眼尺寸滤波使能
+		sizefilter_mode				=>	sizefilter_mode				,---:	out std_logic;	---电眼尺寸滤波模式	
+		sensor_en_sel				=>	sensor_en_sel				,---:	out std_logic := '0';	---电眼使能信号的选择（外部管脚/内部寄存器）	
+		sensor_4b5b_en				=>	sensor_4b5b_en				,---:	out std_logic := '0'; ---电眼4b/5b编码使能
+		dianyan_extra				=>	dianyan_extra				,---:	out std_logic_vector(1 downto 0);	---电眼附加功能标志
+		select_swap	 				=>	select_swap	 				,---:	out std_logic;	---	编码器AB交换使能	
+		filter_delay_encoder_en		=>	filter_delay_encoder_en		,---:	out std_logic := '1';	---编码器滤波使能
+		select1_2	 				=>	select1_2	 				,---:	out std_logic;	--- 编码器输入通道选择（预留）
+		multiplication				=>	multiplication				,---:	out std_logic_vector(7 downto 0);	---编码器倍频
+		gen_en_sensor				=>	gen_en_sensor				,---:	out std_logic;	---内部电眼发生使能
+		gen_en_encoder				=>	gen_en_encoder				,---:	out std_logic;	---内部编码器发生使能
+		printdye_en					=>	printdye_en					,---:	out std_logic;	---印染模式特殊电眼使能
+		sensor_group1_sel			=>	sensor_group1_sel			,---:	out std_logic_vector(3 downto 0);	---第一组输出电眼的电眼源选择
+		sensor_group2_sel			=>	sensor_group2_sel			,---:	out std_logic_vector(3 downto 0);	---第二组输出电眼的电眼源选择
+		sensor_group3_sel			=>	sensor_group3_sel			,---:	out std_logic_vector(3 downto 0);	---第三组输出电眼的电眼源选择	
+		sensor_delay_time1 			=>	sensor_delay_time1 			,---:	out std_logic_vector(15 downto 0);	---第一组电眼延时寄存器
+		sensor_delay_time2 			=>	sensor_delay_time2 			,---:	out std_logic_vector(15 downto 0);	---第二组电眼延时寄存器
+		sensor_delay_time3 			=>	sensor_delay_time3 			,---:	out std_logic_vector(15 downto 0);	---第三组电眼延时寄存器
+		PD1FIFO_aclr				=>	PD1FIFO_aclr				,---:	out std_logic;	---通道1的FIFO清空标志
+		PD2FIFO_aclr				=>	PD2FIFO_aclr				,---:	out std_logic;	---通道2的FIFO清空标志	
+		PD3FIFO_aclr				=>	PD3FIFO_aclr				,---:	out std_logic;	---通道3的FIFO清空标志	
+		filter_time					=>	filter_time					,---:	out std_logic_vector(31 downto 0); 	---电眼滤波时间长度	
+		sensor_cycle				=>	sensor_cycle				,---:	out std_logic_vector(63 downto 0)	:= x"000000000000D60A";	---内部电眼周期编码坐标个数		-- 54794 1of4 cycle = 1s	
+		encoder_1of4				=>	encoder_1of4				,---:	out std_logic_vector(15 downto 0)	:= x"039D";	---内部编码器四分之一周期		-- 73us	
+		filter_delay_time_encoder	=>	filter_delay_time_encoder	,---:	out std_logic_vector(15 downto 0) := x"0010";	---编码器滤波大小
+		sensor_valid_time			=>	sensor_valid_time			,---:	out std_logic_vector(31 downto 0) := x"0007A120";	---内部电眼持续时间
+		Ch1_SPR_XPRTSize_Wr 		=>	Ch1_SPR_XPRTSize_Wr 		,---:	out std_logic_vector(63 downto 0) := (others => '0');	---通道1打印砖的大小 --PrintSize
+		Ch1_SPR_XPRTSize_Wr_en		=>	Ch1_SPR_XPRTSize_Wr_en		,---:	out std_logic := '0';   
+		Ch1_SPR_XPRTSize_Wr_en1 	=>	Ch1_SPR_XPRTSize_Wr_en1 	,---:	out std_logic := '0'; 
+		Ch2_SPR_XPRTSize_Wr 		=>	Ch2_SPR_XPRTSize_Wr 		,---:	out std_logic_vector(63 downto 0) := (others => '0');	---通道2打印砖的大小 --PrintSize
+		Ch2_SPR_XPRTSize_Wr_en		=>	Ch2_SPR_XPRTSize_Wr_en		,---:	out std_logic := '0';	
+		Ch2_SPR_XPRTSize_Wr_en1 	=>	Ch2_SPR_XPRTSize_Wr_en1 	,---:	out std_logic := '0';
+		Ch3_SPR_XPRTSize_Wr 		=>	Ch3_SPR_XPRTSize_Wr 		,---:	out std_logic_vector(63 downto 0) := (others => '0');	---通道3打印砖的大小 --PrintSize
+		Ch3_SPR_XPRTSize_Wr_en		=>	Ch3_SPR_XPRTSize_Wr_en		,---:	out std_logic := '0';
+		Ch3_SPR_XPRTSize_Wr_en1 	=>	Ch3_SPR_XPRTSize_Wr_en1 	,---:	out std_logic := '0';
+		dianyan_on_coor				=>	dianyan_on_coor				,---:	out std_logic_vector(31 downto 0) := (others => '0');	---回拉使能速度			
+		dianyan_off_coor			=>	dianyan_off_coor			,---:	out std_logic_vector(31 downto 0) := (others => '0');	---回拉生效速度			
+		UV_on_coor					=>	UV_on_coor					,---:	out std_logic_vector(31 downto 0) := (others => '0');		---UV灯开启速度
+		UV_off_coor					=>	UV_off_coor					,---:	out std_logic_vector(31 downto 0) := (others => '0');		---UV灯关闭速度		
+		UV_OFF_TIME					=>	UV_OFF_TIME					,---:	out std_logic_vector(15 downto 0);				---UV灯关闭速度持续时间
+		UV_over_coor				=>	UV_over_coor				,---:	out std_logic_vector(31 downto 0) := (others => '0');	---UV关闭延时坐标		
+		terrace_front_do_coor		=>	terrace_front_do_coor		,---:	out std_logic_vector(31 downto 0) := (others => '0');	---平台升起延时坐标
+		terrace_after_do_coor		=>	terrace_after_do_coor		,---:	out std_logic_vector(31 downto 0) := (others => '0');	---平台下落延时坐标
+		terrace_front_eye_coor		=>	terrace_front_eye_coor		,---:	out std_logic_vector(31 downto 0) := (others => '0');	---关闭电眼延时坐标
+		terrace_after_eye_coor		=>	terrace_after_eye_coor		,---:	out std_logic_vector(31 downto 0) := (others => '0');	---开启电眼延时坐标
+		terrace_filter				=>	terrace_filter				,---:	out std_logic_vector(31 downto 0) := (others => '0');	---平台起落滤波时间	
+		terrace_eye_coor			=>	terrace_eye_coor			,---:	out std_logic_vector(31 downto 0) := (others => '0');	---凹印电眼使能速度				
+
+		---ARM要读的参数
+		SPR_XRawCoor				=>	SPR_XRawCoor,
+		
+		valid_edge1					=>	valid_edge1,
+		empty_error1				=>	empty_error1,
+		PD1FIFO_empty				=>	PD1FIFO_empty,
+		PD1FIFO_alfull				=>	PD1FIFO_alfull,
+		discard1_cnt				=>	discard1_cnt,
+		
+		valid_edge2					=>	valid_edge2,
+		empty_error2				=>	empty_error2,
+		PD2FIFO_empty				=>	PD2FIFO_empty,
+		PD2FIFO_alfull				=>	PD2FIFO_alfull,
+		discard2_cnt				=>	discard2_cnt,
+		
+		valid_edge3					=>	valid_edge3,
+		empty_error3				=>	empty_error3,
+		PD3FIFO_empty				=>	PD3FIFO_empty,
+		PD3FIFO_alfull				=>	PD3FIFO_alfull,
+		discard3_cnt				=>	discard3_cnt,
+		
+		sensor_4b5b_cnt1			=>	sensor_4b5b_cnt1,
+		sensor_4b5b_cnt2            =>	sensor_4b5b_cnt2,
+		sensor_4b5b_cnt3            =>	sensor_4b5b_cnt3, 
+		
+		label_signal_1				=>	label_signal_1		,
+		label_signal_2		        =>	label_signal_2		,
+		dianyan_en1			        =>	dianyan_en1			,
+		dianyan_en2			        =>	dianyan_en2			,
+		terrace_signal		        =>	terrace_signal		,
+		terrace_en			        =>	terrace_en			,
+		UV_en				        =>	UV_en				,
+		dianyan_en			        =>	dianyan_en			,
+		control_condition	        =>	control_condition	,
+		
+		terrace_eye_num				=>	terrace_eye_num,
+		terrace_eye_count			=>	terrace_eye_count,
+		
+		
+		dianyan_sign_clr			=>	dianyan_sign_clr			 ---ARM读电眼使能状态时，置1	
+	);
+
+
+	VIRTUAL_ENCODER_inst : VIRTUAL_ENCODER	PORT map(
+		nRST				=>	nRST,		
+		clk					=>	clk_100,
+                            
+		gen_en_encoder		=>	gen_en_sensor,
+		encoder_1of4		=>	encoder_1of4(14 downto 0)&'0',
+			                
+		gen_encoder_A		=>  gen_encoder_A,
+		gen_encoder_B		=>	gen_encoder_B
+	);
+	
+	DEAL_ENCODE_inst: DEAL_ENCODE	port map(
+		nRESET      					=>	nRST,
+		clk_sys							=>	clk_100,
+		                               
+		EN1_X_2A						=>	EN1_X_2A,
+		EN1_X_2B						=>	EN1_X_2B,
+		gen_encoder_A					=>	gen_encoder_A,
+		gen_encoder_B					=> 	gen_encoder_B,
+		
+		select_swap						=>	select_swap,                              
+		gen_en_encoder					=>	gen_en_encoder,
+                                       
+		filter_delay_encoder_en			=>	filter_delay_encoder_en,
+		filter_delay_time_encoder		=>	filter_delay_time_encoder,
+                                       
+		multiplication					=>	multiplication,
+				                      
+		X_Raw_A_Filted_port				=>	X_Raw_A_Filted_port,
+		X_Raw_B_Filted_port				=>	X_Raw_B_Filted_port
+	);
+	
+	CoorGen_inst: CoorGen
+	port map
+	(
+		nReset			=>	nRST,   
+		clk_sys			=>	clk_100,
+		               
+		enable			=>	'1',
+		Encoder_A		=>	X_Raw_A_Filted_port,
+		Encoder_B		=>	X_Raw_B_Filted_port, 
+                       
+		pass_dir		=>	pass_dir,
+		Coor_out		=>	SPR_XRawCoor
+	);	
+
+	---编码信号复用输出
+	MUX_ENCODER_inst:	MUX_ENCODER port map(
+		clk						=> clk_100,
+		nRST					=> nRST,
+		
+		Encd_A					=> X_Raw_A_Filted_port,
+		Encd_B					=> X_Raw_B_Filted_port,
+
+		X_1A					=> X_1A,
+		X_1B					=> X_1B,
+		X_2A					=> X_2A,
+		X_2B					=> X_2B,
+		X_3A					=> X_3A,
+		X_3B					=> X_3B,
+		X_4A					=> X_4A,
+		X_4B					=> X_4B,
+		X_5A					=> X_5A,
+		X_5B					=> X_5B,
+		X_6A					=> X_6A,
+		X_6B					=> X_6B,
+		X_7A					=> X_7A,
+		X_7B					=> X_7B,
+		X_8A					=> X_8A,
+		X_8B					=> X_8B,
+		X_9A					=> X_9A,
+		X_9B					=> X_9B,
+		X_10A					=> X_10A,
+		X_10B					=> X_10B,
+		X_11A					=> X_11A,
+		X_11B					=> X_11B,
+		X_12A					=> X_12A,
+		X_12B					=> X_12B,
+		X_13A					=> X_13A,
+		X_13B					=> X_13B,
+		X_14A					=> X_14A,
+		X_14B					=> X_14B,
+		X_15A					=> X_15A,
+		X_15B					=> X_15B,
+		X_16A					=> X_16A,
+		X_16B					=> X_16B,
+		X_17A					=> X_17A,
+		X_17B					=> X_17B,
+		X_18A					=> X_18A,
+		X_18B					=> X_18B,	
+		X_19A					=> X_19A,
+		X_19B					=> X_19B,	
+		X_20A					=> X_20A,
+		X_20B					=> X_20B,	
+		X_21A					=> X_21A,
+		X_21B					=> X_21B,	
+		X_22A					=> X_22A,
+		X_22B					=> X_22B,	
+		X_23A					=> X_23A,
+		X_23B					=> X_23B,
+		X_24A					=> X_24A,
+		X_24B					=> X_24B	
+	);	
+		
+	VIRTUAL_DY_inst : VIRTUAL_DY PORT map(
+		nRST				=>	nRST,
+		clk					=>	clk_100,
+
+		gen_en_sensor		=>	gen_en_sensor,
+		default_out			=>	default_out,
+
+		sensor_cycle		=>	sensor_cycle,
+		sensor_valid_time	=>	sensor_valid_time(30 downto 0)&'0',
+		SPR_XRawCoor		=>	SPR_XRawCoor,		
+
+		gen_dy				=>	gen_dy
+	);
+
+	DEAL_DY_inst : DEAL_DY port map(
+		nRST							=> 	nRST,		
+		clk_100							=>	clk_100,
+		                				
+		gen_en_sensor					=>	gen_en_sensor,
+		sensor_en_sel					=>	sensor_en_sel,	
+		PN_sel							=>	PN_sel,			
+		select_not						=>	select_not	,	
+
+		F_GPIO_I						=>	F_GPIO_I,
+
+		sensor_en1_reg					=>	sensor_en1_reg,
+   		sensor_en2_reg	                =>	sensor_en2_reg,
+		sensor_en3_reg	                =>	sensor_en3_reg,
+
+		gen_dy							=>	gen_dy,
+
+		timeflt_en						=>	'1',
+		filter_time						=>	filter_time,
+
+		sensor_delay_time1				=>	sensor_delay_time1,
+		sensor_delay_time2				=>	sensor_delay_time2,
+		sensor_delay_time3				=>	sensor_delay_time3,
+			            
+		X_Raw_A_Filted_port				=>	X_Raw_A_Filted_port,
+		X_Raw_B_Filted_port				=>	X_Raw_B_Filted_port,
+			                
+		sensor_en1						=>	sensor_en1,
+		sensor_en2						=>	sensor_en2,		
+		sensor_en3						=>	sensor_en3,
+		sensor_in1						=>	sensor_in1,																																																																				
+		sensor_in2						=>	sensor_in2,																																																																				
+		sensor_in3						=>	sensor_in3,																																																																				
+		
+		dianyan_en						=>	dianyan_en       ,
+		                        		
+		sizefilter_mode					=>	sizefilter_mode  ,
+		SPR_XRawCoor_in					=>	SPR_XRawCoor     ,
+	                            		
+		PD1FIFO_aclr					=> 	PD1FIFO_aclr			,
+		Ch1_SPR_XPRTSize_Wr 			=>  Ch1_SPR_XPRTSize_Wr 	,
+		Ch1_SPR_XPRTSize_Wr_en			=>  Ch1_SPR_XPRTSize_Wr_en	,
+		Ch1_SPR_XPRTSize_Wr_en1 		=>  Ch1_SPR_XPRTSize_Wr_en1 ,
+		PD2FIFO_aclr					=>  PD2FIFO_aclr			,
+		Ch2_SPR_XPRTSize_Wr 			=>  Ch2_SPR_XPRTSize_Wr 	,
+		Ch2_SPR_XPRTSize_Wr_en			=>  Ch2_SPR_XPRTSize_Wr_en	,
+		Ch2_SPR_XPRTSize_Wr_en1 		=>  Ch2_SPR_XPRTSize_Wr_en1 ,
+		PD3FIFO_aclr					=>  PD3FIFO_aclr			,
+		Ch3_SPR_XPRTSize_Wr 			=>  Ch3_SPR_XPRTSize_Wr 	,
+		Ch3_SPR_XPRTSize_Wr_en			=>  Ch3_SPR_XPRTSize_Wr_en	,
+		Ch3_SPR_XPRTSize_Wr_en1 		=>  Ch3_SPR_XPRTSize_Wr_en1 ,
+                                		
+		PD1_FIFO_alfull					=>  PD1FIFO_alfull  ,
+		PD1_FIFO_empty					=>  PD1FIFO_empty	 ,
+		empty_error1					=>  empty_error1	 ,
+		PD2_FIFO_alfull					=>  PD2FIFO_alfull  ,
+		PD2_FIFO_empty					=>  PD2FIFO_empty	 ,
+		empty_error2					=>  empty_error2	 ,
+		PD3_FIFO_alfull					=>  PD3FIFO_alfull	,
+		PD3_FIFO_empty					=>  PD3FIFO_empty	 ,
+		empty_error3					=>  empty_error3	 ,
+                                		                  
+		valid_edge1						=>  valid_edge1		,
+		valid_edge_f1					=>  valid_edge_f1	,
+		discard1_cnt					=>  discard1_cnt	,
+		valid_edge2						=>  valid_edge2		,
+		valid_edge_f2					=>  valid_edge_f2	,
+		discard2_cnt					=>  discard2_cnt	,
+		valid_edge3						=>  valid_edge3		,
+		valid_edge_f3					=>  valid_edge_f3	,
+		discard3_cnt					=>  discard3_cnt	,
+
+		sensor_4b5b_en					=>	sensor_4b5b_en	,	    
+		sensor_4b5b_cnt1	        	=>	sensor_4b5b_cnt1,	
+		sensor_4b5b_cnt2	        	=>	sensor_4b5b_cnt2,	
+		sensor_4b5b_cnt3	        	=>	sensor_4b5b_cnt3,	
+		dianyan_sign_clr				=>	dianyan_sign_clr,	
+		terrace_eye_num					=>	terrace_eye_num	,	
+		terrace_eye_count				=>	terrace_eye_count,		
+		
+		dianyan_extra					=>	dianyan_extra	,
+		printdye_en						=>	printdye_en
+		
+	);	
+	
+	SELECT_OUT_DY_inst: SELECT_OUT_DY PORT map(
+		nRST				=>		nRST				,			
+		clk_100				=>		clk_100				,			
+                            	                     					
+		default_out			=>		default_out			,			
+		                                         						
+		sensor_in1			=>		sensor_in1			,			
+		sensor_in2			=>		sensor_in2			,			
+		sensor_in3			=>		sensor_in3			,			
+		                                         						
+		sensor_en1			=>		sensor_en1			,			
+		sensor_en2			=>		sensor_en2			,			
+		sensor_en3			=>		sensor_en3			,			
+		printdye_en			=>		printdye_en			,			
+		                                         						
+		sensor_4b5b_en		=>		sensor_4b5b_en		,			
+		sizefilter_sw   	=>		sizefilter_sw   	,			
+		                                         						
+		sensor_group1_sel	=>		sensor_group1_sel	,			
+		sensor_group2_sel	=>		sensor_group2_sel	,			
+		sensor_group3_sel	=>		sensor_group3_sel	,			
+				            		                					
+		valid_edge1			=>		valid_edge1			,			
+		valid_edge_f1		=>		valid_edge_f1		,			
+		valid_edge2			=>		valid_edge2			,			
+		valid_edge_f2		=>		valid_edge_f2		,			
+		valid_edge3			=>		valid_edge3			,			
+		valid_edge_f3		=>		valid_edge_f3		,			
+		                                         						
+		Lorigin				=>		Lorigin								
+	);
+
+	EXTRA_FUNCTION_inst: EXTRA_FUNCTION port map(
+		nRST					=>			nRST					   	,							
+		clk_100					=>			clk_100					   	,							
+		terrace_filter			=>			terrace_filter			   	,							
+		F_GPIO_I				=>			F_GPIO_I				   	,							
+		dianyan_extra			=>			dianyan_extra			   	,							
+		SPR_XRawCoor			=>			SPR_XRawCoor			   	,							
+                                		                            								
+		pass_dir				=>			pass_dir				   	,							
+		sensor_en1				=>			sensor_en1				   	,							
+		UV_on_coor				=>			UV_on_coor				   	,							
+		UV_off_coor				=>			UV_off_coor				   	,							
+		UV_over_coor			=>			UV_over_coor			   	,							
+		UV_OFF_TIME				=>			UV_OFF_TIME				   	,							
+			                    				                       								
+		dianyan_on_coor			=>			dianyan_on_coor			   	,							
+		dianyan_off_coor		=>			dianyan_off_coor		   	,							
+		terrace_eye_coor		=>			terrace_eye_coor		   	,							
+		terrace_front_do_coor	=>			terrace_front_do_coor	   	,							
+		terrace_after_do_coor	=>			terrace_after_do_coor	   	,							
+		terrace_front_eye_coor	=>			terrace_front_eye_coor	   	,							
+		terrace_after_eye_coor	=>			terrace_after_eye_coor	   	,							
+                                		                            								                                		                            								
+		label_signal_1			=>			label_signal_1			   	,							
+		label_signal_2			=>			label_signal_2			   	,							
+                                		                            								
+		dianyan_en				=>			dianyan_en				   	,							
+		dianyan_en1				=>			dianyan_en1				   	,							
+		dianyan_en2				=>			dianyan_en2				   	,							
+		terrace_en				=>			terrace_en				   	,							
+                                		                            								
+		control_condition		=>			control_condition		   	,							
+		UV_en					=>			UV_en					   	,							
+		terrace_signal			=>			terrace_signal			   								
+		
+	);
+
+
+	ARM_FPGA_RSV <= (not PD1FIFO_alfull) or (not PD2FIFO_alfull);
+	
+	F_GPIO_O(2) <= not terrace_en;
+	F_GPIO_O(1) <= not UV_EN;
+				
+	---FPGA的LED灯的控制
+	process(nRST,clk_100)
+	begin
+		if(nRST = '0') then
+			led_cnt <= (others => '0');
+			FPGA_LED <= "00";
+		elsif rising_edge(clk_100) then
+--		if rising_edge(clk) then
+			led_cnt <= led_cnt + '1'; 
+			FPGA_LED(0) <= led_cnt(25);		---1.5hz
+			FPGA_LED(1) <= led_cnt(24);		---3hz
+		end if;
+	end process;
+		
+		
+			
+END BEHV;                                          

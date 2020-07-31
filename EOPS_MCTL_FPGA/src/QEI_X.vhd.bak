@@ -1,0 +1,76 @@
+LIBRARY IEEE;
+USE IEEE.STD_LOGIC_1164.ALL;
+USE IEEE.STD_LOGIC_UNSIGNED.ALL;
+USE IEEE.STD_LOGIC_ARITH.ALL;
+
+entity QEI_X is
+	port 
+	(
+		Encoder_A		: in     std_logic;
+		Encoder_B		: in     std_logic;
+
+		nReset			: in     std_logic;
+		enable			: in     std_logic;
+		pass_dir			: out    std_logic;
+		clk_sys			: in std_logic;   --- for A+, it is 133Mhz
+		Coor_out			: OUT STD_LOGIC_VECTOR (63 DOWNTO 0)
+	);
+end entity;
+
+architecture rtl of QEI_X is
+
+signal 	Coor				: STD_LOGIC_VECTOR (63 DOWNTO 0) := X"8000000000000000";
+signal 	Encoder_A_L		: std_logic;
+signal 	Encoder_B_L		: std_logic;
+
+signal 	Add	: std_logic := '0';
+signal 	Dec	: std_logic := '0';
+
+begin
+
+	Coor_out <= Coor ;
+
+	process (clk_sys, nRESET)
+	begin
+		if(nRESET = '0') then
+			Coor <= X"8000000000000000";
+			Add <= '0';
+			Dec <= '0';
+			pass_dir <= '0';
+		elsif (rising_edge(clk_sys)) then
+			Encoder_A_L <= Encoder_A;
+			Encoder_B_L <= Encoder_B;
+
+			if (enable = '1') then
+				if( (Encoder_B_L = '1' and Encoder_B = '1' and Encoder_A = '1' and Encoder_A_L = '0') or 
+					(Encoder_B_L = '0' and Encoder_B = '0' and Encoder_A = '0' and Encoder_A_L = '1') or 
+					(Encoder_A_L = '1' and Encoder_A = '1' and Encoder_B = '0' and Encoder_B_L = '1') or 
+					(Encoder_A_L = '0' and Encoder_A = '0' and Encoder_B = '1' and Encoder_B_L = '0') ) then
+					Add <= '1';
+					Dec <= '0';
+					pass_dir <= '1';
+				elsif( (Encoder_B_L = '1' and Encoder_B = '1' and Encoder_A = '0' and Encoder_A_L = '1') or 
+					(Encoder_B_L = '0' and Encoder_B = '0' and Encoder_A = '1' and Encoder_A_L = '0') or 
+					(Encoder_A_L = '1' and Encoder_A = '1' and Encoder_B = '1' and Encoder_B_L = '0') or 
+					(Encoder_A_L = '0' and Encoder_A = '0' and Encoder_B = '0' and Encoder_B_L = '1') ) then
+					Add <= '0';
+					--Dec <= '0';
+					Dec <= '1';               --ver C：坐标只加不减
+					pass_dir <= '0';
+				else
+					Add <= '0';
+					Dec <= '0';
+				end if;
+			end if;
+
+  	  if(Add = '1') then 
+			Coor <= Coor + X"0000000000000001";
+  	  end if;
+	  
+  	  if(Dec = '1') then 
+			Coor <= Coor - X"0000000000000001";
+  	  end if; 
+		
+		end if;
+	end process;
+end rtl;
