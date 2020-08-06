@@ -6,13 +6,14 @@
 <Project Version="7" Minor="2" Path="e:/uv/fpga/verify/vry_vivadoip/vry_vivadoip/vry_vivadoip.srcs/packageip_vry_fifofirstread3/vry_fifofirstread_v1_0_v1_0_project/vry_FifoFirstRead_v1_0_v1_0_project.xpr">
   <DefaultLaunch Dir="$PRUNDIR"/>
   <Configuration>
-    <Option Name="Id" Val="da7bffdeb97843f8a1987103be9e6670"/>
+    <Option Name="Id" Val="211e9c6d75744a74a4a3d3024f662734"/>
     <Option Name="Part" Val="xc7z020clg400-2"/>
     <Option Name="CompiledLibDir" Val="$PCACHEDIR/compile_simlib"/>
     <Option Name="BoardPart" Val=""/>
     <Option Name="ActiveSimSet" Val="sim_1"/>
     <Option Name="DefaultLib" Val="xil_defaultlib"/>
     <Option Name="IPRepoPath" Val="$PPRDIR/../../../../../../../../UV/FPGA/VERIFY/vry_VivadoIp/vry_VivadoIp/vry_VivadoIp.srcs/PackageIp_vry_FifoFirstRead3"/>
+    <Option Name="IPRepoPath" Val="$PPRDIR/../../packageip_vry_defineinterface"/>
   </Configuration>
   <FileSets Version="1" Minor="31">
     <FileSet Name="sources_1" Type="DesignSrcs" RelSrcDir="$PSRCDIR/sources_1">

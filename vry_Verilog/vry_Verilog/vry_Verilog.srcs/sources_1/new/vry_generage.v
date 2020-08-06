@@ -38,15 +38,15 @@ module vry_generage(
 //    end
 
 
-    genvar i;
-    generate
-        for(i = 0; i < 8; i = i + 1) begin : bit_reverse
-        	wire	out;
-        	wire	in;
-            assign out = in;
-        end
-        
-    endgenerate
+//    genvar i;
+//    generate
+//        for(i = 0; i < 8; i = i + 1) begin : bit_reverse
+//        	wire	out;
+//        	wire	in;
+//            assign 	out = in;
+//        end
+//        
+//    endgenerate
 
 
 endmodule

@@ -1,0 +1,10 @@
+#-----------------------------------------------------------
+# Vivado v2014.4 (64-bit)
+# SW Build 1071353 on Tue Nov 18 18:29:27 MST 2014
+# IP Build 1070531 on Tue Nov 18 01:10:18 MST 2014
+# Start of session at: Thu Aug 06 18:20:24 2020
+# Process ID: 3200
+# Log file: E:/UV/FPGA/VERIFY/vry_VivadoIp/vry_VivadoIp/vry_VivadoIp.runs/POWER_CTRL_0_synth_1/POWER_CTRL_0.vds
+# Journal file: E:/UV/FPGA/VERIFY/vry_VivadoIp/vry_VivadoIp/vry_VivadoIp.runs/POWER_CTRL_0_synth_1\vivado.jou
+#-----------------------------------------------------------
+source POWER_CTRL_0.tcl

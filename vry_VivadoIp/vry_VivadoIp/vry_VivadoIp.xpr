@@ -13,6 +13,7 @@
     <Option Name="ActiveSimSet" Val="sim_1"/>
     <Option Name="DefaultLib" Val="xil_defaultlib"/>
     <Option Name="IPRepoPath" Val="$PSRCDIR/PackageIp_vry_FifoFirstRead3"/>
+    <Option Name="IPRepoPath" Val="$PSRCDIR/packageip_vry_defineinterface"/>
   </Configuration>
   <FileSets Version="1" Minor="31">
     <FileSet Name="sources_1" Type="DesignSrcs" RelSrcDir="$PSRCDIR/sources_1">
@@ -25,6 +26,16 @@
         </FileInfo>
       </File>
       <File Path="$PSRCDIR/sources_1/ip/vry_FifoFirstRead_1/vry_FifoFirstRead_1.upgrade_log"/>
+      <File Path="$PSRCDIR/sources_1/ip/POWER_CTRL_0/POWER_CTRL_0.upgrade_log"/>
+      <File Path="$PSRCDIR/sources_1/bd/design_1/design_1.bd">
+        <FileInfo>
+          <Attr Name="UsedIn" Val="synthesis"/>
+          <Attr Name="UsedIn" Val="implementation"/>
+          <Attr Name="UsedIn" Val="simulation"/>
+        </FileInfo>
+        <CompFileExtendedInfo CompFileName="design_1.bd" FileRelPathName="ip/design_1_POWER_CTRL_0_0/design_1_POWER_CTRL_0_0.xci"/>
+      </File>
+      <File Path="$PSRCDIR/sources_1/bd/design_1/ip/design_1_POWER_CTRL_0_0/design_1_POWER_CTRL_0_0.upgrade_log"/>
       <Config>
         <Option Name="DesignMode" Val="RTL"/>
         <Option Name="TopModule" Val="vry_VivadoIp"/>
@@ -38,6 +49,7 @@
       </Config>
     </FileSet>
     <FileSet Name="sim_1" Type="SimulationSrcs" RelSrcDir="$PSRCDIR/sim_1">
+      <Filter Type="Srcs"/>
       <Config>
         <Option Name="DesignMode" Val="RTL"/>
         <Option Name="TopModule" Val="vry_VivadoIp"/>
@@ -56,6 +68,32 @@
       </File>
       <Config>
         <Option Name="TopModule" Val="vry_FifoFirstRead_1"/>
+        <Option Name="UseBlackboxStub" Val="1"/>
+      </Config>
+    </FileSet>
+    <FileSet Name="axi_iic_0" Type="BlockSrcs" RelSrcDir="$PSRCDIR/axi_iic_0">
+      <File Path="$PSRCDIR/sources_1/ip/axi_iic_0/axi_iic_0.xci">
+        <FileInfo>
+          <Attr Name="UsedIn" Val="synthesis"/>
+          <Attr Name="UsedIn" Val="implementation"/>
+          <Attr Name="UsedIn" Val="simulation"/>
+        </FileInfo>
+      </File>
+      <Config>
+        <Option Name="TopModule" Val="axi_iic_0"/>
+        <Option Name="UseBlackboxStub" Val="1"/>
+      </Config>
+    </FileSet>
+    <FileSet Name="POWER_CTRL_0" Type="BlockSrcs" RelSrcDir="$PSRCDIR/POWER_CTRL_0">
+      <File Path="$PSRCDIR/sources_1/ip/POWER_CTRL_0/POWER_CTRL_0.xci">
+        <FileInfo>
+          <Attr Name="UsedIn" Val="synthesis"/>
+          <Attr Name="UsedIn" Val="implementation"/>
+          <Attr Name="UsedIn" Val="simulation"/>
+        </FileInfo>
+      </File>
+      <Config>
+        <Option Name="TopModule" Val="POWER_CTRL_0"/>
         <Option Name="UseBlackboxStub" Val="1"/>
       </Config>
     </FileSet>
@@ -78,6 +116,20 @@
   <Runs Version="1" Minor="9">
     <Run Id="synth_1" Type="Ft3:Synth" SrcSet="sources_1" Part="xc7z020clg400-2" ConstrsSet="constrs_1" Description="Vivado Synthesis Defaults" State="current" Dir="$PRUNDIR/synth_1">
       <Strategy Version="1" Minor="2">
+        <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2014"/>
+        <Step Id="synth_design"/>
+      </Strategy>
+      <GeneratedRun Dir="$PRUNDIR" File="gen_run.xml"/>
+    </Run>
+    <Run Id="vry_FifoFirstRead_1_synth_1" Type="Ft3:Synth" SrcSet="vry_FifoFirstRead_1" Part="xc7z020clg400-2" ConstrsSet="vry_FifoFirstRead_1" Description="Vivado Synthesis Defaults" Dir="$PRUNDIR/vry_FifoFirstRead_1_synth_1">
+      <Strategy Version="1" Minor="2">
+        <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2014"/>
+        <Step Id="synth_design"/>
+      </Strategy>
+      <GeneratedRun Dir="$PRUNDIR" File="gen_run.xml"/>
+    </Run>
+    <Run Id="axi_iic_0_synth_1" Type="Ft3:Synth" SrcSet="axi_iic_0" Part="xc7z020clg400-2" ConstrsSet="axi_iic_0" Description="Vivado Synthesis Defaults" Dir="$PRUNDIR/axi_iic_0_synth_1">
+      <Strategy Version="1" Minor="2">
         <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2014">
           <Desc>Vivado Synthesis Defaults</Desc>
         </StratHandle>
@@ -85,7 +137,7 @@
       </Strategy>
       <GeneratedRun Dir="$PRUNDIR" File="gen_run.xml"/>
     </Run>
-    <Run Id="vry_FifoFirstRead_1_synth_1" Type="Ft3:Synth" SrcSet="vry_FifoFirstRead_1" Part="xc7z020clg400-2" ConstrsSet="vry_FifoFirstRead_1" Description="Vivado Synthesis Defaults" Dir="$PRUNDIR/vry_FifoFirstRead_1_synth_1">
+    <Run Id="POWER_CTRL_0_synth_1" Type="Ft3:Synth" SrcSet="POWER_CTRL_0" Part="xc7z020clg400-2" ConstrsSet="POWER_CTRL_0" Description="Vivado Synthesis Defaults" Dir="$PRUNDIR/POWER_CTRL_0_synth_1">
       <Strategy Version="1" Minor="2">
         <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2014">
           <Desc>Vivado Synthesis Defaults</Desc>
@@ -95,6 +147,34 @@
       <GeneratedRun Dir="$PRUNDIR" File="gen_run.xml"/>
     </Run>
     <Run Id="impl_1" Type="Ft2:EntireDesign" Part="xc7z020clg400-2" ConstrsSet="constrs_1" Description="Vivado Implementation Defaults" State="current" SynthRun="synth_1">
+      <Strategy Version="1" Minor="2">
+        <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2014"/>
+        <Step Id="init_design"/>
+        <Step Id="opt_design"/>
+        <Step Id="power_opt_design"/>
+        <Step Id="place_design"/>
+        <Step Id="post_place_power_opt_design"/>
+        <Step Id="phys_opt_design"/>
+        <Step Id="route_design"/>
+        <Step Id="post_route_phys_opt_design"/>
+        <Step Id="write_bitstream"/>
+      </Strategy>
+    </Run>
+    <Run Id="vry_FifoFirstRead_1_impl_1" Type="Ft2:EntireDesign" Part="xc7z020clg400-2" ConstrsSet="vry_FifoFirstRead_1" Description="Vivado Implementation Defaults" SynthRun="vry_FifoFirstRead_1_synth_1">
+      <Strategy Version="1" Minor="2">
+        <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2014"/>
+        <Step Id="init_design"/>
+        <Step Id="opt_design"/>
+        <Step Id="power_opt_design"/>
+        <Step Id="place_design"/>
+        <Step Id="post_place_power_opt_design"/>
+        <Step Id="phys_opt_design"/>
+        <Step Id="route_design"/>
+        <Step Id="post_route_phys_opt_design"/>
+        <Step Id="write_bitstream"/>
+      </Strategy>
+    </Run>
+    <Run Id="axi_iic_0_impl_1" Type="Ft2:EntireDesign" Part="xc7z020clg400-2" ConstrsSet="axi_iic_0" Description="Vivado Implementation Defaults" SynthRun="axi_iic_0_synth_1">
       <Strategy Version="1" Minor="2">
         <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2014">
           <Desc>Vivado Implementation Defaults</Desc>
@@ -110,7 +190,7 @@
         <Step Id="write_bitstream"/>
       </Strategy>
     </Run>
-    <Run Id="vry_FifoFirstRead_1_impl_1" Type="Ft2:EntireDesign" Part="xc7z020clg400-2" ConstrsSet="vry_FifoFirstRead_1" Description="Vivado Implementation Defaults" SynthRun="vry_FifoFirstRead_1_synth_1">
+    <Run Id="POWER_CTRL_0_impl_1" Type="Ft2:EntireDesign" Part="xc7z020clg400-2" ConstrsSet="POWER_CTRL_0" Description="Vivado Implementation Defaults" SynthRun="POWER_CTRL_0_synth_1">
       <Strategy Version="1" Minor="2">
         <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2014">
           <Desc>Vivado Implementation Defaults</Desc>

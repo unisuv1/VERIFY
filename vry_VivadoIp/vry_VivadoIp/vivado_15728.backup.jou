@@ -1,0 +1,15 @@
+#-----------------------------------------------------------
+# Vivado v2014.4 (64-bit)
+# SW Build 1071353 on Tue Nov 18 18:29:27 MST 2014
+# IP Build 1070531 on Tue Nov 18 01:10:18 MST 2014
+# Start of session at: Tue Jul 28 09:41:31 2020
+# Process ID: 19480
+# Log file: E:/UV/FPGA/VERIFY/vry_VivadoIp/vry_VivadoIp/vivado.log
+# Journal file: E:/UV/FPGA/VERIFY/vry_VivadoIp/vry_VivadoIp\vivado.jou
+#-----------------------------------------------------------
+start_gui
+open_project E:/UV/FPGA/VERIFY/vry_VivadoIp/vry_VivadoIp/vry_VivadoIp.xpr
+ipx::edit_ip_in_project -upgrade true -name vry_FifoFirstRead_v1_0_v1_0_project -directory E:/UV/FPGA/VERIFY/vry_VivadoIp/vry_VivadoIp/vry_VivadoIp.srcs/PackageIp_vry_FifoFirstRead3/vry_FifoFirstRead_v1_0_v1_0_project e:/UV/FPGA/VERIFY/vry_VivadoIp/vry_VivadoIp/vry_VivadoIp.srcs/PackageIp_vry_FifoFirstRead3/component.xml
+update_compile_order -fileset sources_1
+current_project vry_VivadoIp
+close_project
