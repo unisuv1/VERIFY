@@ -1,0 +1,14 @@
+#-----------------------------------------------------------
+# Vivado v2014.4 (64-bit)
+# SW Build 1071353 on Tue Nov 18 18:29:27 MST 2014
+# IP Build 1070531 on Tue Nov 18 01:10:18 MST 2014
+# Start of session at: Thu Aug 06 16:20:13 2020
+# Process ID: 11316
+# Log file: E:/UV/FPGA/VERIFY/vry_Verilog/vry_Verilog/vivado.log
+# Journal file: E:/UV/FPGA/VERIFY/vry_Verilog/vry_Verilog\vivado.jou
+#-----------------------------------------------------------
+start_gui
+open_project E:/UV/FPGA/VERIFY/vry_Verilog/vry_Verilog/vry_Verilog.xpr
+launch_simulation
+source vry_generage.tcl
+close_sim

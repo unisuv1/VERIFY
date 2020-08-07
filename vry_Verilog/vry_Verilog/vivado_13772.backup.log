@@ -1,0 +1,360 @@
+#-----------------------------------------------------------
+# Vivado v2014.4 (64-bit)
+# SW Build 1071353 on Tue Nov 18 18:29:27 MST 2014
+# IP Build 1070531 on Tue Nov 18 01:10:18 MST 2014
+# Start of session at: Thu Aug 06 19:05:47 2020
+# Process ID: 1620
+# Log file: E:/UV/FPGA/VERIFY/vry_Verilog/vry_Verilog/vivado.log
+# Journal file: E:/UV/FPGA/VERIFY/vry_Verilog/vry_Verilog\vivado.jou
+#-----------------------------------------------------------
+start_gui
+open_project E:/UV/FPGA/VERIFY/vry_Verilog/vry_Verilog/vry_Verilog.xpr
+Scanning sources...
+Finished scanning sources
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1704] No user IP repositories specified
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'D:/install/Xilinx/Vivado/2014.4/data/ip'.
+close [ open E:/UV/FPGA/VERIFY/vry_Verilog/vry_Verilog/vry_Verilog.srcs/sources_1/new/vry_declare.v w ]
+add_files E:/UV/FPGA/VERIFY/vry_Verilog/vry_Verilog/vry_Verilog.srcs/sources_1/new/vry_declare.v
+update_compile_order -fileset sources_1
+set_property top vry_declare [current_fileset]
+update_compile_order -fileset sources_1
+launch_runs synth_1
+INFO: [HDL 9-2216] Analyzing Verilog file "E:/UV/FPGA/VERIFY/vry_Verilog/vry_Verilog/vry_Verilog.srcs/sources_1/new/vry_declare.v" into library work [E:/UV/FPGA/VERIFY/vry_Verilog/vry_Verilog/vry_Verilog.srcs/sources_1/new/vry_declare.v:1]
+INFO: [HDL 9-2216] Analyzing Verilog file "E:/UV/FPGA/VERIFY/vry_Verilog/vry_Verilog/vry_Verilog.srcs/sources_1/new/vry_generage.v" into library work [E:/UV/FPGA/VERIFY/vry_Verilog/vry_Verilog/vry_Verilog.srcs/sources_1/new/vry_generage.v:1]
+[Thu Aug 06 19:16:39 2020] Launched synth_1...
+Run output will be captured here: E:/UV/FPGA/VERIFY/vry_Verilog/vry_Verilog/vry_Verilog.runs/synth_1/runme.log
+launch_runs impl_1
+[Thu Aug 06 19:16:59 2020] Launched impl_1...
+Run output will be captured here: E:/UV/FPGA/VERIFY/vry_Verilog/vry_Verilog/vry_Verilog.runs/impl_1/runme.log
+reset_run synth_1
+launch_runs synth_1
+INFO: [HDL 9-2216] Analyzing Verilog file "E:/UV/FPGA/VERIFY/vry_Verilog/vry_Verilog/vry_Verilog.srcs/sources_1/new/vry_declare.v" into library work [E:/UV/FPGA/VERIFY/vry_Verilog/vry_Verilog/vry_Verilog.srcs/sources_1/new/vry_declare.v:1]
+INFO: [HDL 9-2216] Analyzing Verilog file "E:/UV/FPGA/VERIFY/vry_Verilog/vry_Verilog/vry_Verilog.srcs/sources_1/new/vry_generage.v" into library work [E:/UV/FPGA/VERIFY/vry_Verilog/vry_Verilog/vry_Verilog.srcs/sources_1/new/vry_generage.v:1]
+[Thu Aug 06 19:18:52 2020] Launched synth_1...
+Run output will be captured here: E:/UV/FPGA/VERIFY/vry_Verilog/vry_Verilog/vry_Verilog.runs/synth_1/runme.log
+launch_runs impl_1
+[Thu Aug 06 19:19:10 2020] Launched impl_1...
+Run output will be captured here: E:/UV/FPGA/VERIFY/vry_Verilog/vry_Verilog/vry_Verilog.runs/impl_1/runme.log
+reset_run synth_1
+launch_runs synth_1
+INFO: [HDL 9-2216] Analyzing Verilog file "E:/UV/FPGA/VERIFY/vry_Verilog/vry_Verilog/vry_Verilog.srcs/sources_1/new/vry_declare.v" into library work [E:/UV/FPGA/VERIFY/vry_Verilog/vry_Verilog/vry_Verilog.srcs/sources_1/new/vry_declare.v:1]
+INFO: [HDL 9-2216] Analyzing Verilog file "E:/UV/FPGA/VERIFY/vry_Verilog/vry_Verilog/vry_Verilog.srcs/sources_1/new/vry_generage.v" into library work [E:/UV/FPGA/VERIFY/vry_Verilog/vry_Verilog/vry_Verilog.srcs/sources_1/new/vry_generage.v:1]
+[Thu Aug 06 19:20:46 2020] Launched synth_1...
+Run output will be captured here: E:/UV/FPGA/VERIFY/vry_Verilog/vry_Verilog/vry_Verilog.runs/synth_1/runme.log
+launch_runs impl_1
+[Thu Aug 06 19:21:07 2020] Launched impl_1...
+Run output will be captured here: E:/UV/FPGA/VERIFY/vry_Verilog/vry_Verilog/vry_Verilog.runs/impl_1/runme.log
+file mkdir E:/UV/FPGA/VERIFY/vry_Verilog/vry_Verilog/vry_Verilog.srcs/sim_1/new
+set_property SOURCE_SET sources_1 [get_filesets sim_1]
+close [ open E:/UV/FPGA/VERIFY/vry_Verilog/vry_Verilog/vry_Verilog.srcs/sim_1/new/tb_vry_declare.v w ]
+add_files -fileset sim_1 E:/UV/FPGA/VERIFY/vry_Verilog/vry_Verilog/vry_Verilog.srcs/sim_1/new/tb_vry_declare.v
+update_compile_order -fileset sim_1
+update_compile_order -fileset sim_1
+update_compile_order -fileset sim_1
+launch_simulation
+INFO: [USF-XSim-27] Simulation object is 'sim_1'
+INFO: [USF-XSim-37] Inspecting design source files for 'tb_vry_declare' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE' step in 'E:/UV/FPGA/VERIFY/vry_Verilog/vry_Verilog/vry_Verilog.sim/sim_1/behav'
+"xvlog -m64 -prj tb_vry_declare_vlog.prj"
+Determining compilation order of HDL files.
+INFO: [VRFC 10-2263] Analyzing Verilog file "E:/UV/FPGA/VERIFY/vry_Verilog/vry_Verilog/vry_Verilog.srcs/sources_1/new/vry_declare.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module vry_declare
+INFO: [VRFC 10-2263] Analyzing Verilog file "E:/UV/FPGA/VERIFY/vry_Verilog/vry_Verilog/vry_Verilog.srcs/sim_1/new/tb_vry_declare.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module tb_vry_declare
+INFO: [VRFC 10-2263] Analyzing Verilog file "E:/UV/FPGA/VERIFY/vry_Verilog/vry_Verilog/vry_Verilog.sim/sim_1/behav/glbl.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module glbl
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'E:/UV/FPGA/VERIFY/vry_Verilog/vry_Verilog/vry_Verilog.sim/sim_1/behav'
+Vivado Simulator 2014.4
+Copyright 1986-1999, 2001-2014 Xilinx, Inc. All Rights Reserved.
+Running: D:/install/Xilinx/Vivado/2014.4/bin/unwrapped/win64.o/xelab.exe -wto 261fb7fb0d894769838a7690e5abf11a --debug typical --relax -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot tb_vry_declare_behav xil_defaultlib.tb_vry_declare xil_defaultlib.glbl -log elaborate.log 
+Multi-threading is on. Using 2 slave threads.
+Starting static elaboration
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling module xil_defaultlib.vry_declare
+Compiling module xil_defaultlib.tb_vry_declare
+Compiling module xil_defaultlib.glbl
+Waiting for 2 sub-compilation(s) to finish...
+Built simulation snapshot tb_vry_declare_behav
+
+****** Webtalk v2014.4 (64-bit)
+  **** SW Build 1071353 on Tue Nov 18 18:29:27 MST 2014
+  **** IP Build 1070531 on Tue Nov 18 01:10:18 MST 2014
+    ** Copyright 1986-2014 Xilinx, Inc. All Rights Reserved.
+
+source E:/UV/FPGA/VERIFY/vry_Verilog/vry_Verilog/vry_Verilog.sim/sim_1/behav/xsim.dir/tb_vry_declare_behav/webtalk/xsim_webtalk.tcl -notrace
+
+    while executing
+"webtalk_transmit -clientid 1931539412 -regid "" -xml E:/UV/FPGA/VERIFY/vry_Verilog/vry_Verilog/vry_Verilog.sim/sim_1/behav/xsim.dir/tb_vry_declare_beh..."
+    (file "E:/UV/FPGA/VERIFY/vry_Verilog/vry_Verilog/vry_Verilog.sim/sim_1/behav/xsim.dir/tb_vry_declare_behav/webtalk/xsim_webtalk.tcl" line 41)
+INFO: [Common 17-206] Exiting Webtalk at Thu Aug 06 19:27:07 2020...
+run_program: Time (s): cpu = 00:00:00 ; elapsed = 00:00:09 . Memory (MB): peak = 758.953 ; gain = 0.000
+INFO: [USF-XSim-4] XSim::Simulate design
+INFO: [USF-XSim-61] Executing 'SIMULATE' step in 'E:/UV/FPGA/VERIFY/vry_Verilog/vry_Verilog/vry_Verilog.sim/sim_1/behav'
+INFO: [USF-XSim-98] *** Running xsim
+   with args "tb_vry_declare_behav -key {Behavioral:sim_1:Functional:tb_vry_declare} -tclbatch {tb_vry_declare.tcl} -log {simulate.log}"
+INFO: [USF-XSim-8] Loading simulator feature
+Vivado Simulator 2014.4
+Time resolution is 1 ps
+source tb_vry_declare.tcl
+# set curr_wave [current_wave_config]
+# if { [string length $curr_wave] == 0 } {
+#   if { [llength [get_objects]] > 0} {
+#     add_wave /
+#     set_property needs_save false [current_wave_config]
+#   } else {
+#      send_msg_id Add_Wave-1 WARNING "No top level signals found. Simulator will start without a wave window. If you want to open a wave window go to 'File->New Waveform Configuration' or type 'create_wave_config' in the TCL console."
+#   }
+# }
+# run 1000ns
+INFO: [USF-XSim-96] XSim completed. Design snapshot 'tb_vry_declare_behav' loaded.
+INFO: [USF-XSim-97] XSim simulation ran for 1000ns
+launch_simulation: Time (s): cpu = 00:00:02 ; elapsed = 00:00:14 . Memory (MB): peak = 758.953 ; gain = 0.000
+INFO: [Simtcl 6-16] Simulation closed
+launch_simulation
+INFO: [USF-XSim-27] Simulation object is 'sim_1'
+INFO: [USF-XSim-37] Inspecting design source files for 'tb_vry_declare' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE' step in 'E:/UV/FPGA/VERIFY/vry_Verilog/vry_Verilog/vry_Verilog.sim/sim_1/behav'
+"xvlog -m64 -prj tb_vry_declare_vlog.prj"
+Determining compilation order of HDL files.
+INFO: [VRFC 10-2263] Analyzing Verilog file "E:/UV/FPGA/VERIFY/vry_Verilog/vry_Verilog/vry_Verilog.srcs/sources_1/new/vry_declare.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module vry_declare
+INFO: [VRFC 10-2263] Analyzing Verilog file "E:/UV/FPGA/VERIFY/vry_Verilog/vry_Verilog/vry_Verilog.srcs/sim_1/new/tb_vry_declare.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module tb_vry_declare
+INFO: [VRFC 10-2263] Analyzing Verilog file "E:/UV/FPGA/VERIFY/vry_Verilog/vry_Verilog/vry_Verilog.sim/sim_1/behav/glbl.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module glbl
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'E:/UV/FPGA/VERIFY/vry_Verilog/vry_Verilog/vry_Verilog.sim/sim_1/behav'
+Vivado Simulator 2014.4
+Copyright 1986-1999, 2001-2014 Xilinx, Inc. All Rights Reserved.
+Running: D:/install/Xilinx/Vivado/2014.4/bin/unwrapped/win64.o/xelab.exe -wto 261fb7fb0d894769838a7690e5abf11a --debug typical --relax -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot tb_vry_declare_behav xil_defaultlib.tb_vry_declare xil_defaultlib.glbl -log elaborate.log 
+Multi-threading is on. Using 2 slave threads.
+Starting static elaboration
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling module xil_defaultlib.vry_declare
+Compiling module xil_defaultlib.tb_vry_declare
+Compiling module xil_defaultlib.glbl
+Waiting for 2 sub-compilation(s) to finish...
+Built simulation snapshot tb_vry_declare_behav
+
+****** Webtalk v2014.4 (64-bit)
+  **** SW Build 1071353 on Tue Nov 18 18:29:27 MST 2014
+  **** IP Build 1070531 on Tue Nov 18 01:10:18 MST 2014
+    ** Copyright 1986-2014 Xilinx, Inc. All Rights Reserved.
+
+source E:/UV/FPGA/VERIFY/vry_Verilog/vry_Verilog/vry_Verilog.sim/sim_1/behav/xsim.dir/tb_vry_declare_behav/webtalk/xsim_webtalk.tcl -notrace
+
+    while executing
+"webtalk_transmit -clientid 16063012 -regid "" -xml E:/UV/FPGA/VERIFY/vry_Verilog/vry_Verilog/vry_Verilog.sim/sim_1/behav/xsim.dir/tb_vry_declare_behav..."
+    (file "E:/UV/FPGA/VERIFY/vry_Verilog/vry_Verilog/vry_Verilog.sim/sim_1/behav/xsim.dir/tb_vry_declare_behav/webtalk/xsim_webtalk.tcl" line 41)
+INFO: [Common 17-206] Exiting Webtalk at Thu Aug 06 19:28:04 2020...
+run_program: Time (s): cpu = 00:00:00 ; elapsed = 00:00:06 . Memory (MB): peak = 758.953 ; gain = 0.000
+INFO: [USF-XSim-4] XSim::Simulate design
+INFO: [USF-XSim-61] Executing 'SIMULATE' step in 'E:/UV/FPGA/VERIFY/vry_Verilog/vry_Verilog/vry_Verilog.sim/sim_1/behav'
+INFO: [USF-XSim-98] *** Running xsim
+   with args "tb_vry_declare_behav -key {Behavioral:sim_1:Functional:tb_vry_declare} -tclbatch {tb_vry_declare.tcl} -log {simulate.log}"
+INFO: [USF-XSim-8] Loading simulator feature
+Vivado Simulator 2014.4
+Time resolution is 1 ps
+source tb_vry_declare.tcl
+# set curr_wave [current_wave_config]
+# if { [string length $curr_wave] == 0 } {
+#   if { [llength [get_objects]] > 0} {
+#     add_wave /
+#     set_property needs_save false [current_wave_config]
+#   } else {
+#      send_msg_id Add_Wave-1 WARNING "No top level signals found. Simulator will start without a wave window. If you want to open a wave window go to 'File->New Waveform Configuration' or type 'create_wave_config' in the TCL console."
+#   }
+# }
+# run 1000ns
+INFO: [USF-XSim-96] XSim completed. Design snapshot 'tb_vry_declare_behav' loaded.
+INFO: [USF-XSim-97] XSim simulation ran for 1000ns
+launch_simulation: Time (s): cpu = 00:00:01 ; elapsed = 00:00:10 . Memory (MB): peak = 758.953 ; gain = 0.000
+INFO: [Simtcl 6-16] Simulation closed
+launch_simulation
+INFO: [USF-XSim-27] Simulation object is 'sim_1'
+INFO: [USF-XSim-37] Inspecting design source files for 'tb_vry_declare' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE' step in 'E:/UV/FPGA/VERIFY/vry_Verilog/vry_Verilog/vry_Verilog.sim/sim_1/behav'
+"xvlog -m64 -prj tb_vry_declare_vlog.prj"
+Determining compilation order of HDL files.
+INFO: [VRFC 10-2263] Analyzing Verilog file "E:/UV/FPGA/VERIFY/vry_Verilog/vry_Verilog/vry_Verilog.srcs/sources_1/new/vry_declare.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module vry_declare
+INFO: [VRFC 10-2263] Analyzing Verilog file "E:/UV/FPGA/VERIFY/vry_Verilog/vry_Verilog/vry_Verilog.srcs/sim_1/new/tb_vry_declare.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module tb_vry_declare
+INFO: [VRFC 10-2263] Analyzing Verilog file "E:/UV/FPGA/VERIFY/vry_Verilog/vry_Verilog/vry_Verilog.sim/sim_1/behav/glbl.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module glbl
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'E:/UV/FPGA/VERIFY/vry_Verilog/vry_Verilog/vry_Verilog.sim/sim_1/behav'
+Vivado Simulator 2014.4
+Copyright 1986-1999, 2001-2014 Xilinx, Inc. All Rights Reserved.
+Running: D:/install/Xilinx/Vivado/2014.4/bin/unwrapped/win64.o/xelab.exe -wto 261fb7fb0d894769838a7690e5abf11a --debug typical --relax -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot tb_vry_declare_behav xil_defaultlib.tb_vry_declare xil_defaultlib.glbl -log elaborate.log 
+Multi-threading is on. Using 2 slave threads.
+Starting static elaboration
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling module xil_defaultlib.vry_declare
+Compiling module xil_defaultlib.tb_vry_declare
+Compiling module xil_defaultlib.glbl
+Waiting for 2 sub-compilation(s) to finish...
+Built simulation snapshot tb_vry_declare_behav
+
+****** Webtalk v2014.4 (64-bit)
+  **** SW Build 1071353 on Tue Nov 18 18:29:27 MST 2014
+  **** IP Build 1070531 on Tue Nov 18 01:10:18 MST 2014
+    ** Copyright 1986-2014 Xilinx, Inc. All Rights Reserved.
+
+source E:/UV/FPGA/VERIFY/vry_Verilog/vry_Verilog/vry_Verilog.sim/sim_1/behav/xsim.dir/tb_vry_declare_behav/webtalk/xsim_webtalk.tcl -notrace
+
+    while executing
+"webtalk_transmit -clientid 3748231379 -regid "" -xml E:/UV/FPGA/VERIFY/vry_Verilog/vry_Verilog/vry_Verilog.sim/sim_1/behav/xsim.dir/tb_vry_declare_beh..."
+    (file "E:/UV/FPGA/VERIFY/vry_Verilog/vry_Verilog/vry_Verilog.sim/sim_1/behav/xsim.dir/tb_vry_declare_behav/webtalk/xsim_webtalk.tcl" line 41)
+INFO: [Common 17-206] Exiting Webtalk at Thu Aug 06 19:28:57 2020...
+run_program: Time (s): cpu = 00:00:00 ; elapsed = 00:00:06 . Memory (MB): peak = 758.953 ; gain = 0.000
+INFO: [USF-XSim-4] XSim::Simulate design
+INFO: [USF-XSim-61] Executing 'SIMULATE' step in 'E:/UV/FPGA/VERIFY/vry_Verilog/vry_Verilog/vry_Verilog.sim/sim_1/behav'
+INFO: [USF-XSim-98] *** Running xsim
+   with args "tb_vry_declare_behav -key {Behavioral:sim_1:Functional:tb_vry_declare} -tclbatch {tb_vry_declare.tcl} -log {simulate.log}"
+INFO: [USF-XSim-8] Loading simulator feature
+Vivado Simulator 2014.4
+Time resolution is 1 ps
+source tb_vry_declare.tcl
+# set curr_wave [current_wave_config]
+# if { [string length $curr_wave] == 0 } {
+#   if { [llength [get_objects]] > 0} {
+#     add_wave /
+#     set_property needs_save false [current_wave_config]
+#   } else {
+#      send_msg_id Add_Wave-1 WARNING "No top level signals found. Simulator will start without a wave window. If you want to open a wave window go to 'File->New Waveform Configuration' or type 'create_wave_config' in the TCL console."
+#   }
+# }
+# run 1000ns
+INFO: [USF-XSim-96] XSim completed. Design snapshot 'tb_vry_declare_behav' loaded.
+INFO: [USF-XSim-97] XSim simulation ran for 1000ns
+launch_simulation: Time (s): cpu = 00:00:01 ; elapsed = 00:00:10 . Memory (MB): peak = 758.953 ; gain = 0.000
+close_sim
+INFO: [Simtcl 6-16] Simulation closed
+launch_simulation -mode post-implementation -type functional
+INFO: [USF-XSim-27] Simulation object is 'sim_1'
+INFO: [Netlist 29-17] Analyzing 2 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-479] Netlist was created with Vivado 2014.4
+Loading clock regions from D:/install/Xilinx/Vivado/2014.4/data\parts/xilinx/zynq/zynq/xc7z020/ClockRegion.xml
+Loading clock buffers from D:/install/Xilinx/Vivado/2014.4/data\parts/xilinx/zynq/zynq/xc7z020/ClockBuffers.xml
+Loading clock placement rules from D:/install/Xilinx/Vivado/2014.4/data/parts/xilinx/zynq/ClockPlacerRules.xml
+Loading package pin functions from D:/install/Xilinx/Vivado/2014.4/data\parts/xilinx/zynq/PinFunctions.xml...
+Loading package from D:/install/Xilinx/Vivado/2014.4/data\parts/xilinx/zynq/zynq/xc7z020/clg400/Package.xml
+Loading io standards from D:/install/Xilinx/Vivado/2014.4/data\./parts/xilinx/zynq/IOStandards.xml
+INFO: [Project 1-570] Preparing netlist for logic optimization
+Reading XDEF placement.
+Reading placer database...
+Reading XDEF routing.
+Read XDEF File: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.070 . Memory (MB): peak = 1006.195 ; gain = 0.000
+Restored from archive | CPU: 0.000000 secs | Memory: 0.000000 MB |
+Finished XDEF File Restore: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.070 . Memory (MB): peak = 1006.195 ; gain = 0.000
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+open_run: Time (s): cpu = 00:00:14 ; elapsed = 00:00:11 . Memory (MB): peak = 1104.309 ; gain = 345.355
+INFO: [USF-XSim-32] Writing simulation netlist file for design 'impl_1'...
+INFO: [USF-XSim-92] write_verilog -mode funcsim -nolib -force -file "E:/UV/FPGA/VERIFY/vry_Verilog/vry_Verilog/vry_Verilog.sim/sim_1/impl/func/tb_vry_declare_func_impl.v"
+INFO: [USF-XSim-34] Netlist generated:E:/UV/FPGA/VERIFY/vry_Verilog/vry_Verilog/vry_Verilog.sim/sim_1/impl/func/tb_vry_declare_func_impl.v
+INFO: [USF-XSim-37] Inspecting design source files for 'tb_vry_declare' in fileset 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE' step in 'E:/UV/FPGA/VERIFY/vry_Verilog/vry_Verilog/vry_Verilog.sim/sim_1/impl/func'
+"xvlog -m64 -prj tb_vry_declare_vlog.prj"
+Determining compilation order of HDL files.
+INFO: [VRFC 10-2263] Analyzing Verilog file "E:/UV/FPGA/VERIFY/vry_Verilog/vry_Verilog/vry_Verilog.sim/sim_1/impl/func/tb_vry_declare_func_impl.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module vry_declare
+INFO: [VRFC 10-311] analyzing module glbl
+INFO: [VRFC 10-2263] Analyzing Verilog file "E:/UV/FPGA/VERIFY/vry_Verilog/vry_Verilog/vry_Verilog.srcs/sim_1/new/tb_vry_declare.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module tb_vry_declare
+INFO: [VRFC 10-2263] Analyzing Verilog file "E:/UV/FPGA/VERIFY/vry_Verilog/vry_Verilog/vry_Verilog.sim/sim_1/impl/func/glbl.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module glbl
+WARNING: [VRFC 10-1195] overwriting previous definition of module glbl [E:/UV/FPGA/VERIFY/vry_Verilog/vry_Verilog/vry_Verilog.sim/sim_1/impl/func/glbl.v:6]
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'E:/UV/FPGA/VERIFY/vry_Verilog/vry_Verilog/vry_Verilog.sim/sim_1/impl/func'
+Vivado Simulator 2014.4
+Copyright 1986-1999, 2001-2014 Xilinx, Inc. All Rights Reserved.
+Running: D:/install/Xilinx/Vivado/2014.4/bin/unwrapped/win64.o/xelab.exe -wto 261fb7fb0d894769838a7690e5abf11a --debug typical --relax -L xil_defaultlib -L unisims_ver -L secureip --snapshot tb_vry_declare_func_impl xil_defaultlib.tb_vry_declare xil_defaultlib.glbl -log elaborate.log 
+Multi-threading is on. Using 2 slave threads.
+Starting static elaboration
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling module unisims_ver.x_lut1_mux2
+Compiling module unisims_ver.LUT1
+Compiling module unisims_ver.ffsrce_fdce
+Compiling module unisims_ver.FDCE
+Compiling module unisims_ver.OBUF
+Compiling module unisims_ver.IBUF
+Compiling module unisims_ver.BUFG
+Compiling module xil_defaultlib.vry_declare
+Compiling module xil_defaultlib.tb_vry_declare
+Compiling module xil_defaultlib.glbl
+Waiting for 2 sub-compilation(s) to finish...
+Built simulation snapshot tb_vry_declare_func_impl
+
+****** Webtalk v2014.4 (64-bit)
+  **** SW Build 1071353 on Tue Nov 18 18:29:27 MST 2014
+  **** IP Build 1070531 on Tue Nov 18 01:10:18 MST 2014
+    ** Copyright 1986-2014 Xilinx, Inc. All Rights Reserved.
+
+source E:/UV/FPGA/VERIFY/vry_Verilog/vry_Verilog/vry_Verilog.sim/sim_1/impl/func/xsim.dir/tb_vry_declare_func_impl/webtalk/xsim_webtalk.tcl -notrace
+
+    while executing
+"webtalk_transmit -clientid 2636416891 -regid "" -xml E:/UV/FPGA/VERIFY/vry_Verilog/vry_Verilog/vry_Verilog.sim/sim_1/impl/func/xsim.dir/tb_vry_declare..."
+    (file "E:/UV/FPGA/VERIFY/vry_Verilog/vry_Verilog/vry_Verilog.sim/sim_1/impl/func/xsim.dir/tb_vry_declare_func_impl/webtalk/xsim_webtalk.tcl" line 41)
+INFO: [Common 17-206] Exiting Webtalk at Thu Aug 06 19:30:10 2020...
+run_program: Time (s): cpu = 00:00:06 ; elapsed = 00:00:07 . Memory (MB): peak = 1126.160 ; gain = 0.000
+INFO: [USF-XSim-4] XSim::Simulate design
+INFO: [USF-XSim-61] Executing 'SIMULATE' step in 'E:/UV/FPGA/VERIFY/vry_Verilog/vry_Verilog/vry_Verilog.sim/sim_1/impl/func'
+INFO: [USF-XSim-98] *** Running xsim
+   with args "tb_vry_declare_func_impl -key {Post-Implementation:sim_1:Functional:tb_vry_declare} -tclbatch {tb_vry_declare.tcl} -log {simulate.log}"
+INFO: [USF-XSim-8] Loading simulator feature
+Vivado Simulator 2014.4
+Time resolution is 1 ps
+source tb_vry_declare.tcl
+# set curr_wave [current_wave_config]
+# if { [string length $curr_wave] == 0 } {
+#   if { [llength [get_objects]] > 0} {
+#     add_wave /
+#     set_property needs_save false [current_wave_config]
+#   } else {
+#      send_msg_id Add_Wave-1 WARNING "No top level signals found. Simulator will start without a wave window. If you want to open a wave window go to 'File->New Waveform Configuration' or type 'create_wave_config' in the TCL console."
+#   }
+# }
+# run 1000ns
+INFO: [USF-XSim-96] XSim completed. Design snapshot 'tb_vry_declare_func_impl' loaded.
+INFO: [USF-XSim-97] XSim simulation ran for 1000ns
+launch_simulation: Time (s): cpu = 00:00:29 ; elapsed = 00:00:22 . Memory (MB): peak = 1145.234 ; gain = 386.281
+close_sim
+INFO: [Simtcl 6-16] Simulation closed
+close_design
+update_compile_order -fileset sources_1
+update_compile_order -fileset sources_1
+file mkdir E:/UV/FPGA/VERIFY/vry_Verilog/vry_Verilog/vry_Verilog.srcs/constrs_1
+file mkdir E:/UV/FPGA/VERIFY/vry_Verilog/vry_Verilog/vry_Verilog.srcs/constrs_1/new
+close [ open E:/UV/FPGA/VERIFY/vry_Verilog/vry_Verilog/vry_Verilog.srcs/constrs_1/new/vry.xdc w ]
+add_files -fileset constrs_1 E:/UV/FPGA/VERIFY/vry_Verilog/vry_Verilog/vry_Verilog.srcs/constrs_1/new/vry.xdc
+exit
+INFO: [Common 17-206] Exiting Vivado at Thu Aug 06 19:50:55 2020...

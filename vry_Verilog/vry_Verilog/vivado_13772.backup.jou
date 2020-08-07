@@ -1,0 +1,58 @@
+#-----------------------------------------------------------
+# Vivado v2014.4 (64-bit)
+# SW Build 1071353 on Tue Nov 18 18:29:27 MST 2014
+# IP Build 1070531 on Tue Nov 18 01:10:18 MST 2014
+# Start of session at: Thu Aug 06 19:05:47 2020
+# Process ID: 1620
+# Log file: E:/UV/FPGA/VERIFY/vry_Verilog/vry_Verilog/vivado.log
+# Journal file: E:/UV/FPGA/VERIFY/vry_Verilog/vry_Verilog\vivado.jou
+#-----------------------------------------------------------
+start_gui
+open_project E:/UV/FPGA/VERIFY/vry_Verilog/vry_Verilog/vry_Verilog.xpr
+close [ open E:/UV/FPGA/VERIFY/vry_Verilog/vry_Verilog/vry_Verilog.srcs/sources_1/new/vry_declare.v w ]
+add_files E:/UV/FPGA/VERIFY/vry_Verilog/vry_Verilog/vry_Verilog.srcs/sources_1/new/vry_declare.v
+update_compile_order -fileset sources_1
+# Disabling source management mode.  This is to allow the top design properties to be set without GUI intervention.
+set_property source_mgmt_mode None [current_project]
+set_property top vry_declare [current_fileset]
+# Re-enabling previously disabled source management mode.
+set_property source_mgmt_mode All [current_project]
+update_compile_order -fileset sources_1
+launch_runs synth_1
+wait_on_run synth_1
+launch_runs impl_1
+wait_on_run impl_1
+reset_run synth_1
+launch_runs synth_1
+wait_on_run synth_1
+launch_runs impl_1
+wait_on_run impl_1
+reset_run synth_1
+launch_runs synth_1
+wait_on_run synth_1
+launch_runs impl_1
+wait_on_run impl_1
+file mkdir E:/UV/FPGA/VERIFY/vry_Verilog/vry_Verilog/vry_Verilog.srcs/sim_1/new
+set_property SOURCE_SET sources_1 [get_filesets sim_1]
+close [ open E:/UV/FPGA/VERIFY/vry_Verilog/vry_Verilog/vry_Verilog.srcs/sim_1/new/tb_vry_declare.v w ]
+add_files -fileset sim_1 E:/UV/FPGA/VERIFY/vry_Verilog/vry_Verilog/vry_Verilog.srcs/sim_1/new/tb_vry_declare.v
+update_compile_order -fileset sim_1
+update_compile_order -fileset sim_1
+update_compile_order -fileset sim_1
+launch_simulation
+source tb_vry_declare.tcl
+launch_simulation
+source tb_vry_declare.tcl
+launch_simulation
+source tb_vry_declare.tcl
+close_sim
+launch_simulation -mode post-implementation -type functional
+source tb_vry_declare.tcl
+close_sim
+close_design
+update_compile_order -fileset sources_1
+update_compile_order -fileset sources_1
+file mkdir E:/UV/FPGA/VERIFY/vry_Verilog/vry_Verilog/vry_Verilog.srcs/constrs_1
+file mkdir E:/UV/FPGA/VERIFY/vry_Verilog/vry_Verilog/vry_Verilog.srcs/constrs_1/new
+close [ open E:/UV/FPGA/VERIFY/vry_Verilog/vry_Verilog/vry_Verilog.srcs/constrs_1/new/vry.xdc w ]
+add_files -fileset constrs_1 E:/UV/FPGA/VERIFY/vry_Verilog/vry_Verilog/vry_Verilog.srcs/constrs_1/new/vry.xdc

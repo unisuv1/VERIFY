@@ -1,0 +1,11 @@
+vendor_name = ModelSim
+source_file = 1, E:/UV/FPGA/VERIFY/vry_Vhdl/vry_Vhdl/design/vry_vhdl.vhd
+source_file = 1, E:/UV/FPGA/VERIFY/vry_Vhdl/vry_Vhdl/db/vry_vhdl.cbx.xml
+source_file = 1, d:/install/altera/14.0/quartus/libraries/vhdl/ieee/prmtvs_b.vhd
+source_file = 1, d:/install/altera/14.0/quartus/libraries/vhdl/ieee/prmtvs_p.vhd
+source_file = 1, d:/install/altera/14.0/quartus/libraries/vhdl/ieee/timing_b.vhd
+source_file = 1, d:/install/altera/14.0/quartus/libraries/vhdl/ieee/timing_p.vhd
+design_name = vry_vhdl
+instance = comp, \c~output , c~output, vry_vhdl, 1
+instance = comp, \rstn~input , rstn~input, vry_vhdl, 1
+instance = comp, \sclk~input , sclk~input, vry_vhdl, 1

@@ -1,0 +1,6 @@
+|vry_vhdl
+rstn => b.ACLR
+sclk => b.CLK
+c << b.DB_MAX_OUTPUT_PORT_TYPE
+
+

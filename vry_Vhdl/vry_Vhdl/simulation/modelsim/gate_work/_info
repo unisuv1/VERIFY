@@ -1,0 +1,50 @@
+m255
+K3
+13
+cModel Technology
+Z0 dE:\UV\FPGA\VERIFY\vry_Vhdl\vry_Vhdl\simulation\modelsim
+T_opt
+V;ORAiQ73Mg5V[PXol3CYE1
+04 11 4 work tb_vry_vhdl fast 0
+=1-6c4b907f9ba3-5f2d2626-1cc-798
+o-quiet -auto_acc_if_foreign -work work -L altera_ver -L cycloneive_ver -L gate_work -L work +acc
+n@_opt
+OL;O;10.1c;51
+vtb_vry_vhdl
+I@^mT:_a<]32g[_5O5C6`n3
+V;eLPfT<3D@UL>^SIMieP^1
+Z1 dE:\UV\FPGA\VERIFY\vry_Vhdl\vry_Vhdl\simulation\modelsim
+w1596794091
+8E:/UV/FPGA/VERIFY/vry_Vhdl/vry_Vhdl/sim/tb_vry_vhdl.v
+FE:/UV/FPGA/VERIFY/vry_Vhdl/vry_Vhdl/sim/tb_vry_vhdl.v
+L0 1
+Z2 OL;L;10.1c;51
+r1
+31
+Z3 o-vlog01compat -work work -L mtiAvm -L mtiOvm -L mtiUvm -L mtiUPF
+!i10b 1
+!s100 4H=Ad]jEI]>dkO?MlI4@43
+!s85 0
+!s108 1596794405.563000
+!s107 E:/UV/FPGA/VERIFY/vry_Vhdl/vry_Vhdl/sim/tb_vry_vhdl.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+E:/UV/FPGA/VERIFY/vry_Vhdl/vry_Vhdl/sim|E:/UV/FPGA/VERIFY/vry_Vhdl/vry_Vhdl/sim/tb_vry_vhdl.v|
+!s92 -vlog01compat -work work +incdir+E:/UV/FPGA/VERIFY/vry_Vhdl/vry_Vhdl/sim -L mtiAvm -L mtiOvm -L mtiUvm -L mtiUPF
+vvry_vhdl
+I8jWZl3cN4zLf``UYcdC`92
+VL>oN523BXCTEb?`mIHB6;0
+R1
+w1596794298
+8vry_vhdl_8_1200mv_0c_slow.vo
+Fvry_vhdl_8_1200mv_0c_slow.vo
+L0 32
+R2
+r1
+31
+R3
+!i10b 1
+!s100 C2QzC;Dn7>?3VQRd`VbDW0
+!s85 0
+!s108 1596794405.318000
+!s107 vry_vhdl_8_1200mv_0c_slow.vo|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+.|vry_vhdl_8_1200mv_0c_slow.vo|
+!s92 -vlog01compat -work work +incdir+. -L mtiAvm -L mtiOvm -L mtiUvm -L mtiUPF

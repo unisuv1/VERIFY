@@ -1,0 +1,9 @@
+Determining compilation order of HDL files.
+INFO: [VRFC 10-2263] Analyzing Verilog file "E:/UV/FPGA/VERIFY/vry_Verilog/vry_Verilog/vry_Verilog.sim/sim_1/impl/func/tb_vry_declare_func_impl.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module vry_declare
+INFO: [VRFC 10-311] analyzing module glbl
+INFO: [VRFC 10-2263] Analyzing Verilog file "E:/UV/FPGA/VERIFY/vry_Verilog/vry_Verilog/vry_Verilog.srcs/sim_1/new/tb_vry_declare.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module tb_vry_declare
+INFO: [VRFC 10-2263] Analyzing Verilog file "E:/UV/FPGA/VERIFY/vry_Verilog/vry_Verilog/vry_Verilog.sim/sim_1/impl/func/glbl.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module glbl
+WARNING: [VRFC 10-1195] overwriting previous definition of module glbl [E:/UV/FPGA/VERIFY/vry_Verilog/vry_Verilog/vry_Verilog.sim/sim_1/impl/func/glbl.v:6]

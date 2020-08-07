@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<GenRun Id="impl_1" LaunchPart="xc7z020clg400-2" LaunchTime="1596712867">
+  <File Type="PWROPT-DCP" Name="vry_declare_pwropt.dcp"/>
+  <File Type="RUN-CONSTRS" Name="$PDATADIR/runs/impl_1/constrs_in.xml"/>
+  <File Type="PLACE-DCP" Name="vry_declare_placed.dcp"/>
+  <File Type="RUN-SRCS" Name="$PDATADIR/runs/impl_1/sources.xml"/>
+  <File Type="PWROPT-DRC" Name="vry_declare_drc_pwropted.rpt"/>
+  <File Type="ROUTE-TIMINGSUMMARY" Name="vry_declare_timing_summary_routed.rpt"/>
+  <File Type="PA-TCL" Name="vry_declare.tcl"/>
+  <File Type="RUN-STRAT" Name="$PDATADIR/runs/impl_1/impl_1.psg"/>
+  <File Type="OPT-DCP" Name="vry_declare_opt.dcp"/>
+  <File Type="OPT-DRC" Name="vry_declare_drc_opted.rpt"/>
+  <File Type="PLACE-IO" Name="vry_declare_io_placed.rpt"/>
+  <File Type="PLACE-CLK" Name="vry_declare_clock_utilization_placed.rpt"/>
+  <File Type="PLACE-UTIL" Name="vry_declare_utilization_placed.rpt"/>
+  <File Type="PLACE-UTIL-PB" Name="vry_declare_utilization_placed.pb"/>
+  <File Type="PLACE-CTRL" Name="vry_declare_control_sets_placed.rpt"/>
+  <File Type="PLACE-SIMILARITY" Name="vry_declare_incremental_reuse_placed.rpt"/>
+  <File Type="PLACE-PRE-SIMILARITY" Name="vry_declare_incremental_reuse_pre_placed.rpt"/>
+  <File Type="POSTPLACE-PWROPT-DCP" Name="vry_declare_postplace_pwropt.dcp"/>
+  <File Type="PHYSOPT-DCP" Name="vry_declare_physopt.dcp"/>
+  <File Type="PHYSOPT-DRC" Name="vry_declare_drc_physopted.rpt"/>
+  <File Type="ROUTE-DCP" Name="vry_declare_routed.dcp"/>
+  <File Type="ROUTE-DRC" Name="vry_declare_drc_routed.rpt"/>
+  <File Type="ROUTE-DRC-PB" Name="vry_declare_drc_routed.pb"/>
+  <File Type="ROUTE-PWR" Name="vry_declare_power_routed.rpt"/>
+  <File Type="ROUTE-PWR-SUM" Name="vry_declare_power_summary_routed.pb"/>
+  <File Type="ROUTE-STATUS" Name="vry_declare_route_status.rpt"/>
+  <File Type="ROUTE-STATUS-PB" Name="vry_declare_route_status.pb"/>
+  <File Type="ROUTE-TIMING-PB" Name="vry_declare_timing_summary_routed.pb"/>
+  <File Type="ROUTE-TIMING-RPX" Name="vry_declare_timing_summary_routed.rpx"/>
+  <File Type="ROUTE-SIMILARITY" Name="vry_declare_incremental_reuse_routed.rpt"/>
+  <File Type="POSTROUTE-PHYSOPT-DCP" Name="vry_declare_postroute_physopt.dcp"/>
+  <File Type="RDI-RDI" Name="vry_declare.vdi"/>
+  <File Type="POSTROUTE-PHYSOPT-TIMING" Name="vry_declare_timing_summary_postroute_physopted.rpt"/>
+  <File Type="POSTROUTE-PHYSOPT-TIMING-PB" Name="vry_declare_timing_summary_postroute_physopted.pb"/>
+  <File Type="POSTROUTE-PHYSOPT-TIMING-RPX" Name="vry_declare_timing_summary_postroute_physopted.rpx"/>
+  <File Type="BG-BIT" Name="vry_declare.bit"/>
+  <File Type="BG-BIN" Name="vry_declare.bin"/>
+  <File Type="BITSTR-MSK" Name="vry_declare.msk"/>
+  <File Type="BITSTR-RBT" Name="vry_declare.rbt"/>
+  <File Type="BITSTR-NKY" Name="vry_declare.nky"/>
+  <File Type="BITSTR-BMM" Name="vry_declare_bd.bmm"/>
+  <File Type="BITSTR-MMI" Name="vry_declare.mmi"/>
+  <File Type="BITSTR-SYSDEF" Name="vry_declare.sysdef"/>
+  <File Type="BG-BGN" Name="vry_declare.bgn"/>
+  <File Type="BG-DRC" Name="vry_declare.drc"/>
+  <File Type="WBT-USG" Name="usage_statistics_webtalk.html"/>
+  <FileSet Name="sources" Type="DesignSrcs" RelSrcDir="$PSRCDIR/sources_1">
+    <Filter Type="Srcs"/>
+    <File Path="$PSRCDIR/sources_1/new/vry_declare.v">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/new/vry_generage.v">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <Config>
+      <Option Name="DesignMode" Val="RTL"/>
+      <Option Name="TopModule" Val="vry_declare"/>
+    </Config>
+  </FileSet>
+  <FileSet Name="constrs_in" Type="Constrs" RelSrcDir="$PSRCDIR/constrs_1">
+    <Filter Type="Constrs"/>
+    <Config>
+      <Option Name="ConstrsType" Val="XDC"/>
+    </Config>
+  </FileSet>
+  <Strategy Version="1" Minor="2">
+    <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2014"/>
+    <Step Id="init_design"/>
+    <Step Id="opt_design"/>
+    <Step Id="power_opt_design"/>
+    <Step Id="place_design"/>
+    <Step Id="post_place_power_opt_design"/>
+    <Step Id="phys_opt_design"/>
+    <Step Id="route_design"/>
+    <Step Id="post_route_phys_opt_design"/>
+    <Step Id="write_bitstream"/>
+  </Strategy>
+</GenRun>

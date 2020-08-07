@@ -1,0 +1,363 @@
+#-----------------------------------------------------------
+# Vivado v2014.4 (64-bit)
+# SW Build 1071353 on Tue Nov 18 18:29:27 MST 2014
+# IP Build 1070531 on Tue Nov 18 01:10:18 MST 2014
+# Start of session at: Thu Aug 06 16:51:29 2020
+# Process ID: 15728
+# Log file: E:/UV/FPGA/VERIFY/vry_VivadoIp/vry_VivadoIp/vivado.log
+# Journal file: E:/UV/FPGA/VERIFY/vry_VivadoIp/vry_VivadoIp\vivado.jou
+#-----------------------------------------------------------
+start_gui
+open_project E:/UV/FPGA/VERIFY/vry_VivadoIp/vry_VivadoIp/vry_VivadoIp.xpr
+Scanning sources...
+Finished scanning sources
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1700] Loaded user IP repository 'e:/UV/FPGA/VERIFY/vry_VivadoIp/vry_VivadoIp/vry_VivadoIp.srcs/PackageIp_vry_FifoFirstRead3'.
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'D:/install/Xilinx/Vivado/2014.4/data/ip'.
+open_project: Time (s): cpu = 00:00:11 ; elapsed = 00:00:06 . Memory (MB): peak = 715.164 ; gain = 165.551
+ipx::infer_core E:/UV/FPGA/VERIFY/vry_VivadoIp/vry_VivadoIp/vry_VivadoIp.srcs/PackageIp_vry_DefineInterface_src
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1704] No user IP repositories specified
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'D:/install/Xilinx/Vivado/2014.4/data/ip'.
+INFO: [IP_Flow 19-2228] Inferred bus interface "signal_clock" of definition type "xilinx.com:signal:clock:1.0".
+ipx::unload_core e:/UV/FPGA/VERIFY/vry_VivadoIp/vry_VivadoIp/vry_VivadoIp.srcs/PackageIp_vry_DefineInterface_src/component.xml
+ipx::edit_ip_in_project -upgrade true -name PackageIP_vry_DefineInterface -directory E:/UV/FPGA/VERIFY/vry_VivadoIp/vry_VivadoIp/vry_VivadoIp.srcs e:/UV/FPGA/VERIFY/vry_VivadoIp/vry_VivadoIp/vry_VivadoIp.srcs/PackageIp_vry_DefineInterface_src/component.xml
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1704] No user IP repositories specified
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'D:/install/Xilinx/Vivado/2014.4/data/ip'.
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1700] Loaded user IP repository 'e:/UV/FPGA/VERIFY/vry_VivadoIp/vry_VivadoIp/vry_VivadoIp.srcs/PackageIp_vry_FifoFirstRead3'.
+update_compile_order -fileset sim_1
+close_project
+ipx::infer_core E:/UV/FPGA/VERIFY/vry_VivadoIp/vry_VivadoIp/vry_VivadoIp.srcs/PackageIp_vry_DefineInterface_src
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1704] No user IP repositories specified
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'D:/install/Xilinx/Vivado/2014.4/data/ip'.
+INFO: [IP_Flow 19-2228] Inferred bus interface "signal_clock" of definition type "xilinx.com:signal:clock:1.0".
+ipx::unload_core e:/UV/FPGA/VERIFY/vry_VivadoIp/vry_VivadoIp/vry_VivadoIp.srcs/PackageIp_vry_DefineInterface_src/component.xml
+ipx::edit_ip_in_project -upgrade true -name PackageIP_vry_DefineInterface -directory E:/UV/FPGA/VERIFY/vry_VivadoIp/vry_VivadoIp/vry_VivadoIp.srcs/PackageIp_vry_DefineInterface e:/UV/FPGA/VERIFY/vry_VivadoIp/vry_VivadoIp/vry_VivadoIp.srcs/PackageIp_vry_DefineInterface_src/component.xml
+INFO: [Project 1-489] The host OS only allows 260 characters in a normal path. The project is stored in a path with more than 80 characters. If you experience issues with IP, Block Designs, or files not being found, please consider moving the project to a location with a shorter path. Alternately consider using the OS subst command to map part of the path to a drive letter.
+Current project path is 'e:/uv/fpga/verify/vry_vivadoip/vry_vivadoip/vry_vivadoip.srcs/packageip_vry_defineinterface'
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1704] No user IP repositories specified
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'D:/install/Xilinx/Vivado/2014.4/data/ip'.
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1700] Loaded user IP repository 'e:/UV/FPGA/VERIFY/vry_VivadoIp/vry_VivadoIp/vry_VivadoIp.srcs/PackageIp_vry_FifoFirstRead3'.
+update_compile_order -fileset sim_1
+close_project
+ipx::infer_core -as_library true E:/UV/FPGA/VERIFY/vry_VivadoIp/vry_VivadoIp/vry_VivadoIp.srcs/PackageIp_vry_DefineInterface
+ipx::unload_core e:/UV/FPGA/VERIFY/vry_VivadoIp/vry_VivadoIp/vry_VivadoIp.srcs/PackageIp_vry_DefineInterface/component.xml
+ipx::edit_ip_in_project -upgrade true -name PackageIP_vry_DefineInterface -directory E:/UV/FPGA/VERIFY/vry_VivadoIp/vry_VivadoIp/vry_VivadoIp.srcs/PackageIp_vry_DefineInterface e:/UV/FPGA/VERIFY/vry_VivadoIp/vry_VivadoIp/vry_VivadoIp.srcs/PackageIp_vry_DefineInterface/component.xml
+INFO: [Project 1-489] The host OS only allows 260 characters in a normal path. The project is stored in a path with more than 80 characters. If you experience issues with IP, Block Designs, or files not being found, please consider moving the project to a location with a shorter path. Alternately consider using the OS subst command to map part of the path to a drive letter.
+Current project path is 'e:/uv/fpga/verify/vry_vivadoip/vry_vivadoip/vry_vivadoip.srcs/packageip_vry_defineinterface'
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1704] No user IP repositories specified
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'D:/install/Xilinx/Vivado/2014.4/data/ip'.
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1700] Loaded user IP repository 'e:/UV/FPGA/VERIFY/vry_VivadoIp/vry_VivadoIp/vry_VivadoIp.srcs/PackageIp_vry_FifoFirstRead3'.
+update_compile_order -fileset sources_1
+update_compile_order -fileset sim_1
+ipx::update_ip_instances -delete_project true
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1700] Loaded user IP repository 'e:/UV/FPGA/VERIFY/vry_VivadoIp/vry_VivadoIp/vry_VivadoIp.srcs/PackageIp_vry_FifoFirstRead3'.
+INFO: [IP_Flow 19-1700] Loaded user IP repository 'e:/uv/fpga/verify/vry_vivadoip/vry_vivadoip/vry_vivadoip.srcs/packageip_vry_defineinterface'.
+ipx::infer_core E:/UV/FPGA/VERIFY/vry_VivadoIp/vry_VivadoIp/vry_VivadoIp.srcs/PackageIp_vry_DefineInterface/src
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1704] No user IP repositories specified
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'D:/install/Xilinx/Vivado/2014.4/data/ip'.
+INFO: [IP_Flow 19-2228] Inferred bus interface "signal_clock" of definition type "xilinx.com:signal:clock:1.0".
+ipx::unload_core e:/UV/FPGA/VERIFY/vry_VivadoIp/vry_VivadoIp/vry_VivadoIp.srcs/PackageIp_vry_DefineInterface/src/component.xml
+ipx::edit_ip_in_project -upgrade true -name PackageIP_vry_DefineInterface -directory E:/UV/FPGA/VERIFY/vry_VivadoIp/vry_VivadoIp/vry_VivadoIp.srcs/PackageIp_vry_DefineInterface e:/UV/FPGA/VERIFY/vry_VivadoIp/vry_VivadoIp/vry_VivadoIp.srcs/PackageIp_vry_DefineInterface/src/component.xml
+INFO: [Project 1-489] The host OS only allows 260 characters in a normal path. The project is stored in a path with more than 80 characters. If you experience issues with IP, Block Designs, or files not being found, please consider moving the project to a location with a shorter path. Alternately consider using the OS subst command to map part of the path to a drive letter.
+Current project path is 'e:/uv/fpga/verify/vry_vivadoip/vry_vivadoip/vry_vivadoip.srcs/packageip_vry_defineinterface'
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1704] No user IP repositories specified
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'D:/install/Xilinx/Vivado/2014.4/data/ip'.
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1700] Loaded user IP repository 'e:/UV/FPGA/VERIFY/vry_VivadoIp/vry_VivadoIp/vry_VivadoIp.srcs/PackageIp_vry_FifoFirstRead3'.
+INFO: [IP_Flow 19-1700] Loaded user IP repository 'e:/uv/fpga/verify/vry_vivadoip/vry_vivadoip/vry_vivadoip.srcs/packageip_vry_defineinterface'.
+update_compile_order -fileset sim_1
+ipx::update_ip_instances -delete_project true
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1700] Loaded user IP repository 'e:/UV/FPGA/VERIFY/vry_VivadoIp/vry_VivadoIp/vry_VivadoIp.srcs/PackageIp_vry_FifoFirstRead3'.
+INFO: [IP_Flow 19-1700] Loaded user IP repository 'e:/uv/fpga/verify/vry_vivadoip/vry_vivadoip/vry_vivadoip.srcs/packageip_vry_defineinterface'.
+ipx::infer_core E:/UV/FPGA/VERIFY/vry_VivadoIp/vry_VivadoIp/vry_VivadoIp.srcs/PackageIp_vry_DefineInterface
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1704] No user IP repositories specified
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'D:/install/Xilinx/Vivado/2014.4/data/ip'.
+INFO: [IP_Flow 19-2228] Inferred bus interface "signal_clock" of definition type "xilinx.com:signal:clock:1.0".
+ipx::unload_core e:/UV/FPGA/VERIFY/vry_VivadoIp/vry_VivadoIp/vry_VivadoIp.srcs/PackageIp_vry_DefineInterface/component.xml
+ipx::edit_ip_in_project -upgrade true -name PackageIp_vry_DefineInterface -directory E:/UV/FPGA/VERIFY/vry_VivadoIp/vry_VivadoIp/vry_VivadoIp.srcs/PackageIp_vry_DefineInterface e:/UV/FPGA/VERIFY/vry_VivadoIp/vry_VivadoIp/vry_VivadoIp.srcs/PackageIp_vry_DefineInterface/component.xml
+INFO: [Project 1-489] The host OS only allows 260 characters in a normal path. The project is stored in a path with more than 80 characters. If you experience issues with IP, Block Designs, or files not being found, please consider moving the project to a location with a shorter path. Alternately consider using the OS subst command to map part of the path to a drive letter.
+Current project path is 'e:/uv/fpga/verify/vry_vivadoip/vry_vivadoip/vry_vivadoip.srcs/packageip_vry_defineinterface'
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1704] No user IP repositories specified
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'D:/install/Xilinx/Vivado/2014.4/data/ip'.
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1700] Loaded user IP repository 'e:/UV/FPGA/VERIFY/vry_VivadoIp/vry_VivadoIp/vry_VivadoIp.srcs/PackageIp_vry_FifoFirstRead3'.
+INFO: [IP_Flow 19-1700] Loaded user IP repository 'e:/uv/fpga/verify/vry_vivadoip/vry_vivadoip/vry_vivadoip.srcs/packageip_vry_defineinterface'.
+update_compile_order -fileset sim_1
+remove_files e:/uv/fpga/verify/vry_vivadoip/vry_vivadoip/vry_vivadoip.srcs/packageip_vry_defineinterface/DefineInterface.v
+update_compile_order -fileset sim_1
+add_files -norecurse E:/UV/FPGA/VERIFY/vry_VivadoIp/vry_VivadoIp/vry_VivadoIp.srcs/PackageIp_vry_DefineInterface/hdl/DefineInterface.v
+update_compile_order -fileset sources_1
+update_compile_order -fileset sim_1
+ipx::update_ip_instances -delete_project true
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1700] Loaded user IP repository 'e:/UV/FPGA/VERIFY/vry_VivadoIp/vry_VivadoIp/vry_VivadoIp.srcs/PackageIp_vry_FifoFirstRead3'.
+INFO: [IP_Flow 19-1700] Loaded user IP repository 'e:/uv/fpga/verify/vry_vivadoip/vry_vivadoip/vry_vivadoip.srcs/packageip_vry_defineinterface'.
+ipx::infer_core E:/UV/FPGA/VERIFY/vry_VivadoIp/vry_VivadoIp/vry_VivadoIp.srcs/PackageIp_vry_DefineInterface
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1704] No user IP repositories specified
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'D:/install/Xilinx/Vivado/2014.4/data/ip'.
+INFO: [IP_Flow 19-2228] Inferred bus interface "signal_clock" of definition type "xilinx.com:signal:clock:1.0".
+ipx::unload_core e:/UV/FPGA/VERIFY/vry_VivadoIp/vry_VivadoIp/vry_VivadoIp.srcs/PackageIp_vry_DefineInterface/component.xml
+ipx::edit_ip_in_project -upgrade true -name PackageIp_vry_DefineInterface -directory E:/UV/FPGA/VERIFY/vry_VivadoIp/vry_VivadoIp/vry_VivadoIp.srcs/PackageIp_vry_DefineInterface e:/UV/FPGA/VERIFY/vry_VivadoIp/vry_VivadoIp/vry_VivadoIp.srcs/PackageIp_vry_DefineInterface/component.xml
+INFO: [Project 1-489] The host OS only allows 260 characters in a normal path. The project is stored in a path with more than 80 characters. If you experience issues with IP, Block Designs, or files not being found, please consider moving the project to a location with a shorter path. Alternately consider using the OS subst command to map part of the path to a drive letter.
+Current project path is 'e:/uv/fpga/verify/vry_vivadoip/vry_vivadoip/vry_vivadoip.srcs/packageip_vry_defineinterface'
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1704] No user IP repositories specified
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'D:/install/Xilinx/Vivado/2014.4/data/ip'.
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1700] Loaded user IP repository 'e:/UV/FPGA/VERIFY/vry_VivadoIp/vry_VivadoIp/vry_VivadoIp.srcs/PackageIp_vry_FifoFirstRead3'.
+INFO: [IP_Flow 19-1700] Loaded user IP repository 'e:/uv/fpga/verify/vry_vivadoip/vry_vivadoip/vry_vivadoip.srcs/packageip_vry_defineinterface'.
+update_compile_order -fileset sim_1
+ipx::update_ip_instances -delete_project true
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1700] Loaded user IP repository 'e:/UV/FPGA/VERIFY/vry_VivadoIp/vry_VivadoIp/vry_VivadoIp.srcs/PackageIp_vry_FifoFirstRead3'.
+INFO: [IP_Flow 19-1700] Loaded user IP repository 'e:/uv/fpga/verify/vry_vivadoip/vry_vivadoip/vry_vivadoip.srcs/packageip_vry_defineinterface'.
+create_ip -name axi_iic -vendor xilinx.com -library ip -version 2.0 -module_name axi_iic_0
+generate_target {instantiation_template} [get_files e:/UV/FPGA/VERIFY/vry_VivadoIp/vry_VivadoIp/vry_VivadoIp.srcs/sources_1/ip/axi_iic_0/axi_iic_0.xci]
+INFO: [IP_Flow 19-1686] Generating 'Instantiation Template' target for IP 'axi_iic_0'...
+update_compile_order -fileset sources_1
+generate_target all [get_files  e:/UV/FPGA/VERIFY/vry_VivadoIp/vry_VivadoIp/vry_VivadoIp.srcs/sources_1/ip/axi_iic_0/axi_iic_0.xci]
+INFO: [IP_Flow 19-1686] Generating 'Synthesis' target for IP 'axi_iic_0'...
+WARNING: [IP_Flow 19-1687] The current project language is set to Verilog. However IP 'axi_iic_0' does not support 'Verilog Synthesis' output products, delivering 'VHDL Synthesis' output products instead.
+INFO: [IP_Flow 19-1686] Generating 'Simulation' target for IP 'axi_iic_0'...
+WARNING: [IP_Flow 19-1687] The current project language is set to Verilog. However IP 'axi_iic_0' does not support 'Verilog Simulation' output products, delivering 'VHDL Simulation' output products instead.
+INFO: [IP_Flow 19-1686] Generating 'Implementation' target for IP 'axi_iic_0'...
+INFO: [IP_Flow 19-1686] Generating 'Change Log' target for IP 'axi_iic_0'...
+create_ip_run [get_files -of_objects [get_fileset sources_1] e:/UV/FPGA/VERIFY/vry_VivadoIp/vry_VivadoIp/vry_VivadoIp.srcs/sources_1/ip/axi_iic_0/axi_iic_0.xci]
+launch_run -jobs 4 axi_iic_0_synth_1
+[Thu Aug 06 17:21:29 2020] Launched axi_iic_0_synth_1...
+Run output will be captured here: E:/UV/FPGA/VERIFY/vry_VivadoIp/vry_VivadoIp/vry_VivadoIp.runs/axi_iic_0_synth_1/runme.log
+create_ip -name POWER_CTRL -vendor xilinx.com -library ip -version 1.0 -module_name POWER_CTRL_0
+generate_target {instantiation_template} [get_files e:/UV/FPGA/VERIFY/vry_VivadoIp/vry_VivadoIp/vry_VivadoIp.srcs/sources_1/ip/POWER_CTRL_0/POWER_CTRL_0.xci]
+INFO: [IP_Flow 19-1686] Generating 'Instantiation Template' target for IP 'POWER_CTRL_0'...
+update_compile_order -fileset sources_1
+generate_target all [get_files  e:/UV/FPGA/VERIFY/vry_VivadoIp/vry_VivadoIp/vry_VivadoIp.srcs/sources_1/ip/POWER_CTRL_0/POWER_CTRL_0.xci]
+INFO: [IP_Flow 19-1686] Generating 'Synthesis' target for IP 'POWER_CTRL_0'...
+INFO: [IP_Flow 19-1686] Generating 'Simulation' target for IP 'POWER_CTRL_0'...
+create_ip_run [get_files -of_objects [get_fileset sources_1] e:/UV/FPGA/VERIFY/vry_VivadoIp/vry_VivadoIp/vry_VivadoIp.srcs/sources_1/ip/POWER_CTRL_0/POWER_CTRL_0.xci]
+launch_run -jobs 4 POWER_CTRL_0_synth_1
+[Thu Aug 06 17:37:20 2020] Launched POWER_CTRL_0_synth_1...
+Run output will be captured here: E:/UV/FPGA/VERIFY/vry_VivadoIp/vry_VivadoIp/vry_VivadoIp.runs/POWER_CTRL_0_synth_1/runme.log
+ipx::edit_ip_in_project -upgrade true -name POWER_CTRL_v1_0_v1_0_project -directory E:/UV/FPGA/VERIFY/vry_VivadoIp/vry_VivadoIp/vry_VivadoIp.srcs/PackageIp_vry_DefineInterface/POWER_CTRL_v1_0_v1_0_project e:/uv/fpga/verify/vry_vivadoip/vry_vivadoip/vry_vivadoip.srcs/packageip_vry_defineinterface/component.xml
+INFO: [Project 1-489] The host OS only allows 260 characters in a normal path. The project is stored in a path with more than 80 characters. If you experience issues with IP, Block Designs, or files not being found, please consider moving the project to a location with a shorter path. Alternately consider using the OS subst command to map part of the path to a drive letter.
+Current project path is 'e:/uv/fpga/verify/vry_vivadoip/vry_vivadoip/vry_vivadoip.srcs/packageip_vry_defineinterface/power_ctrl_v1_0_v1_0_project'
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1704] No user IP repositories specified
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'D:/install/Xilinx/Vivado/2014.4/data/ip'.
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1700] Loaded user IP repository 'e:/UV/FPGA/VERIFY/vry_VivadoIp/vry_VivadoIp/vry_VivadoIp.srcs/PackageIp_vry_FifoFirstRead3'.
+INFO: [IP_Flow 19-1700] Loaded user IP repository 'e:/uv/fpga/verify/vry_vivadoip/vry_vivadoip/vry_vivadoip.srcs/packageip_vry_defineinterface'.
+WARNING: [IP_Flow 19-3656] If you move the project, the path for repository 'e:/uv/fpga/verify/vry_vivadoip/vry_vivadoip/vry_vivadoip.srcs/packageip_vry_defineinterface' may become invalid. A better location for the repostory would be in a path adjacent to the project. (Current project location is 'e:/uv/fpga/verify/vry_vivadoip/vry_vivadoip/vry_vivadoip.srcs/packageip_vry_defineinterface/power_ctrl_v1_0_v1_0_project'.)
+update_compile_order -fileset sim_1
+current_project vry_VivadoIp
+current_project POWER_CTRL_v1_0_v1_0_project
+ipx::create_abstraction_definition xilinx.com user POWER_rtl 1.0
+ipx::create_bus_definition xilinx.com user POWER 1.0
+set_property xml_file_name E:/UV/FPGA/VERIFY/vry_VivadoIp/vry_VivadoIp/vry_VivadoIp.srcs/PackageIp_vry_DefineInterface/POWER_rtl.xml [ipx::current_busabs]
+set_property xml_file_name E:/UV/FPGA/VERIFY/vry_VivadoIp/vry_VivadoIp/vry_VivadoIp.srcs/PackageIp_vry_DefineInterface/POWER.xml [ipx::current_busdef]
+set_property bus_type_vlnv xilinx.com:user:POWER:1.0 [ipx::current_busabs]
+ipx::save_abstraction_definition [ipx::current_busabs]
+ipx::save_bus_definition [ipx::current_busdef]
+set_property display_name POWER [ipx::current_busdef]
+set_property display_name POWER [ipx::current_busabs]
+set_property description {the interface of the power contral} [ipx::current_busdef]
+ipx::add_bus_abstraction_port power_down [ipx::current_busabs]
+ipx::add_bus_abstraction_port power_state [ipx::current_busabs]
+ipx::save_bus_definition [ipx::current_busdef]
+ipx::save_abstraction_definition [ipx::current_busabs]
+ipx::add_bus_abstraction_port delay_cnt [ipx::current_busabs]
+ipx::add_bus_abstraction_port down_delay_cnt [ipx::current_busabs]
+ipx::save_bus_definition [ipx::current_busdef]
+ipx::save_abstraction_definition [ipx::current_busabs]
+ipx::add_bus_abstraction_port power_up [ipx::current_busabs]
+ipx::add_bus_abstraction_port power_fliter [ipx::current_busabs]
+set_property master_direction in [ipx::get_bus_abstraction_ports power_fliter -of_objects [ipx::current_busabs]]
+set_property master_direction in [ipx::get_bus_abstraction_ports power_up -of_objects [ipx::current_busabs]]
+set_property slave_direction in [ipx::get_bus_abstraction_ports power_down -of_objects [ipx::current_busabs]]
+set_property slave_direction in [ipx::get_bus_abstraction_ports power_state -of_objects [ipx::current_busabs]]
+set_property slave_direction in [ipx::get_bus_abstraction_ports delay_cnt -of_objects [ipx::current_busabs]]
+set_property slave_direction in [ipx::get_bus_abstraction_ports down_delay_cnt -of_objects [ipx::current_busabs]]
+set_property master_width 1 [ipx::get_bus_abstraction_ports power_down -of_objects [ipx::current_busabs]]
+set_property slave_width 1 [ipx::get_bus_abstraction_ports power_down -of_objects [ipx::current_busabs]]
+set_property master_width 4 [ipx::get_bus_abstraction_ports power_state -of_objects [ipx::current_busabs]]
+set_property slave_width 4 [ipx::get_bus_abstraction_ports power_state -of_objects [ipx::current_busabs]]
+set_property master_width 32 [ipx::get_bus_abstraction_ports delay_cnt -of_objects [ipx::current_busabs]]
+set_property slave_width 32 [ipx::get_bus_abstraction_ports delay_cnt -of_objects [ipx::current_busabs]]
+set_property master_width 32 [ipx::get_bus_abstraction_ports down_delay_cnt -of_objects [ipx::current_busabs]]
+set_property slave_width 32 [ipx::get_bus_abstraction_ports down_delay_cnt -of_objects [ipx::current_busabs]]
+set_property master_width 1 [ipx::get_bus_abstraction_ports power_up -of_objects [ipx::current_busabs]]
+set_property slave_width 1 [ipx::get_bus_abstraction_ports power_up -of_objects [ipx::current_busabs]]
+set_property master_width 32 [ipx::get_bus_abstraction_ports power_fliter -of_objects [ipx::current_busabs]]
+set_property slave_width 32 [ipx::get_bus_abstraction_ports power_fliter -of_objects [ipx::current_busabs]]
+ipx::save_bus_definition [ipx::current_busdef]
+ipx::save_abstraction_definition [ipx::current_busabs]
+ipx::update_ip_instances -delete_project true
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1700] Loaded user IP repository 'e:/UV/FPGA/VERIFY/vry_VivadoIp/vry_VivadoIp/vry_VivadoIp.srcs/PackageIp_vry_FifoFirstRead3'.
+INFO: [IP_Flow 19-1700] Loaded user IP repository 'e:/uv/fpga/verify/vry_vivadoip/vry_vivadoip/vry_vivadoip.srcs/packageip_vry_defineinterface'.
+Upgrading 'POWER_CTRL_0'
+INFO: [IP_Flow 19-3422] Upgraded POWER_CTRL_0 (POWER_CTRL_v1_0 1.0) from revision 2 to revision 3
+INFO: [IP_Flow 19-3471] Wrote upgrade log to 'e:/UV/FPGA/VERIFY/vry_VivadoIp/vry_VivadoIp/vry_VivadoIp.srcs/sources_1/ip/POWER_CTRL_0/POWER_CTRL_0.upgrade_log'.
+INFO: [IP_Flow 19-1686] Generating 'Instantiation Template' target for IP 'POWER_CTRL_0'...
+update_compile_order -fileset sources_1
+generate_target all [get_files  e:/UV/FPGA/VERIFY/vry_VivadoIp/vry_VivadoIp/vry_VivadoIp.srcs/sources_1/ip/POWER_CTRL_0/POWER_CTRL_0.xci]
+INFO: [IP_Flow 19-1686] Generating 'Synthesis' target for IP 'POWER_CTRL_0'...
+INFO: [IP_Flow 19-1686] Generating 'Simulation' target for IP 'POWER_CTRL_0'...
+create_ip_run [get_files -of_objects [get_fileset sources_1] e:/UV/FPGA/VERIFY/vry_VivadoIp/vry_VivadoIp/vry_VivadoIp.srcs/sources_1/ip/POWER_CTRL_0/POWER_CTRL_0.xci]
+launch_run -jobs 4 POWER_CTRL_0_synth_1
+[Thu Aug 06 17:51:31 2020] Launched POWER_CTRL_0_synth_1...
+Run output will be captured here: E:/UV/FPGA/VERIFY/vry_VivadoIp/vry_VivadoIp/vry_VivadoIp.runs/POWER_CTRL_0_synth_1/runme.log
+create_bd_design "design_1"
+Wrote  : <E:/UV/FPGA/VERIFY/vry_VivadoIp/vry_VivadoIp/vry_VivadoIp.srcs/sources_1/bd/design_1/design_1.bd> 
+update_compile_order -fileset sources_1
+startgroup
+create_bd_cell -type ip -vlnv xilinx.com:ip:POWER_CTRL:1.0 POWER_CTRL_0
+endgroup
+set_property location {0.5 2 154} [get_bd_cells POWER_CTRL_0]
+ipx::edit_ip_in_project -upgrade true -name POWER_CTRL_v1_0_v1_0_project -directory E:/UV/FPGA/VERIFY/vry_VivadoIp/vry_VivadoIp/vry_VivadoIp.srcs/PackageIp_vry_DefineInterface/POWER_CTRL_v1_0_v1_0_project e:/uv/fpga/verify/vry_vivadoip/vry_vivadoip/vry_vivadoip.srcs/packageip_vry_defineinterface/component.xml
+INFO: [Project 1-489] The host OS only allows 260 characters in a normal path. The project is stored in a path with more than 80 characters. If you experience issues with IP, Block Designs, or files not being found, please consider moving the project to a location with a shorter path. Alternately consider using the OS subst command to map part of the path to a drive letter.
+Current project path is 'e:/uv/fpga/verify/vry_vivadoip/vry_vivadoip/vry_vivadoip.srcs/packageip_vry_defineinterface/power_ctrl_v1_0_v1_0_project'
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1704] No user IP repositories specified
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'D:/install/Xilinx/Vivado/2014.4/data/ip'.
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1700] Loaded user IP repository 'e:/UV/FPGA/VERIFY/vry_VivadoIp/vry_VivadoIp/vry_VivadoIp.srcs/PackageIp_vry_FifoFirstRead3'.
+INFO: [IP_Flow 19-1700] Loaded user IP repository 'e:/uv/fpga/verify/vry_vivadoip/vry_vivadoip/vry_vivadoip.srcs/packageip_vry_defineinterface'.
+WARNING: [IP_Flow 19-3656] If you move the project, the path for repository 'e:/uv/fpga/verify/vry_vivadoip/vry_vivadoip/vry_vivadoip.srcs/packageip_vry_defineinterface' may become invalid. A better location for the repostory would be in a path adjacent to the project. (Current project location is 'e:/uv/fpga/verify/vry_vivadoip/vry_vivadoip/vry_vivadoip.srcs/packageip_vry_defineinterface/power_ctrl_v1_0_v1_0_project'.)
+update_compile_order -fileset sim_1
+ipx::infer_bus_interfaces xilinx.com:user:POWER_rtl:1.0 [ipx::current_core]
+INFO: [IP_Flow 19-2228] Inferred bus interface "down" of definition type "xilinx.com:user:POWER:1.0".
+ERROR: [Common 17-39] 'ipx::infer_bus_interfaces' failed due to earlier errors.
+set_property name POWER [ipx::get_bus_interfaces down -of_objects [ipx::current_core]]
+set_property interface_mode master [ipx::get_bus_interfaces POWER -of_objects [ipx::current_core]]
+ipx::remove_bus_interface POWER [ipx::current_core]
+ipx::add_bus_interface POWER [ipx::current_core]
+set_property abstraction_type_vlnv xilinx.com:user:POWER_rtl:1.0 [ipx::get_bus_interfaces POWER -of_objects [ipx::current_core]]
+set_property bus_type_vlnv xilinx.com:user:POWER:1.0 [ipx::get_bus_interfaces POWER -of_objects [ipx::current_core]]
+set_property interface_mode master [ipx::get_bus_interfaces POWER -of_objects [ipx::current_core]]
+set_property display_name POWER [ipx::get_bus_interfaces POWER -of_objects [ipx::current_core]]
+set_property description POWER [ipx::get_bus_interfaces POWER -of_objects [ipx::current_core]]
+ipx::remove_bus_interface POWER [ipx::current_core]
+close_project
+ipx::edit_ip_in_project -upgrade true -name POWER_CTRL_v1_0_v1_0_project -directory E:/UV/FPGA/VERIFY/vry_VivadoIp/vry_VivadoIp/vry_VivadoIp.srcs/PackageIp_vry_DefineInterface/POWER_CTRL_v1_0_v1_0_project e:/uv/fpga/verify/vry_vivadoip/vry_vivadoip/vry_vivadoip.srcs/packageip_vry_defineinterface/component.xml
+INFO: [Project 1-489] The host OS only allows 260 characters in a normal path. The project is stored in a path with more than 80 characters. If you experience issues with IP, Block Designs, or files not being found, please consider moving the project to a location with a shorter path. Alternately consider using the OS subst command to map part of the path to a drive letter.
+Current project path is 'e:/uv/fpga/verify/vry_vivadoip/vry_vivadoip/vry_vivadoip.srcs/packageip_vry_defineinterface/power_ctrl_v1_0_v1_0_project'
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1704] No user IP repositories specified
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'D:/install/Xilinx/Vivado/2014.4/data/ip'.
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1700] Loaded user IP repository 'e:/UV/FPGA/VERIFY/vry_VivadoIp/vry_VivadoIp/vry_VivadoIp.srcs/PackageIp_vry_FifoFirstRead3'.
+INFO: [IP_Flow 19-1700] Loaded user IP repository 'e:/uv/fpga/verify/vry_vivadoip/vry_vivadoip/vry_vivadoip.srcs/packageip_vry_defineinterface'.
+WARNING: [IP_Flow 19-3656] If you move the project, the path for repository 'e:/uv/fpga/verify/vry_vivadoip/vry_vivadoip/vry_vivadoip.srcs/packageip_vry_defineinterface' may become invalid. A better location for the repostory would be in a path adjacent to the project. (Current project location is 'e:/uv/fpga/verify/vry_vivadoip/vry_vivadoip/vry_vivadoip.srcs/packageip_vry_defineinterface/power_ctrl_v1_0_v1_0_project'.)
+update_compile_order -fileset sim_1
+ipx::infer_bus_interface down_delay_cnt xilinx.com:user:POWER_rtl:1.0 [ipx::current_core]
+set_property name POWER [ipx::get_bus_interfaces down_delay_cnt -of_objects [ipx::current_core]]
+set_property interface_mode master [ipx::get_bus_interfaces POWER -of_objects [ipx::current_core]]
+set_property display_name POWER [ipx::get_bus_interfaces POWER -of_objects [ipx::current_core]]
+set_property description POWER [ipx::get_bus_interfaces POWER -of_objects [ipx::current_core]]
+ipx::remove_bus_interface POWER [ipx::current_core]
+ipx::infer_bus_interfaces xilinx.com:user:POWER_rtl:1.0 [ipx::current_core]
+INFO: [IP_Flow 19-2228] Inferred bus interface "down" of definition type "xilinx.com:user:POWER:1.0".
+ERROR: [Common 17-39] 'ipx::infer_bus_interfaces' failed due to earlier errors.
+ipx::remove_bus_interface down [ipx::current_core]
+ipx::infer_bus_interfaces xilinx.com:user:POWER_rtl:1.0 [ipx::current_core]
+INFO: [IP_Flow 19-2228] Inferred bus interface "down" of definition type "xilinx.com:user:POWER:1.0".
+ERROR: [Common 17-39] 'ipx::infer_bus_interfaces' failed due to earlier errors.
+set_property name POWER [ipx::get_bus_interfaces down -of_objects [ipx::current_core]]
+set_property interface_mode master [ipx::get_bus_interfaces POWER -of_objects [ipx::current_core]]
+set_property display_name POWER [ipx::get_bus_interfaces POWER -of_objects [ipx::current_core]]
+set_property description POWER [ipx::get_bus_interfaces POWER -of_objects [ipx::current_core]]
+set_property physical_name delay_cnt [ipx::get_port_maps delay_cnt -of_objects [ipx::get_bus_interfaces POWER -of_objects [ipx::current_core]]]
+ipx::remove_bus_interface POWER [ipx::current_core]
+ipx::infer_bus_interfaces xilinx.com:user:POWER_rtl:1.0 [ipx::current_core]
+INFO: [IP_Flow 19-2228] Inferred bus interface "down" of definition type "xilinx.com:user:POWER:1.0".
+ERROR: [Common 17-39] 'ipx::infer_bus_interfaces' failed due to earlier errors.
+ipx::remove_bus_interface down [ipx::current_core]
+current_project vry_VivadoIp
+ipx::edit_ip_in_project -upgrade true -name vry_FifoFirstRead_v1_0_v1_0_project -directory E:/UV/FPGA/VERIFY/vry_VivadoIp/vry_VivadoIp/vry_VivadoIp.srcs/PackageIp_vry_FifoFirstRead3/vry_FifoFirstRead_v1_0_v1_0_project e:/UV/FPGA/VERIFY/vry_VivadoIp/vry_VivadoIp/vry_VivadoIp.srcs/PackageIp_vry_FifoFirstRead3/component.xml
+INFO: [Project 1-489] The host OS only allows 260 characters in a normal path. The project is stored in a path with more than 80 characters. If you experience issues with IP, Block Designs, or files not being found, please consider moving the project to a location with a shorter path. Alternately consider using the OS subst command to map part of the path to a drive letter.
+Current project path is 'e:/uv/fpga/verify/vry_vivadoip/vry_vivadoip/vry_vivadoip.srcs/packageip_vry_fifofirstread3/vry_fifofirstread_v1_0_v1_0_project'
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1704] No user IP repositories specified
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'D:/install/Xilinx/Vivado/2014.4/data/ip'.
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1700] Loaded user IP repository 'e:/UV/FPGA/VERIFY/vry_VivadoIp/vry_VivadoIp/vry_VivadoIp.srcs/PackageIp_vry_FifoFirstRead3'.
+INFO: [IP_Flow 19-1700] Loaded user IP repository 'e:/uv/fpga/verify/vry_vivadoip/vry_vivadoip/vry_vivadoip.srcs/packageip_vry_defineinterface'.
+WARNING: [filemgmt 56-99] Vivado Synthesis ignores library specification for Verilog or SystemVerilog files. [d:/install/Xilinx/Vivado/2014.4/data/ip/xilinx/fifo_generator_v12_0/hdl/fifo_generator_v12_0_rfs.v:]
+ipx::edit_ip_in_project: Time (s): cpu = 00:00:08 ; elapsed = 00:00:08 . Memory (MB): peak = 1051.813 ; gain = 0.000
+update_compile_order -fileset sources_1
+current_project vry_VivadoIp
+current_project vry_FifoFirstRead_v1_0_v1_0_project
+close_project
+ipx::infer_bus_interfaces xilinx.com:interface:aximm_rtl:1.0 [ipx::current_core]
+INFO: [IP_Flow 19-1793] Cannot infer any bus interface that matches bus definition xilinx.com:interface:aximm:1.0.
+ipx::infer_bus_interfaces xilinx.com:interface:axis_rtl:1.0 [ipx::current_core]
+INFO: [IP_Flow 19-1793] Cannot infer any bus interface that matches bus definition xilinx.com:interface:axis:1.0.
+ipx::infer_bus_interfaces xilinx.com:interface:dp_main_lnk_rtl:1.0 [ipx::current_core]
+INFO: [IP_Flow 19-1793] Cannot infer any bus interface that matches bus definition xilinx.com:interface:dp_main_lnk:1.0.
+ipx::infer_bus_interfaces xilinx.com:user:POWER_rtl:1.0 [ipx::current_core]
+INFO: [IP_Flow 19-2228] Inferred bus interface "down" of definition type "xilinx.com:user:POWER:1.0".
+ERROR: [Common 17-39] 'ipx::infer_bus_interfaces' failed due to earlier errors.
+set_property physical_name delay_cnt [ipx::get_port_maps delay_cnt -of_objects [ipx::get_bus_interfaces down -of_objects [ipx::current_core]]]
+set_property name power [ipx::get_bus_interfaces down -of_objects [ipx::current_core]]
+set_property interface_mode monitor [ipx::get_bus_interfaces power -of_objects [ipx::current_core]]
+set_property display_name power [ipx::get_bus_interfaces power -of_objects [ipx::current_core]]
+set_property description power [ipx::get_bus_interfaces power -of_objects [ipx::current_core]]
+set_property enablement_dependency {$power > 0} [ipx::get_bus_interfaces power -of_objects [ipx::current_core]]
+WARNING: [IP_Flow 19-627] Bus Interface 'power': XPath expression failed: Undefined parameter "power" found in XPath expression "$power > 0".
+ipx::add_bus_parameter power [ipx::get_bus_interfaces power -of_objects [ipx::current_core]]
+ipx::remove_port_map power_down [ipx::get_bus_interfaces power -of_objects [ipx::current_core]]
+ipx::remove_port_map power_state [ipx::get_bus_interfaces power -of_objects [ipx::current_core]]
+ipx::remove_port_map delay_cnt [ipx::get_bus_interfaces power -of_objects [ipx::current_core]]
+ipx::remove_port_map down_delay_cnt [ipx::get_bus_interfaces power -of_objects [ipx::current_core]]
+set_property enablement_dependency { } [ipx::get_bus_interfaces power -of_objects [ipx::current_core]]
+ipx::remove_bus_interface power [ipx::current_core]
+ipx::infer_bus_interfaces xilinx.com:user:POWER_rtl:1.0 [ipx::current_core]
+INFO: [IP_Flow 19-2228] Inferred bus interface "down" of definition type "xilinx.com:user:POWER:1.0".
+ERROR: [Common 17-39] 'ipx::infer_bus_interfaces' failed due to earlier errors.
+set_property name POWER [ipx::get_bus_interfaces down -of_objects [ipx::current_core]]
+set_property interface_mode master [ipx::get_bus_interfaces POWER -of_objects [ipx::current_core]]
+set_property display_name POWER [ipx::get_bus_interfaces POWER -of_objects [ipx::current_core]]
+set_property description POWER [ipx::get_bus_interfaces POWER -of_objects [ipx::current_core]]
+set_property physical_name delay_cnt [ipx::get_port_maps delay_cnt -of_objects [ipx::get_bus_interfaces POWER -of_objects [ipx::current_core]]]
+ipx::update_ip_instances -delete_project true
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1700] Loaded user IP repository 'e:/UV/FPGA/VERIFY/vry_VivadoIp/vry_VivadoIp/vry_VivadoIp.srcs/PackageIp_vry_FifoFirstRead3'.
+INFO: [IP_Flow 19-1700] Loaded user IP repository 'e:/uv/fpga/verify/vry_vivadoip/vry_vivadoip/vry_vivadoip.srcs/packageip_vry_defineinterface'.
+Upgrading 'POWER_CTRL_0'
+INFO: [IP_Flow 19-3422] Upgraded POWER_CTRL_0 (POWER_CTRL_v1_0 1.0) from revision 3 to revision 4
+INFO: [IP_Flow 19-3670] Detected external interface differences while upgrading IP 'POWER_CTRL_0'.
+INFO: [IP_Flow 19-3471] Wrote upgrade log to 'e:/UV/FPGA/VERIFY/vry_VivadoIp/vry_VivadoIp/vry_VivadoIp.srcs/sources_1/ip/POWER_CTRL_0/POWER_CTRL_0.upgrade_log'.
+INFO: [IP_Flow 19-1686] Generating 'Instantiation Template' target for IP 'POWER_CTRL_0'...
+INFO: [IP_Flow 19-3422] Upgraded design_1_POWER_CTRL_0_0 (POWER_CTRL_v1_0 1.0) from revision 3 to revision 4
+INFO: [IP_Flow 19-3670] Detected external interface differences while upgrading IP 'design_1_POWER_CTRL_0_0'.
+INFO: [IP_Flow 19-3471] Wrote upgrade log to 'e:/UV/FPGA/VERIFY/vry_VivadoIp/vry_VivadoIp/vry_VivadoIp.srcs/sources_1/bd/design_1/ip/design_1_POWER_CTRL_0_0/design_1_POWER_CTRL_0_0.upgrade_log'.
+Wrote  : <E:/UV/FPGA/VERIFY/vry_VivadoIp/vry_VivadoIp/vry_VivadoIp.srcs/sources_1/bd/design_1/design_1.bd> 
+update_compile_order -fileset sources_1
+generate_target all [get_files  e:/UV/FPGA/VERIFY/vry_VivadoIp/vry_VivadoIp/vry_VivadoIp.srcs/sources_1/ip/POWER_CTRL_0/POWER_CTRL_0.xci]
+INFO: [IP_Flow 19-1686] Generating 'Synthesis' target for IP 'POWER_CTRL_0'...
+INFO: [IP_Flow 19-1686] Generating 'Simulation' target for IP 'POWER_CTRL_0'...
+create_ip_run [get_files -of_objects [get_fileset sources_1] e:/UV/FPGA/VERIFY/vry_VivadoIp/vry_VivadoIp/vry_VivadoIp.srcs/sources_1/ip/POWER_CTRL_0/POWER_CTRL_0.xci]
+launch_run -jobs 4 POWER_CTRL_0_synth_1
+[Thu Aug 06 18:20:18 2020] Launched POWER_CTRL_0_synth_1...
+Run output will be captured here: E:/UV/FPGA/VERIFY/vry_VivadoIp/vry_VivadoIp/vry_VivadoIp.runs/POWER_CTRL_0_synth_1/runme.log
+set_property location {1 144 152} [get_bd_cells POWER_CTRL_0]
+set_property location {1 170 150} [get_bd_cells POWER_CTRL_0]
+save_bd_design
+Wrote  : <E:/UV/FPGA/VERIFY/vry_VivadoIp/vry_VivadoIp/vry_VivadoIp.srcs/sources_1/bd/design_1/design_1.bd> 
+exit
+INFO: [Common 17-206] Exiting Vivado at Thu Aug 06 18:34:02 2020...
