@@ -15,6 +15,10 @@ architecture behavior of vry_vhdl is
 
 signal		a		:std_logic	:='0';
 signal		b		:std_logic;
+
+signal		b_p_dy_out_sel_map	:bit_vector(7 downto 0);
+signal		b_p_dy_out_sel		:integer;
+signal		shift_bit			:bit_vector(7 downto 0) := x"01";
 	
 begin
 	
@@ -30,10 +34,41 @@ begin
 			end if;
 		end if;	
 	end process;
-
-
 	
-	
-	
+--	verify the operator "sll"
+	process(sclk,rstn)
+	begin
+		if(rstn = '0') then
+			b_p_dy_out_sel_map <= x"00";
+		elsif(sclk'event and sclk='1') then		
+			b_p_dy_out_sel_map <= shift_bit sll b_p_dy_out_sel;
+		end if;
+	end process;
 	
 end behavior;
+
+
+--entity vry_vhdl is
+--port
+--	(
+--		clk : in std_logic;
+--		rst_n : in std_logic;
+--		en : in std_logic;
+--		di : in std_logic_vector(7 downto 0);
+--		do : out std_logic_vector(7 downto 0)
+--	);
+--end entity;
+--
+--architecture art of vry_vhdl is
+--signal ddd : bit_vector(7 downto 0);
+--begin
+--	process(clk,rst_n)
+--	begin
+--		if rst_n = '0' then
+--			ddd <= x"00";
+--		elsif clk'event and clk = '1' then
+--			ddd <= to_bitvector(di) sll 3;
+--		end if;
+--	end process;
+--	do <= to_stdlogicvector(ddd);
+--end art;

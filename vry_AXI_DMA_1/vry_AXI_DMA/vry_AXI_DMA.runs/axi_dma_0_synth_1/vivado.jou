@@ -1,0 +1,10 @@
+#-----------------------------------------------------------
+# Vivado v2014.4 (64-bit)
+# SW Build 1071353 on Tue Nov 18 18:29:27 MST 2014
+# IP Build 1070531 on Tue Nov 18 01:10:18 MST 2014
+# Start of session at: Thu Aug 13 11:04:51 2020
+# Process ID: 6904
+# Log file: E:/UV/FPGA/VERIFY/vry_AXI_DMA_1/vry_AXI_DMA/vry_AXI_DMA.runs/axi_dma_0_synth_1/axi_dma_0.vds
+# Journal file: E:/UV/FPGA/VERIFY/vry_AXI_DMA_1/vry_AXI_DMA/vry_AXI_DMA.runs/axi_dma_0_synth_1\vivado.jou
+#-----------------------------------------------------------
+source axi_dma_0.tcl

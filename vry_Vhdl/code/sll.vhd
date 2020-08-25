@@ -1,0 +1,46 @@
+--	process(clk_100,nRST)
+--	begin
+--		if(nRST = '0') then
+--			b_p_dy_cnt <= (others => '0');
+--		elsif(clk_100'event and clk_100='1') then
+--			
+--			if(dianyan_en = '1') then	
+--				if(valid_edge1_l = '0' and valid_edge1 = '1') then
+--					b_p_dy_cnt <= b_p_dy_cnt + '1';
+--				else
+--					b_p_dy_cnt <= b_p_dy_cnt;
+--				end if;
+--				
+--				if(b_p_dy_cnt = b_p_cycle_num * b_p_road_num) then	
+--					b_p_dy_cnt <= (others => '0');
+--				end if;				
+--			end if;
+--		end if;
+--	end process;
+	
+--	process(clk_100,nRST)
+--	begin
+--		if(nRST = '0') then
+--			b_p_dy_out_sel <= (others => '0');
+--			b_p_dy_out_sel_map <= (others => '0');
+--		elsif(clk_100'event and clk_100='1') then	
+--			if(dianyan_en = '1') then	
+--				if(valid_edge1_l = '1' and valid_edge1 = '0') then
+--					if((conv_integer(b_p_dy_cnt) mod conv_integer(b_p_cycle_num)) = x"0000") then
+--						if(b_p_dy_out_sel < b_p_road_num) then
+--							b_p_dy_out_sel <= b_p_dy_out_sel + '1';
+--						else 
+--							b_p_dy_out_sel <= x"0000";
+--						end if;
+--						b_p_dy_out_sel_map <= '1' sll (b_p_dy_out_sel + '1');
+--					end if;
+--				end if;
+--			else
+--				b_p_dy_out_sel <= (others => '0');
+--				b_p_dy_out_sel_map <= (others => '0');
+--			end if;
+--		end if;
+--	end process;
+	
+	
+	debug_line <= bottle_print and b_p_clr and b_p_clr_l and master_slave(0) and master_slave(1) and valid_edge1;

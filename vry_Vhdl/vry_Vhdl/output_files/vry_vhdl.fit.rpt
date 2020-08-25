@@ -1,5 +1,5 @@
 Fitter report for vry_vhdl
-Fri Aug 07 18:17:53 2020
+Mon Aug 24 16:57:18 2020
 Quartus II 64-Bit Version 14.0.0 Build 200 06/17/2014 SJ Full Version
 
 
@@ -59,7 +59,7 @@ agreement for further details.
 +----------------------------------------------------------------------------------+
 ; Fitter Summary                                                                   ;
 +------------------------------------+---------------------------------------------+
-; Fitter Status                      ; Successful - Fri Aug 07 18:17:53 2020       ;
+; Fitter Status                      ; Successful - Mon Aug 24 16:57:18 2020       ;
 ; Quartus II 64-Bit Version          ; 14.0.0 Build 200 06/17/2014 SJ Full Version ;
 ; Revision Name                      ; vry_vhdl                                    ;
 ; Top-level Entity Name              ; vry_vhdl                                    ;
@@ -852,9 +852,9 @@ Warning (169177): 2 pins must meet Altera requirements for 3.3-, 3.0-, and 2.5-V
     Info (169178): Pin sclk uses I/O standard 3.3-V LVCMOS at M1
 Info (144001): Generated suppressed messages file E:/UV/FPGA/VERIFY/vry_Vhdl/vry_Vhdl/output_files/vry_vhdl.fit.smsg
 Info: Quartus II 64-Bit Fitter was successful. 0 errors, 4 warnings
-    Info: Peak virtual memory: 5440 megabytes
-    Info: Processing ended: Fri Aug 07 18:17:54 2020
-    Info: Elapsed time: 00:00:06
+    Info: Peak virtual memory: 5450 megabytes
+    Info: Processing ended: Mon Aug 24 16:57:19 2020
+    Info: Elapsed time: 00:00:05
     Info: Total CPU time (on all processors): 00:00:04
 
 

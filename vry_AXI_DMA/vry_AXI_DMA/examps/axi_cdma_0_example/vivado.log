@@ -1,0 +1,125 @@
+#-----------------------------------------------------------
+# Vivado v2014.4 (64-bit)
+# SW Build 1071353 on Tue Nov 18 18:29:27 MST 2014
+# IP Build 1070531 on Tue Nov 18 01:10:18 MST 2014
+# Start of session at: Thu Aug 13 11:09:54 2020
+# Process ID: 12744
+# Log file: e:/UV/FPGA/VERIFY/vry_AXI_DMA/vry_AXI_DMA/examps/axi_cdma_0_example/vivado.log
+# Journal file: e:/UV/FPGA/VERIFY/vry_AXI_DMA/vry_AXI_DMA/examps/axi_cdma_0_example\vivado.jou
+#-----------------------------------------------------------
+start_gui
+source e:/UV/FPGA/VERIFY/vry_AXI_DMA/vry_AXI_DMA/vry_AXI_DMA.srcs/sources_1/ip/axi_cdma_0/axi_cdma_0_ex.tcl
+# set srcIpDir "e:/UV/FPGA/VERIFY/vry_AXI_DMA/vry_AXI_DMA/vry_AXI_DMA.srcs/sources_1/ip/axi_cdma_0"
+# create_project -name axi_cdma_0_example -force
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1704] No user IP repositories specified
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'D:/install/Xilinx/Vivado/2014.4/data/ip'.
+create_project: Time (s): cpu = 00:00:10 ; elapsed = 00:00:05 . Memory (MB): peak = 725.402 ; gain = 171.434
+# set_property part xc7z020clg400-2 [current_project]
+# set_property target_language verilog [current_project]
+# set_property simulator_language MIXED [current_project]
+# set returnCode 0
+# set_property ip_repo_paths [list [list e:/UV/FPGA/VERIFY/vry_AXI_DMA/vry_AXI_DMA/ip_repo]] [current_fileset]
+# update_ip_catalog
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1700] Loaded user IP repository 'e:/UV/FPGA/VERIFY/vry_AXI_DMA/vry_AXI_DMA/ip_repo'.
+# import_ip -files [list [file join $srcIpDir axi_cdma_0.xci]] -name axi_cdma_0
+# reset_target {example} [get_ips axi_cdma_0]
+WARNING: [Vivado 12-4104] The example target will be deprecated in a future release.
+# proc _filter_supported_targets {targets ip} {
+#   set res {}
+#   set all [get_property SUPPORTED_TARGETS $ip]
+#   foreach target $targets {
+#     lappend res {*}[lsearch -all -inline -nocase $all $target]
+#   }
+#   return $res
+# }
+# generate_target [_filter_supported_targets {instantiation_template synthesis simulation implementation shared_logic} [get_ips axi_cdma_0]] [get_ips axi_cdma_0]
+INFO: [IP_Flow 19-1706] Not generating 'Instantiation Template' target for IP 'axi_cdma_0'. Target already exists and is up to date.
+INFO: [IP_Flow 19-1706] Not generating 'Synthesis' target for IP 'axi_cdma_0'. Target already exists and is up to date.
+INFO: [IP_Flow 19-1706] Not generating 'Simulation' target for IP 'axi_cdma_0'. Target already exists and is up to date.
+# add_files -scan_for_includes -quiet -fileset [current_fileset] \
+#   [list [file join $srcIpDir example_design/axi4_write_master.vhd]] \
+#   [list [file join $srcIpDir axi_cdma_0/example_design/axi_s2mm_read.vhd]] \
+#   [list [file join $srcIpDir axi_cdma_0/example_design/axi_lite_sm.vhd]] \
+#   [list [file join $srcIpDir axi_cdma_0/example_design/clock_gen.vhd]] \
+#   [list [file join $srcIpDir example_design/axi_cdma_0_exdes.vhd]]
+# add_files -quiet -fileset [current_fileset] \
+#   [list [file join $srcIpDir axi_cdma_0/example_design/atg_addr.coe]] \
+#   [list [file join $srcIpDir axi_cdma_0/example_design/atg_data.coe]] \
+#   [list [file join $srcIpDir axi_cdma_0/example_design/atg_ctrl.coe]] \
+#   [list [file join $srcIpDir axi_cdma_0/example_design/atg_mask.coe]] \
+#   [list [file join $srcIpDir axi_cdma_0/example_design/sg_mif.coe]]
+# add_files -quiet -fileset [current_fileset -constrset] \
+#   [list [file join $srcIpDir axi_cdma_0/example_design/axi_cdma_0_exdes.xdc]]
+# if { [catch {current_fileset -simset} exc] } { create_fileset -simset sim_1 }
+# add_files -quiet -scan_for_includes -fileset [current_fileset -simset] \
+#   [list [file join $srcIpDir axi_cdma_0/simulation/axi_cdma_0_exdes_tb.vhd]]
+# set_property USED_IN_SYNTHESIS false [get_files [file join $srcIpDir axi_cdma_0/simulation/axi_cdma_0_exdes_tb.vhd]]
+# import_files
+# set_property TOP [lindex [find_top] 0] [current_fileset]
+# if {[catch {source [file join $srcIpDir axi_cdma_0/example_design/top_set.tcl]} errMsg]} {
+#   puts "Error encountered while sourcing custom IP example design script."
+#   puts "$errorInfo"
+#   incr returnCode
+# }
+## current_project
+## list CONFIG.PRIM_IN_FREQ {200.000} CONFIG.PRIM_SOURCE {Differential_clock_capable_pin} CONFIG.CLKOUT1_REQUESTED_OUT_FREQ {25.000} CONFIG.CLKOUT2_USED {true} CONFIG.CLKOUT2_REQUESTED_OUT_FREQ {50.000}
+## get_ips clk_wiz_0
+## get_ips clk_wiz_0
+INFO: [IP_Flow 19-1686] Generating 'Instantiation Template' target for IP 'clk_wiz_0'...
+INFO: [IP_Flow 19-1686] Generating 'Synthesis' target for IP 'clk_wiz_0'...
+INFO: [IP_Flow 19-1686] Generating 'Simulation' target for IP 'clk_wiz_0'...
+INFO: [IP_Flow 19-1686] Generating 'Implementation' target for IP 'clk_wiz_0'...
+INFO: [IP_Flow 19-1686] Generating 'Change Log' target for IP 'clk_wiz_0'...
+## lindex [get_property name [get_files *sg_mif.coe]] 0 
+## list CONFIG.Interface_Type {AXI4} CONFIG.Load_Init_File {true} CONFIG.Coe_File $coe1
+## get_ips blk_mem_gen_0
+INFO: [IP_Flow 19-3484] Absolute path of file 'e:/UV/FPGA/VERIFY/vry_AXI_DMA/vry_AXI_DMA/examps/axi_cdma_0_example/axi_cdma_0_example.srcs/sources_1/imports/axi_cdma_0/axi_cdma_0/example_design/sg_mif.coe' provided. It will be converted relative to IP Instance files '..\..\imports\axi_cdma_0\axi_cdma_0\example_design\sg_mif.coe'
+## get_ips blk_mem_gen_0
+INFO: [IP_Flow 19-1686] Generating 'Instantiation Template' target for IP 'blk_mem_gen_0'...
+INFO: [IP_Flow 19-1686] Generating 'Synthesis' target for IP 'blk_mem_gen_0'...
+WARNING: [IP_Flow 19-1687] The current project language is set to Verilog. However IP 'blk_mem_gen_0' does not support 'Verilog Synthesis' output products, delivering 'VHDL Synthesis' output products instead.
+INFO: [IP_Flow 19-1686] Generating 'Simulation' target for IP 'blk_mem_gen_0'...
+INFO: [IP_Flow 19-1686] Generating 'Miscellaneous' target for IP 'blk_mem_gen_0'...
+INFO: [IP_Flow 19-1686] Generating 'Change Log' target for IP 'blk_mem_gen_0'...
+## list CONFIG.DATA_WIDTH {32} CONFIG.MEM_DEPTH {1024} CONFIG.BMG_INSTANCE {INTERNAL} CONFIG.ID_WIDTH {1}
+## get_ips axi_bram_ctrl_0
+## get_ips axi_bram_ctrl_0
+INFO: [IP_Flow 19-1686] Generating 'Instantiation Template' target for IP 'axi_bram_ctrl_0'...
+INFO: [IP_Flow 19-1686] Generating 'Synthesis' target for IP 'axi_bram_ctrl_0'...
+WARNING: [IP_Flow 19-1687] The current project language is set to Verilog. However IP 'axi_bram_ctrl_0' does not support 'Verilog Synthesis' output products, delivering 'VHDL Synthesis' output products instead.
+INFO: [IP_Flow 19-1686] Generating 'Simulation' target for IP 'axi_bram_ctrl_0'...
+WARNING: [IP_Flow 19-1687] The current project language is set to Verilog. However IP 'axi_bram_ctrl_0' does not support 'Verilog Simulation' output products, delivering 'VHDL Simulation' output products instead.
+INFO: [IP_Flow 19-1686] Generating 'Change Log' target for IP 'axi_bram_ctrl_0'...
+## lindex [get_property name [get_files *atg_addr.coe]] 0 
+## lindex [get_property name [get_files *atg_mask.coe]] 0 
+## lindex [get_property name [get_files *atg_ctrl.coe]] 0 
+## lindex [get_property name [get_files *atg_data.coe]] 0 
+## list CONFIG.C_ATG_MODE {AXI4-Lite} CONFIG.C_ATG_SYSINIT_MODES {System_Test} CONFIG.C_ATG_MIF_DATA_DEPTH {16} CONFIG.C_ATG_SYSTEM_TEST_MAX_CLKS {2147483647} CONFIG.C_ATG_SYSTEM_CMD_MAX_RETRY {2147483647} CONFIG.C_ATG_SYSTEM_INIT_ADDR_MIF $coe1 CONFIG.C_ATG_SYSTEM_INIT_MASK_MIF $coe2 CONFIG.C_ATG_SYSTEM_INIT_CTRL_MIF $coe3 CONFIG.C_ATG_SYSTEM_INIT_DATA_MIF $coe4
+## get_ips axi_traffic_gen_0
+INFO: [IP_Flow 19-3484] Absolute path of file 'e:/UV/FPGA/VERIFY/vry_AXI_DMA/vry_AXI_DMA/examps/axi_cdma_0_example/axi_cdma_0_example.srcs/sources_1/imports/axi_cdma_0/axi_cdma_0/example_design/atg_ctrl.coe' provided. It will be converted relative to IP Instance files '..\..\imports\axi_cdma_0\axi_cdma_0\example_design\atg_ctrl.coe'
+INFO: [IP_Flow 19-3484] Absolute path of file 'e:/UV/FPGA/VERIFY/vry_AXI_DMA/vry_AXI_DMA/examps/axi_cdma_0_example/axi_cdma_0_example.srcs/sources_1/imports/axi_cdma_0/axi_cdma_0/example_design/atg_mask.coe' provided. It will be converted relative to IP Instance files '..\..\imports\axi_cdma_0\axi_cdma_0\example_design\atg_mask.coe'
+INFO: [IP_Flow 19-3484] Absolute path of file 'e:/UV/FPGA/VERIFY/vry_AXI_DMA/vry_AXI_DMA/examps/axi_cdma_0_example/axi_cdma_0_example.srcs/sources_1/imports/axi_cdma_0/axi_cdma_0/example_design/atg_addr.coe' provided. It will be converted relative to IP Instance files '..\..\imports\axi_cdma_0\axi_cdma_0\example_design\atg_addr.coe'
+INFO: [IP_Flow 19-3484] Absolute path of file 'e:/UV/FPGA/VERIFY/vry_AXI_DMA/vry_AXI_DMA/examps/axi_cdma_0_example/axi_cdma_0_example.srcs/sources_1/imports/axi_cdma_0/axi_cdma_0/example_design/atg_data.coe' provided. It will be converted relative to IP Instance files '..\..\imports\axi_cdma_0\axi_cdma_0\example_design\atg_data.coe'
+## get_ips axi_traffic_gen_0
+INFO: [IP_Flow 19-1686] Generating 'Instantiation Template' target for IP 'axi_traffic_gen_0'...
+INFO: [IP_Flow 19-1686] Generating 'Synthesis' target for IP 'axi_traffic_gen_0'...
+INFO: [IP_Flow 19-1686] Generating 'Simulation' target for IP 'axi_traffic_gen_0'...
+INFO: [IP_Flow 19-1686] Generating 'Change Log' target for IP 'axi_traffic_gen_0'...
+## current_fileset
+## get_filesets sim_1
+## get_filesets sim_1
+## get_filesets sim_1
+update_compile_order: Time (s): cpu = 00:00:05 ; elapsed = 00:00:06 . Memory (MB): peak = 752.078 ; gain = 3.590
+# update_compile_order -fileset [current_fileset]
+# update_compile_order -fileset [current_fileset -simset]
+# set dfile e:/UV/FPGA/VERIFY/vry_AXI_DMA/vry_AXI_DMA/vry_AXI_DMA.srcs/sources_1/ip/axi_cdma_0/oepdone.txt
+# set doneFile [open $dfile w]
+# puts $doneFile "Open Example Project DONE"
+# close $doneFile
+# if { $returnCode != 0 } {
+#   error "Problems were encountered while executing the example design script, please review the log files."
+# }
+exit
+INFO: [Common 17-206] Exiting Vivado at Thu Aug 13 11:14:28 2020...

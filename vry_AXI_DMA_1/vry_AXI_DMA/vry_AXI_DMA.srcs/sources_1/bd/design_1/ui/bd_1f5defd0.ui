@@ -6,15 +6,15 @@ preplace port m00_axi_error -pg 1 -y 150 -defaultsOSRD
 preplace port m00_axi_init_axi_txn -pg 1 -y 110 -defaultsOSRD
 preplace port m00_axi_aresetn -pg 1 -y 90 -defaultsOSRD
 preplace port m00_axi_txn_done -pg 1 -y 170 -defaultsOSRD
-preplace inst axi_full_slave2_0 -pg 1 -lvl 2 -y 90 -defaultsOSRD
-preplace inst axi_full_master_0 -pg 1 -lvl 1 -y 90 -defaultsOSRD
-preplace netloc axi_full_master_0_m00_axi_error 1 1 2 540 20 NJ
-preplace netloc axi_full_master_0_m00_axi_txn_done 1 1 2 530 10 NJ
-preplace netloc m00_axi_aresetn_1 1 0 2 210 20 510
-preplace netloc m00_axi_aclk_1 1 0 2 200 10 520
-preplace netloc axi_full_master_0_M00_AXI 1 1 1 N
-preplace netloc m00_axi_init_axi_txn_1 1 0 1 N
-levelinfo -pg 1 180 360 640 770
+preplace inst axi_full_slave2_0 -pg 1 -lvl 3 -y 90 -defaultsOSRD
+preplace inst axi_full_master_0 -pg 1 -lvl 2 -y 90 -defaultsOSRD
+preplace netloc axi_full_master_0_m00_axi_error 1 2 2 750 20 NJ
+preplace netloc axi_full_master_0_m00_axi_txn_done 1 2 2 740 10 NJ
+preplace netloc m00_axi_aresetn_1 1 0 3 NJ 120 250 20 720
+preplace netloc m00_axi_aclk_1 1 0 3 NJ 70 240 10 730
+preplace netloc axi_full_master_0_M00_AXI 1 2 1 N
+preplace netloc m00_axi_init_axi_txn_1 1 0 2 NJ 110 N
+levelinfo -pg 1 180 220 570 900 1030
 ",
 }
 0

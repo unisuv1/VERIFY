@@ -1,5 +1,5 @@
 Analysis & Synthesis report for vry_vhdl
-Fri Aug 07 18:17:45 2020
+Mon Aug 24 16:57:12 2020
 Quartus II 64-Bit Version 14.0.0 Build 200 06/17/2014 SJ Full Version
 
 
@@ -44,7 +44,7 @@ agreement for further details.
 +----------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                     ;
 +------------------------------------+---------------------------------------------+
-; Analysis & Synthesis Status        ; Successful - Fri Aug 07 18:17:45 2020       ;
+; Analysis & Synthesis Status        ; Successful - Mon Aug 24 16:57:12 2020       ;
 ; Quartus II 64-Bit Version          ; 14.0.0 Build 200 06/17/2014 SJ Full Version ;
 ; Revision Name                      ; vry_vhdl                                    ;
 ; Top-level Entity Name              ; vry_vhdl                                    ;
@@ -268,7 +268,7 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 Info: *******************************************************************
 Info: Running Quartus II 64-Bit Analysis & Synthesis
     Info: Version 14.0.0 Build 200 06/17/2014 SJ Full Version
-    Info: Processing started: Fri Aug 07 18:17:43 2020
+    Info: Processing started: Mon Aug 24 16:57:09 2020
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off vry_vhdl -c vry_vhdl
 Info (20030): Parallel compilation is enabled and will use 4 of the 4 processors detected
 Info (12021): Found 2 design units, including 1 entities, in source file design/vry_vhdl.vhd
@@ -276,6 +276,9 @@ Info (12021): Found 2 design units, including 1 entities, in source file design/
     Info (12023): Found entity 1: vry_vhdl
 Info (12127): Elaborating entity "vry_vhdl" for the top level hierarchy
 Warning (10540): VHDL Signal Declaration warning at vry_vhdl.vhd(16): used explicit default value for signal "a" because signal was never assigned a value
+Warning (10036): Verilog HDL or VHDL warning at vry_vhdl.vhd(19): object "b_p_dy_out_sel_map" assigned a value but never read
+Warning (10541): VHDL Signal Declaration warning at vry_vhdl.vhd(20): used implicit default value for signal "b_p_dy_out_sel" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations.
+Warning (10540): VHDL Signal Declaration warning at vry_vhdl.vhd(21): used explicit default value for signal "shift_bit" because signal was never assigned a value
 Warning (13024): Output pins are stuck at VCC or GND
     Warning (13410): Pin "c" is stuck at GND
 Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
@@ -286,10 +289,10 @@ Warning (21074): Design contains 2 input pin(s) that do not drive logic
 Info (21057): Implemented 3 device resources after synthesis - the final resource count might be different
     Info (21058): Implemented 2 input pins
     Info (21059): Implemented 1 output pins
-Info: Quartus II 64-Bit Analysis & Synthesis was successful. 0 errors, 6 warnings
+Info: Quartus II 64-Bit Analysis & Synthesis was successful. 0 errors, 9 warnings
     Info: Peak virtual memory: 4739 megabytes
-    Info: Processing ended: Fri Aug 07 18:17:45 2020
-    Info: Elapsed time: 00:00:02
+    Info: Processing ended: Mon Aug 24 16:57:12 2020
+    Info: Elapsed time: 00:00:03
     Info: Total CPU time (on all processors): 00:00:02
 
 
