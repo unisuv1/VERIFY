@@ -1,0 +1,24 @@
+|vry_BottlePrint
+nRST => ~NO_FANOUT~
+clk_100 => ~NO_FANOUT~
+dianyan_en => ~NO_FANOUT~
+b_p_clr => ~NO_FANOUT~
+valid_edge_f1 => ~NO_FANOUT~
+b_p_road_num[0] => ~NO_FANOUT~
+b_p_road_num[1] => ~NO_FANOUT~
+b_p_road_num[2] => ~NO_FANOUT~
+b_p_road_num[3] => ~NO_FANOUT~
+b_p_road_num[4] => ~NO_FANOUT~
+b_p_road_num[5] => ~NO_FANOUT~
+b_p_road_num[6] => ~NO_FANOUT~
+b_p_road_num[7] => ~NO_FANOUT~
+b_p_cycle_num[0] => ~NO_FANOUT~
+b_p_cycle_num[1] => ~NO_FANOUT~
+b_p_cycle_num[2] => ~NO_FANOUT~
+b_p_cycle_num[3] => ~NO_FANOUT~
+b_p_cycle_num[4] => ~NO_FANOUT~
+b_p_cycle_num[5] => ~NO_FANOUT~
+b_p_cycle_num[6] => ~NO_FANOUT~
+b_p_cycle_num[7] => ~NO_FANOUT~
+
+
