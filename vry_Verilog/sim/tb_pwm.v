@@ -1,0 +1,67 @@
+`timescale 1ns/1ps
+
+module tb_pwm();
+
+reg		sclk,rstn;
+
+reg		[31:0]	pwm_par; 
+wire			pwm_out;
+
+
+initial begin
+	rstn = 0;
+	sclk = 0;
+	#200
+	rstn = 1;
+	
+end 
+always #5 sclk = !sclk;
+
+initial begin
+	pwm_par = 10;
+	
+//	#10000000000
+	for(integer i = 0;i < 100;i = i+1) begin
+		#10000;
+	end 
+	
+	pwm_par = 50;
+	
+	for(integer i = 0;i < 100;i = i+1) begin
+		#10000;
+	end 
+	
+	pwm_par = 0;
+	
+	for(integer i = 0;i < 100;i = i+1) begin
+		#10000;
+	end 
+	
+	pwm_par = 100;
+	
+	for(integer i = 0;i < 100;i = i+1) begin
+		#10000;
+	end 
+	
+	pwm_par = 1;
+	
+	
+end 
+
+
+
+
+pwm pwm_inst(
+		.rstn(rstn),			//input			
+		.sclk(sclk),       		//input			
+		                         
+		.pwm_par(pwm_par),    	//input	[31:0]	
+		                           
+		.pwm_out(pwm_out)     	//output	reg		
+);
+
+
+
+
+
+endmodule

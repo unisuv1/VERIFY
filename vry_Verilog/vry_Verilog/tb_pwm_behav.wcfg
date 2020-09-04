@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<wave_config>
+   <wave_state>
+   </wave_state>
+   <db_ref_list>
+      <db_ref path="tb_pwm_behav.wdb" id="1">
+         <top_modules>
+            <top_module name="glbl" />
+            <top_module name="tb_pwm" />
+         </top_modules>
+      </db_ref>
+   </db_ref_list>
+   <WVObjectSize size="8" />
+   <wvobject db_ref_id="1" fp_name="/tb_pwm/sclk" type="logic">
+      <obj_property name="ElementShortName">sclk</obj_property>
+      <obj_property name="ObjectShortName">sclk</obj_property>
+   </wvobject>
+   <wvobject db_ref_id="1" fp_name="/tb_pwm/rstn" type="logic">
+      <obj_property name="ElementShortName">rstn</obj_property>
+      <obj_property name="ObjectShortName">rstn</obj_property>
+   </wvobject>
+   <wvobject db_ref_id="1" fp_name="/tb_pwm/pwm_out" type="logic">
+      <obj_property name="ElementShortName">pwm_out</obj_property>
+      <obj_property name="ObjectShortName">pwm_out</obj_property>
+   </wvobject>
+   <wvobject db_ref_id="1" fp_name="/tb_pwm/pwm_par" type="array">
+      <obj_property name="ElementShortName">pwm_par[31:0]</obj_property>
+      <obj_property name="ObjectShortName">pwm_par[31:0]</obj_property>
+      <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+   </wvobject>
+   <wvobject db_ref_id="1" fp_name="/tb_pwm/pwm_inst/cnt_ms" type="array">
+      <obj_property name="ElementShortName">cnt_ms[19:0]</obj_property>
+      <obj_property name="ObjectShortName">cnt_ms[19:0]</obj_property>
+      <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+   </wvobject>
+   <wvobject db_ref_id="1" fp_name="/tb_pwm/pwm_inst/num_ms" type="array">
+      <obj_property name="ElementShortName">num_ms[11:0]</obj_property>
+      <obj_property name="ObjectShortName">num_ms[11:0]</obj_property>
+      <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+   </wvobject>
+   <wvobject db_ref_id="1" fp_name="/tb_pwm/pwm_inst/NUM_CLK_OF_MS" type="array">
+      <obj_property name="ElementShortName">NUM_CLK_OF_MS[19:0]</obj_property>
+      <obj_property name="ObjectShortName">NUM_CLK_OF_MS[19:0]</obj_property>
+      <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+   </wvobject>
+   <wvobject db_ref_id="1" fp_name="/tb_pwm/pwm_inst/NUM_MS_OF_SEC" type="array">
+      <obj_property name="ElementShortName">NUM_MS_OF_SEC[11:0]</obj_property>
+      <obj_property name="ObjectShortName">NUM_MS_OF_SEC[11:0]</obj_property>
+      <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+   </wvobject>
+</wave_config>

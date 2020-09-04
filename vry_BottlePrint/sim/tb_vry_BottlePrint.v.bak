@@ -1,31 +1,64 @@
+`timescale	1ns / 1ns
+
 module tb_vry_BottlePrint();
 
 reg		sclk,rstn;
 
+reg		dianyan_en,b_p_clr,valid_edge_f1;
+
 initial begin
-	sclk = 0;
 	rstn = 0;
+	sclk = 0;
 	#200
 	rstn = 1;
 end 
 
 always #5 sclk = !sclk;
 
+initial begin
+		dianyan_en = 1'b1;
+		@(posedge valid_edge_f1)
+		#2000
+		#20
+		dianyan_en = 1'b0;
+		#50
+		dianyan_en = 1'b1;
+	
+end 
 
 
-//vry_BottlePrint vry_BottlePrint_inst(
-//		.nRST(rstn)	,				//:in	std_logic;
-//		.clk_100(sclk)	,			//:in	std_logic;
-//		                    		//
-//		.dianyan_en()	,			//:in	std_logic;
-//		.b_p_clr()	,				//:in	std_logic;
-//		                    		//
-//		.valid_edge_f1() ,			//:in	std_logic;
-//		                    		//
-//		.b_p_road_num()	,			//:in		std_logic_vector(7 downto 0);
-//		.b_p_cycle_num()			//:in		std_logic_vector(7 downto 0)
-//			
-//	);
+initial begin
+
+	b_p_clr = 1'b0;	
+	valid_edge_f1 = 1'b0;
+	
+	wait (rstn == 1)
+	forever begin
+		#200
+		@ (posedge sclk)
+		valid_edge_f1 = 1'b1;
+		@ (posedge sclk)
+		valid_edge_f1 = 1'b0;
+		
+	end 
+	
+end 
+
+
+
+vry_BottlePrint vry_BottlePrint_inst(
+		.nRST(rstn)	,				//:in	std_logic;
+		.clk_100(sclk)	,			//:in	std_logic;
+		                    		//
+		.dianyan_en(dianyan_en)	,			//:in	std_logic;
+		.b_p_clr(b_p_clr)	,				//:in	std_logic;
+		                    		//
+		.valid_edge_f1(valid_edge_f1) ,			//:in	std_logic;
+		                    		//
+		.b_p_road_num(8'd6)	,			//:in		std_logic_vector(7 downto 0);
+		.b_p_cycle_num(8'd1)			//:in		std_logic_vector(7 downto 0)
+			
+	);
 
 
 

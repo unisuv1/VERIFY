@@ -1,0 +1,19 @@
+#-----------------------------------------------------------
+# Vivado v2014.4 (64-bit)
+# SW Build 1071353 on Tue Nov 18 18:29:27 MST 2014
+# IP Build 1070531 on Tue Nov 18 01:10:18 MST 2014
+# Start of session at: Thu Aug 27 11:54:43 2020
+# Process ID: 14552
+# Log file: E:/UV/FPGA/VERIFY/vry_AXI_DMA_1/vry_AXI_DMA/vivado.log
+# Journal file: E:/UV/FPGA/VERIFY/vry_AXI_DMA_1/vry_AXI_DMA\vivado.jou
+#-----------------------------------------------------------
+start_gui
+open_project E:/UV/FPGA/VERIFY/vry_AXI_DMA_1/vry_AXI_DMA/vry_AXI_DMA.xpr
+load_feature simulator
+open_wave_database {E:/UV/FPGA/FPGA_EOPS_KM1024I/SplitTwoHead/km1024i_project_ver13/project_1/project_1.hw/hw_1/wave/hw_ila_data_1/hw_ila_data_1.wdb}
+close_sim
+open_wave_database {E:/UV/FPGA/VERIFY/vry_AXI_DMA_1/vry_AXI_DMA/vry_AXI_DMA.sim/sim_1/behav/tb_design_1_behav.wdb}
+open_wave_config {E:/UV/FPGA/VERIFY/vry_AXI_DMA_1/vry_AXI_DMA\tb_design_1_behav.wcfg}
+create_wave_config
+open_wave_config {C:/Users/admin/Desktop/debug/hw_ila_data_2.wcfg}
+close_sim

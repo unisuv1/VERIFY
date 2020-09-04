@@ -1,0 +1,24 @@
+#-----------------------------------------------------------
+# Vivado v2014.4 (64-bit)
+# SW Build 1071353 on Tue Nov 18 18:29:27 MST 2014
+# IP Build 1070531 on Tue Nov 18 01:10:18 MST 2014
+# Start of session at: Thu Sep 03 15:48:55 2020
+# Process ID: 5864
+# Log file: E:/UV/FPGA/VERIFY/vry_VivadoIp/vry_VivadoIp/vivado.log
+# Journal file: E:/UV/FPGA/VERIFY/vry_VivadoIp/vry_VivadoIp\vivado.jou
+#-----------------------------------------------------------
+start_gui
+open_project E:/UV/FPGA/VERIFY/vry_VivadoIp/vry_VivadoIp/vry_VivadoIp.xpr
+Scanning sources...
+Finished scanning sources
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1700] Loaded user IP repository 'e:/UV/FPGA/VERIFY/vry_VivadoIp/vry_VivadoIp/vry_VivadoIp.srcs/PackageIp_vry_FifoFirstRead3'.
+INFO: [IP_Flow 19-1700] Loaded user IP repository 'e:/UV/FPGA/VERIFY/vry_VivadoIp/vry_VivadoIp/vry_VivadoIp.srcs/packageip_vry_defineinterface'.
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'D:/install/Xilinx/Vivado/2014.4/data/ip'.
+open_project: Time (s): cpu = 00:00:12 ; elapsed = 00:00:07 . Memory (MB): peak = 725.980 ; gain = 175.684
+update_compile_order -fileset sources_1
+open_example_project -force -dir E:/UV/FPGA/VERIFY/vry_VivadoIp/vry_VivadoIp/Examples [get_ips  axi_iic_0]
+INFO: [IP_Flow 19-1686] Generating 'Examples' target for IP 'axi_iic_0'...
+open_example_project: Time (s): cpu = 00:00:02 ; elapsed = 00:00:32 . Memory (MB): peak = 749.141 ; gain = 0.000
+exit
+INFO: [Common 17-206] Exiting Vivado at Thu Sep 03 17:24:39 2020...

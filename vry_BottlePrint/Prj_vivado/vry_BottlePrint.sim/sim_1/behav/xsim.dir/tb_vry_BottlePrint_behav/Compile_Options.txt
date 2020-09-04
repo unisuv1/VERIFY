@@ -1,0 +1,1 @@
+-wto "55fde5f60f5949a3b149fa4e05015a1c" --debug "typical" --relax -L "xil_defaultlib" -L "secureip" --snapshot "tb_vry_BottlePrint_behav" "xil_defaultlib.tb_vry_BottlePrint" -log "elaborate.log" 

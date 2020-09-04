@@ -1,0 +1,36 @@
+#-----------------------------------------------------------
+# Vivado v2014.4 (64-bit)
+# SW Build 1071353 on Tue Nov 18 18:29:27 MST 2014
+# IP Build 1070531 on Tue Nov 18 01:10:18 MST 2014
+# Start of session at: Wed Sep 02 18:25:34 2020
+# Process ID: 13352
+# Log file: E:/UV/FPGA/VERIFY/vry_AXI_DMA/vry_AXI_DMA/vivado.log
+# Journal file: E:/UV/FPGA/VERIFY/vry_AXI_DMA/vry_AXI_DMA\vivado.jou
+#-----------------------------------------------------------
+start_gui
+open_project E:/UV/FPGA/VERIFY/vry_AXI_DMA/vry_AXI_DMA/vry_AXI_DMA.xpr
+CRITICAL WARNING: [Project 1-19] Could not find the file 'E:/UV/FPGA/VERIFY/vry_AXI_DMA/vry_AXI_DMA/vry_AXI_DMA.srcs/sources_1/ip/AXI_FIFO_BRIDGE/AXI_FIFO_BRIDGE.upgrade_log'.
+Scanning sources...
+Finished scanning sources
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1700] Loaded user IP repository 'e:/UV/FPGA/VERIFY/vry_AXI_DMA/vry_AXI_DMA/ip_repo'.
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'D:/install/Xilinx/Vivado/2014.4/data/ip'.
+open_project: Time (s): cpu = 00:00:12 ; elapsed = 00:00:14 . Memory (MB): peak = 656.922 ; gain = 111.664
+generate_target all [get_files  E:/UV/FPGA/VERIFY/vry_AXI_DMA/vry_AXI_DMA/vry_AXI_DMA.srcs/sources_1/bd/design_1/design_1.bd]
+Adding component instance block -- xilinx.com:user:axi_full_master:1.0 - axi_full_master_0
+Adding component instance block -- xilinx.com:user:axi_full_slave2:1.0 - axi_full_slave2_0
+Adding component instance block -- xilinx.com:ip:axi_dma:7.1 - axi_dma_0
+Adding component instance block -- xilinx.com:ip:axi_cdma:4.1 - axi_cdma_0
+Successfully read diagram <design_1> from BD file <E:/UV/FPGA/VERIFY/vry_AXI_DMA/vry_AXI_DMA/vry_AXI_DMA.srcs/sources_1/bd/design_1/design_1.bd>
+ERROR: [BD 41-758] The following clock pins are not connected to a valid clock source: 
+/axi_dma_0/s_axi_lite_aclk
+/axi_dma_0/m_axi_sg_aclk
+/axi_dma_0/m_axi_mm2s_aclk
+/axi_cdma_0/m_axi_aclk
+/axi_cdma_0/s_axi_lite_aclk
+
+ERROR: [BD 41-1031] Hdl Generation failed for the IP Integrator design E:/UV/FPGA/VERIFY/vry_AXI_DMA/vry_AXI_DMA/vry_AXI_DMA.srcs/sources_1/bd/design_1/design_1.bd 
+generate_target: Time (s): cpu = 00:00:02 ; elapsed = 00:00:08 . Memory (MB): peak = 656.922 ; gain = 0.000
+ERROR: [Common 17-39] 'generate_target' failed due to earlier errors.
+exit
+INFO: [Common 17-206] Exiting Vivado at Wed Sep 02 19:46:13 2020...

@@ -1,14 +1,14 @@
 Vivado Simulator 2014.4
 Copyright 1986-1999, 2001-2014 Xilinx, Inc. All Rights Reserved.
-Running: D:/install/Xilinx/Vivado/2014.4/bin/unwrapped/win64.o/xelab.exe -wto 261fb7fb0d894769838a7690e5abf11a --debug typical --relax -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot tb_vry_declare_behav xil_defaultlib.tb_vry_declare xil_defaultlib.glbl -log elaborate.log 
+Running: D:/install/Xilinx/Vivado/2014.4/bin/unwrapped/win64.o/xelab.exe -wto 261fb7fb0d894769838a7690e5abf11a --debug typical --relax -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot tb_pwm_behav xil_defaultlib.tb_pwm xil_defaultlib.glbl -log elaborate.log 
 Multi-threading is on. Using 2 slave threads.
 Starting static elaboration
 Completed static elaboration
 Starting simulation data flow analysis
 Completed simulation data flow analysis
 Time Resolution for simulation is 1ps
-Compiling module xil_defaultlib.vry_declare
-Compiling module xil_defaultlib.tb_vry_declare
+Compiling module xil_defaultlib.pwm
+Compiling module xil_defaultlib.tb_pwm
 Compiling module xil_defaultlib.glbl
 Waiting for 2 sub-compilation(s) to finish...
-Built simulation snapshot tb_vry_declare_behav
+Built simulation snapshot tb_pwm_behav

@@ -2,11 +2,10 @@
 # Vivado v2014.4 (64-bit)
 # SW Build 1071353 on Tue Nov 18 18:29:27 MST 2014
 # IP Build 1070531 on Tue Nov 18 01:10:18 MST 2014
-# Start of session at: Thu Aug 13 11:06:11 2020
-# Process ID: 13252
+# Start of session at: Thu Sep 03 15:46:44 2020
+# Process ID: 17680
 # Log file: E:/UV/FPGA/VERIFY/vry_AXI_DMA/vry_AXI_DMA/vivado.log
 # Journal file: E:/UV/FPGA/VERIFY/vry_AXI_DMA/vry_AXI_DMA\vivado.jou
 #-----------------------------------------------------------
 start_gui
 open_project E:/UV/FPGA/VERIFY/vry_AXI_DMA/vry_AXI_DMA/vry_AXI_DMA.xpr
-open_example_project -force -dir E:/UV/FPGA/VERIFY/vry_AXI_DMA/vry_AXI_DMA/examps [get_ips  axi_cdma_0]

@@ -1,0 +1,80 @@
+library	ieee;
+use ieee.std_logic_1164.all;
+use ieee.std_logic_unsigned.all;
+use ieee.std_logic_arith.all;
+
+
+entity	tb_vry_BottlePrint is 
+	
+end entity;
+	
+architecture behavior of tb_vry_BottlePrint is
+	
+component vry_BottlePrint is 
+	port (
+		nRST		:in	std_logic;
+		clk_100		:in	std_logic;
+		
+		dianyan_en	:in	std_logic;
+		b_p_clr		:in	std_logic;
+		
+		valid_edge_f1 :in	std_logic;
+		
+		b_p_road_num	:in		std_logic_vector(7 downto 0);
+		b_p_cycle_num	:in		std_logic_vector(7 downto 0);
+			
+		b_p_dy_out_sel_map:	out	std_logic_vector(7 downto 0)				
+	);	
+end component;	
+	
+constant	clk_per	:time	:=10 ns;
+
+signal	rstn	:std_logic	:='0';
+signal	sclk	:std_logic	:='0';
+
+signal	dianyan_en	:std_logic	:='1';
+
+signal	b_p_clr	:std_logic :='0';
+signal	valid_edge_f1	:std_logic	:='0';
+
+signal	b_p_road_num	:std_logic_vector(7 downto 0);
+signal	b_p_cycle_num	:std_logic_vector(7 downto 0);
+	
+signal	b_p_dy_out_sel_map	:std_logic_vector(7 downto 0);
+
+	
+	
+	
+begin
+	
+	rstn <= '1' after 200 ns;
+	
+	process begin
+		wait for (clk_per/2);
+		sclk <= not sclk;
+	end process;
+	
+	process begin 
+		wait for 10000 ns;
+		report "Test Timed Out" ;
+	end process;
+	
+	
+	vry_BottlePrint_inst : vry_BottlePrint
+	port map(
+		nRST => rstn,
+		clk_100 => sclk,
+		
+		dianyan_en => dianyan_en,
+		b_p_clr => b_p_clr,
+		valid_edge_f1 => valid_edge_f1,
+		
+		b_p_road_num => b_p_road_num,
+		b_p_cycle_num => b_p_cycle_num,
+		
+		b_p_dy_out_sel_map => b_p_dy_out_sel_map
+		
+	);
+	
+	
+end behavior;

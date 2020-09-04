@@ -47,9 +47,9 @@ vcom -93 -work work {E:/UV/FPGA/VERIFY/vry_BottlePrint/design/vry_BottlePrint.vh
 
 vlog -vlog01compat -work work +incdir+E:/UV/FPGA/VERIFY/vry_BottlePrint/Prj_quartusii/../sim {E:/UV/FPGA/VERIFY/vry_BottlePrint/Prj_quartusii/../sim/tb_vry_BottlePrint.v}
 
-vsim -t 1ps -L altera -L lpm -L sgate -L altera_mf -L altera_lnsim -L cycloneive -L rtl_work -L work -voptargs="+acc"  tb_bottle
+vsim -t 1ps -L altera -L lpm -L sgate -L altera_mf -L altera_lnsim -L cycloneive -L rtl_work -L work -voptargs="+acc"  tb_vry_BottlePrint
 
 add wave *
 view structure
 view signals
-run 100 us
+run 1 us

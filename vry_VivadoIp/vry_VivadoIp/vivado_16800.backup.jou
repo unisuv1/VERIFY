@@ -1,0 +1,12 @@
+#-----------------------------------------------------------
+# Vivado v2014.4 (64-bit)
+# SW Build 1071353 on Tue Nov 18 18:29:27 MST 2014
+# IP Build 1070531 on Tue Nov 18 01:10:18 MST 2014
+# Start of session at: Thu Aug 06 18:40:14 2020
+# Process ID: 5880
+# Log file: E:/UV/FPGA/VERIFY/vry_VivadoIp/vry_VivadoIp/vivado.log
+# Journal file: E:/UV/FPGA/VERIFY/vry_VivadoIp/vry_VivadoIp\vivado.jou
+#-----------------------------------------------------------
+start_gui
+open_project E:/UV/FPGA/VERIFY/vry_VivadoIp/vry_VivadoIp/vry_VivadoIp.xpr
+update_compile_order -fileset sources_1

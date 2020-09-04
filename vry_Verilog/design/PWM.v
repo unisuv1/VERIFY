@@ -1,0 +1,87 @@
+`timescale 1ns / 1ps
+//////////////////////////////////////////////////////////////////////////////////
+// Company: 
+// Engineer: 
+// 
+// Create Date: 2020/09/03 17:28:13
+// Design Name: 
+// Module Name: PWM
+// Project Name: 
+// Target Devices: 
+// Tool Versions: 
+// Description: 
+// 
+// Dependencies: 
+// 
+// Revision:
+// Revision 0.01 - File Created
+// Additional Comments:
+// 
+//////////////////////////////////////////////////////////////////////////////////
+
+
+module pwm(
+	input	rstn,
+	input	sclk,
+	
+	input	[31:0]	pwm_par,
+	
+	output	reg		pwm_out
+);
+
+parameter			NUM_CLK_OF_MS = 20'd10;//0000;
+parameter			NUM_MS_OF_SEC = 12'd1000;
+
+reg		[19:0]		cnt_ms;
+reg		[11:0]		num_ms;
+
+	always @ (posedge sclk or negedge rstn)
+	begin
+		if(!rstn) begin
+			cnt_ms <= 20'd0;			
+		end 
+		else begin
+			if(cnt_ms >= NUM_CLK_OF_MS - 1) begin
+				cnt_ms <= 20'd0;
+			end
+			else begin
+				cnt_ms <= cnt_ms + 1'b1;
+			end 			
+		end		
+	end 
+	
+	always @ (posedge sclk or negedge rstn)
+	begin
+		if(!rstn) begin
+			num_ms <= 12'd0;			
+		end 
+		else begin
+			if(num_ms >= NUM_MS_OF_SEC - 1) begin
+				num_ms <= 12'd0;
+			end 
+			else begin
+				if(cnt_ms == NUM_CLK_OF_MS/2) begin
+					num_ms <= num_ms + 1'b1;
+				end
+				else begin
+					num_ms <= num_ms;
+				end 				
+			end 	
+		end		
+	end 
+	
+	always @ (posedge sclk or negedge rstn)
+	begin
+		if(!rstn) begin
+			pwm_out <= 1'b0;
+		end
+		else begin
+			if(num_ms < 10*pwm_par) begin
+				pwm_out <= 1'b1;
+			end 
+			else begin
+				pwm_out <= 1'b0;
+			end 		
+		end
+	end 
+endmodule

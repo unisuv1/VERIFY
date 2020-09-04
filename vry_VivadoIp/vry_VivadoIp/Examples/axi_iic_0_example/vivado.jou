@@ -1,0 +1,11 @@
+#-----------------------------------------------------------
+# Vivado v2014.4 (64-bit)
+# SW Build 1071353 on Tue Nov 18 18:29:27 MST 2014
+# IP Build 1070531 on Tue Nov 18 01:10:18 MST 2014
+# Start of session at: Thu Sep 03 15:50:42 2020
+# Process ID: 3928
+# Log file: e:/UV/FPGA/VERIFY/vry_VivadoIp/vry_VivadoIp/Examples/axi_iic_0_example/vivado.log
+# Journal file: e:/UV/FPGA/VERIFY/vry_VivadoIp/vry_VivadoIp/Examples/axi_iic_0_example\vivado.jou
+#-----------------------------------------------------------
+start_gui
+source e:/UV/FPGA/VERIFY/vry_VivadoIp/vry_VivadoIp/vry_VivadoIp.srcs/sources_1/ip/axi_iic_0/axi_iic_0_ex.tcl

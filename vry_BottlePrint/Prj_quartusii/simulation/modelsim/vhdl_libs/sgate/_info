@@ -17,7 +17,7 @@ Vbe:gYV^][8`g^8mK<NPJ>0
 Z7 OL;C;10.1c;51
 31
 !i10b 1
-Z8 !s108 1598357434.372000
+Z8 !s108 1599113895.092000
 Z9 !s90 -reportprogress|300|-93|-work|sgate|d:/install/altera/14.0/quartus/eda/sim_lib/sgate.vhd|
 Z10 !s107 d:/install/altera/14.0/quartus/eda/sim_lib/sgate.vhd|
 Z11 o-93 -work sgate
@@ -723,7 +723,7 @@ VbD^AD?amTKD_UPSiQO?fH0
 R7
 31
 b1
-Z78 !s108 1598357433.725000
+Z78 !s108 1599113894.677000
 Z79 !s90 -reportprogress|300|-93|-work|sgate|d:/install/altera/14.0/quartus/eda/sim_lib/sgate_pack.vhd|
 Z80 !s107 d:/install/altera/14.0/quartus/eda/sim_lib/sgate_pack.vhd|
 R11

@@ -1,0 +1,5 @@
+Determining compilation order of HDL files.
+INFO: [VRFC 10-163] Analyzing VHDL file "E:/UV/FPGA/VERIFY/vry_BottlePrint/design/vry_BottlePrint.vhd" into library xil_defaultlib
+INFO: [VRFC 10-307] analyzing entity vry_BottlePrint
+INFO: [VRFC 10-163] Analyzing VHDL file "E:/UV/FPGA/VERIFY/vry_BottlePrint/sim/tb_vry_BottlePrint.vhd" into library xil_defaultlib
+INFO: [VRFC 10-307] analyzing entity tb_vry_BottlePrint

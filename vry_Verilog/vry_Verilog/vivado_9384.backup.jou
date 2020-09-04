@@ -1,0 +1,67 @@
+#-----------------------------------------------------------
+# Vivado v2014.4 (64-bit)
+# SW Build 1071353 on Tue Nov 18 18:29:27 MST 2014
+# IP Build 1070531 on Tue Nov 18 01:10:18 MST 2014
+# Start of session at: Thu Sep 03 18:18:34 2020
+# Process ID: 2844
+# Log file: E:/UV/FPGA/VERIFY/vry_Verilog/vry_Verilog/vivado.log
+# Journal file: E:/UV/FPGA/VERIFY/vry_Verilog/vry_Verilog\vivado.jou
+#-----------------------------------------------------------
+start_gui
+open_project E:/UV/FPGA/VERIFY/vry_Verilog/vry_Verilog/vry_Verilog.xpr
+update_compile_order -fileset sources_1
+add_files -norecurse E:/UV/FPGA/VERIFY/vry_Verilog/design/PWM.v
+update_compile_order -fileset sources_1
+set_property SOURCE_SET sources_1 [get_filesets sim_1]
+add_files -fileset sim_1 -norecurse E:/UV/FPGA/VERIFY/vry_Verilog/sim/tb_pwm.v
+update_compile_order -fileset sim_1
+set_property top tb_pwm [get_filesets sim_1]
+set_property top_lib xil_defaultlib [get_filesets sim_1]
+update_compile_order -fileset sim_1
+launch_simulation
+launch_simulation
+source tb_pwm.tcl
+run 20 s
+restart
+launch_simulation
+source tb_pwm.tcl
+launch_simulation
+source tb_pwm.tcl
+run 100 ms
+run 100 ms
+run 100 ms
+add_wave {{/tb_pwm/pwm_inst/cnt_ms}} {{/tb_pwm/pwm_inst/num_ms}} 
+run 100 ms
+save_wave_config {E:/UV/FPGA/VERIFY/vry_Verilog/vry_Verilog/tb_pwm_behav.wcfg}
+launch_simulation
+open_wave_config {E:/UV/FPGA/VERIFY/vry_Verilog/vry_Verilog\tb_pwm_behav.wcfg}
+source tb_pwm.tcl
+run 100 ms
+run 100 ms
+launch_simulation
+open_wave_config {E:/UV/FPGA/VERIFY/vry_Verilog/vry_Verilog\tb_pwm_behav.wcfg}
+source tb_pwm.tcl
+run 100 ms
+close_sim
+launch_simulation
+launch_simulation
+open_wave_config {E:/UV/FPGA/VERIFY/vry_Verilog/vry_Verilog\tb_pwm_behav.wcfg}
+source tb_pwm.tcl
+run 100 ms
+launch_simulation
+open_wave_config {E:/UV/FPGA/VERIFY/vry_Verilog/vry_Verilog\tb_pwm_behav.wcfg}
+source tb_pwm.tcl
+run 100 ms
+close_sim
+launch_simulation
+open_wave_config {E:/UV/FPGA/VERIFY/vry_Verilog/vry_Verilog\tb_pwm_behav.wcfg}
+source tb_pwm.tcl
+run 1 ms
+run 1 ms
+add_wave {{/tb_pwm/sclk}} 
+save_wave_config {E:/UV/FPGA/VERIFY/vry_Verilog/vry_Verilog\tb_pwm_behav.wcfg}
+launch_simulation
+open_wave_config {E:/UV/FPGA/VERIFY/vry_Verilog/vry_Verilog\tb_pwm_behav.wcfg}
+source tb_pwm.tcl
+run 1 ms
+close_sim

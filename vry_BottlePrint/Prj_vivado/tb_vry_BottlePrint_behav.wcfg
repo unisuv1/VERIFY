@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<wave_config>
+   <wave_state>
+   </wave_state>
+   <db_ref_list>
+      <db_ref path="tb_vry_BottlePrint_behav.wdb" id="1">
+         <top_modules>
+            <top_module name="glbl" />
+            <top_module name="tb_vry_BottlePrint" />
+         </top_modules>
+      </db_ref>
+   </db_ref_list>
+   <WVObjectSize size="13" />
+   <wvobject db_ref_id="1" fp_name="/tb_vry_BottlePrint/sclk" type="logic">
+      <obj_property name="ElementShortName">sclk</obj_property>
+      <obj_property name="ObjectShortName">sclk</obj_property>
+   </wvobject>
+   <wvobject db_ref_id="1" fp_name="/tb_vry_BottlePrint/rstn" type="logic">
+      <obj_property name="ElementShortName">rstn</obj_property>
+      <obj_property name="ObjectShortName">rstn</obj_property>
+   </wvobject>
+   <wvobject db_ref_id="1" fp_name="/tb_vry_BottlePrint/vry_BottlePrint_inst/nRST" type="logic">
+      <obj_property name="ElementShortName">nRST</obj_property>
+      <obj_property name="ObjectShortName">nRST</obj_property>
+   </wvobject>
+   <wvobject db_ref_id="1" fp_name="/tb_vry_BottlePrint/vry_BottlePrint_inst/clk_100" type="logic">
+      <obj_property name="ElementShortName">clk_100</obj_property>
+      <obj_property name="ObjectShortName">clk_100</obj_property>
+   </wvobject>
+   <wvobject db_ref_id="1" fp_name="/tb_vry_BottlePrint/vry_BottlePrint_inst/dianyan_en" type="logic">
+      <obj_property name="ElementShortName">dianyan_en</obj_property>
+      <obj_property name="ObjectShortName">dianyan_en</obj_property>
+   </wvobject>
+   <wvobject db_ref_id="1" fp_name="/tb_vry_BottlePrint/vry_BottlePrint_inst/b_p_clr" type="logic">
+      <obj_property name="ElementShortName">b_p_clr</obj_property>
+      <obj_property name="ObjectShortName">b_p_clr</obj_property>
+   </wvobject>
+   <wvobject db_ref_id="1" fp_name="/tb_vry_BottlePrint/vry_BottlePrint_inst/valid_edge_f1" type="logic">
+      <obj_property name="ElementShortName">valid_edge_f1</obj_property>
+      <obj_property name="ObjectShortName">valid_edge_f1</obj_property>
+   </wvobject>
+   <wvobject db_ref_id="1" fp_name="/tb_vry_BottlePrint/vry_BottlePrint_inst/b_p_road_num" type="array">
+      <obj_property name="ElementShortName">b_p_road_num[7:0]</obj_property>
+      <obj_property name="ObjectShortName">b_p_road_num[7:0]</obj_property>
+      <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+   </wvobject>
+   <wvobject db_ref_id="1" fp_name="/tb_vry_BottlePrint/vry_BottlePrint_inst/b_p_cycle_num" type="array">
+      <obj_property name="ElementShortName">b_p_cycle_num[7:0]</obj_property>
+      <obj_property name="ObjectShortName">b_p_cycle_num[7:0]</obj_property>
+      <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+   </wvobject>
+   <wvobject db_ref_id="1" fp_name="/tb_vry_BottlePrint/vry_BottlePrint_inst/b_p_road_cnt" type="array">
+      <obj_property name="ElementShortName">b_p_road_cnt[7:0]</obj_property>
+      <obj_property name="ObjectShortName">b_p_road_cnt[7:0]</obj_property>
+      <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+   </wvobject>
+   <wvobject db_ref_id="1" fp_name="/tb_vry_BottlePrint/vry_BottlePrint_inst/b_p_cycle_cnt" type="array">
+      <obj_property name="ElementShortName">b_p_cycle_cnt[7:0]</obj_property>
+      <obj_property name="ObjectShortName">b_p_cycle_cnt[7:0]</obj_property>
+      <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+   </wvobject>
+   <wvobject db_ref_id="1" fp_name="/tb_vry_BottlePrint/vry_BottlePrint_inst/b_p_clr_l" type="logic">
+      <obj_property name="ElementShortName">b_p_clr_l</obj_property>
+      <obj_property name="ObjectShortName">b_p_clr_l</obj_property>
+   </wvobject>
+   <wvobject db_ref_id="1" fp_name="/tb_vry_BottlePrint/vry_BottlePrint_inst/b_p_dy_out_sel_map" type="array">
+      <obj_property name="ElementShortName">b_p_dy_out_sel_map[7:0]</obj_property>
+      <obj_property name="ObjectShortName">b_p_dy_out_sel_map[7:0]</obj_property>
+      <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+   </wvobject>
+</wave_config>

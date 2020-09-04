@@ -2,8 +2,8 @@
 # Vivado v2014.4 (64-bit)
 # SW Build 1071353 on Tue Nov 18 18:29:27 MST 2014
 # IP Build 1070531 on Tue Nov 18 01:10:18 MST 2014
-# Start of session at: Thu Aug 06 18:40:14 2020
-# Process ID: 5880
+# Start of session at: Fri Sep 04 18:44:42 2020
+# Process ID: 8884
 # Log file: E:/UV/FPGA/VERIFY/vry_VivadoIp/vry_VivadoIp/vivado.log
 # Journal file: E:/UV/FPGA/VERIFY/vry_VivadoIp/vry_VivadoIp\vivado.jou
 #-----------------------------------------------------------
@@ -15,7 +15,23 @@ INFO: [IP_Flow 19-234] Refreshing IP repositories
 INFO: [IP_Flow 19-1700] Loaded user IP repository 'e:/UV/FPGA/VERIFY/vry_VivadoIp/vry_VivadoIp/vry_VivadoIp.srcs/PackageIp_vry_FifoFirstRead3'.
 INFO: [IP_Flow 19-1700] Loaded user IP repository 'e:/UV/FPGA/VERIFY/vry_VivadoIp/vry_VivadoIp/vry_VivadoIp.srcs/packageip_vry_defineinterface'.
 INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'D:/install/Xilinx/Vivado/2014.4/data/ip'.
-open_project: Time (s): cpu = 00:00:12 ; elapsed = 00:00:07 . Memory (MB): peak = 726.895 ; gain = 175.203
+open_project: Time (s): cpu = 00:00:12 ; elapsed = 00:00:09 . Memory (MB): peak = 682.051 ; gain = 149.035
 update_compile_order -fileset sources_1
+open_bd_design {E:/UV/FPGA/VERIFY/vry_VivadoIp/vry_VivadoIp/vry_VivadoIp.srcs/sources_1/bd/design_1/design_1.bd}
+Adding component instance block -- xilinx.com:ip:POWER_CTRL:1.0 - POWER_CTRL_0
+Successfully read diagram <design_1> from BD file <E:/UV/FPGA/VERIFY/vry_VivadoIp/vry_VivadoIp/vry_VivadoIp.srcs/sources_1/bd/design_1/design_1.bd>
+ipx::edit_ip_in_project -upgrade true -name POWER_CTRL_v1_0_project -directory E:/UV/FPGA/VERIFY/vry_VivadoIp/vry_VivadoIp/vry_VivadoIp.srcs/PackageIp_vry_DefineInterface/POWER_CTRL_v1_0_project e:/UV/FPGA/VERIFY/vry_VivadoIp/vry_VivadoIp/vry_VivadoIp.srcs/packageip_vry_defineinterface/component.xml
+INFO: [Project 1-489] The host OS only allows 260 characters in a normal path. The project is stored in a path with more than 80 characters. If you experience issues with IP, Block Designs, or files not being found, please consider moving the project to a location with a shorter path. Alternately consider using the OS subst command to map part of the path to a drive letter.
+Current project path is 'e:/uv/fpga/verify/vry_vivadoip/vry_vivadoip/vry_vivadoip.srcs/packageip_vry_defineinterface/power_ctrl_v1_0_project'
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1704] No user IP repositories specified
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'D:/install/Xilinx/Vivado/2014.4/data/ip'.
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1700] Loaded user IP repository 'e:/UV/FPGA/VERIFY/vry_VivadoIp/vry_VivadoIp/vry_VivadoIp.srcs/PackageIp_vry_FifoFirstRead3'.
+INFO: [IP_Flow 19-1700] Loaded user IP repository 'e:/UV/FPGA/VERIFY/vry_VivadoIp/vry_VivadoIp/vry_VivadoIp.srcs/packageip_vry_defineinterface'.
+ipx::edit_ip_in_project: Time (s): cpu = 00:00:09 ; elapsed = 00:00:06 . Memory (MB): peak = 742.285 ; gain = 43.023
+update_compile_order -fileset sim_1
+current_project vry_VivadoIp
+close_project
 exit
-INFO: [Common 17-206] Exiting Vivado at Thu Aug 06 18:40:52 2020...
+INFO: [Common 17-206] Exiting Vivado at Fri Sep 04 19:21:53 2020...

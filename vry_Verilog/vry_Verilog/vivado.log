@@ -2,8 +2,8 @@
 # Vivado v2014.4 (64-bit)
 # SW Build 1071353 on Tue Nov 18 18:29:27 MST 2014
 # IP Build 1070531 on Tue Nov 18 01:10:18 MST 2014
-# Start of session at: Thu Aug 13 10:49:31 2020
-# Process ID: 12256
+# Start of session at: Thu Sep 03 19:07:23 2020
+# Process ID: 9384
 # Log file: E:/UV/FPGA/VERIFY/vry_Verilog/vry_Verilog/vivado.log
 # Journal file: E:/UV/FPGA/VERIFY/vry_Verilog/vry_Verilog\vivado.jou
 #-----------------------------------------------------------
@@ -14,7 +14,899 @@ Finished scanning sources
 INFO: [IP_Flow 19-234] Refreshing IP repositories
 INFO: [IP_Flow 19-1704] No user IP repositories specified
 INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'D:/install/Xilinx/Vivado/2014.4/data/ip'.
-open_project: Time (s): cpu = 00:00:13 ; elapsed = 00:00:06 . Memory (MB): peak = 732.324 ; gain = 186.320
+open_project: Time (s): cpu = 00:00:12 ; elapsed = 00:00:06 . Memory (MB): peak = 706.883 ; gain = 166.570
 update_compile_order -fileset sources_1
+update_compile_order -fileset sim_1
+launch_simulation
+INFO: [USF-XSim-27] Simulation object is 'sim_1'
+INFO: [USF-XSim-37] Inspecting design source files for 'tb_pwm' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE' step in 'E:/UV/FPGA/VERIFY/vry_Verilog/vry_Verilog/vry_Verilog.sim/sim_1/behav'
+"xvlog -m64 -prj tb_pwm_vlog.prj"
+Determining compilation order of HDL files.
+INFO: [VRFC 10-2263] Analyzing Verilog file "E:/UV/FPGA/VERIFY/vry_Verilog/design/PWM.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module pwm
+INFO: [VRFC 10-2263] Analyzing Verilog file "E:/UV/FPGA/VERIFY/vry_Verilog/sim/tb_pwm.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module tb_pwm
+WARNING: [VRFC 10-2019] loop variable declaration is not allowed in this mode of verilog [E:/UV/FPGA/VERIFY/vry_Verilog/sim/tb_pwm.v:24]
+INFO: [VRFC 10-2263] Analyzing Verilog file "E:/UV/FPGA/VERIFY/vry_Verilog/vry_Verilog/vry_Verilog.sim/sim_1/behav/glbl.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module glbl
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'E:/UV/FPGA/VERIFY/vry_Verilog/vry_Verilog/vry_Verilog.sim/sim_1/behav'
+Vivado Simulator 2014.4
+Copyright 1986-1999, 2001-2014 Xilinx, Inc. All Rights Reserved.
+Running: D:/install/Xilinx/Vivado/2014.4/bin/unwrapped/win64.o/xelab.exe -wto 261fb7fb0d894769838a7690e5abf11a --debug typical --relax -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot tb_pwm_behav xil_defaultlib.tb_pwm xil_defaultlib.glbl -log elaborate.log 
+Multi-threading is on. Using 2 slave threads.
+Starting static elaboration
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling module xil_defaultlib.pwm
+Compiling module xil_defaultlib.tb_pwm
+Compiling module xil_defaultlib.glbl
+Waiting for 2 sub-compilation(s) to finish...
+Built simulation snapshot tb_pwm_behav
+
+****** Webtalk v2014.4 (64-bit)
+  **** SW Build 1071353 on Tue Nov 18 18:29:27 MST 2014
+  **** IP Build 1070531 on Tue Nov 18 01:10:18 MST 2014
+    ** Copyright 1986-2014 Xilinx, Inc. All Rights Reserved.
+
+source E:/UV/FPGA/VERIFY/vry_Verilog/vry_Verilog/vry_Verilog.sim/sim_1/behav/xsim.dir/tb_pwm_behav/webtalk/xsim_webtalk.tcl -notrace
+
+    while executing
+"webtalk_transmit -clientid 1060514864 -regid "" -xml E:/UV/FPGA/VERIFY/vry_Verilog/vry_Verilog/vry_Verilog.sim/sim_1/behav/xsim.dir/tb_pwm_behav/webta..."
+    (file "E:/UV/FPGA/VERIFY/vry_Verilog/vry_Verilog/vry_Verilog.sim/sim_1/behav/xsim.dir/tb_pwm_behav/webtalk/xsim_webtalk.tcl" line 41)
+INFO: [Common 17-206] Exiting Webtalk at Thu Sep 03 19:07:50 2020...
+run_program: Time (s): cpu = 00:00:00 ; elapsed = 00:00:06 . Memory (MB): peak = 714.883 ; gain = 0.000
+INFO: [USF-XSim-4] XSim::Simulate design
+INFO: [USF-XSim-61] Executing 'SIMULATE' step in 'E:/UV/FPGA/VERIFY/vry_Verilog/vry_Verilog/vry_Verilog.sim/sim_1/behav'
+INFO: [USF-XSim-98] *** Running xsim
+   with args "tb_pwm_behav -key {Behavioral:sim_1:Functional:tb_pwm} -tclbatch {tb_pwm.tcl} -log {simulate.log}"
+INFO: [USF-XSim-8] Loading simulator feature
+Vivado Simulator 2014.4
+Time resolution is 1 ps
+open_wave_config {E:/UV/FPGA/VERIFY/vry_Verilog/vry_Verilog\tb_pwm_behav.wcfg}
+source tb_pwm.tcl
+# set curr_wave [current_wave_config]
+# if { [string length $curr_wave] == 0 } {
+#   if { [llength [get_objects]] > 0} {
+#     add_wave /
+#     set_property needs_save false [current_wave_config]
+#   } else {
+#      send_msg_id Add_Wave-1 WARNING "No top level signals found. Simulator will start without a wave window. If you want to open a wave window go to 'File->New Waveform Configuration' or type 'create_wave_config' in the TCL console."
+#   }
+# }
+# run 1000ns
+INFO: [USF-XSim-96] XSim completed. Design snapshot 'tb_pwm_behav' loaded.
+INFO: [USF-XSim-97] XSim simulation ran for 1000ns
+launch_simulation: Time (s): cpu = 00:00:04 ; elapsed = 00:00:11 . Memory (MB): peak = 735.273 ; gain = 20.391
+run 1 ms
+add_wave {{/tb_pwm/pwm_out}} 
+add_wave {{/tb_pwm/pwm_par}} 
+add_wave {{/tb_pwm/rstn}} 
+restart
+INFO: [Simtcl 6-17] Simulation restarted
+run 1 ms
+add_wave {{/tb_pwm/pwm_inst/cnt_ms}} {{/tb_pwm/pwm_inst/num_ms}} {{/tb_pwm/pwm_inst/NUM_CLK_OF_MS}} {{/tb_pwm/pwm_inst/NUM_MS_OF_SEC}} 
+restart
+INFO: [Simtcl 6-17] Simulation restarted
+run 1 ms
+save_wave_config {E:/UV/FPGA/VERIFY/vry_Verilog/vry_Verilog\tb_pwm_behav.wcfg}
+INFO: [Simtcl 6-16] Simulation closed
+launch_simulation
+INFO: [USF-XSim-27] Simulation object is 'sim_1'
+INFO: [USF-XSim-37] Inspecting design source files for 'tb_pwm' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE' step in 'E:/UV/FPGA/VERIFY/vry_Verilog/vry_Verilog/vry_Verilog.sim/sim_1/behav'
+"xvlog -m64 -prj tb_pwm_vlog.prj"
+Determining compilation order of HDL files.
+INFO: [VRFC 10-2263] Analyzing Verilog file "E:/UV/FPGA/VERIFY/vry_Verilog/design/PWM.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module pwm
+INFO: [VRFC 10-2263] Analyzing Verilog file "E:/UV/FPGA/VERIFY/vry_Verilog/sim/tb_pwm.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module tb_pwm
+WARNING: [VRFC 10-2019] loop variable declaration is not allowed in this mode of verilog [E:/UV/FPGA/VERIFY/vry_Verilog/sim/tb_pwm.v:24]
+INFO: [VRFC 10-2263] Analyzing Verilog file "E:/UV/FPGA/VERIFY/vry_Verilog/vry_Verilog/vry_Verilog.sim/sim_1/behav/glbl.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module glbl
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'E:/UV/FPGA/VERIFY/vry_Verilog/vry_Verilog/vry_Verilog.sim/sim_1/behav'
+Vivado Simulator 2014.4
+Copyright 1986-1999, 2001-2014 Xilinx, Inc. All Rights Reserved.
+Running: D:/install/Xilinx/Vivado/2014.4/bin/unwrapped/win64.o/xelab.exe -wto 261fb7fb0d894769838a7690e5abf11a --debug typical --relax -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot tb_pwm_behav xil_defaultlib.tb_pwm xil_defaultlib.glbl -log elaborate.log 
+Multi-threading is on. Using 2 slave threads.
+Starting static elaboration
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling module xil_defaultlib.pwm
+Compiling module xil_defaultlib.tb_pwm
+Compiling module xil_defaultlib.glbl
+Waiting for 2 sub-compilation(s) to finish...
+Built simulation snapshot tb_pwm_behav
+
+****** Webtalk v2014.4 (64-bit)
+  **** SW Build 1071353 on Tue Nov 18 18:29:27 MST 2014
+  **** IP Build 1070531 on Tue Nov 18 01:10:18 MST 2014
+    ** Copyright 1986-2014 Xilinx, Inc. All Rights Reserved.
+
+source E:/UV/FPGA/VERIFY/vry_Verilog/vry_Verilog/vry_Verilog.sim/sim_1/behav/xsim.dir/tb_pwm_behav/webtalk/xsim_webtalk.tcl -notrace
+
+    while executing
+"webtalk_transmit -clientid 3187019237 -regid "" -xml E:/UV/FPGA/VERIFY/vry_Verilog/vry_Verilog/vry_Verilog.sim/sim_1/behav/xsim.dir/tb_pwm_behav/webta..."
+    (file "E:/UV/FPGA/VERIFY/vry_Verilog/vry_Verilog/vry_Verilog.sim/sim_1/behav/xsim.dir/tb_pwm_behav/webtalk/xsim_webtalk.tcl" line 41)
+INFO: [Common 17-206] Exiting Webtalk at Thu Sep 03 19:10:10 2020...
+run_program: Time (s): cpu = 00:00:01 ; elapsed = 00:00:06 . Memory (MB): peak = 744.449 ; gain = 0.000
+INFO: [USF-XSim-4] XSim::Simulate design
+INFO: [USF-XSim-61] Executing 'SIMULATE' step in 'E:/UV/FPGA/VERIFY/vry_Verilog/vry_Verilog/vry_Verilog.sim/sim_1/behav'
+INFO: [USF-XSim-98] *** Running xsim
+   with args "tb_pwm_behav -key {Behavioral:sim_1:Functional:tb_pwm} -tclbatch {tb_pwm.tcl} -log {simulate.log}"
+INFO: [USF-XSim-8] Loading simulator feature
+Vivado Simulator 2014.4
+Time resolution is 1 ps
+open_wave_config {E:/UV/FPGA/VERIFY/vry_Verilog/vry_Verilog\tb_pwm_behav.wcfg}
+source tb_pwm.tcl
+# set curr_wave [current_wave_config]
+# if { [string length $curr_wave] == 0 } {
+#   if { [llength [get_objects]] > 0} {
+#     add_wave /
+#     set_property needs_save false [current_wave_config]
+#   } else {
+#      send_msg_id Add_Wave-1 WARNING "No top level signals found. Simulator will start without a wave window. If you want to open a wave window go to 'File->New Waveform Configuration' or type 'create_wave_config' in the TCL console."
+#   }
+# }
+# run 1000ns
+INFO: [USF-XSim-96] XSim completed. Design snapshot 'tb_pwm_behav' loaded.
+INFO: [USF-XSim-97] XSim simulation ran for 1000ns
+launch_simulation: Time (s): cpu = 00:00:02 ; elapsed = 00:00:10 . Memory (MB): peak = 744.449 ; gain = 0.000
+run 1 ms
+run 1 ms
+run 1 ms
+INFO: [Simtcl 6-16] Simulation closed
+launch_simulation
+INFO: [USF-XSim-27] Simulation object is 'sim_1'
+INFO: [USF-XSim-37] Inspecting design source files for 'tb_pwm' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE' step in 'E:/UV/FPGA/VERIFY/vry_Verilog/vry_Verilog/vry_Verilog.sim/sim_1/behav'
+"xvlog -m64 -prj tb_pwm_vlog.prj"
+Determining compilation order of HDL files.
+INFO: [VRFC 10-2263] Analyzing Verilog file "E:/UV/FPGA/VERIFY/vry_Verilog/design/PWM.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module pwm
+INFO: [VRFC 10-2263] Analyzing Verilog file "E:/UV/FPGA/VERIFY/vry_Verilog/sim/tb_pwm.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module tb_pwm
+WARNING: [VRFC 10-2019] loop variable declaration is not allowed in this mode of verilog [E:/UV/FPGA/VERIFY/vry_Verilog/sim/tb_pwm.v:24]
+INFO: [VRFC 10-2263] Analyzing Verilog file "E:/UV/FPGA/VERIFY/vry_Verilog/vry_Verilog/vry_Verilog.sim/sim_1/behav/glbl.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module glbl
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'E:/UV/FPGA/VERIFY/vry_Verilog/vry_Verilog/vry_Verilog.sim/sim_1/behav'
+Vivado Simulator 2014.4
+Copyright 1986-1999, 2001-2014 Xilinx, Inc. All Rights Reserved.
+Running: D:/install/Xilinx/Vivado/2014.4/bin/unwrapped/win64.o/xelab.exe -wto 261fb7fb0d894769838a7690e5abf11a --debug typical --relax -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot tb_pwm_behav xil_defaultlib.tb_pwm xil_defaultlib.glbl -log elaborate.log 
+Multi-threading is on. Using 2 slave threads.
+Starting static elaboration
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling module xil_defaultlib.pwm
+Compiling module xil_defaultlib.tb_pwm
+Compiling module xil_defaultlib.glbl
+Waiting for 2 sub-compilation(s) to finish...
+Built simulation snapshot tb_pwm_behav
+
+****** Webtalk v2014.4 (64-bit)
+  **** SW Build 1071353 on Tue Nov 18 18:29:27 MST 2014
+  **** IP Build 1070531 on Tue Nov 18 01:10:18 MST 2014
+    ** Copyright 1986-2014 Xilinx, Inc. All Rights Reserved.
+
+source E:/UV/FPGA/VERIFY/vry_Verilog/vry_Verilog/vry_Verilog.sim/sim_1/behav/xsim.dir/tb_pwm_behav/webtalk/xsim_webtalk.tcl -notrace
+
+    while executing
+"webtalk_transmit -clientid 2799055449 -regid "" -xml E:/UV/FPGA/VERIFY/vry_Verilog/vry_Verilog/vry_Verilog.sim/sim_1/behav/xsim.dir/tb_pwm_behav/webta..."
+    (file "E:/UV/FPGA/VERIFY/vry_Verilog/vry_Verilog/vry_Verilog.sim/sim_1/behav/xsim.dir/tb_pwm_behav/webtalk/xsim_webtalk.tcl" line 41)
+INFO: [Common 17-206] Exiting Webtalk at Thu Sep 03 19:16:01 2020...
+run_program: Time (s): cpu = 00:00:00 ; elapsed = 00:00:06 . Memory (MB): peak = 747.387 ; gain = 0.000
+INFO: [USF-XSim-4] XSim::Simulate design
+INFO: [USF-XSim-61] Executing 'SIMULATE' step in 'E:/UV/FPGA/VERIFY/vry_Verilog/vry_Verilog/vry_Verilog.sim/sim_1/behav'
+INFO: [USF-XSim-98] *** Running xsim
+   with args "tb_pwm_behav -key {Behavioral:sim_1:Functional:tb_pwm} -tclbatch {tb_pwm.tcl} -log {simulate.log}"
+INFO: [USF-XSim-8] Loading simulator feature
+Vivado Simulator 2014.4
+Time resolution is 1 ps
+open_wave_config {E:/UV/FPGA/VERIFY/vry_Verilog/vry_Verilog\tb_pwm_behav.wcfg}
+source tb_pwm.tcl
+# set curr_wave [current_wave_config]
+# if { [string length $curr_wave] == 0 } {
+#   if { [llength [get_objects]] > 0} {
+#     add_wave /
+#     set_property needs_save false [current_wave_config]
+#   } else {
+#      send_msg_id Add_Wave-1 WARNING "No top level signals found. Simulator will start without a wave window. If you want to open a wave window go to 'File->New Waveform Configuration' or type 'create_wave_config' in the TCL console."
+#   }
+# }
+# run 1000ns
+INFO: [USF-XSim-96] XSim completed. Design snapshot 'tb_pwm_behav' loaded.
+INFO: [USF-XSim-97] XSim simulation ran for 1000ns
+launch_simulation: Time (s): cpu = 00:00:02 ; elapsed = 00:00:09 . Memory (MB): peak = 747.387 ; gain = 0.000
+run 1 ms
+INFO: [Simtcl 6-16] Simulation closed
+launch_simulation
+INFO: [USF-XSim-27] Simulation object is 'sim_1'
+INFO: [USF-XSim-37] Inspecting design source files for 'tb_pwm' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE' step in 'E:/UV/FPGA/VERIFY/vry_Verilog/vry_Verilog/vry_Verilog.sim/sim_1/behav'
+"xvlog -m64 -prj tb_pwm_vlog.prj"
+Determining compilation order of HDL files.
+INFO: [VRFC 10-2263] Analyzing Verilog file "E:/UV/FPGA/VERIFY/vry_Verilog/design/PWM.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module pwm
+INFO: [VRFC 10-2263] Analyzing Verilog file "E:/UV/FPGA/VERIFY/vry_Verilog/sim/tb_pwm.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module tb_pwm
+WARNING: [VRFC 10-2019] loop variable declaration is not allowed in this mode of verilog [E:/UV/FPGA/VERIFY/vry_Verilog/sim/tb_pwm.v:24]
+INFO: [VRFC 10-2263] Analyzing Verilog file "E:/UV/FPGA/VERIFY/vry_Verilog/vry_Verilog/vry_Verilog.sim/sim_1/behav/glbl.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module glbl
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'E:/UV/FPGA/VERIFY/vry_Verilog/vry_Verilog/vry_Verilog.sim/sim_1/behav'
+Vivado Simulator 2014.4
+Copyright 1986-1999, 2001-2014 Xilinx, Inc. All Rights Reserved.
+Running: D:/install/Xilinx/Vivado/2014.4/bin/unwrapped/win64.o/xelab.exe -wto 261fb7fb0d894769838a7690e5abf11a --debug typical --relax -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot tb_pwm_behav xil_defaultlib.tb_pwm xil_defaultlib.glbl -log elaborate.log 
+Multi-threading is on. Using 2 slave threads.
+Starting static elaboration
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling module xil_defaultlib.pwm
+Compiling module xil_defaultlib.tb_pwm
+Compiling module xil_defaultlib.glbl
+Waiting for 2 sub-compilation(s) to finish...
+Built simulation snapshot tb_pwm_behav
+
+****** Webtalk v2014.4 (64-bit)
+  **** SW Build 1071353 on Tue Nov 18 18:29:27 MST 2014
+  **** IP Build 1070531 on Tue Nov 18 01:10:18 MST 2014
+    ** Copyright 1986-2014 Xilinx, Inc. All Rights Reserved.
+
+source E:/UV/FPGA/VERIFY/vry_Verilog/vry_Verilog/vry_Verilog.sim/sim_1/behav/xsim.dir/tb_pwm_behav/webtalk/xsim_webtalk.tcl -notrace
+
+    while executing
+"webtalk_transmit -clientid 3850220456 -regid "" -xml E:/UV/FPGA/VERIFY/vry_Verilog/vry_Verilog/vry_Verilog.sim/sim_1/behav/xsim.dir/tb_pwm_behav/webta..."
+    (file "E:/UV/FPGA/VERIFY/vry_Verilog/vry_Verilog/vry_Verilog.sim/sim_1/behav/xsim.dir/tb_pwm_behav/webtalk/xsim_webtalk.tcl" line 41)
+INFO: [Common 17-206] Exiting Webtalk at Thu Sep 03 19:16:42 2020...
+run_program: Time (s): cpu = 00:00:00 ; elapsed = 00:00:06 . Memory (MB): peak = 747.387 ; gain = 0.000
+INFO: [USF-XSim-4] XSim::Simulate design
+INFO: [USF-XSim-61] Executing 'SIMULATE' step in 'E:/UV/FPGA/VERIFY/vry_Verilog/vry_Verilog/vry_Verilog.sim/sim_1/behav'
+INFO: [USF-XSim-98] *** Running xsim
+   with args "tb_pwm_behav -key {Behavioral:sim_1:Functional:tb_pwm} -tclbatch {tb_pwm.tcl} -log {simulate.log}"
+INFO: [USF-XSim-8] Loading simulator feature
+Vivado Simulator 2014.4
+Time resolution is 1 ps
+open_wave_config {E:/UV/FPGA/VERIFY/vry_Verilog/vry_Verilog\tb_pwm_behav.wcfg}
+source tb_pwm.tcl
+# set curr_wave [current_wave_config]
+# if { [string length $curr_wave] == 0 } {
+#   if { [llength [get_objects]] > 0} {
+#     add_wave /
+#     set_property needs_save false [current_wave_config]
+#   } else {
+#      send_msg_id Add_Wave-1 WARNING "No top level signals found. Simulator will start without a wave window. If you want to open a wave window go to 'File->New Waveform Configuration' or type 'create_wave_config' in the TCL console."
+#   }
+# }
+# run 1000ns
+INFO: [USF-XSim-96] XSim completed. Design snapshot 'tb_pwm_behav' loaded.
+INFO: [USF-XSim-97] XSim simulation ran for 1000ns
+launch_simulation: Time (s): cpu = 00:00:01 ; elapsed = 00:00:09 . Memory (MB): peak = 747.387 ; gain = 0.000
+run 1 ms
+run 1 ms
+INFO: [Simtcl 6-16] Simulation closed
+launch_simulation
+INFO: [USF-XSim-27] Simulation object is 'sim_1'
+INFO: [USF-XSim-37] Inspecting design source files for 'tb_pwm' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE' step in 'E:/UV/FPGA/VERIFY/vry_Verilog/vry_Verilog/vry_Verilog.sim/sim_1/behav'
+"xvlog -m64 -prj tb_pwm_vlog.prj"
+Determining compilation order of HDL files.
+INFO: [VRFC 10-2263] Analyzing Verilog file "E:/UV/FPGA/VERIFY/vry_Verilog/design/PWM.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module pwm
+INFO: [VRFC 10-2263] Analyzing Verilog file "E:/UV/FPGA/VERIFY/vry_Verilog/sim/tb_pwm.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module tb_pwm
+WARNING: [VRFC 10-2019] loop variable declaration is not allowed in this mode of verilog [E:/UV/FPGA/VERIFY/vry_Verilog/sim/tb_pwm.v:24]
+WARNING: [VRFC 10-2019] loop variable declaration is not allowed in this mode of verilog [E:/UV/FPGA/VERIFY/vry_Verilog/sim/tb_pwm.v:30]
+INFO: [VRFC 10-2263] Analyzing Verilog file "E:/UV/FPGA/VERIFY/vry_Verilog/vry_Verilog/vry_Verilog.sim/sim_1/behav/glbl.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module glbl
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'E:/UV/FPGA/VERIFY/vry_Verilog/vry_Verilog/vry_Verilog.sim/sim_1/behav'
+Vivado Simulator 2014.4
+Copyright 1986-1999, 2001-2014 Xilinx, Inc. All Rights Reserved.
+Running: D:/install/Xilinx/Vivado/2014.4/bin/unwrapped/win64.o/xelab.exe -wto 261fb7fb0d894769838a7690e5abf11a --debug typical --relax -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot tb_pwm_behav xil_defaultlib.tb_pwm xil_defaultlib.glbl -log elaborate.log 
+Multi-threading is on. Using 2 slave threads.
+Starting static elaboration
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling module xil_defaultlib.pwm
+Compiling module xil_defaultlib.tb_pwm
+Compiling module xil_defaultlib.glbl
+Waiting for 2 sub-compilation(s) to finish...
+Built simulation snapshot tb_pwm_behav
+
+****** Webtalk v2014.4 (64-bit)
+  **** SW Build 1071353 on Tue Nov 18 18:29:27 MST 2014
+  **** IP Build 1070531 on Tue Nov 18 01:10:18 MST 2014
+    ** Copyright 1986-2014 Xilinx, Inc. All Rights Reserved.
+
+source E:/UV/FPGA/VERIFY/vry_Verilog/vry_Verilog/vry_Verilog.sim/sim_1/behav/xsim.dir/tb_pwm_behav/webtalk/xsim_webtalk.tcl -notrace
+
+    while executing
+"webtalk_transmit -clientid 1045728347 -regid "" -xml E:/UV/FPGA/VERIFY/vry_Verilog/vry_Verilog/vry_Verilog.sim/sim_1/behav/xsim.dir/tb_pwm_behav/webta..."
+    (file "E:/UV/FPGA/VERIFY/vry_Verilog/vry_Verilog/vry_Verilog.sim/sim_1/behav/xsim.dir/tb_pwm_behav/webtalk/xsim_webtalk.tcl" line 41)
+INFO: [Common 17-206] Exiting Webtalk at Thu Sep 03 19:17:35 2020...
+run_program: Time (s): cpu = 00:00:00 ; elapsed = 00:00:06 . Memory (MB): peak = 759.266 ; gain = 0.000
+INFO: [USF-XSim-4] XSim::Simulate design
+INFO: [USF-XSim-61] Executing 'SIMULATE' step in 'E:/UV/FPGA/VERIFY/vry_Verilog/vry_Verilog/vry_Verilog.sim/sim_1/behav'
+INFO: [USF-XSim-98] *** Running xsim
+   with args "tb_pwm_behav -key {Behavioral:sim_1:Functional:tb_pwm} -tclbatch {tb_pwm.tcl} -log {simulate.log}"
+INFO: [USF-XSim-8] Loading simulator feature
+Vivado Simulator 2014.4
+Time resolution is 1 ps
+open_wave_config {E:/UV/FPGA/VERIFY/vry_Verilog/vry_Verilog\tb_pwm_behav.wcfg}
+source tb_pwm.tcl
+# set curr_wave [current_wave_config]
+# if { [string length $curr_wave] == 0 } {
+#   if { [llength [get_objects]] > 0} {
+#     add_wave /
+#     set_property needs_save false [current_wave_config]
+#   } else {
+#      send_msg_id Add_Wave-1 WARNING "No top level signals found. Simulator will start without a wave window. If you want to open a wave window go to 'File->New Waveform Configuration' or type 'create_wave_config' in the TCL console."
+#   }
+# }
+# run 1000ns
+INFO: [USF-XSim-96] XSim completed. Design snapshot 'tb_pwm_behav' loaded.
+INFO: [USF-XSim-97] XSim simulation ran for 1000ns
+launch_simulation: Time (s): cpu = 00:00:01 ; elapsed = 00:00:09 . Memory (MB): peak = 759.266 ; gain = 0.000
+run 1 ms
+run 1 ms
+run 1 ms
+INFO: [Simtcl 6-16] Simulation closed
+launch_simulation
+INFO: [USF-XSim-27] Simulation object is 'sim_1'
+INFO: [USF-XSim-37] Inspecting design source files for 'tb_pwm' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE' step in 'E:/UV/FPGA/VERIFY/vry_Verilog/vry_Verilog/vry_Verilog.sim/sim_1/behav'
+"xvlog -m64 -prj tb_pwm_vlog.prj"
+Determining compilation order of HDL files.
+INFO: [VRFC 10-2263] Analyzing Verilog file "E:/UV/FPGA/VERIFY/vry_Verilog/design/PWM.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module pwm
+INFO: [VRFC 10-2263] Analyzing Verilog file "E:/UV/FPGA/VERIFY/vry_Verilog/sim/tb_pwm.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module tb_pwm
+WARNING: [VRFC 10-2019] loop variable declaration is not allowed in this mode of verilog [E:/UV/FPGA/VERIFY/vry_Verilog/sim/tb_pwm.v:24]
+WARNING: [VRFC 10-2019] loop variable declaration is not allowed in this mode of verilog [E:/UV/FPGA/VERIFY/vry_Verilog/sim/tb_pwm.v:30]
+INFO: [VRFC 10-2263] Analyzing Verilog file "E:/UV/FPGA/VERIFY/vry_Verilog/vry_Verilog/vry_Verilog.sim/sim_1/behav/glbl.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module glbl
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'E:/UV/FPGA/VERIFY/vry_Verilog/vry_Verilog/vry_Verilog.sim/sim_1/behav'
+Vivado Simulator 2014.4
+Copyright 1986-1999, 2001-2014 Xilinx, Inc. All Rights Reserved.
+Running: D:/install/Xilinx/Vivado/2014.4/bin/unwrapped/win64.o/xelab.exe -wto 261fb7fb0d894769838a7690e5abf11a --debug typical --relax -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot tb_pwm_behav xil_defaultlib.tb_pwm xil_defaultlib.glbl -log elaborate.log 
+Multi-threading is on. Using 2 slave threads.
+Starting static elaboration
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling module xil_defaultlib.pwm
+Compiling module xil_defaultlib.tb_pwm
+Compiling module xil_defaultlib.glbl
+Waiting for 2 sub-compilation(s) to finish...
+Built simulation snapshot tb_pwm_behav
+
+****** Webtalk v2014.4 (64-bit)
+  **** SW Build 1071353 on Tue Nov 18 18:29:27 MST 2014
+  **** IP Build 1070531 on Tue Nov 18 01:10:18 MST 2014
+    ** Copyright 1986-2014 Xilinx, Inc. All Rights Reserved.
+
+source E:/UV/FPGA/VERIFY/vry_Verilog/vry_Verilog/vry_Verilog.sim/sim_1/behav/xsim.dir/tb_pwm_behav/webtalk/xsim_webtalk.tcl -notrace
+
+    while executing
+"webtalk_transmit -clientid 1704863066 -regid "" -xml E:/UV/FPGA/VERIFY/vry_Verilog/vry_Verilog/vry_Verilog.sim/sim_1/behav/xsim.dir/tb_pwm_behav/webta..."
+    (file "E:/UV/FPGA/VERIFY/vry_Verilog/vry_Verilog/vry_Verilog.sim/sim_1/behav/xsim.dir/tb_pwm_behav/webtalk/xsim_webtalk.tcl" line 41)
+INFO: [Common 17-206] Exiting Webtalk at Thu Sep 03 19:19:09 2020...
+run_program: Time (s): cpu = 00:00:00 ; elapsed = 00:00:05 . Memory (MB): peak = 759.266 ; gain = 0.000
+INFO: [USF-XSim-4] XSim::Simulate design
+INFO: [USF-XSim-61] Executing 'SIMULATE' step in 'E:/UV/FPGA/VERIFY/vry_Verilog/vry_Verilog/vry_Verilog.sim/sim_1/behav'
+INFO: [USF-XSim-98] *** Running xsim
+   with args "tb_pwm_behav -key {Behavioral:sim_1:Functional:tb_pwm} -tclbatch {tb_pwm.tcl} -log {simulate.log}"
+INFO: [USF-XSim-8] Loading simulator feature
+Vivado Simulator 2014.4
+Time resolution is 1 ps
+open_wave_config {E:/UV/FPGA/VERIFY/vry_Verilog/vry_Verilog\tb_pwm_behav.wcfg}
+source tb_pwm.tcl
+# set curr_wave [current_wave_config]
+# if { [string length $curr_wave] == 0 } {
+#   if { [llength [get_objects]] > 0} {
+#     add_wave /
+#     set_property needs_save false [current_wave_config]
+#   } else {
+#      send_msg_id Add_Wave-1 WARNING "No top level signals found. Simulator will start without a wave window. If you want to open a wave window go to 'File->New Waveform Configuration' or type 'create_wave_config' in the TCL console."
+#   }
+# }
+# run 1000ns
+INFO: [USF-XSim-96] XSim completed. Design snapshot 'tb_pwm_behav' loaded.
+INFO: [USF-XSim-97] XSim simulation ran for 1000ns
+launch_simulation: Time (s): cpu = 00:00:02 ; elapsed = 00:00:10 . Memory (MB): peak = 761.543 ; gain = 2.277
+run 1 ms
+run 1 ms
+run 1 ms
+INFO: [Simtcl 6-16] Simulation closed
+launch_simulation
+INFO: [USF-XSim-27] Simulation object is 'sim_1'
+INFO: [USF-XSim-37] Inspecting design source files for 'tb_pwm' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE' step in 'E:/UV/FPGA/VERIFY/vry_Verilog/vry_Verilog/vry_Verilog.sim/sim_1/behav'
+"xvlog -m64 -prj tb_pwm_vlog.prj"
+Determining compilation order of HDL files.
+INFO: [VRFC 10-2263] Analyzing Verilog file "E:/UV/FPGA/VERIFY/vry_Verilog/design/PWM.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module pwm
+ERROR: [VRFC 10-1412] syntax error near module [E:/UV/FPGA/VERIFY/vry_Verilog/design/PWM.v:91]
+ERROR: [VRFC 10-1412] syntax error near parameter [E:/UV/FPGA/VERIFY/vry_Verilog/design/PWM.v:101]
+ERROR: [VRFC 10-1412] syntax error near [ [E:/UV/FPGA/VERIFY/vry_Verilog/design/PWM.v:103]
+ERROR: [VRFC 10-1412] syntax error near [ [E:/UV/FPGA/VERIFY/vry_Verilog/design/PWM.v:104]
+ERROR: [VRFC 10-1412] syntax error near always [E:/UV/FPGA/VERIFY/vry_Verilog/design/PWM.v:121]
+ERROR: [VRFC 10-1412] syntax error near always [E:/UV/FPGA/VERIFY/vry_Verilog/design/PWM.v:141]
+ERROR: [VRFC 10-1412] syntax error near endmodule [E:/UV/FPGA/VERIFY/vry_Verilog/design/PWM.v:155]
+ERROR: [VRFC 10-75] pwm is not a task [E:/UV/FPGA/VERIFY/vry_Verilog/design/PWM.v:91]
+ERROR: [VRFC 10-29] pwm expects 4 arguments [E:/UV/FPGA/VERIFY/vry_Verilog/design/PWM.v:91]
+ERROR: [VRFC 10-404] cannot assign to non-variable NUM_CLK_OF_MS [E:/UV/FPGA/VERIFY/vry_Verilog/design/PWM.v:100]
+ERROR: [VRFC 10-1280] procedural assignment to a non-register NUM_CLK_OF_MS is not permitted, left-hand side should be reg/integer/time/genvar [E:/UV/FPGA/VERIFY/vry_Verilog/design/PWM.v:100]
+ERROR: [VRFC 10-404] cannot assign to non-variable NUM_MS_OF_SEC [E:/UV/FPGA/VERIFY/vry_Verilog/design/PWM.v:101]
+ERROR: [VRFC 10-1280] procedural assignment to a non-register NUM_MS_OF_SEC is not permitted, left-hand side should be reg/integer/time/genvar [E:/UV/FPGA/VERIFY/vry_Verilog/design/PWM.v:101]
+ERROR: [VRFC 10-75] cnt_ms is not a task [E:/UV/FPGA/VERIFY/vry_Verilog/design/PWM.v:103]
+ERROR: [VRFC 10-75] num_ms is not a task [E:/UV/FPGA/VERIFY/vry_Verilog/design/PWM.v:104]
+ERROR: [VRFC 10-1040] module pwm ignored due to previous errors [E:/UV/FPGA/VERIFY/vry_Verilog/design/PWM.v:23]
+ERROR: [USF-XSim-62] 'compile' step failed with error(s). Please check the Tcl console output or '' file for more information.
+launch_simulation
+INFO: [USF-XSim-27] Simulation object is 'sim_1'
+INFO: [USF-XSim-37] Inspecting design source files for 'tb_pwm' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE' step in 'E:/UV/FPGA/VERIFY/vry_Verilog/vry_Verilog/vry_Verilog.sim/sim_1/behav'
+"xvlog -m64 -prj tb_pwm_vlog.prj"
+Determining compilation order of HDL files.
+INFO: [VRFC 10-2263] Analyzing Verilog file "E:/UV/FPGA/VERIFY/vry_Verilog/design/PWM.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module pwm
+INFO: [VRFC 10-2263] Analyzing Verilog file "E:/UV/FPGA/VERIFY/vry_Verilog/sim/tb_pwm.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module tb_pwm
+WARNING: [VRFC 10-2019] loop variable declaration is not allowed in this mode of verilog [E:/UV/FPGA/VERIFY/vry_Verilog/sim/tb_pwm.v:24]
+WARNING: [VRFC 10-2019] loop variable declaration is not allowed in this mode of verilog [E:/UV/FPGA/VERIFY/vry_Verilog/sim/tb_pwm.v:30]
+INFO: [VRFC 10-2263] Analyzing Verilog file "E:/UV/FPGA/VERIFY/vry_Verilog/vry_Verilog/vry_Verilog.sim/sim_1/behav/glbl.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module glbl
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'E:/UV/FPGA/VERIFY/vry_Verilog/vry_Verilog/vry_Verilog.sim/sim_1/behav'
+Vivado Simulator 2014.4
+Copyright 1986-1999, 2001-2014 Xilinx, Inc. All Rights Reserved.
+Running: D:/install/Xilinx/Vivado/2014.4/bin/unwrapped/win64.o/xelab.exe -wto 261fb7fb0d894769838a7690e5abf11a --debug typical --relax -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot tb_pwm_behav xil_defaultlib.tb_pwm xil_defaultlib.glbl -log elaborate.log 
+Multi-threading is on. Using 2 slave threads.
+Starting static elaboration
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling module xil_defaultlib.pwm
+Compiling module xil_defaultlib.tb_pwm
+Compiling module xil_defaultlib.glbl
+Waiting for 2 sub-compilation(s) to finish...
+Built simulation snapshot tb_pwm_behav
+
+****** Webtalk v2014.4 (64-bit)
+  **** SW Build 1071353 on Tue Nov 18 18:29:27 MST 2014
+  **** IP Build 1070531 on Tue Nov 18 01:10:18 MST 2014
+    ** Copyright 1986-2014 Xilinx, Inc. All Rights Reserved.
+
+source E:/UV/FPGA/VERIFY/vry_Verilog/vry_Verilog/vry_Verilog.sim/sim_1/behav/xsim.dir/tb_pwm_behav/webtalk/xsim_webtalk.tcl -notrace
+
+    while executing
+"webtalk_transmit -clientid 1355105957 -regid "" -xml E:/UV/FPGA/VERIFY/vry_Verilog/vry_Verilog/vry_Verilog.sim/sim_1/behav/xsim.dir/tb_pwm_behav/webta..."
+    (file "E:/UV/FPGA/VERIFY/vry_Verilog/vry_Verilog/vry_Verilog.sim/sim_1/behav/xsim.dir/tb_pwm_behav/webtalk/xsim_webtalk.tcl" line 41)
+INFO: [Common 17-206] Exiting Webtalk at Thu Sep 03 19:25:30 2020...
+run_program: Time (s): cpu = 00:00:00 ; elapsed = 00:00:06 . Memory (MB): peak = 763.172 ; gain = 0.000
+INFO: [USF-XSim-4] XSim::Simulate design
+INFO: [USF-XSim-61] Executing 'SIMULATE' step in 'E:/UV/FPGA/VERIFY/vry_Verilog/vry_Verilog/vry_Verilog.sim/sim_1/behav'
+INFO: [USF-XSim-98] *** Running xsim
+   with args "tb_pwm_behav -key {Behavioral:sim_1:Functional:tb_pwm} -tclbatch {tb_pwm.tcl} -log {simulate.log}"
+INFO: [USF-XSim-8] Loading simulator feature
+Vivado Simulator 2014.4
+Time resolution is 1 ps
+open_wave_config {E:/UV/FPGA/VERIFY/vry_Verilog/vry_Verilog\tb_pwm_behav.wcfg}
+source tb_pwm.tcl
+# set curr_wave [current_wave_config]
+# if { [string length $curr_wave] == 0 } {
+#   if { [llength [get_objects]] > 0} {
+#     add_wave /
+#     set_property needs_save false [current_wave_config]
+#   } else {
+#      send_msg_id Add_Wave-1 WARNING "No top level signals found. Simulator will start without a wave window. If you want to open a wave window go to 'File->New Waveform Configuration' or type 'create_wave_config' in the TCL console."
+#   }
+# }
+# run 1000ns
+INFO: [USF-XSim-96] XSim completed. Design snapshot 'tb_pwm_behav' loaded.
+INFO: [USF-XSim-97] XSim simulation ran for 1000ns
+launch_simulation: Time (s): cpu = 00:00:01 ; elapsed = 00:00:11 . Memory (MB): peak = 763.172 ; gain = 0.000
+run 1 ms
+run 1 ms
+run 1 ms
+INFO: [Simtcl 6-16] Simulation closed
+launch_simulation
+INFO: [USF-XSim-27] Simulation object is 'sim_1'
+INFO: [USF-XSim-37] Inspecting design source files for 'tb_pwm' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE' step in 'E:/UV/FPGA/VERIFY/vry_Verilog/vry_Verilog/vry_Verilog.sim/sim_1/behav'
+"xvlog -m64 -prj tb_pwm_vlog.prj"
+Determining compilation order of HDL files.
+INFO: [VRFC 10-2263] Analyzing Verilog file "E:/UV/FPGA/VERIFY/vry_Verilog/design/PWM.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module pwm
+INFO: [VRFC 10-2263] Analyzing Verilog file "E:/UV/FPGA/VERIFY/vry_Verilog/sim/tb_pwm.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module tb_pwm
+WARNING: [VRFC 10-2019] loop variable declaration is not allowed in this mode of verilog [E:/UV/FPGA/VERIFY/vry_Verilog/sim/tb_pwm.v:24]
+WARNING: [VRFC 10-2019] loop variable declaration is not allowed in this mode of verilog [E:/UV/FPGA/VERIFY/vry_Verilog/sim/tb_pwm.v:30]
+INFO: [VRFC 10-2263] Analyzing Verilog file "E:/UV/FPGA/VERIFY/vry_Verilog/vry_Verilog/vry_Verilog.sim/sim_1/behav/glbl.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module glbl
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'E:/UV/FPGA/VERIFY/vry_Verilog/vry_Verilog/vry_Verilog.sim/sim_1/behav'
+Vivado Simulator 2014.4
+Copyright 1986-1999, 2001-2014 Xilinx, Inc. All Rights Reserved.
+Running: D:/install/Xilinx/Vivado/2014.4/bin/unwrapped/win64.o/xelab.exe -wto 261fb7fb0d894769838a7690e5abf11a --debug typical --relax -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot tb_pwm_behav xil_defaultlib.tb_pwm xil_defaultlib.glbl -log elaborate.log 
+Multi-threading is on. Using 2 slave threads.
+Starting static elaboration
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling module xil_defaultlib.pwm
+Compiling module xil_defaultlib.tb_pwm
+Compiling module xil_defaultlib.glbl
+Waiting for 2 sub-compilation(s) to finish...
+Built simulation snapshot tb_pwm_behav
+
+****** Webtalk v2014.4 (64-bit)
+  **** SW Build 1071353 on Tue Nov 18 18:29:27 MST 2014
+  **** IP Build 1070531 on Tue Nov 18 01:10:18 MST 2014
+    ** Copyright 1986-2014 Xilinx, Inc. All Rights Reserved.
+
+source E:/UV/FPGA/VERIFY/vry_Verilog/vry_Verilog/vry_Verilog.sim/sim_1/behav/xsim.dir/tb_pwm_behav/webtalk/xsim_webtalk.tcl -notrace
+
+    while executing
+"webtalk_transmit -clientid 1652682791 -regid "" -xml E:/UV/FPGA/VERIFY/vry_Verilog/vry_Verilog/vry_Verilog.sim/sim_1/behav/xsim.dir/tb_pwm_behav/webta..."
+    (file "E:/UV/FPGA/VERIFY/vry_Verilog/vry_Verilog/vry_Verilog.sim/sim_1/behav/xsim.dir/tb_pwm_behav/webtalk/xsim_webtalk.tcl" line 41)
+INFO: [Common 17-206] Exiting Webtalk at Thu Sep 03 19:26:24 2020...
+run_program: Time (s): cpu = 00:00:00 ; elapsed = 00:00:06 . Memory (MB): peak = 763.172 ; gain = 0.000
+INFO: [USF-XSim-4] XSim::Simulate design
+INFO: [USF-XSim-61] Executing 'SIMULATE' step in 'E:/UV/FPGA/VERIFY/vry_Verilog/vry_Verilog/vry_Verilog.sim/sim_1/behav'
+INFO: [USF-XSim-98] *** Running xsim
+   with args "tb_pwm_behav -key {Behavioral:sim_1:Functional:tb_pwm} -tclbatch {tb_pwm.tcl} -log {simulate.log}"
+INFO: [USF-XSim-8] Loading simulator feature
+Vivado Simulator 2014.4
+Time resolution is 1 ps
+open_wave_config {E:/UV/FPGA/VERIFY/vry_Verilog/vry_Verilog\tb_pwm_behav.wcfg}
+source tb_pwm.tcl
+# set curr_wave [current_wave_config]
+# if { [string length $curr_wave] == 0 } {
+#   if { [llength [get_objects]] > 0} {
+#     add_wave /
+#     set_property needs_save false [current_wave_config]
+#   } else {
+#      send_msg_id Add_Wave-1 WARNING "No top level signals found. Simulator will start without a wave window. If you want to open a wave window go to 'File->New Waveform Configuration' or type 'create_wave_config' in the TCL console."
+#   }
+# }
+# run 1000ns
+INFO: [USF-XSim-96] XSim completed. Design snapshot 'tb_pwm_behav' loaded.
+INFO: [USF-XSim-97] XSim simulation ran for 1000ns
+launch_simulation: Time (s): cpu = 00:00:02 ; elapsed = 00:00:11 . Memory (MB): peak = 763.172 ; gain = 0.000
+run 1 ms
+run 1 ms
+run 1 ms
+INFO: [Simtcl 6-16] Simulation closed
+launch_simulation
+INFO: [USF-XSim-27] Simulation object is 'sim_1'
+INFO: [USF-XSim-37] Inspecting design source files for 'tb_pwm' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE' step in 'E:/UV/FPGA/VERIFY/vry_Verilog/vry_Verilog/vry_Verilog.sim/sim_1/behav'
+"xvlog -m64 -prj tb_pwm_vlog.prj"
+Determining compilation order of HDL files.
+INFO: [VRFC 10-2263] Analyzing Verilog file "E:/UV/FPGA/VERIFY/vry_Verilog/design/PWM.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module pwm
+INFO: [VRFC 10-2263] Analyzing Verilog file "E:/UV/FPGA/VERIFY/vry_Verilog/sim/tb_pwm.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module tb_pwm
+WARNING: [VRFC 10-2019] loop variable declaration is not allowed in this mode of verilog [E:/UV/FPGA/VERIFY/vry_Verilog/sim/tb_pwm.v:24]
+WARNING: [VRFC 10-2019] loop variable declaration is not allowed in this mode of verilog [E:/UV/FPGA/VERIFY/vry_Verilog/sim/tb_pwm.v:30]
+INFO: [VRFC 10-2263] Analyzing Verilog file "E:/UV/FPGA/VERIFY/vry_Verilog/vry_Verilog/vry_Verilog.sim/sim_1/behav/glbl.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module glbl
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'E:/UV/FPGA/VERIFY/vry_Verilog/vry_Verilog/vry_Verilog.sim/sim_1/behav'
+Vivado Simulator 2014.4
+Copyright 1986-1999, 2001-2014 Xilinx, Inc. All Rights Reserved.
+Running: D:/install/Xilinx/Vivado/2014.4/bin/unwrapped/win64.o/xelab.exe -wto 261fb7fb0d894769838a7690e5abf11a --debug typical --relax -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot tb_pwm_behav xil_defaultlib.tb_pwm xil_defaultlib.glbl -log elaborate.log 
+Multi-threading is on. Using 2 slave threads.
+Starting static elaboration
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling module xil_defaultlib.pwm
+Compiling module xil_defaultlib.tb_pwm
+Compiling module xil_defaultlib.glbl
+Waiting for 2 sub-compilation(s) to finish...
+Built simulation snapshot tb_pwm_behav
+
+****** Webtalk v2014.4 (64-bit)
+  **** SW Build 1071353 on Tue Nov 18 18:29:27 MST 2014
+  **** IP Build 1070531 on Tue Nov 18 01:10:18 MST 2014
+    ** Copyright 1986-2014 Xilinx, Inc. All Rights Reserved.
+
+source E:/UV/FPGA/VERIFY/vry_Verilog/vry_Verilog/vry_Verilog.sim/sim_1/behav/xsim.dir/tb_pwm_behav/webtalk/xsim_webtalk.tcl -notrace
+
+    while executing
+"webtalk_transmit -clientid 956854125 -regid "" -xml E:/UV/FPGA/VERIFY/vry_Verilog/vry_Verilog/vry_Verilog.sim/sim_1/behav/xsim.dir/tb_pwm_behav/webtal..."
+    (file "E:/UV/FPGA/VERIFY/vry_Verilog/vry_Verilog/vry_Verilog.sim/sim_1/behav/xsim.dir/tb_pwm_behav/webtalk/xsim_webtalk.tcl" line 41)
+INFO: [Common 17-206] Exiting Webtalk at Thu Sep 03 19:27:17 2020...
+run_program: Time (s): cpu = 00:00:00 ; elapsed = 00:00:06 . Memory (MB): peak = 763.172 ; gain = 0.000
+INFO: [USF-XSim-4] XSim::Simulate design
+INFO: [USF-XSim-61] Executing 'SIMULATE' step in 'E:/UV/FPGA/VERIFY/vry_Verilog/vry_Verilog/vry_Verilog.sim/sim_1/behav'
+INFO: [USF-XSim-98] *** Running xsim
+   with args "tb_pwm_behav -key {Behavioral:sim_1:Functional:tb_pwm} -tclbatch {tb_pwm.tcl} -log {simulate.log}"
+INFO: [USF-XSim-8] Loading simulator feature
+Vivado Simulator 2014.4
+Time resolution is 1 ps
+open_wave_config {E:/UV/FPGA/VERIFY/vry_Verilog/vry_Verilog\tb_pwm_behav.wcfg}
+source tb_pwm.tcl
+# set curr_wave [current_wave_config]
+# if { [string length $curr_wave] == 0 } {
+#   if { [llength [get_objects]] > 0} {
+#     add_wave /
+#     set_property needs_save false [current_wave_config]
+#   } else {
+#      send_msg_id Add_Wave-1 WARNING "No top level signals found. Simulator will start without a wave window. If you want to open a wave window go to 'File->New Waveform Configuration' or type 'create_wave_config' in the TCL console."
+#   }
+# }
+# run 1000ns
+INFO: [USF-XSim-96] XSim completed. Design snapshot 'tb_pwm_behav' loaded.
+INFO: [USF-XSim-97] XSim simulation ran for 1000ns
+launch_simulation: Time (s): cpu = 00:00:01 ; elapsed = 00:00:09 . Memory (MB): peak = 763.172 ; gain = 0.000
+run 5 ms
+INFO: [Simtcl 6-16] Simulation closed
+launch_simulation
+INFO: [USF-XSim-27] Simulation object is 'sim_1'
+INFO: [USF-XSim-37] Inspecting design source files for 'tb_pwm' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE' step in 'E:/UV/FPGA/VERIFY/vry_Verilog/vry_Verilog/vry_Verilog.sim/sim_1/behav'
+"xvlog -m64 -prj tb_pwm_vlog.prj"
+Determining compilation order of HDL files.
+INFO: [VRFC 10-2263] Analyzing Verilog file "E:/UV/FPGA/VERIFY/vry_Verilog/design/PWM.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module pwm
+INFO: [VRFC 10-2263] Analyzing Verilog file "E:/UV/FPGA/VERIFY/vry_Verilog/sim/tb_pwm.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module tb_pwm
+WARNING: [VRFC 10-2019] loop variable declaration is not allowed in this mode of verilog [E:/UV/FPGA/VERIFY/vry_Verilog/sim/tb_pwm.v:24]
+WARNING: [VRFC 10-2019] loop variable declaration is not allowed in this mode of verilog [E:/UV/FPGA/VERIFY/vry_Verilog/sim/tb_pwm.v:30]
+INFO: [VRFC 10-2263] Analyzing Verilog file "E:/UV/FPGA/VERIFY/vry_Verilog/vry_Verilog/vry_Verilog.sim/sim_1/behav/glbl.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module glbl
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'E:/UV/FPGA/VERIFY/vry_Verilog/vry_Verilog/vry_Verilog.sim/sim_1/behav'
+Vivado Simulator 2014.4
+Copyright 1986-1999, 2001-2014 Xilinx, Inc. All Rights Reserved.
+Running: D:/install/Xilinx/Vivado/2014.4/bin/unwrapped/win64.o/xelab.exe -wto 261fb7fb0d894769838a7690e5abf11a --debug typical --relax -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot tb_pwm_behav xil_defaultlib.tb_pwm xil_defaultlib.glbl -log elaborate.log 
+Multi-threading is on. Using 2 slave threads.
+Starting static elaboration
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling module xil_defaultlib.pwm
+Compiling module xil_defaultlib.tb_pwm
+Compiling module xil_defaultlib.glbl
+Waiting for 2 sub-compilation(s) to finish...
+Built simulation snapshot tb_pwm_behav
+
+****** Webtalk v2014.4 (64-bit)
+  **** SW Build 1071353 on Tue Nov 18 18:29:27 MST 2014
+  **** IP Build 1070531 on Tue Nov 18 01:10:18 MST 2014
+    ** Copyright 1986-2014 Xilinx, Inc. All Rights Reserved.
+
+source E:/UV/FPGA/VERIFY/vry_Verilog/vry_Verilog/vry_Verilog.sim/sim_1/behav/xsim.dir/tb_pwm_behav/webtalk/xsim_webtalk.tcl -notrace
+
+    while executing
+"webtalk_transmit -clientid 2099853650 -regid "" -xml E:/UV/FPGA/VERIFY/vry_Verilog/vry_Verilog/vry_Verilog.sim/sim_1/behav/xsim.dir/tb_pwm_behav/webta..."
+    (file "E:/UV/FPGA/VERIFY/vry_Verilog/vry_Verilog/vry_Verilog.sim/sim_1/behav/xsim.dir/tb_pwm_behav/webtalk/xsim_webtalk.tcl" line 41)
+INFO: [Common 17-206] Exiting Webtalk at Thu Sep 03 19:31:26 2020...
+run_program: Time (s): cpu = 00:00:00 ; elapsed = 00:00:06 . Memory (MB): peak = 764.965 ; gain = 0.000
+INFO: [USF-XSim-4] XSim::Simulate design
+INFO: [USF-XSim-61] Executing 'SIMULATE' step in 'E:/UV/FPGA/VERIFY/vry_Verilog/vry_Verilog/vry_Verilog.sim/sim_1/behav'
+INFO: [USF-XSim-98] *** Running xsim
+   with args "tb_pwm_behav -key {Behavioral:sim_1:Functional:tb_pwm} -tclbatch {tb_pwm.tcl} -log {simulate.log}"
+INFO: [USF-XSim-8] Loading simulator feature
+Vivado Simulator 2014.4
+Time resolution is 1 ps
+open_wave_config {E:/UV/FPGA/VERIFY/vry_Verilog/vry_Verilog\tb_pwm_behav.wcfg}
+source tb_pwm.tcl
+# set curr_wave [current_wave_config]
+# if { [string length $curr_wave] == 0 } {
+#   if { [llength [get_objects]] > 0} {
+#     add_wave /
+#     set_property needs_save false [current_wave_config]
+#   } else {
+#      send_msg_id Add_Wave-1 WARNING "No top level signals found. Simulator will start without a wave window. If you want to open a wave window go to 'File->New Waveform Configuration' or type 'create_wave_config' in the TCL console."
+#   }
+# }
+# run 1000ns
+INFO: [USF-XSim-96] XSim completed. Design snapshot 'tb_pwm_behav' loaded.
+INFO: [USF-XSim-97] XSim simulation ran for 1000ns
+launch_simulation: Time (s): cpu = 00:00:01 ; elapsed = 00:00:10 . Memory (MB): peak = 764.965 ; gain = 0.000
+run 5 ms
+INFO: [Simtcl 6-16] Simulation closed
+launch_simulation
+INFO: [USF-XSim-27] Simulation object is 'sim_1'
+INFO: [USF-XSim-37] Inspecting design source files for 'tb_pwm' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE' step in 'E:/UV/FPGA/VERIFY/vry_Verilog/vry_Verilog/vry_Verilog.sim/sim_1/behav'
+"xvlog -m64 -prj tb_pwm_vlog.prj"
+Determining compilation order of HDL files.
+INFO: [VRFC 10-2263] Analyzing Verilog file "E:/UV/FPGA/VERIFY/vry_Verilog/design/PWM.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module pwm
+INFO: [VRFC 10-2263] Analyzing Verilog file "E:/UV/FPGA/VERIFY/vry_Verilog/sim/tb_pwm.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module tb_pwm
+WARNING: [VRFC 10-2019] loop variable declaration is not allowed in this mode of verilog [E:/UV/FPGA/VERIFY/vry_Verilog/sim/tb_pwm.v:24]
+WARNING: [VRFC 10-2019] loop variable declaration is not allowed in this mode of verilog [E:/UV/FPGA/VERIFY/vry_Verilog/sim/tb_pwm.v:30]
+WARNING: [VRFC 10-2019] loop variable declaration is not allowed in this mode of verilog [E:/UV/FPGA/VERIFY/vry_Verilog/sim/tb_pwm.v:36]
+INFO: [VRFC 10-2263] Analyzing Verilog file "E:/UV/FPGA/VERIFY/vry_Verilog/vry_Verilog/vry_Verilog.sim/sim_1/behav/glbl.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module glbl
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'E:/UV/FPGA/VERIFY/vry_Verilog/vry_Verilog/vry_Verilog.sim/sim_1/behav'
+Vivado Simulator 2014.4
+Copyright 1986-1999, 2001-2014 Xilinx, Inc. All Rights Reserved.
+Running: D:/install/Xilinx/Vivado/2014.4/bin/unwrapped/win64.o/xelab.exe -wto 261fb7fb0d894769838a7690e5abf11a --debug typical --relax -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot tb_pwm_behav xil_defaultlib.tb_pwm xil_defaultlib.glbl -log elaborate.log 
+Multi-threading is on. Using 2 slave threads.
+Starting static elaboration
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling module xil_defaultlib.pwm
+Compiling module xil_defaultlib.tb_pwm
+Compiling module xil_defaultlib.glbl
+Waiting for 2 sub-compilation(s) to finish...
+Built simulation snapshot tb_pwm_behav
+
+****** Webtalk v2014.4 (64-bit)
+  **** SW Build 1071353 on Tue Nov 18 18:29:27 MST 2014
+  **** IP Build 1070531 on Tue Nov 18 01:10:18 MST 2014
+    ** Copyright 1986-2014 Xilinx, Inc. All Rights Reserved.
+
+source E:/UV/FPGA/VERIFY/vry_Verilog/vry_Verilog/vry_Verilog.sim/sim_1/behav/xsim.dir/tb_pwm_behav/webtalk/xsim_webtalk.tcl -notrace
+
+    while executing
+"webtalk_transmit -clientid 1523413205 -regid "" -xml E:/UV/FPGA/VERIFY/vry_Verilog/vry_Verilog/vry_Verilog.sim/sim_1/behav/xsim.dir/tb_pwm_behav/webta..."
+    (file "E:/UV/FPGA/VERIFY/vry_Verilog/vry_Verilog/vry_Verilog.sim/sim_1/behav/xsim.dir/tb_pwm_behav/webtalk/xsim_webtalk.tcl" line 41)
+INFO: [Common 17-206] Exiting Webtalk at Thu Sep 03 19:33:35 2020...
+run_program: Time (s): cpu = 00:00:00 ; elapsed = 00:00:06 . Memory (MB): peak = 780.574 ; gain = 0.000
+INFO: [USF-XSim-4] XSim::Simulate design
+INFO: [USF-XSim-61] Executing 'SIMULATE' step in 'E:/UV/FPGA/VERIFY/vry_Verilog/vry_Verilog/vry_Verilog.sim/sim_1/behav'
+INFO: [USF-XSim-98] *** Running xsim
+   with args "tb_pwm_behav -key {Behavioral:sim_1:Functional:tb_pwm} -tclbatch {tb_pwm.tcl} -log {simulate.log}"
+INFO: [USF-XSim-8] Loading simulator feature
+Vivado Simulator 2014.4
+Time resolution is 1 ps
+open_wave_config {E:/UV/FPGA/VERIFY/vry_Verilog/vry_Verilog\tb_pwm_behav.wcfg}
+source tb_pwm.tcl
+# set curr_wave [current_wave_config]
+# if { [string length $curr_wave] == 0 } {
+#   if { [llength [get_objects]] > 0} {
+#     add_wave /
+#     set_property needs_save false [current_wave_config]
+#   } else {
+#      send_msg_id Add_Wave-1 WARNING "No top level signals found. Simulator will start without a wave window. If you want to open a wave window go to 'File->New Waveform Configuration' or type 'create_wave_config' in the TCL console."
+#   }
+# }
+# run 1000ns
+INFO: [USF-XSim-96] XSim completed. Design snapshot 'tb_pwm_behav' loaded.
+INFO: [USF-XSim-97] XSim simulation ran for 1000ns
+launch_simulation: Time (s): cpu = 00:00:01 ; elapsed = 00:00:10 . Memory (MB): peak = 780.574 ; gain = 0.000
+run 5 ms
+run 5 ms
+INFO: [Simtcl 6-16] Simulation closed
+launch_simulation
+INFO: [USF-XSim-27] Simulation object is 'sim_1'
+INFO: [USF-XSim-37] Inspecting design source files for 'tb_pwm' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE' step in 'E:/UV/FPGA/VERIFY/vry_Verilog/vry_Verilog/vry_Verilog.sim/sim_1/behav'
+"xvlog -m64 -prj tb_pwm_vlog.prj"
+Determining compilation order of HDL files.
+INFO: [VRFC 10-2263] Analyzing Verilog file "E:/UV/FPGA/VERIFY/vry_Verilog/design/PWM.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module pwm
+INFO: [VRFC 10-2263] Analyzing Verilog file "E:/UV/FPGA/VERIFY/vry_Verilog/sim/tb_pwm.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module tb_pwm
+WARNING: [VRFC 10-2019] loop variable declaration is not allowed in this mode of verilog [E:/UV/FPGA/VERIFY/vry_Verilog/sim/tb_pwm.v:24]
+WARNING: [VRFC 10-2019] loop variable declaration is not allowed in this mode of verilog [E:/UV/FPGA/VERIFY/vry_Verilog/sim/tb_pwm.v:30]
+WARNING: [VRFC 10-2019] loop variable declaration is not allowed in this mode of verilog [E:/UV/FPGA/VERIFY/vry_Verilog/sim/tb_pwm.v:36]
+WARNING: [VRFC 10-2019] loop variable declaration is not allowed in this mode of verilog [E:/UV/FPGA/VERIFY/vry_Verilog/sim/tb_pwm.v:42]
+INFO: [VRFC 10-2263] Analyzing Verilog file "E:/UV/FPGA/VERIFY/vry_Verilog/vry_Verilog/vry_Verilog.sim/sim_1/behav/glbl.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module glbl
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'E:/UV/FPGA/VERIFY/vry_Verilog/vry_Verilog/vry_Verilog.sim/sim_1/behav'
+Vivado Simulator 2014.4
+Copyright 1986-1999, 2001-2014 Xilinx, Inc. All Rights Reserved.
+Running: D:/install/Xilinx/Vivado/2014.4/bin/unwrapped/win64.o/xelab.exe -wto 261fb7fb0d894769838a7690e5abf11a --debug typical --relax -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot tb_pwm_behav xil_defaultlib.tb_pwm xil_defaultlib.glbl -log elaborate.log 
+Multi-threading is on. Using 2 slave threads.
+Starting static elaboration
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling module xil_defaultlib.pwm
+Compiling module xil_defaultlib.tb_pwm
+Compiling module xil_defaultlib.glbl
+Waiting for 2 sub-compilation(s) to finish...
+Built simulation snapshot tb_pwm_behav
+
+****** Webtalk v2014.4 (64-bit)
+  **** SW Build 1071353 on Tue Nov 18 18:29:27 MST 2014
+  **** IP Build 1070531 on Tue Nov 18 01:10:18 MST 2014
+    ** Copyright 1986-2014 Xilinx, Inc. All Rights Reserved.
+
+source E:/UV/FPGA/VERIFY/vry_Verilog/vry_Verilog/vry_Verilog.sim/sim_1/behav/xsim.dir/tb_pwm_behav/webtalk/xsim_webtalk.tcl -notrace
+
+    while executing
+"webtalk_transmit -clientid 2671185679 -regid "" -xml E:/UV/FPGA/VERIFY/vry_Verilog/vry_Verilog/vry_Verilog.sim/sim_1/behav/xsim.dir/tb_pwm_behav/webta..."
+    (file "E:/UV/FPGA/VERIFY/vry_Verilog/vry_Verilog/vry_Verilog.sim/sim_1/behav/xsim.dir/tb_pwm_behav/webtalk/xsim_webtalk.tcl" line 41)
+INFO: [Common 17-206] Exiting Webtalk at Thu Sep 03 19:34:50 2020...
+run_program: Time (s): cpu = 00:00:00 ; elapsed = 00:00:06 . Memory (MB): peak = 780.574 ; gain = 0.000
+INFO: [USF-XSim-4] XSim::Simulate design
+INFO: [USF-XSim-61] Executing 'SIMULATE' step in 'E:/UV/FPGA/VERIFY/vry_Verilog/vry_Verilog/vry_Verilog.sim/sim_1/behav'
+INFO: [USF-XSim-98] *** Running xsim
+   with args "tb_pwm_behav -key {Behavioral:sim_1:Functional:tb_pwm} -tclbatch {tb_pwm.tcl} -log {simulate.log}"
+INFO: [USF-XSim-8] Loading simulator feature
+Vivado Simulator 2014.4
+Time resolution is 1 ps
+open_wave_config {E:/UV/FPGA/VERIFY/vry_Verilog/vry_Verilog\tb_pwm_behav.wcfg}
+source tb_pwm.tcl
+# set curr_wave [current_wave_config]
+# if { [string length $curr_wave] == 0 } {
+#   if { [llength [get_objects]] > 0} {
+#     add_wave /
+#     set_property needs_save false [current_wave_config]
+#   } else {
+#      send_msg_id Add_Wave-1 WARNING "No top level signals found. Simulator will start without a wave window. If you want to open a wave window go to 'File->New Waveform Configuration' or type 'create_wave_config' in the TCL console."
+#   }
+# }
+# run 1000ns
+INFO: [USF-XSim-96] XSim completed. Design snapshot 'tb_pwm_behav' loaded.
+INFO: [USF-XSim-97] XSim simulation ran for 1000ns
+launch_simulation: Time (s): cpu = 00:00:01 ; elapsed = 00:00:09 . Memory (MB): peak = 780.574 ; gain = 0.000
+run 5 ms
+close_sim
+INFO: [Simtcl 6-16] Simulation closed
 exit
-INFO: [Common 17-206] Exiting Vivado at Thu Aug 13 10:49:57 2020...
+INFO: [Common 17-206] Exiting Vivado at Thu Sep 03 19:40:31 2020...

@@ -1,0 +1,15 @@
+#-----------------------------------------------------------
+# Webtalk v2014.4 (64-bit)
+# SW Build 1071353 on Tue Nov 18 18:29:27 MST 2014
+# IP Build 1070531 on Tue Nov 18 01:10:18 MST 2014
+# Start of session at: Thu Sep 03 17:14:23 2020
+# Process ID: 5644
+# Log file: E:/UV/FPGA/VERIFY/vry_BottlePrint/Prj_vivado/vry_BottlePrint.sim/sim_1/behav/webtalk.log
+# Journal file: E:/UV/FPGA/VERIFY/vry_BottlePrint/Prj_vivado/vry_BottlePrint.sim/sim_1/behav\webtalk.jou
+#-----------------------------------------------------------
+source E:/UV/FPGA/VERIFY/vry_BottlePrint/Prj_vivado/vry_BottlePrint.sim/sim_1/behav/xsim.dir/tb_vry_BottlePrint_behav/webtalk/xsim_webtalk.tcl -notrace
+
+    while executing
+"webtalk_transmit -clientid 2809929249 -regid "" -xml E:/UV/FPGA/VERIFY/vry_BottlePrint/Prj_vivado/vry_BottlePrint.sim/sim_1/behav/xsim.dir/tb_vry_Bott..."
+    (file "E:/UV/FPGA/VERIFY/vry_BottlePrint/Prj_vivado/vry_BottlePrint.sim/sim_1/behav/xsim.dir/tb_vry_BottlePrint_behav/webtalk/xsim_webtalk.tcl" line 41)
+INFO: [Common 17-206] Exiting Webtalk at Thu Sep 03 17:14:25 2020...

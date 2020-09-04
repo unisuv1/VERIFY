@@ -728,13 +728,22 @@
 # Top level modules:
 # 	tb_vry_BottlePrint
 # 
-# vsim -t 1ps -L altera -L lpm -L sgate -L altera_mf -L altera_lnsim -L cycloneive -L rtl_work -L work -voptargs="+acc"  tb_bottle
-# vsim -L altera -L lpm -L sgate -L altera_mf -L altera_lnsim -L cycloneive -L rtl_work -L work -voptargs=\"+acc\" -t 1ps tb_bottle 
+# vsim -t 1ps -L altera -L lpm -L sgate -L altera_mf -L altera_lnsim -L cycloneive -L rtl_work -L work -voptargs="+acc"  tb_vry_BottlePrint
+# vsim -L altera -L lpm -L sgate -L altera_mf -L altera_lnsim -L cycloneive -L rtl_work -L work -voptargs=\"+acc\" -t 1ps tb_vry_BottlePrint 
 # ** Note: (vsim-3812) Design is being optimized...
 # 
-# ** Error: Failed to find design unit work.tb_bottle.
-# Optimization failed
-# Error loading design
-# Error: Error loading design 
-#        Pausing macro execution 
-# MACRO ./vry_BottlePrint_run_msim_rtl_vhdl.do PAUSED at line 50
+# Loading work.tb_vry_BottlePrint(fast)
+# Loading std.standard
+# Loading std.textio(body)
+# Loading ieee.std_logic_1164(body)
+# Loading ieee.std_logic_arith(body)
+# Loading ieee.std_logic_unsigned(body)
+# Loading work.vry_bottleprint(behv)#1
+# 
+# add wave *
+# 
+# view structure
+# .main_pane.structure.interior.cs.body.struct
+# view signals
+# .main_pane.objects.interior.cs.body.tree
+# run 1 us
